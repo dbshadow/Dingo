@@ -54,7 +54,8 @@ async def process_csv(
     if total_to_translate == 0:
         await send_ws_message(websocket, 'log', {"message": "No empty target fields to translate. All done!"})
         await send_ws_message(websocket, 'progress', {
-            "csv_data": df.to_csv(index=False),
+            "csv_json": df.to_dict('records'),
+            "csv_string": df.to_csv(index=False, encoding='utf-8-sig'),
             "processed": 0,
             "total": 0
         })
@@ -87,7 +88,8 @@ async def process_csv(
             df.to_csv(output_path, index=False, encoding='utf-8-sig')
             await send_ws_message(websocket, 'log', {"message": f"Progress for batch {start_num}-{end_num} saved."})
             await send_ws_message(websocket, 'progress', {
-                "csv_data": df.to_csv(index=False),
+                "csv_json": df.to_dict('records'),
+                "csv_string": df.to_csv(index=False, encoding='utf-8-sig'),
                 "processed": processed_count,
                 "total": total_to_translate
             })

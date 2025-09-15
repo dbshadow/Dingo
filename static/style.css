@@ -43,12 +43,28 @@
     font-weight: bold;
 }
 
-.form-group input[type="text"], .form-group input[type="file"] {
+.form-group input[type="text"],
+.form-group input[type="file"],
+.form-group select {
     width: 100%;
-    padding: 8px;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
     box-sizing: border-box;
+    font-size: 1rem; /* 加大字體 */
+    background-color: white;
+    -webkit-appearance: none; /* 移除 webkit 預設樣式 */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* 為下拉選單加上自訂的箭頭 */
+.form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    cursor: pointer;
 }
 
 .form-group-checkbox {
@@ -95,11 +111,7 @@ button:disabled {
     padding: 10px;
 }
 
-#csv-preview {
-    white-space: pre;
-    font-family: monospace;
-    font-size: 0.9rem;
-}
+
 
 #status-log {
     margin-top: 20px;
@@ -111,6 +123,7 @@ button:disabled {
     overflow-y: scroll;
     font-family: monospace;
     font-size: 0.8rem;
+    white-space: pre-wrap; /* 關鍵：保留換行符 */
 }
 
 /* Progress Bar Styles */
@@ -140,5 +153,31 @@ button:disabled {
 #progress-text {
     font-weight: bold;
     font-size: 0.9rem;
+}
+
+
+/* Table Styles */
+#csv-preview table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    table-layout: fixed; /* 關鍵：固定表格佈局，防止內容撐開表格 */
+}
+
+#csv-preview th, #csv-preview td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top; /* 確保長文字能正常換行顯示 */
+    overflow-wrap: break-word; /* 關鍵：強制長單字或URL換行 */
+}
+
+#csv-preview th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.target-column {
+    color: #28a745; /* A nice shade of green */
 }
 

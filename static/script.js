@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const progressText = document.getElementById('progress-text');
 
     let websocket;
-    let translatedCSVContent = '';
+    let translatedCSVContent = ''; // 用於儲存原始CSV字串以供下載
 
     function log(message) {
         const timestamp = new Date().toLocaleTimeString();
@@ -20,10 +20,51 @@ document.addEventListener('DOMContentLoaded', () => {
     function resetUI() {
         submitBtn.disabled = false;
         downloadBtn.disabled = true;
-        csvPreview.textContent = '翻譯預覽將顯示於此';
+        csvPreview.innerHTML = '<p style="color: #888;">翻譯預覽將顯示於此</p>';
         statusLog.innerHTML = '';
         progressBar.style.width = '0%';
         progressText.textContent = '0%';
+    }
+
+    function renderTable(jsonData) {
+        if (!jsonData || jsonData.length === 0) {
+            return;
+        }
+
+        const table = document.createElement('table');
+        const thead = document.createElement('thead');
+        const tbody = document.createElement('tbody');
+        const headers = Object.keys(jsonData[0]);
+
+        // 建立表頭
+        const headerRow = document.createElement('tr');
+        headers.forEach(headerText => {
+            const th = document.createElement('th');
+            th.textContent = headerText;
+            headerRow.appendChild(th);
+        });
+        thead.appendChild(headerRow);
+
+        // 建立表格內容
+        jsonData.forEach(row => {
+            const tr = document.createElement('tr');
+            headers.forEach(header => {
+                const td = document.createElement('td');
+                td.textContent = row[header];
+                if (header.toLowerCase() === 'target') {
+                    td.classList.add('target-column');
+                }
+                tr.appendChild(td);
+            });
+            tbody.appendChild(tr);
+        });
+
+        table.appendChild(thead);
+        table.appendChild(tbody);
+
+        // 清空並渲染
+        csvPreview.innerHTML = '';
+        csvPreview.appendChild(table);
     }
 
     function connectWebSocket() {
@@ -49,8 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     resetUI();
                     break;
                 case 'progress':
-                    translatedCSVContent = payload.csv_data;
-                    csvPreview.textContent = translatedCSVContent;
+                    // 儲存原始CSV字串以供下載
+                    translatedCSVContent = payload.csv_string;
+                    // 渲染表格
+                    renderTable(payload.csv_json);
                     downloadBtn.disabled = false;
 
                     const total = payload.total;
@@ -122,5 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     submitBtn.disabled = true;
+    resetUI();
     connectWebSocket();
 });

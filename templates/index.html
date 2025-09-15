@@ -28,12 +28,54 @@
 
                 <div class="form-group">
                     <label for="source-lang">2. 來源語言</label>
-                    <input type="text" id="source-lang" name="source_lang" value="English" required>
+                    <select id="source-lang" name="source_lang" required>
+                        <option value="Arabic">Arabic</option>
+                        <option value="Chinese (Simplified)">Chinese (Simplified)</option>
+                        <option value="Chinese (Traditional)">Chinese (Traditional)</option>
+                        <option value="Dutch">Dutch</option>
+                        <option value="English" selected>English</option>
+                        <option value="French">French</option>
+                        <option value="German">German</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Indonesian">Indonesian</option>
+                        <option value="Italian">Italian</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Korean">Korean</option>
+                        <option value="Polish">Polish</option>
+                        <option value="Portuguese">Portuguese</option>
+                        <option value="Russian">Russian</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="Swedish">Swedish</option>
+                        <option value="Thai">Thai</option>
+                        <option value="Turkish">Turkish</option>
+                        <option value="Vietnamese">Vietnamese</option>
+                    </select>
                 </div>
 
                 <div class="form-group">
                     <label for="target-lang">3. 目標語言</label>
-                    <input type="text" id="target-lang" name="target_lang" value="Traditional Chinese" required>
+                    <select id="target-lang" name="target_lang" required>
+                        <option value="Arabic">Arabic</option>
+                        <option value="Chinese (Simplified)">Chinese (Simplified)</option>
+                        <option value="Chinese (Traditional)" selected>Chinese (Traditional)</option>
+                        <option value="Dutch">Dutch</option>
+                        <option value="English">English</option>
+                        <option value="French">French</option>
+                        <option value="German">German</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Indonesian">Indonesian</option>
+                        <option value="Italian">Italian</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Korean">Korean</option>
+                        <option value="Polish">Polish</option>
+                        <option value="Portuguese">Portuguese</option>
+                        <option value="Russian">Russian</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="Swedish">Swedish</option>
+                        <option value="Thai">Thai</option>
+                        <option value="Turkish">Turkish</option>
+                        <option value="Vietnamese">Vietnamese</option>
+                    </select>
                 </div>
 
                 <div class="form-group-checkbox">
@@ -41,7 +83,7 @@
                     <label for="overwrite">覆寫已翻譯的欄位 (Overwrite)</label>
                 </div>
 
-                <button type-="submit">開始翻譯</button>
+                <button type="submit">開始翻譯</button>
             </form>
             <div id="status-log"></div>
         </div>
@@ -51,8 +93,8 @@
             <div class="preview-controls">
                  <button id="download-btn" disabled>下載翻譯後的 CSV</button>
             </div>
-            <div class="preview-container">
-                <pre id="csv-preview"></pre>
+            <div class="preview-container" id="csv-preview">
+                <!-- 表格將由 JavaScript 動態生成於此 -->
             </div>
             <div class="progress-container">
                 <div class="progress-bar-outer">
