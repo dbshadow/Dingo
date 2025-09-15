@@ -1,0 +1,34 @@
+import argparse
+import asyncio
+from pathlib import Path
+from process import process_csv
+
+async def main_cli():
+    parser = argparse.ArgumentParser(description="Translate a CSV file using an Ollama LLM.")
+    parser.add_argument("csv_path", type=str, help="Path to the input CSV file.")
+    parser.add_argument("source_lang", type=str, help="Source language.")
+    parser.add_argument("target_lang", type=str, help="Target language.")
+    parser.add_argument("--ollama_host", type=str, default="http://192.168.7.149:11434", help="Ollama host URL.")
+    parser.add_argument("--model", type=str, default="gpt-oss:20b", help="Ollama model to use.")
+    parser.add_argument("--batch-size", type=int, default=10, help="Number of rows to process before saving.")
+    parser.add_argument("--overwrite", action='store_true', help="Overwrite existing translations. If false, only translates rows with empty target.")
+
+    args = parser.parse_args()
+
+    input_path = Path(args.csv_path)
+    if not input_path.is_file():
+        print(f"Error: File not found at {input_path}")
+        return
+
+    await process_csv(
+        csv_path=input_path,
+        source_lang=args.source_lang,
+        target_lang=args.target_lang,
+        ollama_host=args.ollama_host,
+        model=args.model,
+        batch_size=args.batch_size,
+        overwrite=args.overwrite
+    )
+
+if __name__ == "__main__":
+    asyncio.run(main_cli())

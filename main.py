@@ -1,95 +1,102 @@
-import argparse
+import uvicorn
 import asyncio
-import pandas as pd
-import ollama
+import uuid
 from pathlib import Path
-from translator import translate_text
+from fastapi import FastAPI, Request, WebSocket, UploadFile, File, Form, WebSocketDisconnect
+from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
 
-async def main():
-    """
-    主函式，用於解析參數、讀取CSV、執行翻譯並寫入結果。
-    """
-    parser = argparse.ArgumentParser(description="Translate a CSV file using an Ollama LLM.")
-    parser.add_argument("csv_path", type=str, help="Path to the input CSV file.")
-    parser.add_argument("source_lang", type=str, help="Source language.")
-    parser.add_argument("target_lang", type=str, help="Target language.")
-    parser.add_argument("--ollama_host", type=str, default="http://192.168.7.149:11434", help="Ollama host URL.")
-    parser.add_argument("--model", type=str, default="gpt-oss:20b", help="Ollama model to use.")
-    parser.add_argument("--batch-size", type=int, default=10, help="Number of rows to process before saving.")
-    parser.add_argument("--overwrite", action='store_true', help="Overwrite existing translations. If false, only translates rows with empty target.")
+from process import process_csv
 
-    args = parser.parse_args()
+app = FastAPI()
 
-    input_path = Path(args.csv_path)
-    if not input_path.is_file():
-        print(f"Error: File not found at {input_path}")
-        return
+# 設置模板和靜態文件目錄
+templates = Jinja2Templates(directory="templates")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
+# 臨時上傳文件的存放位置
+UPLOAD_DIR = Path("uploads")
+UPLOAD_DIR.mkdir(exist_ok=True)
+
+# 用於追蹤背景任務和 WebSocket 連線
+active_tasks = {}
+active_websockets = {}
+
+@app.get("/", response_class=HTMLResponse)
+async def read_root(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
+
+@app.post("/upload")
+async def handle_upload(
+    csv_file: UploadFile = File(...),
+    source_lang: str = Form(...),
+    target_lang: str = Form(...),
+    overwrite: bool = Form(False),
+    ollama_host: str = Form("http://192.168.7.149:11434"),
+    model: str = Form("gpt-oss:20b"),
+    batch_size: int = Form(10),
+):
+    task_id = str(uuid.uuid4())
+    file_path = UPLOAD_DIR / f"{task_id}_{csv_file.filename}"
+
+    with open(file_path, "wb") as buffer:
+        buffer.write(await csv_file.read())
+
+    # 將任務參數存儲起來，等待 WebSocket 來領取
+    active_tasks[task_id] = {
+        "file_path": file_path,
+        "source_lang": source_lang,
+        "target_lang": target_lang,
+        "ollama_host": ollama_host,
+        "model": model,
+        "batch_size": batch_size,
+        "overwrite": overwrite,
+        "status": "pending"
+    }
+
+    return JSONResponse({"task_id": task_id})
+
+@app.websocket("/ws")
+async def websocket_endpoint(websocket: WebSocket):
+    await websocket.accept()
+    ws_id = str(uuid.uuid4())
+    active_websockets[ws_id] = websocket
+    
     try:
-        df = pd.read_csv(input_path)
+        # 等待前端發送任務ID
+        message = await websocket.receive_json()
+        task_id = message.get("task_id")
+
+        if task_id and task_id in active_tasks:
+            task_info = active_tasks[task_id]
+            if task_info["status"] == "pending":
+                task_info["status"] = "running"
+                
+                # 執行翻譯任務
+                await process_csv(
+                    csv_path=task_info["file_path"],
+                    source_lang=task_info["source_lang"],
+                    target_lang=task_info["target_lang"],
+                    ollama_host=task_info["ollama_host"],
+                    model=task_info["model"],
+                    batch_size=task_info["batch_size"],
+                    overwrite=task_info["overwrite"],
+                    websocket=websocket
+                )
+                
+                # 任務完成後清理
+                del active_tasks[task_id]
+                task_info["file_path"].unlink() # 刪除臨時文件
+
+    except WebSocketDisconnect:
+        print(f"WebSocket {ws_id} disconnected.")
     except Exception as e:
-        print(f"Error reading CSV file: {e}")
-        return
+        print(f"An error occurred in WebSocket: {e}")
+    finally:
+        if ws_id in active_websockets:
+            del active_websockets[ws_id]
 
-    if 'source' not in df.columns:
-        print("Error: CSV file must contain a 'source' column.")
-        return
-
-    if 'target' not in df.columns:
-        df['target'] = ""
-
-    # 修正 pandas 讀取空值行為：先填充na再轉str
-    df['source'] = df['source'].fillna('').astype(str)
-    df['target'] = df['target'].fillna('').astype(str)
-
-    # 根據 overwrite 旗標決定要翻譯的行
-    if not args.overwrite:
-        print("Overwrite mode is OFF. Only translating rows with empty target.")
-        rows_to_process_mask = (df['target'] == '') | (df['target'].isna())
-        indices_to_update = df.index[rows_to_process_mask]
-        texts_to_translate = df.loc[indices_to_update, 'source'].tolist()
-    else:
-        print("Overwrite mode is ON. Translating all rows.")
-        indices_to_update = df.index
-        texts_to_translate = df["source"].tolist()
-
-    total_to_translate = len(texts_to_translate)
-    if total_to_translate == 0:
-        print("No empty target fields to translate. All done!")
-        return
-        
-    print(f"Found {total_to_translate} texts to translate...")
-
-    client = ollama.AsyncClient(host=args.ollama_host)
-    output_path = input_path.parent / f"{input_path.stem}_translated.csv"
-
-    # 以批次方式處理
-    for i in range(0, total_to_translate, args.batch_size):
-        batch_texts = texts_to_translate[i:i + args.batch_size]
-        batch_indices = indices_to_update[i:i + args.batch_size]
-        
-        start_num = i + 1
-        end_num = min(i + args.batch_size, total_to_translate)
-        print(f"--- Translating batch {start_num}-{end_num} of {total_to_translate} ---")
-
-        tasks = [
-            translate_text(client, text, args.source_lang, args.target_lang, args.model)
-            for text in batch_texts
-        ]
-
-        batch_results = await asyncio.gather(*tasks)
-
-        # 將批次結果寫回DataFrame
-        df.loc[batch_indices, 'target'] = batch_results
-
-        try:
-            df.to_csv(output_path, index=False, encoding='utf-8-sig')
-            print(f"Progress for batch {start_num}-{end_num} saved to {output_path}")
-        except Exception as e:
-            print(f"Error writing to CSV file: {e}")
-            return
-
-    print(f"\nTranslation complete. Final results saved to {output_path}")
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    uvicorn.run(app, host="0.0.0.0", port=8000)

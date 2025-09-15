@@ -1,0 +1,110 @@
+:root {
+    --md-primary-fg-color: #0087A9;
+    --header-bg-color: #0087A9;
+    --text-color: white;
+}
+
+body {
+    font-family: 'Microsoft JhengHei', Calibri, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 確保所有內容在水平方向上置中 */
+    padding: 20px;
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
+}
+
+.logo-container {
+    position: absolute; /* 使 logo 固定在 header 左側 */
+    left: 20px;
+}
+
+.logo-container img {
+    width: 180px; /* 調整這個值來改變logo的大小 */
+    height: auto;
+    filter: invert(100%); /* 將 logo 顏色改為白色（適用於黑色 logo） */
+}
+
+.title-container {
+    flex: 1;
+    text-align: center; /* 使標題置中 */
+    margin: 0 auto; /* 確保標題容器在中間 */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 4rem;
+}
+
+@media (max-width: 600px) {
+    .logo-container {
+	position: static; /* 在小屏幕上使 logo 靜態顯示 */
+	margin-bottom: 10px;
+    }
+
+    .logo-container img {
+	width: 60px; /* 調整 logo 的大小 */
+    }
+
+    .title-container {
+	padding-left: 0; /* 移除內邊距 */
+    }
+
+    header h1 {
+	font-size: 2rem; /* 調整標題字體大小 */
+    }
+}
+
+.grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    flex: 1 1 300px;
+    max-width: 350px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h2 {
+    font-size: 1.4rem;
+    margin: 15px 0;
+    color: var(--md-primary-fg-color);
+}
+
+.card p {
+    font-size: 1.2rem;
+    padding: 0 15px 15px;
+}
+
+.card a {
+    display: block;
+    padding: 10px;
+    background-color: var(--md-primary-fg-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 0 0 10px 10px;
+}
+
+.card a:hover {
+    background-color: #005f73;
+}

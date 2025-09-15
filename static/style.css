@@ -1,0 +1,144 @@
+/* 引入 dlink.css 的風格 */
+@import url('dlink.css');
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+.left-panel {
+    flex: 0 0 30%; /* 固定為 30% 寬度 */
+    min-width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.right-panel {
+    flex: 1; /* 佔據剩餘空間 */
+    min-width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.left-panel h2, .right-panel h2 {
+    color: var(--md-primary-fg-color);
+    margin-top: 0;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.form-group, .form-group-checkbox {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"], .form-group input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.form-group-checkbox input {
+    margin-right: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--md-primary-fg-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #005f73;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.preview-controls {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.preview-container {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    height: 400px;
+    overflow: auto;
+    padding: 10px;
+}
+
+#csv-preview {
+    white-space: pre;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+#status-log {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #222;
+    color: #eee;
+    border-radius: 5px;
+    height: 150px;
+    overflow-y: scroll;
+    font-family: monospace;
+    font-size: 0.8rem;
+}
+
+/* Progress Bar Styles */
+.progress-container {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-bar-outer {
+    flex-grow: 1;
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar-inner {
+    height: 100%;
+    width: 0%; /* Initial width */
+    background-color: var(--md-primary-fg-color);
+    border-radius: 10px;
+    transition: width 0.4s ease;
+}
+
+#progress-text {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
