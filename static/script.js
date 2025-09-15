@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = form.querySelector('button');
     const progressBar = document.getElementById('progress-bar');
     const progressText = document.getElementById('progress-text');
-    const progressBarOuter = document.querySelector('.progress-bar-outer'); // 取得動畫目標
+    const progressBarOuter = document.querySelector('.progress-bar-outer');
     const tokenModal = document.getElementById('token-modal');
     const tokenInput = document.getElementById('token-input');
     const tokenSubmit = document.getElementById('token-submit');
@@ -68,11 +68,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function resetUI() {
         submitBtn.disabled = false;
         downloadBtn.disabled = true;
-        csvPreview.innerHTML = '<p style="color: #888;">翻譯預覽將顯示於此</p>';
+        csvPreview.innerHTML = '<p style="color: #888;">Translation preview will be shown here.</p>';
         statusLog.innerHTML = '';
         progressBar.style.width = '0%';
         progressText.textContent = '0%';
-        progressBarOuter.classList.remove('progress-bar-animated'); // 移除動畫
+        progressBarOuter.classList.remove('progress-bar-animated');
     }
 
     function renderTable(jsonData) {
@@ -128,10 +128,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     const percentage = total > 0 ? Math.round((processed / total) * 100) : 100;
                     progressBar.style.width = `${percentage}%`;
                     progressText.textContent = `${percentage}%`;
-
                     if (percentage >= 100) {
                         submitBtn.disabled = false;
-                        progressBarOuter.classList.remove('progress-bar-animated'); // 完成後移除動畫
+                        progressBarOuter.classList.remove('progress-bar-animated');
                     }
                     break;
             }
@@ -150,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         resetUI();
         submitBtn.disabled = true;
-        progressBarOuter.classList.add('progress-bar-animated'); // 開始時加入動畫
+        progressBarOuter.classList.add('progress-bar-animated');
         log('Starting translation process...');
 
         const formData = new FormData(form);

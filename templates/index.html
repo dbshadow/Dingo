@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <!-- Token 輸入對話框 -->
+    <!-- Token Input Modal -->
     <div id="token-modal" class="modal">
         <div class="modal-content">
             <h2>API Token Required</h2>
@@ -29,15 +29,15 @@
 
     <main class="container">
         <div class="left-panel">
-            <h2>設定</h2>
+            <h2>Settings</h2>
             <form id="upload-form">
                 <div class="form-group">
-                    <label for="csv-file">1. 上傳 CSV 檔案</label>
+                    <label for="csv-file">1. Upload CSV File</label>
                     <input type="file" id="csv-file" name="csv_file" accept=".csv" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="source-lang">2. 來源語言</label>
+                    <label for="source-lang">2. Source Language</label>
                     <select id="source-lang" name="source_lang" required>
                         <option value="Arabic">Arabic</option>
                         <option value="Chinese (Simplified)">Chinese (Simplified)</option>
@@ -63,7 +63,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="target-lang">3. 目標語言</label>
+                    <label for="target-lang">3. Target Language</label>
                     <select id="target-lang" name="target_lang" required>
                         <option value="Arabic">Arabic</option>
                         <option value="Chinese (Simplified)">Chinese (Simplified)</option>
@@ -90,21 +90,21 @@
 
                 <div class="form-group-checkbox">
                     <input type="checkbox" id="overwrite" name="overwrite">
-                    <label for="overwrite">覆寫已翻譯的欄位 (Overwrite)</label>
+                    <label for="overwrite">Overwrite existing translations</label>
                 </div>
 
-                <button type="submit">開始翻譯</button>
+                <button type="submit">Start Translation</button>
             </form>
             <div id="status-log"></div>
         </div>
 
         <div class="right-panel">
-            <h2>預覽</h2>
+            <h2>Preview</h2>
             <div class="preview-controls">
-                 <button id="download-btn" disabled>下載翻譯後的 CSV</button>
+                 <button id="download-btn" disabled>Download Translated CSV</button>
             </div>
             <div class="preview-container" id="csv-preview">
-                <!-- 表格將由 JavaScript 動態生成於此 -->
+                <!-- The table will be dynamically generated here by JavaScript -->
             </div>
             <div class="progress-container">
                 <div class="progress-bar-outer">
