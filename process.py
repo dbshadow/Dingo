@@ -51,14 +51,18 @@ async def process_csv(
         texts_to_translate = df["source"].tolist()
 
     total_to_translate = len(texts_to_translate)
+
+    # --- NEW: 發送初始狀態預覽 ---
+    await send_ws_message(websocket, 'progress', {
+        "csv_json": df.to_dict('records'),
+        "csv_string": df.to_csv(index=False, encoding='utf-8-sig'),
+        "processed": 0,
+        "total": total_to_translate
+    })
+    # --- END NEW ---
+
     if total_to_translate == 0:
         await send_ws_message(websocket, 'log', {"message": "No empty target fields to translate. All done!"})
-        await send_ws_message(websocket, 'progress', {
-            "csv_json": df.to_dict('records'),
-            "csv_string": df.to_csv(index=False, encoding='utf-8-sig'),
-            "processed": 0,
-            "total": 0
-        })
         return
 
     await send_ws_message(websocket, 'log', {"message": f"Found {total_to_translate} texts to translate..."})

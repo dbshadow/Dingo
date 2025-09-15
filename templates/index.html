@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
+    <!-- Token 輸入對話框 -->
+    <div id="token-modal" class="modal">
+        <div class="modal-content">
+            <h2>API Token Required</h2>
+            <p id="token-message">Please enter the API token to use this service.</p>
+            <input type="password" id="token-input" placeholder="Enter token...">
+            <button id="token-submit">Submit</button>
+        </div>
+    </div>
+
     <header>
         <div class="logo-container">
             <a href="/"><img src="/static/logo.png" alt="D-Link Logo"></a>

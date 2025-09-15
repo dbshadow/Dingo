@@ -1,15 +1,35 @@
 import uvicorn
 import asyncio
 import uuid
+import os
 from pathlib import Path
-from fastapi import FastAPI, Request, WebSocket, UploadFile, File, Form, WebSocketDisconnect
+from dotenv import load_dotenv
+
+from fastapi import FastAPI, Request, WebSocket, UploadFile, File, Form, WebSocketDisconnect, Depends, HTTPException
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
+from starlette.status import HTTP_401_UNAUTHORIZED
+from fastapi.security import APIKeyHeader
 
 from process import process_csv
 
+# 載入 .env 文件中的環境變數
+load_dotenv()
+
+# 從環境變數讀取 API Token
+API_TOKEN = os.getenv("API_TOKEN")
+
+# --- 啟動時檢查 ---
+if not API_TOKEN:
+    print("\033[91mFATAL: API_TOKEN not found in environment variables or .env file.\033[0m")
+    print("Please create a .env file and add a line like: API_TOKEN=\"your-secret-token\"")
+    exit(1)
+# --- 檢查結束 ---
+
 app = FastAPI()
+
+API_KEY_HEADER = APIKeyHeader(name="X-API-Token")
 
 # 設置模板和靜態文件目錄
 templates = Jinja2Templates(directory="templates")
@@ -23,11 +43,17 @@ UPLOAD_DIR.mkdir(exist_ok=True)
 active_tasks = {}
 active_websockets = {}
 
+# API Token 驗證函式 (FastAPI Dependency)
+async def verify_api_token(api_key: str = Depends(API_KEY_HEADER)):
+    if api_key != API_TOKEN:
+        raise HTTPException(status_code=HTTP_401_UNAUTHORIZED, detail="Invalid or missing API Token")
+
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
-@app.post("/upload")
+# 保護 /upload 端點
+@app.post("/upload", dependencies=[Depends(verify_api_token)])
 async def handle_upload(
     csv_file: UploadFile = File(...),
     source_lang: str = Form(...),
@@ -43,7 +69,6 @@ async def handle_upload(
     with open(file_path, "wb") as buffer:
         buffer.write(await csv_file.read())
 
-    # 將任務參數存儲起來，等待 WebSocket 來領取
     active_tasks[task_id] = {
         "file_path": file_path,
         "source_lang": source_lang,
@@ -64,7 +89,6 @@ async def websocket_endpoint(websocket: WebSocket):
     active_websockets[ws_id] = websocket
     
     try:
-        # 等待前端發送任務ID
         message = await websocket.receive_json()
         task_id = message.get("task_id")
 
@@ -73,7 +97,6 @@ async def websocket_endpoint(websocket: WebSocket):
             if task_info["status"] == "pending":
                 task_info["status"] = "running"
                 
-                # 執行翻譯任務
                 await process_csv(
                     csv_path=task_info["file_path"],
                     source_lang=task_info["source_lang"],
@@ -85,9 +108,9 @@ async def websocket_endpoint(websocket: WebSocket):
                     websocket=websocket
                 )
                 
-                # 任務完成後清理
-                del active_tasks[task_id]
-                task_info["file_path"].unlink() # 刪除臨時文件
+                if task_id in active_tasks:
+                    active_tasks[task_id]["file_path"].unlink(missing_ok=True)
+                    del active_tasks[task_id]
 
     except WebSocketDisconnect:
         print(f"WebSocket {ws_id} disconnected.")

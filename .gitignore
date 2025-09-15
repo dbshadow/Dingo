@@ -1,11 +1,16 @@
-# Python-generated files
+# Environment variables
+.env
+
+# Python virtual environment
+.venv/
+
+# Python cache
 __pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
+*.py[cod]
+*$py.class
+
+# Uploaded files
 uploads/
 
-# Virtual environments
-.venv
+# Translated output (can be regenerated)
+*_translated.csv
