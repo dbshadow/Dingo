@@ -1,6 +1,10 @@
 /* 引入 dlink.css 的風格 */
 @import url('dlink.css');
 
+header {
+    position: relative; /* 為了讓絕對定位的子元素有參考點 */
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -26,7 +30,7 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.left-panel h2, .right-panel h2 {
+.left-panel h2, .right-panel h2, .full-width-panel h2 {
     color: var(--md-primary-fg-color);
     margin-top: 0;
     border-bottom: 2px solid #eee;
@@ -111,9 +115,7 @@ button:disabled {
     padding: 10px;
 }
 
-
-
-#status-log {
+#status-log, #idml-tools-log {
     margin-top: 20px;
     padding: 10px;
     background-color: #222;
@@ -155,7 +157,6 @@ button:disabled {
     font-size: 0.9rem;
 }
 
-
 /* Table Styles */
 #csv-preview table {
     width: 100%;
@@ -180,7 +181,6 @@ button:disabled {
 .target-column {
     color: #28a745; /* A nice shade of green */
 }
-
 
 /* Token Modal Styles */
 .modal {
@@ -219,8 +219,6 @@ button:disabled {
     box-sizing: border-box;
 }
 
-
-
 @keyframes animate-stripes {
     from { background-position: 40px 0; }
     to { background-position: 0 0; }
@@ -232,3 +230,73 @@ button:disabled {
     animation: animate-stripes 1s linear infinite;
 }
 
+/* Tab Styles */
+.tabs {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.tab-link {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: 0.3s;
+    font-size: 1rem;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+.tab-link:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.tab-link.active {
+    background-color: white;
+    color: var(--md-primary-fg-color);
+    font-weight: bold;
+}
+
+.tab-content {
+    display: none; /* Hidden by default */
+}
+
+.tab-content.active {
+    display: flex; /* Show active tab */
+}
+
+.full-width-panel {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box; /* 關鍵：將 padding 和 border 包含在寬度計算中 */
+}
+
+.tool-section {
+    margin-bottom: 20px;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: #eee;
+    margin: 40px 0;
+}
+
+#idml-tools-log {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #222;
+    color: #eee;
+    border-radius: 5px;
+    min-height: 100px;
+    overflow-y: scroll;
+    font-family: monospace;
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+}

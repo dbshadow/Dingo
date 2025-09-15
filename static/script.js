@@ -1,5 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // DOM Elements
+    // --- Tab Navigation ---
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const tabId = link.dataset.tab;
+
+            tabLinks.forEach(innerLink => innerLink.classList.remove('active'));
+            link.classList.add('active');
+
+            tabContents.forEach(content => {
+                // The IDML panel has a different layout, so use 'block' for it.
+                if (content.id === 'idml-tools') {
+                    content.style.display = content.id === tabId ? 'block' : 'none';
+                } else {
+                    content.style.display = content.id === tabId ? 'flex' : 'none';
+                }
+            });
+        });
+    });
+
+    // --- CSV Translator Elements ---
     const form = document.getElementById('upload-form');
     const statusLog = document.getElementById('status-log');
     const csvPreview = document.getElementById('csv-preview');
@@ -8,16 +30,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const progressBar = document.getElementById('progress-bar');
     const progressText = document.getElementById('progress-text');
     const progressBarOuter = document.querySelector('.progress-bar-outer');
+
+    // --- IDML Tools Elements ---
+    const idmlExtractForm = document.getElementById('idml-extract-form');
+    const idmlRebuildForm = document.getElementById('idml-rebuild-form');
+    const idmlToolsLog = document.getElementById('idml-tools-log'); // Shared log for IDML tools
+
+    // --- Shared Logic (Token, Auth, etc.) ---
     const tokenModal = document.getElementById('token-modal');
     const tokenInput = document.getElementById('token-input');
     const tokenSubmit = document.getElementById('token-submit');
     const tokenMessage = document.getElementById('token-message');
-
-    // State
     let websocket;
     let translatedCSVContent = '';
 
-    // --- Token Modal Logic ---
     function showTokenModal(message) {
         tokenMessage.textContent = message || "Please enter the API token to use this service.";
         tokenModal.style.display = "flex";
@@ -35,37 +61,110 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- Authenticated Fetch ---
     async function authenticatedFetch(url, options) {
         const token = localStorage.getItem('api_token');
         if (!token) {
             showTokenModal();
             throw new Error("API Token not found.");
         }
-
         const headers = new Headers(options.headers || {});
         headers.append('X-API-Token', token);
         options.headers = headers;
-
         const response = await fetch(url, options);
-
         if (response.status === 401) {
             localStorage.removeItem('api_token');
             showTokenModal("Token is invalid or has expired. Please enter a new one.");
             throw new Error("Authentication failed.");
         }
-
         return response;
     }
 
-    // --- UI & WebSocket Logic ---
-    function log(message) {
+    function logTo(logger, message, isError = false) {
         const timestamp = new Date().toLocaleTimeString();
-        statusLog.innerHTML += `[${timestamp}] ${message}\n`;
-        statusLog.scrollTop = statusLog.scrollHeight;
+        const color = isError ? '#ff6b6b' : '#eee';
+        logger.innerHTML += `<span style="color: ${color}">[${timestamp}] ${message}</span>\n`;
+        logger.scrollTop = logger.scrollHeight;
     }
 
-    function resetUI() {
+    // --- IDML Tools Event Listeners ---
+    idmlExtractForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const btn = idmlExtractForm.querySelector('button');
+        btn.disabled = true;
+        btn.textContent = 'Extracting...';
+        idmlToolsLog.innerHTML = ''; // Clear shared log
+        logTo(idmlToolsLog, 'Starting IDML extraction...');
+
+        const formData = new FormData(idmlExtractForm);
+
+        try {
+            const response = await authenticatedFetch('/extract_idml', { method: 'POST', body: formData });
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.detail || `HTTP error! status: ${response.status}`);
+            }
+            const blob = await response.blob();
+            const filename = response.headers.get('Content-Disposition').split('filename=')[1].replace(/"/g, '');
+            
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            logTo(idmlToolsLog, `Successfully extracted and downloaded ${filename}`);
+
+        } catch (error) {
+            logTo(idmlToolsLog, `Extraction failed: ${error.message}`, true);
+        } finally {
+            btn.disabled = false;
+            btn.textContent = 'Extract to CSV';
+        }
+    });
+
+    idmlRebuildForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const btn = idmlRebuildForm.querySelector('button');
+        btn.disabled = true;
+        btn.textContent = 'Rebuilding...';
+        idmlToolsLog.innerHTML = ''; // Clear shared log
+        logTo(idmlToolsLog, 'Starting IDML rebuild...');
+
+        const formData = new FormData(idmlRebuildForm);
+
+        try {
+            const response = await authenticatedFetch('/rebuild_idml', { method: 'POST', body: formData });
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.detail || `HTTP error! status: ${response.status}`);
+            }
+            const blob = await response.blob();
+            const filename = response.headers.get('Content-Disposition').split('filename=')[1].replace(/"/g, '');
+            
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            logTo(idmlToolsLog, `Successfully rebuilt and downloaded ${filename}`);
+
+        } catch (error) {
+            logTo(idmlToolsLog, `Rebuild failed: ${error.message}`, true);
+        } finally {
+            btn.disabled = false;
+            btn.textContent = 'Rebuild IDML';
+        }
+    });
+
+    // --- CSV Translator Logic ---
+    function resetTranslatorUI() {
         submitBtn.disabled = false;
         downloadBtn.disabled = true;
         csvPreview.innerHTML = '<p style="color: #888;">Translation preview will be shown here.</p>';
@@ -108,18 +207,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
         const wsUrl = `${wsProtocol}//${window.location.host}/ws`;
         websocket = new WebSocket(wsUrl);
-        websocket.onopen = () => log('WebSocket connection established.');
+        websocket.onopen = () => logTo(statusLog, 'WebSocket connection established.');
         websocket.onmessage = (event) => {
             const data = JSON.parse(event.data);
             const payload = data.payload;
             switch (data.type) {
-                case 'log':
-                    log(payload.message);
-                    break;
-                case 'error':
-                    log(`ERROR: ${payload.message}`);
-                    resetUI();
-                    break;
+                case 'log': logTo(statusLog, payload.message); break;
+                case 'error': logTo(statusLog, `ERROR: ${payload.message}`, true); resetTranslatorUI(); break;
                 case 'progress':
                     translatedCSVContent = payload.csv_string;
                     renderTable(payload.csv_json);
@@ -135,39 +229,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     break;
             }
         };
-        websocket.onclose = () => {
-            log('WebSocket connection closed. Please refresh the page to reconnect.');
-            submitBtn.disabled = true;
-        };
-        websocket.onerror = (error) => {
-            log('WebSocket error. See console for details.');
-            console.error('WebSocket Error:', error);
-        };
+        websocket.onclose = () => { logTo(statusLog, 'WebSocket connection closed. Please refresh the page to reconnect.', true); submitBtn.disabled = true; };
+        websocket.onerror = (error) => { logTo(statusLog, 'WebSocket error. See console for details.', true); console.error('WebSocket Error:', error); };
     }
 
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
-        resetUI();
+        resetTranslatorUI();
         submitBtn.disabled = true;
         progressBarOuter.classList.add('progress-bar-animated');
-        log('Starting translation process...');
-
+        logTo(statusLog, 'Starting translation process...');
         const formData = new FormData(form);
-
         try {
-            const response = await authenticatedFetch('/upload', {
-                method: 'POST',
-                body: formData,
-            });
-
+            const response = await authenticatedFetch('/upload', { method: 'POST', body: formData });
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-
             const result = await response.json();
-            log(`Backend task started with ID: ${result.task_id}`);
+            logTo(statusLog, `Backend task started with ID: ${result.task_id}`);
             websocket.send(JSON.stringify({ task_id: result.task_id }));
         } catch (error) {
-            log(`Upload failed: ${error.message}`);
-            resetUI();
+            logTo(statusLog, `Upload failed: ${error.message}`, true);
+            resetTranslatorUI();
         }
     });
 
@@ -189,6 +270,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!localStorage.getItem('api_token')) {
         showTokenModal();
     }
-    resetUI();
+    resetTranslatorUI();
     connectWebSocket();
 });

@@ -6,13 +6,14 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from fastapi import FastAPI, Request, WebSocket, UploadFile, File, Form, WebSocketDisconnect, Depends, HTTPException
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse, Response
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from starlette.status import HTTP_401_UNAUTHORIZED
 from fastapi.security import APIKeyHeader
 
 from process import process_csv
+from idml_processor import extract_idml_to_csv, rebuild_idml_from_csv # 引入新模組
 
 # 載入 .env 文件中的環境變數
 load_dotenv()
@@ -81,6 +82,66 @@ async def handle_upload(
     }
 
     return JSONResponse({"task_id": task_id})
+
+# IDML 提取端點
+@app.post("/extract_idml", dependencies=[Depends(verify_api_token)])
+async def handle_idml_extraction(idml_file: UploadFile = File(...)):
+    temp_idml_path = UPLOAD_DIR / f"temp_{idml_file.filename}"
+    try:
+        with open(temp_idml_path, "wb") as buffer:
+            buffer.write(await idml_file.read())
+
+        csv_content = extract_idml_to_csv(temp_idml_path)
+        
+        output_filename = f"{Path(idml_file.filename).stem}.csv"
+        headers = {'Content-Disposition': f'attachment; filename="{output_filename}"'}
+        return Response(content=csv_content, media_type="text/csv", headers=headers)
+
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"An unexpected error occurred: {e}")
+    finally:
+        if os.path.exists(temp_idml_path):
+            os.remove(temp_idml_path)
+
+# --- NEW: IDML 重建端點 ---
+@app.post("/rebuild_idml", dependencies=[Depends(verify_api_token)])
+async def handle_idml_rebuild(
+    original_idml: UploadFile = File(...),
+    translated_csv: UploadFile = File(...)
+):
+    # 為上傳的檔案創建唯一的暫存路徑
+    temp_idml_path = UPLOAD_DIR / f"temp_rebuild_{original_idml.filename}"
+    temp_csv_path = UPLOAD_DIR / f"temp_rebuild_{translated_csv.filename}"
+
+    try:
+        # 儲存暫存檔案
+        with open(temp_idml_path, "wb") as buffer:
+            buffer.write(await original_idml.read())
+        with open(temp_csv_path, "wb") as buffer:
+            buffer.write(await translated_csv.read())
+
+        # 呼叫核心邏輯
+        rebuilt_idml_content = rebuild_idml_from_csv(temp_idml_path, temp_csv_path)
+
+        # 準備下載的檔名
+        output_filename = f"{Path(original_idml.filename).stem}_translated.idml"
+        headers = {'Content-Disposition': f'attachment; filename="{output_filename}"'}
+        
+        return Response(content=rebuilt_idml_content, media_type="application/vnd.adobe.indesign-idml-package", headers=headers)
+
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"An unexpected error occurred: {e}")
+    finally:
+        # 清理所有暫存檔案
+        if os.path.exists(temp_idml_path):
+            os.remove(temp_idml_path)
+        if os.path.exists(temp_csv_path):
+            os.remove(temp_csv_path)
+# --- END NEW ---
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):

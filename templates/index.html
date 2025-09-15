@@ -25,9 +25,14 @@
         <div class="title-container">
             <h1>D-Link Translator</h1>
         </div>
+        <div class="tabs">
+            <button class="tab-link active" data-tab="csv-translator">CSV Translator</button>
+            <button class="tab-link" data-tab="idml-tools">IDML Tools</button>
+        </div>
     </header>
 
-    <main class="container">
+    <main class="container tab-content active" id="csv-translator">
+        <!-- CSV Translator Panel -->
         <div class="left-panel">
             <h2>Settings</h2>
             <form id="upload-form">
@@ -35,7 +40,6 @@
                     <label for="csv-file">1. Upload CSV File</label>
                     <input type="file" id="csv-file" name="csv_file" accept=".csv" required>
                 </div>
-
                 <div class="form-group">
                     <label for="source-lang">2. Source Language</label>
                     <select id="source-lang" name="source_lang" required>
@@ -61,7 +65,6 @@
                         <option value="Vietnamese">Vietnamese</option>
                     </select>
                 </div>
-
                 <div class="form-group">
                     <label for="target-lang">3. Target Language</label>
                     <select id="target-lang" name="target_lang" required>
@@ -87,31 +90,60 @@
                         <option value="Vietnamese">Vietnamese</option>
                     </select>
                 </div>
-
                 <div class="form-group-checkbox">
                     <input type="checkbox" id="overwrite" name="overwrite">
                     <label for="overwrite">Overwrite existing translations</label>
                 </div>
-
                 <button type="submit">Start Translation</button>
             </form>
             <div id="status-log"></div>
         </div>
-
         <div class="right-panel">
             <h2>Preview</h2>
             <div class="preview-controls">
                  <button id="download-btn" disabled>Download Translated CSV</button>
             </div>
-            <div class="preview-container" id="csv-preview">
-                <!-- The table will be dynamically generated here by JavaScript -->
-            </div>
+            <div class="preview-container" id="csv-preview"></div>
             <div class="progress-container">
                 <div class="progress-bar-outer">
                     <div class="progress-bar-inner" id="progress-bar"></div>
                 </div>
                 <span id="progress-text">0%</span>
             </div>
+        </div>
+    </main>
+
+    <main class="container tab-content" id="idml-tools" style="display: none;">
+        <!-- IDML Tools Panel -->
+        <div class="full-width-panel">
+            <div class="tool-section">
+                <h2>1. IDML to CSV Extractor</h2>
+                <p>This tool extracts text from an Adobe InDesign IDML file and converts it into a CSV file ready for translation.</p>
+                <form id="idml-extract-form">
+                    <div class="form-group">
+                        <label for="idml-file-extract">Upload IDML File</label>
+                        <input type="file" id="idml-file-extract" name="idml_file" accept=".idml" required>
+                    </div>
+                    <button type="submit">Extract to CSV</button>
+                </form>
+            </div>
+            <hr class="section-divider">
+            <div class="tool-section">
+                <h2>2. Rebuild IDML from CSV</h2>
+                <p>This tool merges a translated CSV file back into the original IDML file structure.</p>
+                <form id="idml-rebuild-form">
+                    <div class="form-group">
+                        <label for="idml-file-rebuild">Upload Original IDML File</label>
+                        <input type="file" id="idml-file-rebuild" name="original_idml" accept=".idml" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="csv-file-rebuild">Upload Translated CSV File</label>
+                        <input type="file" id="csv-file-rebuild" name="translated_csv" accept=".csv" required>
+                    </div>
+                    <button type="submit">Rebuild IDML</button>
+                </form>
+            </div>
+            <div id="idml-tools-log"></div> <!-- Shared Log Area -->
         </div>
     </main>
 
