@@ -38,13 +38,16 @@ def extract_idml_to_csv(idml_file_path: Path) -> str:
     # Filter out empty strings that might result from empty tags
     stories_content = [text for text in stories_content if text]
 
-    if not stories_content:
+    # --- NEW: Deduplicate the list while preserving order ---
+    unique_stories = list(dict.fromkeys(stories_content))
+
+    if not unique_stories:
         return "source,target\n"
 
-    # Create a pandas DataFrame
+    # Create a pandas DataFrame from the unique list
     df = pd.DataFrame({
-        'source': stories_content,
-        'target': [''] * len(stories_content) # Add an empty target column
+        'source': unique_stories,
+        'target': [''] * len(unique_stories) # Add an empty target column
     })
 
     # Convert DataFrame to CSV string
