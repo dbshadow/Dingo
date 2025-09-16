@@ -1,5 +1,6 @@
 # Use the official uv-provided Python image, which is pre-configured and optimized.
 FROM ghcr.io/astral-sh/uv:python3.12-bookworm-slim
+
 # Set the working directory in the container
 WORKDIR /app
 
@@ -30,6 +31,6 @@ COPY . .
 EXPOSE 8000
 
 # --- Run Command ---
-# Command to run the application using uvicorn. 
-# We use uvicorn directly for better control in a production-like environment.
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Use "uv run" to ensure that the command is executed within the environment
+# managed by uv, which correctly resolves the path to uvicorn.
+CMD ["uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
