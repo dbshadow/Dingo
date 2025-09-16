@@ -1,0 +1,24 @@
+# Docker specific
+Dockerfile
+.dockerignore
+
+# Python virtual environment
+.venv/
+
+# Environment variables - DO NOT COMMIT
+.env
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Temporary files
+.pytest_cache/
+.ruff_cache/
+uploads/
+
+# Git files
+.git/
+.gitignore

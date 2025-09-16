@@ -1,18 +1,19 @@
 # D-Link Translator
 
-A simple but powerful tool for translating CSV files using an Ollama-powered Large Language Model. It provides both a user-friendly Web UI and a versatile Command-Line Interface (CLI).
+A web-based and command-line tool for translating CSV files and processing IDML files using an Ollama-powered Large Language Model.
 
 ## Features
 
-- **Dual Interface**: Use the intuitive Web UI for manual translations or the powerful CLI for automation and backend tasks.
-- **CSV Translation**: Translates text from a `source` column to a `target` column in a CSV file.
-- **Real-time Preview**: The Web UI features a live preview that shows translation progress in real-time using WebSockets.
-- **Batch Processing**: Processes large files in batches, saving progress intermittently to prevent data loss.
-- **Selective Translation**: Choose to overwrite existing translations or only fill in empty `target` fields.
-- **Secure Web Access**: The web interface is protected by API Token authentication.
-- **Configurable**: Easily configure languages, Ollama host, model, and batch size.
+- **Dual Interface**: Use the intuitive Web UI for manual tasks or the powerful CLI for automation.
+- **CSV Translation**: Translates text from a `source` column to a `target` column in a CSV file with real-time progress updates.
+- **IDML Workflow**: Provides a complete workflow for translating Adobe InDesign files:
+    - **Extractor**: Extracts text from an `.idml` file into a ready-to-translate `.csv` file.
+    - **Rebuilder**: Merges a translated `.csv` file back into the original `.idml` structure.
+- **Real-time Preview**: The Web UI features a live preview that shows translation progress in a color-coded table.
+- **Secure & Configurable**: Web access is protected by a configurable API Token, and key parameters like languages and Ollama settings can be easily adjusted.
+- **Dockerized**: Comes with a production-ready Dockerfile for easy deployment.
 
-## Setup and Installation
+## Setup and Installation (Local Development)
 
 This project is managed with `uv`. Ensure you have Python 3.10+ and `uv` installed.
 
@@ -22,67 +23,72 @@ git clone <repository-url>
 cd DlinkTranslator
 ```
 
-**2. Create Virtual Environment**
-Use `uv` to create a virtual environment in the `.venv` directory.
+**2. Create Virtual Environment & Install Dependencies**
+`uv` can perform both steps in one command:
 ```bash
-uv venv
-```
-
-**3. Install Dependencies**
-Activate the environment and install the required packages from `pyproject.toml`.
-```bash
-# On Linux/macOS
-source .venv/bin/activate
-
-# On Windows
-.venv\Scripts\activate
-
-# Install packages
 uv sync
 ```
+This creates a `.venv` folder if it doesn't exist and installs all packages from `pyproject.toml`.
 
-## Configuration
-
-The web server requires an API Token for security. This is configured via a `.env` file.
-
-**1. Create the `.env` file**
-Create a file named `.env` in the root of the project directory.
-
-**2. Set the API Token**
-Add the following line to your `.env` file, replacing the example token with your own secure token.
+**3. Configure API Token**
+Create a `.env` file in the project root and add your secret API token:
 ```
 API_TOKEN="your-super-secret-and-long-token-here"
 ```
 > **Note**: The web server will fail to start if this token is not configured. This is a security feature.
 
-## Usage
-
-You can interact with this project via the Web UI or the CLI.
-
-### Using the Web UI
-
-The Web UI is ideal for most users. It provides a visual interface for uploading files and monitoring progress.
-
-**1. Start the Server**
-Run the following command from the project root:
+**4. Run the Web Server**
 ```bash
 uv run python main.py
 ```
 The server will start on `http://localhost:8000`.
 
-**2. Using the Interface**
-- Open your web browser and navigate to `http://localhost:8000`.
-- You will be prompted to enter the API Token you configured in the `.env` file.
-- **Upload** your CSV file.
-- **Select** the source and target languages.
-- **Choose** whether to overwrite existing translations.
-- Click **"Start Translation"**.
-- Monitor the progress in the real-time log and preview table.
-- Once complete, click **"Download Translated CSV"**.
+## Running with Docker (Recommended)
 
-### Using the CLI
+Using Docker is the recommended way to run this application in a stable, isolated environment.
 
-The CLI is suitable for backend operations, automation, or when you have direct access to the server. It does **not** require an API token.
+**1. Build the Docker Image**
+From the project root, run:
+```bash
+docker build -t dlink-translator .
+```
+
+**2. Run the Docker Container**
+You must provide the API_TOKEN from your `.env` file to the container at runtime.
+```bash
+docker run -p 8000:8000 --env-file .env --rm -it dlink-translator
+```
+- `-p 8000:8000`: Maps your local port 8000 to the container's port 8000.
+- `--env-file .env`: Securely passes the environment variables (like `API_TOKEN`) from your `.env` file to the container.
+- `--rm`: Automatically removes the container when it exits.
+- `-it`: Runs the container in interactive mode so you can see logs and stop it with `Ctrl+C`.
+
+The application will be available at `http://localhost:8000`.
+
+## Usage
+
+### Web UI
+
+The Web UI provides access to all features through a tabbed interface.
+
+1.  Open your browser to `http://localhost:8000`.
+2.  Enter the API Token when prompted.
+3.  Navigate between the two main tabs:
+
+    -   **CSV Translator**: 
+        - Upload a CSV file with `source` and `target` columns.
+        - Select source/target languages.
+        - Click "Start Translation" to begin.
+        - Monitor progress in the real-time log and preview table.
+        - Download the completed CSV file.
+
+    -   **IDML Tools**:
+        - **Extractor**: Upload an `.idml` file to generate and download a translatable `.csv` file.
+        - **Rebuilder**: Upload the original `.idml` and the translated `.csv` to generate a new, translated `.idml` file.
+
+### Command-Line Interface (CLI)
+
+The CLI is suitable for backend operations and automation. It does **not** require an API token.
 
 **1. Command Structure**
 ```bash
@@ -96,7 +102,7 @@ uv run python cli.py test.csv English German
 ```
 
 **3. Options**
-- `--overwrite`: Overwrites all entries in the target column, even if they already have content.
-- `--batch-size <NUMBER>`: Sets the number of rows to process before saving. Defaults to `10`.
-- `--model <MODEL_NAME>`: Specifies the Ollama model to use. Defaults to `gpt-oss:20b`.
-- `--ollama_host <URL>`: Sets the URL for the Ollama host. Defaults to `http://192.168.7.149:11434`.
+- `--overwrite`: Overwrites all entries in the target column.
+- `--batch-size <NUMBER>`: Sets the number of rows to process before saving (default: 10).
+- `--model <MODEL_NAME>`: Specifies the Ollama model to use (default: `gpt-oss:20b`).
+- `--ollama_host <URL>`: Sets the URL for the Ollama host.
