@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D-Link Translator</title>
+    <title>Translator</title>
     <link rel="stylesheet" href="/static/dlink.css">
     <link rel="stylesheet" href="/static/style.css">
 </head>
@@ -28,6 +28,7 @@
         <div class="tabs">
             <button class="tab-link active" data-tab="csv-translator">CSV Translator</button>
             <button class="tab-link" data-tab="idml-tools">IDML Tools</button>
+            <button class="tab-link" data-tab="live-translator">Live Translator</button>
         </div>
     </header>
 
@@ -113,7 +114,7 @@
         </div>
     </main>
 
-    <main class="container tab-content" id="idml-tools" style="display: none;">
+    <div class="container tab-content" id="idml-tools" style="display: none;">
         <!-- IDML Tools Panel -->
         <div class="full-width-panel">
             <div class="tool-section">
@@ -145,7 +146,24 @@
             </div>
             <div id="idml-tools-log"></div> <!-- Shared Log Area -->
         </div>
-    </main>
+    </div>
+
+    <div class="container tab-content" id="live-translator" style="display: none;">
+        <!-- Live Translator Panel -->
+        <div class="live-translator-panel">
+            <div class="text-panel">
+                <select id="live-source-lang"></select>
+                <textarea id="source-text" placeholder="Enter text to translate..."></textarea>
+            </div>
+            <div class="action-panel">
+                <button id="translate-live-btn" title="Translate">→</button>
+            </div>
+            <div class="text-panel">
+                <select id="live-target-lang"></select>
+                <textarea id="target-text" placeholder="Translation will appear here..." readonly></textarea>
+            </div>
+        </div>
+    </div>
 
     <script src="/static/script.js"></script>
 </body>

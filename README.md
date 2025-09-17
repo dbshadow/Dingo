@@ -5,6 +5,7 @@ A web-based and command-line tool for translating CSV files and processing IDML 
 ## Features
 
 - **Dual Interface**: Use the intuitive Web UI for manual tasks or the powerful CLI for automation.
+- **Live Translation**: A simple, side-by-side interface for translating single sentences or short paragraphs on the fly.
 - **CSV Translation**: Translates text from a `source` column to a `target` column in a CSV file with real-time progress updates.
 - **IDML Workflow**: Provides a complete workflow for translating Adobe InDesign files:
     - **Extractor**: Extracts text from an `.idml` file into a ready-to-translate `.csv` file.
@@ -73,7 +74,7 @@ The Web UI provides access to all features through a tabbed interface.
 
 1.  Open your browser to `http://localhost:8000`.
 2.  Enter the API Token when prompted.
-3.  Navigate between the two main tabs:
+3.  Navigate between the three main tabs:
 
     -   **CSV Translator**: 
         - Upload a CSV file with `source` and `target` columns.
@@ -85,6 +86,11 @@ The Web UI provides access to all features through a tabbed interface.
     -   **IDML Tools**:
         - **Extractor**: Upload an `.idml` file to generate and download a translatable `.csv` file.
         - **Rebuilder**: Upload the original `.idml` and the translated `.csv` to generate a new, translated `.idml` file.
+
+    -   **Live Translator**:
+        - Select source and target languages.
+        - Type or paste text into the left-hand text area.
+        - Click the translate button (→) to see the result in the right-hand text area.
 
 ### Command-Line Interface (CLI)
 

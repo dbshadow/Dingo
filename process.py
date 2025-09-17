@@ -14,20 +14,21 @@ async def send_ws_message(websocket: WebSocket, msg_type: str, content: dict):
     await websocket.send_text(json.dumps(message))
 
 async def process_csv(
-    csv_path: Path,
+    file_path: Path, # <-- 參數名稱已修正
     source_lang: str,
     target_lang: str,
     ollama_host: str,
     model: str,
     batch_size: int,
     overwrite: bool,
-    websocket: WebSocket = None
+    websocket: WebSocket = None,
+    **kwargs # 接受任何其他未使用的參數
 ):
     """
     處理CSV翻譯的核心邏輯。
     """
     try:
-        df = pd.read_csv(csv_path)
+        df = pd.read_csv(file_path)
     except Exception as e:
         await send_ws_message(websocket, 'error', {"message": f"Error reading CSV file: {e}"})
         return
@@ -68,7 +69,7 @@ async def process_csv(
     await send_ws_message(websocket, 'log', {"message": f"Found {total_to_translate} texts to translate..."})
 
     client = ollama.AsyncClient(host=ollama_host)
-    output_path = csv_path.parent / f"{csv_path.stem}_translated.csv"
+    output_path = file_path.parent / f"{file_path.stem}_translated.csv"
     processed_count = 0
 
     for i in range(0, total_to_translate, batch_size):

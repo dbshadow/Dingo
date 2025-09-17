@@ -1,8 +1,16 @@
 /* 引入 dlink.css 的風格 */
 @import url('dlink.css');
 
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 header {
     position: relative; /* 為了讓絕對定位的子元素有參考點 */
+    flex-shrink: 0; /* 防止 header 在 flex 佈局中被壓縮 */
 }
 
 .container {
@@ -10,6 +18,8 @@ header {
     flex-wrap: wrap;
     padding: 20px;
     gap: 20px;
+    flex-grow: 1; /* 讓 main 容器填滿剩餘空間 */
+    overflow-y: auto; /* 如果內容過多，則容器內部滾動 */
 }
 
 .left-panel {
@@ -233,8 +243,12 @@ button:disabled {
 /* Tab Styles */
 .tabs {
     position: absolute;
-    top: 20px;
+    top: 10px; /* Adjust position */
     right: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2x2 grid */
+    gap: 5px;
+    width: 300px; /* Set a fixed width to force wrapping */
 }
 
 .tab-link {
@@ -243,11 +257,11 @@ button:disabled {
     border: 1px solid white;
     outline: none;
     cursor: pointer;
-    padding: 10px 15px;
+    padding: 8px 10px; /* Smaller padding */
     transition: 0.3s;
-    font-size: 1rem;
-    margin-left: 5px;
+    font-size: 0.9rem; /* Smaller font */
     border-radius: 5px;
+    text-align: center;
 }
 
 .tab-link:hover {
@@ -262,6 +276,7 @@ button:disabled {
 
 .tab-content {
     display: none; /* Hidden by default */
+    flex-grow: 1; /* Allow content to grow */
 }
 
 .tab-content.active {
@@ -299,4 +314,67 @@ button:disabled {
     font-family: monospace;
     font-size: 0.9rem;
     white-space: pre-wrap;
+}
+
+/* Live Translator Styles */
+#live-translator {
+    height: 100%; /* Make the container take full height */
+}
+
+.live-translator-panel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+    align-items: stretch; /* Make columns equal height */
+}
+
+.text-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-panel select {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+.text-panel textarea {
+    flex-grow: 1; /* Take up all available vertical space */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    resize: none; /* Disable manual resizing */
+    box-sizing: border-box;
+}
+
+.action-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 50px; /* Fixed width for the button container */
+}
+
+#translate-live-btn {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Make it circular */
+    padding: 0;
 }
