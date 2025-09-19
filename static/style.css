@@ -168,6 +168,31 @@ button:disabled {
 }
 
 /* Table Styles */
+#task-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* 確保欄位寬度被遵守 */
+}
+
+#task-list-table th,
+#task-list-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    vertical-align: middle; /* 垂直置中 */
+    overflow-wrap: break-word;
+}
+
+#task-list-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* 為每一欄設定寬度 */
+#task-list-table th:nth-child(1), #task-list-table td:nth-child(1) { width: 20%; text-align: center; }
+#task-list-table th:nth-child(2), #task-list-table td:nth-child(2) { width: 60%; text-align: center; }
+#task-list-table th:nth-child(3), #task-list-table td:nth-child(3) { width: 10%; text-align: center; }
+#task-list-table th:nth-child(4), #task-list-table td:nth-child(4) { width: 10%; text-align: center; }
+
 #csv-preview table {
     width: 100%;
     border-collapse: collapse;
@@ -378,3 +403,18 @@ button:disabled {
     border-radius: 50%; /* Make it circular */
     padding: 0;
 }
+
+.actions-cell {
+    width: 20%;
+    text-align: right;
+}
+
+.action-btn {
+    width: auto; /* Override full-width button style */
+    padding: 10px 30px;
+    font-size: 1.2rem; /* Make icons slightly larger */
+    margin: 0 5px;
+    line-height: 1;
+    display: inline-block; /* Ensure buttons are side-by-side */
+}
+

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Translator</title>
+    <title>D-Link Translator</title>
     <link rel="stylesheet" href="/static/dlink.css">
     <link rel="stylesheet" href="/static/style.css">
 </head>
@@ -32,10 +32,10 @@
         </div>
     </header>
 
+    <!-- CSV Translator Panel -->
     <main class="container tab-content active" id="csv-translator">
-        <!-- CSV Translator Panel -->
         <div class="left-panel">
-            <h2>Settings</h2>
+            <h2>Add New Translation Task</h2>
             <form id="upload-form">
                 <div class="form-group">
                     <label for="csv-file">1. Upload CSV File</label>
@@ -44,78 +44,42 @@
                 <div class="form-group">
                     <label for="source-lang">2. Source Language</label>
                     <select id="source-lang" name="source_lang" required>
-                        <option value="Arabic">Arabic</option>
-                        <option value="Chinese (Simplified)">Chinese (Simplified)</option>
-                        <option value="Chinese (Traditional)">Chinese (Traditional)</option>
-                        <option value="Dutch">Dutch</option>
-                        <option value="English" selected>English</option>
-                        <option value="French">French</option>
-                        <option value="German">German</option>
-                        <option value="Hindi">Hindi</option>
-                        <option value="Indonesian">Indonesian</option>
-                        <option value="Italian">Italian</option>
-                        <option value="Japanese">Japanese</option>
-                        <option value="Korean">Korean</option>
-                        <option value="Polish">Polish</option>
-                        <option value="Portuguese">Portuguese</option>
-                        <option value="Russian">Russian</option>
-                        <option value="Spanish">Spanish</option>
-                        <option value="Swedish">Swedish</option>
-                        <option value="Thai">Thai</option>
-                        <option value="Turkish">Turkish</option>
-                        <option value="Vietnamese">Vietnamese</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="target-lang">3. Target Language</label>
                     <select id="target-lang" name="target_lang" required>
-                        <option value="Arabic">Arabic</option>
-                        <option value="Chinese (Simplified)">Chinese (Simplified)</option>
-                        <option value="Chinese (Traditional)" selected>Chinese (Traditional)</option>
-                        <option value="Dutch">Dutch</option>
-                        <option value="English">English</option>
-                        <option value="French">French</option>
-                        <option value="German">German</option>
-                        <option value="Hindi">Hindi</option>
-                        <option value="Indonesian">Indonesian</option>
-                        <option value="Italian">Italian</option>
-                        <option value="Japanese">Japanese</option>
-                        <option value="Korean">Korean</option>
-                        <option value="Polish">Polish</option>
-                        <option value="Portuguese">Portuguese</option>
-                        <option value="Russian">Russian</option>
-                        <option value="Spanish">Spanish</option>
-                        <option value="Swedish">Swedish</option>
-                        <option value="Thai">Thai</option>
-                        <option value="Turkish">Turkish</option>
-                        <option value="Vietnamese">Vietnamese</option>
                     </select>
                 </div>
                 <div class="form-group-checkbox">
                     <input type="checkbox" id="overwrite" name="overwrite">
                     <label for="overwrite">Overwrite existing translations</label>
                 </div>
-                <button type="submit">Start Translation</button>
+                <button type="submit">Add to Queue</button>
             </form>
-            <div id="status-log"></div>
         </div>
         <div class="right-panel">
-            <h2>Preview</h2>
-            <div class="preview-controls">
-                 <button id="download-btn" disabled>Download Translated CSV</button>
-            </div>
-            <div class="preview-container" id="csv-preview"></div>
-            <div class="progress-container">
-                <div class="progress-bar-outer">
-                    <div class="progress-bar-inner" id="progress-bar"></div>
-                </div>
-                <span id="progress-text">0%</span>
+            <h2>Translation Queue</h2>
+            <div class="task-list-container">
+                <table id="task-list-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 20%;">Filename</th>
+                            <th style="width: 60%;">Progress</th>
+                            <th style="width: 10%;"></th>
+                            <th style="width: 10%;"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="task-list-body">
+                        <!-- Tasks will be rendered here by JavaScript -->
+                    </tbody>
+                </table>
             </div>
         </div>
     </main>
 
+    <!-- IDML Tools Panel -->
     <div class="container tab-content" id="idml-tools" style="display: none;">
-        <!-- IDML Tools Panel -->
         <div class="full-width-panel">
             <div class="tool-section">
                 <h2>1. IDML to CSV Extractor</h2>
@@ -144,12 +108,12 @@
                     <button type="submit">Rebuild IDML</button>
                 </form>
             </div>
-            <div id="idml-tools-log"></div> <!-- Shared Log Area -->
+            <div id="idml-tools-log"></div>
         </div>
     </div>
 
+    <!-- Live Translator Panel -->
     <div class="container tab-content" id="live-translator" style="display: none;">
-        <!-- Live Translator Panel -->
         <div class="live-translator-panel">
             <div class="text-panel">
                 <select id="live-source-lang"></select>

@@ -4,15 +4,14 @@ A web-based and command-line tool for translating CSV files and processing IDML 
 
 ## Features
 
-- **Dual Interface**: Use the intuitive Web UI for manual tasks or the powerful CLI for automation.
-- **Live Translation**: A simple, side-by-side interface for translating single sentences or short paragraphs on the fly.
-- **CSV Translation**: Translates text from a `source` column to a `target` column in a CSV file with real-time progress updates.
+- **Asynchronous Task Queue**: The CSV Translator operates as a robust, non-blocking task queue. Uploaded tasks are processed sequentially, ensuring stability and resource management.
+- **Persistent Jobs**: Translation tasks are saved to a `tasks.json` file, meaning the queue persists even if the server restarts. You won't lose your work.
+- **Live Task Board**: The Web UI features a live-updating task board that shows the status (`pending`, `running`, `completed`, `error`) and progress of all tasks for all connected users.
 - **IDML Workflow**: Provides a complete workflow for translating Adobe InDesign files:
     - **Extractor**: Extracts text from an `.idml` file into a ready-to-translate `.csv` file.
     - **Rebuilder**: Merges a translated `.csv` file back into the original `.idml` structure.
-- **Real-time Preview**: The Web UI features a live preview that shows translation progress in a color-coded table.
-- **Secure & Configurable**: Web access is protected by a configurable API Token, and key parameters like languages and Ollama settings can be easily adjusted.
-- **Dockerized**: Comes with a production-ready Dockerfile for easy deployment.
+- **Live Translator**: A simple, side-by-side interface for translating single sentences or short paragraphs on the fly.
+- **Secure & Dockerized**: Web access is protected by a configurable API Token, and the entire application is containerized with Docker for easy and consistent deployment.
 
 ## Setup and Installation (Local Development)
 
@@ -77,24 +76,22 @@ The Web UI provides access to all features through a tabbed interface.
 3.  Navigate between the three main tabs:
 
     -   **CSV Translator**: 
-        - Upload a CSV file with `source` and `target` columns.
-        - Select source/target languages.
-        - Click "Start Translation" to begin.
-        - Monitor progress in the real-time log and preview table.
-        - Download the completed CSV file.
+        - Use the left panel to configure and upload a new translation task. Click **"Add to Queue"**.
+        - The task will appear in the **Translation Queue** on the right.
+        - The system processes one task at a time. Your task will change from `pending` to `running` when it's its turn.
+        - You can monitor the progress of all tasks in real-time.
+        - Once a task is `completed`, you can **Download** the translated file or **Delete** the task to clean up the list.
 
     -   **IDML Tools**:
         - **Extractor**: Upload an `.idml` file to generate and download a translatable `.csv` file.
         - **Rebuilder**: Upload the original `.idml` and the translated `.csv` to generate a new, translated `.idml` file.
 
     -   **Live Translator**:
-        - Select source and target languages.
-        - Type or paste text into the left-hand text area.
-        - Click the translate button (→) to see the result in the right-hand text area.
+        - A simple tool for translating single sentences quickly.
 
 ### Command-Line Interface (CLI)
 
-The CLI is suitable for backend operations and automation. It does **not** require an API token.
+The CLI is suitable for backend operations and automation. It does **not** require an API token and operates independently of the task queue.
 
 **1. Command Structure**
 ```bash

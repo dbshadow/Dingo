@@ -14,3 +14,6 @@ uploads/
 
 # Translated output (can be regenerated)
 *_translated.csv
+
+# Task list (can be regenerated)
+tasks.json
