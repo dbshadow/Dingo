@@ -3,10 +3,36 @@ import pandas as pd
 import ollama
 from pathlib import Path
 from translator import translate_text
-from typing import Callable, Awaitable
+from typing import Callable, Awaitable, Dict
 
 # 定義回呼函式的類型
 ProgressCallback = Callable[[int, int], Awaitable[None]]
+
+def load_glossary(glossary_path: Path) -> Dict[str, Dict[str, str]]:
+    """
+    從CSV檔案載入對照表並轉換為字典格式。
+    第一欄應為 'English' 或作為索引的基準語言。
+    """
+    if not glossary_path or not glossary_path.exists():
+        return None
+    try:
+        glossary_df = pd.read_csv(glossary_path)
+        # 將 NaN 轉換為 None，以便後續 .get() 操作能正確返回 None
+        glossary_df = glossary_df.where(pd.notna(glossary_df), None)
+        
+        # 假設第一欄是英文原文，並將其設為索引
+        english_col = glossary_df.columns[0]
+        if english_col != 'English':
+            print(f"Warning: Glossary's first column is '{english_col}', not 'English'. Using it as the base language.")
+
+        glossary_df = glossary_df.set_index(english_col)
+        
+        # to_dict('index') 會產生 {index_val: {col1: val1, col2: val2}} 的格式
+        glossary_dict = glossary_df.to_dict('index')
+        return glossary_dict
+    except Exception as e:
+        print(f"Error loading glossary from {glossary_path}: {e}")
+        return None
 
 async def process_csv(
     csv_path: Path,
@@ -16,12 +42,15 @@ async def process_csv(
     model: str,
     batch_size: int,
     overwrite: bool,
-    progress_callback: ProgressCallback = None
+    progress_callback: ProgressCallback = None,
+    glossary_path: Path | None = None
 ):
     """
     處理CSV翻譯的核心邏輯，進度透過回呼函式報告。
     CancelledError會被向上拋出給調用者處理。
     """
+    glossary_dict = load_glossary(glossary_path)
+
     try:
         df = pd.read_csv(csv_path)
     except Exception as e:
@@ -61,7 +90,7 @@ async def process_csv(
         batch_indices = indices_to_update[i:i + batch_size]
         
         tasks = [
-            translate_text(client, text, source_lang, target_lang, model)
+            translate_text(client, text, source_lang, target_lang, model, glossary=glossary_dict)
             for text in batch_texts
         ]
         

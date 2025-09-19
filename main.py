@@ -103,6 +103,10 @@ async def background_worker():
                         write_tasks(current_tasks)
                         await manager.broadcast_tasks()
 
+                # Get glossary path if it exists
+                glossary_path_str = pending_task.get("glossary_path")
+                glossary_path = Path(glossary_path_str) if glossary_path_str else None
+
                 # Create and store the asyncio.Task
                 process_task = asyncio.create_task(
                     process_csv(
@@ -114,7 +118,8 @@ async def background_worker():
                         # Passing these values from the task data
                         ollama_host=pending_task.get("ollama_host"),
                         model=pending_task.get("model"),
-                        batch_size=pending_task.get("batch_size", 10)
+                        batch_size=pending_task.get("batch_size", 10),
+                        glossary_path=glossary_path # Pass the glossary path to the processing function
                     )
                 )
                 running_async_tasks[task_id] = process_task
@@ -188,12 +193,22 @@ async def handle_upload(
     source_lang: str = Form(...),
     target_lang: str = Form(...),
     overwrite: bool = Form(False),
+    glossary_file: UploadFile | None = File(None),
+    note: str = Form("") # Add note parameter
 ):
     task_id = str(uuid.uuid4())
     original_filename = csv_file.filename
     filepath = UPLOAD_DIR / f"{task_id}_{original_filename}"
     with open(filepath, "wb") as buffer:
         buffer.write(await csv_file.read())
+
+    # Handle optional glossary file
+    glossary_filepath_str = None
+    if glossary_file and glossary_file.filename:
+        glossary_filepath = UPLOAD_DIR / f"{task_id}_glossary_{glossary_file.filename}"
+        with open(glossary_filepath, "wb") as buffer:
+            buffer.write(await glossary_file.read())
+        glossary_filepath_str = str(glossary_filepath)
     new_task = {
         "id": task_id,
         "filename": original_filename,
@@ -203,6 +218,8 @@ async def handle_upload(
         "source_lang": source_lang,
         "target_lang": target_lang,
         "overwrite": overwrite,
+        "glossary_path": glossary_filepath_str, # Can be None
+        "note": note, # Save the note
         # Default values, can be configured elsewhere if needed
         "ollama_host": OLLAMA_HOST,
         "model": OLLAMA_MODEL,
@@ -261,13 +278,14 @@ async def download_file(task_id: str):
     # Determine which file to send
     processed_filepath = Path(task["filepath"]).with_name(f"{Path(task['filepath']).stem}_processed.csv")
     original_filepath = Path(task["filepath"])
+    target_lang = task.get("target_lang", "unknown") # Fallback for safety
 
     if task["status"] == "running" and processed_filepath.exists():
         # If running, send the in-progress file
-        return FileResponse(processed_filepath, filename=f"{Path(task['filename']).stem}_inprogress.csv")
+        return FileResponse(processed_filepath, filename=f"{Path(task['filename']).stem}_inprogress_{target_lang}.csv")
     elif task["status"] == "completed" and processed_filepath.exists():
         # If completed, send the final processed file
-        return FileResponse(processed_filepath, filename=f"{Path(task['filename']).stem}_translated.csv")
+        return FileResponse(processed_filepath, filename=f"{Path(task['filename']).stem}_translated_{target_lang}.csv")
     elif original_filepath.exists():
         # Otherwise, send the original file
         return FileResponse(original_filepath, filename=task["filename"])

@@ -7,25 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Language Setup ---
     const languages = [
-        /*
-        { value: 'English', text: 'English' }, { value: 'German', text: 'German' }, { value: 'French', text: 'French' },
-        { value: 'Spanish', text: 'Spanish' }, { value: 'Italian', text: 'Italian' },
-        { value: 'Dutch', text: 'Dutch' }, { value: 'Polish', text: 'Polish' },
-        { value: 'Czech', text: 'Czech' }, { value: 'Hungarian', text: 'Hungarian' },
-        { value: 'Nynorsk', text: 'Nynorsk' }, { value: 'Danish', text: 'Danish' },
-        { value: 'Finnish', text: 'Finnish' }, { value: 'Swedish', text: 'Swedish' },
-        { value: 'Portugal Portuguese', text: 'Portugal Portuguese' }, { value: 'Greek', text: 'Greek' },
-        { value: 'Romanian', text: 'Romanian' }, { value: 'Croatian', text: 'Croatian' },
-        { value: 'Slovenian', text: 'Slovenian' }, { value: 'Lithuanian', text: 'Lithuanian' },
-        { value: 'Latvian', text: 'Latvian' }, { value: 'Estonian', text: 'Estonian' },
-        { value: 'Slovak', text: 'Slovak' }, { value: 'Icelandic', text: 'Icelandic' },
-        { value: 'Bulgarian', text: 'Bulgarian' }, { value: 'Maltese', text: 'Maltese' },
-        { value: 'Russian', text: 'Russian' }, { value: 'Latin Spanish', text: 'Latin Spanish' },
-        { value: 'Brazil Portuguese', text: 'Brazil Portuguese' },
-        { value: 'Thai', text: 'Thai' }, { value: 'Indonesian', text: 'Indonesian' },
-        { value: 'Japanese', text: 'Japanese' }, { value: 'Traditional Chinese', text: 'Traditional Chinese' },
-        { value: 'Simplified Chinese', text: 'Simplified Chinese' }, { value: 'Canada French', text: 'Canada French' }
-         */
         { value: 'en', text: 'English' },
         { value: 'de', text: 'German' },
         { value: 'fr-FR', text: 'French' },
@@ -154,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             submitBtn.disabled = true;
-        submitBtn.textContent = 'Uploading...';
+            submitBtn.textContent = 'Uploading...';
             const formData = new FormData(form);
             try {
                 const response = await authenticatedFetch('/upload', { method: 'POST', body: formData });
@@ -177,111 +158,20 @@ document.addEventListener('DOMContentLoaded', () => {
         // --- IDML Extract Form ---
         if (event.target.id === 'idml-extract-form') {
             event.preventDefault();
-            const form = event.target;
-            const btn = form.querySelector('button');
-            const logEl = document.getElementById('idml-tools-log');
-            btn.disabled = true;
-            btn.textContent = 'Extracting...';
-            logEl.innerHTML = '';
-            logTo(logEl, 'Starting IDML extraction...');
-            const formData = new FormData(form);
-            try {
-                const response = await authenticatedFetch('/extract_idml', { method: 'POST', body: formData });
-                if (!response.ok) {
-                    const errorData = await response.json();
-                    throw new Error(errorData.detail || `HTTP error! status: ${response.status}`);
-                }
-                const blob = await response.blob();
-                //const filename = response.headers.get('Content-Disposition').split('filename=')[1].replace(/"/g, '');
-                const disposition = response.headers.get('Content-Disposition');
-                const match = disposition && disposition.match(/filename="?([^"]+)"?/);
-                const filename = match ? match[1] : null;
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = filename;
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-                logTo(logEl, `Successfully extracted and downloaded ${filename}`);
-            } catch (error) {
-                logTo(logEl, `Extraction failed: ${error.message}`, true);
-            } finally {
-                btn.disabled = false;
-                btn.textContent = 'Extract to CSV';
-            }
+            // This logic is now handled by the initializeIdmlTools function
         }
 
         // --- IDML Rebuild Form ---
         if (event.target.id === 'idml-rebuild-form') {
             event.preventDefault();
-            const form = event.target;
-            const btn = form.querySelector('button');
-            const logEl = document.getElementById('idml-tools-log');
-            btn.disabled = true;
-            btn.textContent = 'Rebuilding...';
-            logEl.innerHTML = '';
-            logTo(logEl, 'Starting IDML rebuild...');
-            const formData = new FormData(form);
-            try {
-                const response = await authenticatedFetch('/rebuild_idml', { method: 'POST', body: formData });
-                if (!response.ok) {
-                    const errorData = await response.json();
-                    throw new Error(errorData.detail || `HTTP error! status: ${response.status}`);
-                }
-                const blob = await response.blob();
-                const filename = response.headers.get('Content-Disposition').split('filename=')[1].replace(/"/g, '');
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = filename;
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-                logTo(logEl, `Successfully rebuilt and downloaded ${filename}`);
-            } catch (error) {
-                logTo(logEl, `Rebuild failed: ${error.message}`, true);
-            } finally {
-                btn.disabled = false;
-                btn.textContent = 'Rebuild IDML';
-            }
+            // This logic is now handled by the initializeIdmlTools function
         }
     });
 
     document.body.addEventListener('click', async (event) => {
         // --- Live Translator Button ---
         if (event.target.id === 'translate-live-btn') {
-            const btn = event.target;
-            const sourceText = document.getElementById('source-text');
-            const targetText = document.getElementById('target-text');
-            const text = sourceText.value.trim();
-            if (!text) return;
-
-            btn.disabled = true;
-            targetText.value = 'Translating...';
-
-            try {
-                const response = await authenticatedFetch('/live_translate', {
-                    method: 'POST',
-                    body: JSON.stringify({
-                        text: text,
-                        source_lang: document.getElementById('live-source-lang').value,
-                        target_lang: document.getElementById('live-target-lang').value,
-                    }),
-                });
-                if (!response.ok) {
-                    const errorData = await response.json();
-                    throw new Error(errorData.detail || `HTTP error! status: ${response.status}`);
-                }
-                const result = await response.json();
-                targetText.value = result.translated_text;
-            } catch (error) {
-                targetText.value = `Error: ${error.message}`;
-            } finally {
-                btn.disabled = false;
-            }
+            // This logic is now handled by the initializeLiveTranslator function
         }
 
         // --- CSV Task List Buttons ---
@@ -304,21 +194,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     const response = await authenticatedFetch(`/download/${taskId}`, { method: 'GET' });
                     if (!response.ok) throw new Error('Download failed');
                     const blob = await response.blob();
-                const disposition = response.headers.get('Content-Disposition');
-                let filename = 'download'; // Default filename
-                if (disposition) {
-                    const filenameRegex = /filename\*=UTF-8''([^;]+)/i;
-                    const filenameMatch = disposition.match(filenameRegex);
-                    if (filenameMatch && filenameMatch[1]) {
-                        filename = decodeURIComponent(filenameMatch[1]);
-                    } else {
-                        const basicFilenameRegex = /filename="?([^"]+)"?/i;
-                        const basicFilenameMatch = disposition.match(basicFilenameRegex);
-                        if (basicFilenameMatch && basicFilenameMatch[1]) {
-                            filename = basicFilenameMatch[1];
+                    const disposition = response.headers.get('Content-Disposition');
+                    let filename = 'download'; // Default filename
+                    if (disposition) {
+                        const filenameRegex = /filename*"=UTF-8''([^;]+)/i;
+                        const filenameMatch = disposition.match(filenameRegex);
+                        if (filenameMatch && filenameMatch[1]) {
+                            filename = decodeURIComponent(filenameMatch[1]);
+                        } else {
+                            const basicFilenameRegex = /filename="?([^"]+)"?/i;
+                            const basicFilenameMatch = disposition.match(basicFilenameRegex);
+                            if (basicFilenameMatch && basicFilenameMatch[1]) {
+                                filename = basicFilenameMatch[1];
+                            }
                         }
                     }
-                }
                     const url = URL.createObjectURL(blob);
                     const a = document.createElement('a');
                     a.href = url;
@@ -330,6 +220,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 } catch (error) {
                     alert(`Download failed: ${error.message}`);
                 }
+            }
+        }
+        
+        // --- Note Toggling ---
+        if (event.target.matches('.filename-toggle')) {
+            event.preventDefault();
+            const taskId = event.target.dataset.taskId;
+            const noteRow = document.querySelector(`.note-row[data-task-id="${taskId}"]`);
+            if (noteRow) {
+                const isVisible = noteRow.style.display !== 'none';
+                noteRow.style.display = isVisible ? 'none' : 'table-row';
             }
         }
     });
@@ -351,14 +252,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 const percentage = progress.total > 0 ? Math.round((progress.processed / progress.total) * 100) : 0;
                 const isRunning = task.status === 'running';
                 const isError = task.status === 'error';
+                const hasNote = task.note && task.note.trim() !== '';
 
+                // Main task row
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td>${task.filename}</td>
+                    <td>
+                        ${hasNote 
+                            ? `<a href="#" class="filename-toggle" data-task-id="${task.id}">${task.filename}</a>` 
+                            : task.filename
+                        }
+                    </td>
                     <td>
                         <div class="progress-container">
                             <div class="progress-bar-outer ${isRunning ? 'progress-bar-animated' : ''}">
-                            <div class="progress-bar-inner" style="width: ${percentage}%; background-color: ${isError ? '#ff6b6b' : 'var(--md-primary-fg-color)'};"></div>
+                                <div class="progress-bar-inner" style="width: ${percentage}%; background-color: ${isError ? '#ff6b6b' : 'var(--md-primary-fg-color)'};"></div>
                             </div>
                             <span class="progress-text">${isError ? 'Error' : percentage + '%'}</span>
                         </div>
@@ -371,6 +279,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     </td>
                 `;
                 taskListBody.appendChild(row);
+
+                // Note row (if note exists)
+                if (hasNote) {
+                    const noteRow = document.createElement('tr');
+                    noteRow.className = 'note-row';
+                    noteRow.dataset.taskId = task.id;
+                    noteRow.style.display = 'none'; // Initially hidden
+                    noteRow.innerHTML = `
+                        <td colspan="4" class="note-content">
+                            ${task.note.replace(/\n/g, '<br>')}
+                        </td>
+                    `;
+                    taskListBody.appendChild(noteRow);
+                }
             });
         }
 
@@ -419,11 +341,11 @@ document.addEventListener('DOMContentLoaded', () => {
         showTokenModal();
     }
     initCsvTranslatorWebSocket();
-    initializeIdmlTools(authenticatedFetch);
+    initializeIdmlTools(authenticatedFetch, logTo);
     initializeLiveTranslator(authenticatedFetch);
 });
 
-function initializeIdmlTools(authenticatedFetch) {
+function initializeIdmlTools(authenticatedFetch, logTo) {
     const extractForm = document.getElementById('idml-extract-form');
     const rebuildForm = document.getElementById('idml-rebuild-form');
     const logEl = document.getElementById('idml-tools-log');
@@ -445,7 +367,9 @@ function initializeIdmlTools(authenticatedFetch) {
                 throw new Error(errorData.detail || `HTTP error! status: ${response.status}`);
             }
             const blob = await response.blob();
-            const filename = response.headers.get('Content-Disposition').split('filename=')[1].replace(/"/g, '');
+            const disposition = response.headers.get('Content-Disposition');
+            const match = disposition && disposition.match(/filename="?([^"]+)"?/);
+            const filename = match ? match[1] : 'extracted.csv';
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
@@ -478,7 +402,9 @@ function initializeIdmlTools(authenticatedFetch) {
                 throw new Error(errorData.detail || `HTTP error! status: ${response.status}`);
             }
             const blob = await response.blob();
-            const filename = response.headers.get('Content-Disposition').split('filename=')[1].replace(/"/g, '');
+            const disposition = response.headers.get('Content-Disposition');
+            const match = disposition && disposition.match(/filename="?([^"]+)"?/);
+            const filename = match ? match[1] : 'rebuilt.idml';
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
@@ -511,7 +437,7 @@ function initializeLiveTranslator(authenticatedFetch) {
         targetText.value = 'Translating...';
 
         try {
-            const response = await authenticatedFetch('/live_translate', {
+            const response = await authenticatedFetch('/live_translate', { 
                 method: 'POST',
                 body: JSON.stringify({
                     text: text,

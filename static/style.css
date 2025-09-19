@@ -59,7 +59,8 @@ header {
 
 .form-group input[type="text"],
 .form-group input[type="file"],
-.form-group select {
+.form-group select,
+.form-group textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
