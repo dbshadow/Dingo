@@ -23,6 +23,8 @@ async def translate_text(
     """
     prompt = (
         f"Translate the following text from {source_lang} to {target_lang}. "
+        f"Both {source_lang} and {target_lang} are specified using BCP 47 language codes "
+        f"(e.g., en, fr-FR, fr-CA, pt-BR, zh-Hant, zh-Hans). "
         f"Do not provide any explanation or extra text, just the translation. "
         f"The text to translate is: \"{text_to_translate}\""
     )

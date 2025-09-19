@@ -7,16 +7,59 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Language Setup ---
     const languages = [
-        { value: 'Arabic', text: 'Arabic' }, { value: 'Chinese (Simplified)', text: 'Chinese (Simplified)' },
-        { value: 'Chinese (Traditional)', text: 'Chinese (Traditional)' }, { value: 'Dutch', text: 'Dutch' },
-        { value: 'English', text: 'English' }, { value: 'French', text: 'French' },
-        { value: 'German', text: 'German' }, { value: 'Hindi', text: 'Hindi' },
-        { value: 'Indonesian', text: 'Indonesian' }, { value: 'Italian', text: 'Italian' },
-        { value: 'Japanese', text: 'Japanese' }, { value: 'Korean', text: 'Korean' },
-        { value: 'Polish', text: 'Polish' }, { value: 'Portuguese', text: 'Portuguese' },
-        { value: 'Russian', text: 'Russian' }, { value: 'Spanish', text: 'Spanish' },
-        { value: 'Swedish', text: 'Swedish' }, { value: 'Thai', text: 'Thai' },
-        { value: 'Turkish', text: 'Turkish' }, { value: 'Vietnamese', text: 'Vietnamese' },
+        /*
+        { value: 'English', text: 'English' }, { value: 'German', text: 'German' }, { value: 'French', text: 'French' },
+        { value: 'Spanish', text: 'Spanish' }, { value: 'Italian', text: 'Italian' },
+        { value: 'Dutch', text: 'Dutch' }, { value: 'Polish', text: 'Polish' },
+        { value: 'Czech', text: 'Czech' }, { value: 'Hungarian', text: 'Hungarian' },
+        { value: 'Nynorsk', text: 'Nynorsk' }, { value: 'Danish', text: 'Danish' },
+        { value: 'Finnish', text: 'Finnish' }, { value: 'Swedish', text: 'Swedish' },
+        { value: 'Portugal Portuguese', text: 'Portugal Portuguese' }, { value: 'Greek', text: 'Greek' },
+        { value: 'Romanian', text: 'Romanian' }, { value: 'Croatian', text: 'Croatian' },
+        { value: 'Slovenian', text: 'Slovenian' }, { value: 'Lithuanian', text: 'Lithuanian' },
+        { value: 'Latvian', text: 'Latvian' }, { value: 'Estonian', text: 'Estonian' },
+        { value: 'Slovak', text: 'Slovak' }, { value: 'Icelandic', text: 'Icelandic' },
+        { value: 'Bulgarian', text: 'Bulgarian' }, { value: 'Maltese', text: 'Maltese' },
+        { value: 'Russian', text: 'Russian' }, { value: 'Latin Spanish', text: 'Latin Spanish' },
+        { value: 'Brazil Portuguese', text: 'Brazil Portuguese' },
+        { value: 'Thai', text: 'Thai' }, { value: 'Indonesian', text: 'Indonesian' },
+        { value: 'Japanese', text: 'Japanese' }, { value: 'Traditional Chinese', text: 'Traditional Chinese' },
+        { value: 'Simplified Chinese', text: 'Simplified Chinese' }, { value: 'Canada French', text: 'Canada French' }
+         */
+        { value: 'en', text: 'English' },
+        { value: 'de', text: 'German' },
+        { value: 'fr-FR', text: 'French' },
+        { value: 'es', text: 'Spanish' },
+        { value: 'it', text: 'Italian' },
+        { value: 'nl', text: 'Dutch' },
+        { value: 'pl', text: 'Polish' },
+        { value: 'cs', text: 'Czech' },
+        { value: 'hu', text: 'Hungarian' },
+        { value: 'nn', text: 'Nynorsk' },
+        { value: 'da', text: 'Danish' },
+        { value: 'fi', text: 'Finnish' },
+        { value: 'sv', text: 'Swedish' },
+        { value: 'pt-PT', text: 'Portugal Portuguese' },
+        { value: 'el', text: 'Greek' },
+        { value: 'ro', text: 'Romanian' },
+        { value: 'hr', text: 'Croatian' },
+        { value: 'sl', text: 'Slovenian' },
+        { value: 'lt', text: 'Lithuanian' },
+        { value: 'lv', text: 'Latvian' },
+        { value: 'et', text: 'Estonian' },
+        { value: 'sk', text: 'Slovak' },
+        { value: 'is', text: 'Icelandic' },
+        { value: 'bg', text: 'Bulgarian' },
+        { value: 'mt', text: 'Maltese' },
+        { value: 'ru', text: 'Russian' },
+        { value: 'es-419', text: 'Latin Spanish' },   // 419 = Latin America
+        { value: 'pt-BR', text: 'Brazil Portuguese' },
+        { value: 'th', text: 'Thai' },
+        { value: 'id', text: 'Indonesian' },
+        { value: 'ja', text: 'Japanese' },
+        { value: 'zh-Hant', text: 'Traditional Chinese' },
+        { value: 'zh-Hans', text: 'Simplified Chinese' },
+        { value: 'fr-CA', text: 'Canada French' }
     ];
 
     function populateLanguageSelects() {
@@ -28,10 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 select.appendChild(option);
             });
         });
-        document.getElementById('source-lang').value = 'English';
-        document.getElementById('target-lang').value = 'Chinese (Traditional)';
-        document.getElementById('live-source-lang').value = 'English';
-        document.getElementById('live-target-lang').value = 'Chinese (Traditional)';
+        document.getElementById('source-lang').value = 'en';
+        document.getElementById('target-lang').value = 'zh-Hant';
+        document.getElementById('live-source-lang').value = 'en';
+        document.getElementById('live-target-lang').value = 'zh-Hant';
     }
 
     // --- Authentication ---
