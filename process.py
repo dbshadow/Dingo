@@ -22,8 +22,8 @@ def load_glossary(glossary_path: Path) -> Dict[str, Dict[str, str]]:
         
         # 假設第一欄是英文原文，並將其設為索引
         english_col = glossary_df.columns[0]
-        if english_col != 'English':
-            print(f"Warning: Glossary's first column is '{english_col}', not 'English'. Using it as the base language.")
+        if english_col != 'en':
+            print(f"Warning: Glossary's first column is '{english_col}', not 'en'. Using it as the base language.")
 
         glossary_df = glossary_df.set_index(english_col)
         
