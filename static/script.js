@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.textContent = 'Uploading...';
             const formData = new FormData(form);
             try {
-                const response = await authenticatedFetch('/upload', { method: 'POST', body: formData });
+                                const response = await authenticatedFetch('/tasks/upload', { method: 'POST', body: formData });
                 if (!response.ok) {
                     const errorData = await response.json();
                     throw new Error(errorData.detail || 'Upload failed');
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (btn.classList.contains('download-btn')) {
                 try {
-                    const response = await authenticatedFetch(`/download/${taskId}`, { method: 'GET' });
+                    const response = await authenticatedFetch(`/tasks/download/${taskId}`, { method: 'GET' });
                     if (!response.ok) throw new Error('Download failed');
                     const blob = await response.blob();
                     const disposition = response.headers.get('Content-Disposition');
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 row.innerHTML = `
                     <td>
                         ${hasNote 
-                            ? `<a href="#" class="filename-toggle" data-task-id="${task.id}">${task.filename}</a>` 
+                            ? `<a href="#" class="filename-toggle filename-link" data-task-id="${task.id}">${task.filename}</a>` 
                             : task.filename
                         }
                     </td>
@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         async function fetchAndRenderTasks() {
             try {
-                const response = await authenticatedFetch('/tasks', { method: 'GET' });
+                const response = await authenticatedFetch('/tasks/', { method: 'GET' });
                 if (!response.ok) throw new Error('Failed to fetch tasks');
                 const tasks = await response.json();
                 renderTasks(tasks);
@@ -361,7 +361,7 @@ function initializeIdmlTools(authenticatedFetch, logTo) {
         logTo(logEl, 'Starting IDML extraction...');
         const formData = new FormData(extractForm);
         try {
-            const response = await authenticatedFetch('/extract_idml', { method: 'POST', body: formData });
+            const response = await authenticatedFetch('/idml/extract', { method: 'POST', body: formData });
             if (!response.ok) {
                 const errorData = await response.json();
                 throw new Error(errorData.detail || `HTTP error! status: ${response.status}`);
@@ -396,7 +396,7 @@ function initializeIdmlTools(authenticatedFetch, logTo) {
         logTo(logEl, 'Starting IDML rebuild...');
         const formData = new FormData(rebuildForm);
         try {
-            const response = await authenticatedFetch('/rebuild_idml', { method: 'POST', body: formData });
+            const response = await authenticatedFetch('/idml/rebuild', { method: 'POST', body: formData });
             if (!response.ok) {
                 const errorData = await response.json();
                 throw new Error(errorData.detail || `HTTP error! status: ${response.status}`);

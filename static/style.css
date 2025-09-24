@@ -419,3 +419,14 @@ button:disabled {
     display: inline-block; /* Ensure buttons are side-by-side */
 }
 
+/* Custom style for filename link in task queue */
+.filename-link {
+    color: inherit; /* Use the parent's text color */
+    text-decoration: none; /* Remove the underline */
+    cursor: pointer;
+}
+
+.filename-link:hover {
+    text-decoration: underline; /* Add underline on hover for feedback */
+    color: #0056b3; /* A slightly darker blue for hover feedback */
+}

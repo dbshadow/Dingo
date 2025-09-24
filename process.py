@@ -2,10 +2,12 @@ import asyncio
 import pandas as pd
 import ollama
 import io
+import zipfile
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from translator import translate_text
+from idml_processor import extract_idml_to_csv
 from typing import Callable, Awaitable, Dict
-from idml_processor import extract_idml_to_csv, rebuild_idml_from_csv
 
 # Define the type for the progress callback function
 ProgressCallback = Callable[[int, int], Awaitable[None]]
@@ -110,6 +112,18 @@ async def process_csv(
             print(f"Error writing to CSV file {processed_filepath}: {e}")
             raise
 
+def _cleanup_temp_files(temp_csv_path: Path, translated_csv_path: Path):
+    """Safely remove temporary files."""
+    print("Cleaning up temporary files...")
+    try:
+        if temp_csv_path.exists():
+            temp_csv_path.unlink()
+        if translated_csv_path.exists():
+            translated_csv_path.unlink()
+    except OSError as e:
+        print(f"Error during cleanup: {e}")
+
+
 async def process_idml(
     idml_path: Path,
     source_lang: str,
@@ -123,8 +137,9 @@ async def process_idml(
 ):
     """
     Orchestrates the full IDML translation process.
+    Intermediate files are preserved on cancellation.
     """
-    temp_csv_path = idml_path.with_name(f"{idml_path.stem}_temp.csv")
+    temp_csv_path = idml_path.with_name(f"{idml_path.stem}.csv")
     translated_csv_path = temp_csv_path.with_name(f"{temp_csv_path.stem}_processed.csv")
     final_idml_path = idml_path.with_name(f"{idml_path.stem}_processed.idml")
 
@@ -166,14 +181,16 @@ async def process_idml(
             f.write(rebuilt_idml_content)
         print(f"Rebuilt IDML saved to: {final_idml_path}")
 
-    except Exception as e:
-        print(f"An error occurred during IDML processing: {e}")
+        # 5. Clean up temporary files on success
+        _cleanup_temp_files(temp_csv_path, translated_csv_path)
+
+    except asyncio.CancelledError:
+        print("IDML processing was cancelled. Intermediate files will be preserved.")
         # Re-raise the exception to be caught by the background worker
         raise
-    finally:
-        # 5. Clean up temporary files
-        print("Cleaning up temporary files...")
-        if temp_csv_path.exists():
-            temp_csv_path.unlink()
-        if translated_csv_path.exists():
-            translated_csv_path.unlink()
+    except Exception as e:
+        print(f"An error occurred during IDML processing: {e}")
+        # Clean up on other errors
+        _cleanup_temp_files(temp_csv_path, translated_csv_path)
+        # Re-raise the exception to be caught by the background worker
+        raise
