@@ -73,9 +73,9 @@ Create the `.env` file as described above, but adjust `OLLAMA_HOST` for local ac
 
 ```ini
 # .env
-API_TOKEN="your-super-secret-and-long-token-here"
-OLLAMA_HOST="http://localhost:11434"
-OLLAMA_MODEL="llama3"
+API_TOKEN=your-super-secret-and-long-token-here
+OLLAMA_HOST=http://localhost:11434
+OLLAMA_MODEL=llama3
 ```
 
 **2. Install Dependencies**

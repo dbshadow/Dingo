@@ -159,14 +159,18 @@ async def download_file(task_id: str):
 
     final_idml = original_filepath.with_name(f"{original_filepath.stem}_processed.idml")
     final_csv = original_filepath.with_name(f"{original_filepath.stem}_processed.csv")
-    #temp_idml_csv = original_filepath.with_name(f"{original_filepath.stem}_temp_processed.csv")
-
     if file_type == 'csv' and final_csv.exists():
         if task["status"] == "completed":
             filename = f"{original_stem}_translated_{target_lang}.csv"
         else:
             filename = f"{original_stem}_inprogress_{target_lang}.csv"
-        return FileResponse(final_csv, filename=filename, media_type="text/csv")
+        return FileResponse(
+            final_csv,
+            media_type="application/octet-stream",
+            headers={
+                "Content-Disposition": f'attachment; filename="{filename}"'
+            }
+        )
 
     if task["status"] == "completed" and file_type == 'idml' and final_idml.exists():
         filename = f"{original_stem}_translated_{target_lang}.idml"

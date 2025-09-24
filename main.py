@@ -3,6 +3,7 @@ import uvicorn
 import asyncio
 import os
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, Request
@@ -31,6 +32,7 @@ async def lifespan(app: FastAPI):
     Manages application startup and shutdown events.
     """
     print("Application starting up...")
+    Path("uploads").mkdir(exist_ok=True) # Ensure uploads directory exists
     # Initialize the tasks.json file if it doesn't exist
     initialize_tasks_file()
     
