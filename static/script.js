@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (token) {
             localStorage.setItem('api_token', token);
             hideTokenModal();
+            fetchDefaultPrompt(); // Fetch prompt after getting token
         }
     });
 
@@ -97,6 +98,21 @@ document.addEventListener('DOMContentLoaded', () => {
             throw new Error("Authentication failed.");
         }
         return response;
+    }
+
+    // --- Prompt Fetching ---
+    async function fetchDefaultPrompt() {
+        const displayElement = document.getElementById('default-prompt-display');
+        if (!displayElement) return;
+        try {
+            const response = await authenticatedFetch('/prompt/default', { method: 'GET' });
+            if (!response.ok) throw new Error('Failed to fetch default prompt.');
+            const data = await response.json();
+            displayElement.textContent = data.template;
+        } catch (error) {
+            console.error(error.message);
+            displayElement.textContent = 'Could not load prompt template. Please ensure you are logged in.';
+        }
     }
 
     // --- Tab Navigation ---
@@ -337,7 +353,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Initial Load ---
     populateLanguageSelects();
-    if (!localStorage.getItem('api_token')) {
+    if (localStorage.getItem('api_token')) {
+        fetchDefaultPrompt();
+    } else {
         showTokenModal();
     }
     initCsvTranslatorWebSocket();

@@ -23,7 +23,7 @@ if not os.getenv("OLLAMA_HOST") or not os.getenv("OLLAMA_MODEL"):
 # These must come after the dotenv load
 from storage import initialize_tasks_file
 from worker import run_background_worker, get_running_tasks_dict
-from routers import tasks, idml, live, ws
+from routers import tasks, idml, live, ws, prompt
 
 # --- App Lifecycle (Lifespan) ---
 @asynccontextmanager
@@ -74,6 +74,7 @@ app.include_router(tasks.router)
 app.include_router(idml.router)
 app.include_router(live.router)
 app.include_router(ws.router) # Include the WebSocket router
+app.include_router(prompt.router)
 
 # --- Root Endpoint ---
 @app.get("/")

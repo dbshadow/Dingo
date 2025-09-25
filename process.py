@@ -43,7 +43,8 @@ async def process_csv(
     batch_size: int,
     overwrite: bool,
     progress_callback: ProgressCallback = None,
-    glossary_path: Path | None = None
+    glossary_path: Path | None = None,
+    custom_prompt: str = ""
 ):
     """
     Core logic for CSV translation. Progress is reported via a callback.
@@ -94,7 +95,15 @@ async def process_csv(
         batch_indices = indices_to_update[i:i + batch_size]
         
         tasks = [
-            translate_text(client, text, source_lang, target_lang, model, glossary=glossary_dict)
+            translate_text(
+                client,
+                text,
+                source_lang,
+                target_lang,
+                model,
+                glossary=glossary_dict,
+                custom_prompt=custom_prompt
+            )
             for text in batch_texts
         ]
         
@@ -133,7 +142,8 @@ async def process_idml(
     batch_size: int,
     overwrite: bool, # Overwrite is implicitly handled by the process
     progress_callback: ProgressCallback = None,
-    glossary_path: Path | None = None
+    glossary_path: Path | None = None,
+    custom_prompt: str = ""
 ):
     """
     Orchestrates the full IDML translation process.
@@ -162,7 +172,8 @@ async def process_idml(
             batch_size=batch_size,
             overwrite=True,  # Always overwrite for the IDML process
             progress_callback=progress_callback,
-            glossary_path=glossary_path
+            glossary_path=glossary_path,
+            custom_prompt=custom_prompt
         )
         print("CSV translation completed.")
 

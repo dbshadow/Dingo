@@ -76,7 +76,8 @@ async def run_background_worker(manager):
                         ollama_host=pending_task.get("ollama_host"),
                         model=pending_task.get("model"),
                         batch_size=pending_task.get("batch_size", 10),
-                        glossary_path=glossary_path
+                        glossary_path=glossary_path,
+                        custom_prompt=pending_task.get("custom_prompt", "")
                     )
                 )
                 running_async_tasks[task_id] = process_task

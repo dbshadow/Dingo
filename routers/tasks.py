@@ -41,7 +41,8 @@ async def handle_upload(
     target_lang: str = Form(...),
     overwrite: bool = Form(False),
     glossary_file: UploadFile | None = File(None),
-    note: str = Form("")
+    note: str = Form(""),
+    custom_prompt: str = Form("")
 ):
     """Handles file upload and creates a new translation task."""
     original_filename = upload_file.filename
@@ -75,6 +76,7 @@ async def handle_upload(
         "overwrite": overwrite,
         "glossary_path": glossary_filepath_str,
         "note": note,
+        "custom_prompt": custom_prompt,
         "ollama_host": OLLAMA_HOST,
         "model": OLLAMA_MODEL,
         "batch_size": 10,

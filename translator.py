@@ -9,7 +9,8 @@ async def translate_text(
     source_lang: str,
     target_lang: str,
     model: str,
-    glossary: Optional[Dict[str, Dict[str, str]]] = None
+    glossary: Optional[Dict[str, Dict[str, str]]] = None,
+    custom_prompt: str = ""
 ) -> str:
     """
     使用指定的Ollama模型非同步翻譯單一文本。
@@ -34,6 +35,7 @@ async def translate_text(
         instruction_str = "Follow these rules: " + ", and ".join(prompt_instructions) + ". "
 
     prompt = (
+        f"{custom_prompt}"
         f"Translate the following text from {source_lang} to {target_lang}. "
         f"{instruction_str}"
         f"Both {source_lang} and {target_lang} are specified using BCP 47 language codes "
