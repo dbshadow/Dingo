@@ -46,6 +46,7 @@ async def translate_text(
         response = await client.chat(
             model=model,
             messages=[{"role": "user", "content": prompt}],
+            options={"temperature": 0, "repeat_penalty": 1.1},
         )
         translated_text = response["message"]["content"].strip()
         # 移除可能出現的引號
