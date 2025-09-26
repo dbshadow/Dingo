@@ -37,6 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { value: 'pt-BR', text: 'Brazil Portuguese (pt-BR)' },
         { value: 'th', text: 'Thai (th)' },
         { value: 'id', text: 'Indonesian (id)' },
+        { value: 'ms', text: 'Malay (ms)' },
+        { value: 'tr', text: 'Turkish (tr)' },
         { value: 'ja', text: 'Japanese (ja)' },
         { value: 'zh-Hant', text: 'Traditional Chinese (zh-Hant)' },
         { value: 'zh-Hans', text: 'Simplified Chinese (zh-Hans)' },
