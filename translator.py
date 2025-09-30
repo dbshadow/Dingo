@@ -19,26 +19,46 @@ async def translate_text(
     prompt_instructions = []
     if glossary and text_to_translate:
         for term, translations in glossary.items():
-            # 使用正規表示式進行全字匹配，並忽略大小寫
             if re.search(r'\b' + re.escape(term) + r'\b', text_to_translate, re.IGNORECASE):
                 target_translation = translations.get(target_lang)
                 if target_translation:
-                    # Prompt B: 指定翻譯
-                    prompt_instructions.append(f"the term '{term}' MUST be translated as '{target_translation}'")
+                    # 指定翻譯
+                    prompt_instructions.append(
+                        f"- Always translate '{term}' as '{target_translation}'."
+                    )
                 else:
-                    # Prompt C: 不需翻譯
-                    prompt_instructions.append(f"the term '{term}' MUST NOT be translated, keep it as it is")
+                    # 保持原樣
+                    prompt_instructions.append(
+                        f"- Do not translate '{term}'; keep it exactly as written."
+                    )
 
-    instruction_str = ""
+    general_rules = (
+        "- Keep all Arabic numerals (0–9) unchanged.\n"
+        "- Keep terms with numbers + units unchanged (e.g., mW, mHz, Mbps, dBm, GHz, MHz).\n"
+        "- Keep acronyms/abbreviations in ALL CAPS unchanged (e.g., SSID, WPS, QoS).\n"
+    )
+
     if prompt_instructions:
-        instruction_str = "Follow these rules: " + ", and ".join(prompt_instructions) + ". "
+        rules_section = (
+            "Follow these rules in order of priority:\n\n"
+            "1. Glossary rules (highest priority):\n"
+            + "\n".join(prompt_instructions)
+            + "\n\n"
+            "2. Then apply the general non-translation rules:\n"
+            + general_rules
+        )
+    else:
+        rules_section = (
+            "Follow these non-translation rules:\n\n"
+            + general_rules
+        )
 
     prompt = (
-        f"Translate the following text from {source_lang} to {target_lang}. "
-        f"{instruction_str}"
+        f"Translate the following text from {source_lang} to {target_lang}.\n\n"
+        f"{rules_section}\n"
         f"Both {source_lang} and {target_lang} are specified using BCP 47 language codes "
-        f"(e.g., en, fr-FR, fr-CA, pt-BR, zh-Hant, zh-Hans). "
-        f"Do not provide any explanation or extra text, just the translation. "
+        f"(e.g., en, fr-FR, fr-CA, pt-BR, zh-Hant, zh-Hans).\n"
+        f"Do not provide any explanation or extra text, only output the translation.\n\n"
         f"The text to translate is: \"{text_to_translate}\""
     )
 
