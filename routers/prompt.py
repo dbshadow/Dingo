@@ -2,7 +2,8 @@
 from fastapi import APIRouter
 import re
 
-from translator import translate_text
+# Import the template directly, no need for translate_text anymore
+from translator import DEFAULT_PROMPT_TEMPLATE
 
 router = APIRouter(
     prefix="/prompt",
@@ -14,24 +15,23 @@ async def get_default_prompt():
     """
     Returns the default prompt template used by the translator.
     """
-    # This is a bit of a hack, but it's the most reliable way to get the prompt
-    # without duplicating the code. We can get the source code of the function.
-    import inspect
-    source_code = inspect.getsource(translate_text)
-
-    # Extract the prompt string using regex
-    prompt_match = re.search(r'prompt = \((.*?)\)', source_code, re.DOTALL)
-    if not prompt_match:
-        return {"template": "Could not extract prompt template."}
-
-    prompt_template = prompt_match.group(1)
-
-    # Clean up the f-string formatting and extra quotes/indentation
-    prompt_template = re.sub(r'f"""|f"|"""|"', '', prompt_template)
-    prompt_template = re.sub(r'\s*\n\s*', ' ', prompt_template) # Replace newlines and surrounding whitespace with a single space
-    prompt_template = prompt_template.strip()
+    # The template is now directly imported.
+    # Python's string literal concatenation makes it a single line.
+    # We can make it more readable for the UI.
     
-    # Replace the f-string variables with placeholders
-    prompt_template = prompt_template.replace("{instruction_str}", "{glossary_rules}")
+    # Create a display version by replacing placeholders and adding line breaks.
+    # The template is a single line, so we add newlines for UI readability.
+    display_template = DEFAULT_PROMPT_TEMPLATE.replace("{custom_prompt}", "{custom_prompt}")
+    display_template = display_template.replace(". ", ".\n")
+    display_template = display_template.replace("{instruction_str}", "{glossary_rules}")
     
-    return {"template": prompt_template}
+    # Replace the final part for a cleaner template view.
+    display_template = display_template.replace(
+        'The text to translate is: "{text_to_translate}"', 
+        'The text to translate is: "..."'
+    )
+
+    # Add a newline before the glossary rules for better separation
+    display_template = display_template.replace("{glossary_rules}", "\n{glossary_rules}")
+
+    return {"template": display_template}

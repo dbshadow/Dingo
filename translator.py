@@ -3,6 +3,18 @@ import ollama
 import re
 from typing import Dict, Optional
 
+# The prompt template is defined as a constant for better readability, reusability,
+# and to allow for easier parsing by other parts of the application.
+DEFAULT_PROMPT_TEMPLATE = (
+    "{custom_prompt}"
+    "Translate the following text from {source_lang} to {target_lang}. "
+    "{instruction_str}"
+    "Both {source_lang} and {target_lang} are specified using BCP 47 language codes "
+    "(e.g., en, fr-FR, fr-CA, pt-BR, zh-Hant, zh-Hans). "
+    "Do not provide any explanation or extra text, just the translation. "
+    "The text to translate is: \"{text_to_translate}\""
+)
+
 async def translate_text(
     client: ollama.AsyncClient,
     text_to_translate: str,
@@ -34,15 +46,16 @@ async def translate_text(
     if prompt_instructions:
         instruction_str = "Follow these rules: " + ", and ".join(prompt_instructions) + ". "
 
-    prompt = (
-        f"{custom_prompt}"
-        f"Translate the following text from {source_lang} to {target_lang}. "
-        f"{instruction_str}"
-        f"Both {source_lang} and {target_lang} are specified using BCP 47 language codes "
-        f"(e.g., en, fr-FR, fr-CA, pt-BR, zh-Hant, zh-Hans). "
-        f"Do not provide any explanation or extra text, just the translation. "
-        f"The text to translate is: \"{text_to_translate}\""
+    # Use the template to format the prompt, ensuring a space after custom_prompt if it exists.
+    prompt = DEFAULT_PROMPT_TEMPLATE.format(
+        custom_prompt=f"{custom_prompt} " if custom_prompt else "",
+        source_lang=source_lang,
+        target_lang=target_lang,
+        instruction_str=instruction_str,
+        text_to_translate=text_to_translate
     )
+
+    print(f"\nxxxxxxxxxxxxx\n{prompt}\nxxxxxxxxxxxxxx\n")
 
     try:
         response = await client.chat(
