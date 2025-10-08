@@ -24,9 +24,12 @@ async def handle_idml_extraction(idml_file: UploadFile = File(...)):
         
         csv_content = extract_idml_to_csv(temp_idml_path)
         
+        # --- NEW: Ensure BOM for Excel compatibility --
+        encoded_content = csv_content.encode('utf-8-sig')
+
         output_filename = f"{Path(idml_file.filename).stem}.csv"
         headers = {'Content-Disposition': f'attachment; filename="{output_filename}"'}
-        return Response(content=csv_content, media_type="text/csv", headers=headers)
+        return Response(content=encoded_content, media_type="text/csv; charset=utf-8-sig", headers=headers)
 
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
