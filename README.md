@@ -4,6 +4,7 @@ A web-based tool for translating CSV and IDML files using a local Ollama-powered
 
 ## ✨ Features
 
+-   **Multi-User Ready**: Each user has their own API token. Users can see all tasks but can only manage (delete, download) their own.
 -   **Asynchronous Task Queue**: A robust, non-blocking task queue processes uploaded jobs sequentially. Translation tasks are persistent and survive server restarts.
 -   **Broad File Support**:
     -   Translate `.csv` and `.idml` files.
@@ -13,7 +14,7 @@ A web-based tool for translating CSV and IDML files using a local Ollama-powered
     -   **Extractor**: Extracts text from an `.idml` file into a ready-to-translate `.csv` file.
     -   **Rebuilder**: Merges a translated `.csv` file back into the original `.idml` structure.
 -   **Live Translator**: A simple, side-by-side interface for translating single sentences or short paragraphs on the fly.
--   **Secure & Dockerized**: Web access is protected by a configurable API Token, and the entire application is containerized with Docker for easy and consistent deployment.
+-   **Secure & Dockerized**: Web access is protected by API Tokens, and the entire application is containerized with Docker for easy and consistent deployment.
 
 ## 🛠️ Tech Stack
 
@@ -38,30 +39,60 @@ This is the easiest and most reliable way to run the application.
 
 **1. Configure Environment**
 
-Create a `.env` file in the project root. This file will store your secrets and configuration.
+Create a `.env` file in the project root. This file stores your Ollama configuration.
 
 ```ini
 # .env
-API_TOKEN="your-super-secret-and-long-token-here"
 OLLAMA_HOST="http://host.docker.internal:11434"
 OLLAMA_MODEL="llama3"
 ```
 
-> **Note:**
-> - `host.docker.internal` is a special DNS name that allows the Docker container to connect to services running on your host machine (like Ollama).
-> - Replace `llama3` with the model you have downloaded in Ollama.
+> **Note:** `host.docker.internal` is a special DNS name that allows the Docker container to connect to services running on your host machine (like Ollama). Replace `llama3` with the model you have downloaded.
 
-**2. Build the Docker Image**
+**2. Manage API Tokens**
+
+API tokens are now managed in the `api_tokens.json` file. You can add users and generate tokens using the built-in command-line tool.
+
+```bash
+# This will create the file and add 'first-user' with a new, secure token.
+python -m token_manager add first-user
+```
+
+After running the command, your `api_tokens.json` will look like this:
+
+```json
+[
+  {
+    "name": "first-user",
+    "token": "a-long-randomly-generated-token..."
+  }
+]
+```
+
+You can add more users by running the command again with a different name. You can also manually edit this file.
+
+**3. Build the Docker Image**
 
 ```bash
 docker build -t dlink-translator .
 ```
 
-**3. Run the Docker Container**
+**4. Run the Docker Container**
+
+This command uses Docker Volumes (`-v`) to link your local data and configuration files directly into the container. This ensures that your tasks, uploaded files, and API tokens are **persistent** and will not be lost when the container stops.
 
 ```bash
-docker run -p 8000:8000 --env-file .env --rm -it dlink-translator
+docker run -d -p 8000:8000 \
+  --env-file ./.env \
+  -v ./uploads:/app/uploads \
+  -v ./tasks.json:/app/tasks.json \
+  -v ./api_tokens.json:/app/api_tokens.json \
+  --rm --name dlink-translator-app dlink-translator
 ```
+
+- `-d`: Run in detached mode (in the background).
+- `--rm`: Automatically remove the container when it exits.
+- `--name`: Assign a convenient name to the container.
 
 The application will be available at `http://localhost:8000`.
 
@@ -73,12 +104,19 @@ Create the `.env` file as described above, but adjust `OLLAMA_HOST` for local ac
 
 ```ini
 # .env
-API_TOKEN=your-super-secret-and-long-token-here
 OLLAMA_HOST=http://localhost:11434
 OLLAMA_MODEL=llama3
 ```
 
-**2. Install Dependencies**
+**2. Manage API Tokens**
+
+Run the token manager script to create your first token:
+
+```bash
+python -m token_manager add my-local-user
+```
+
+**3. Install Dependencies**
 
 `uv` creates a virtual environment and installs dependencies in one step.
 
@@ -86,7 +124,7 @@ OLLAMA_MODEL=llama3
 uv sync
 ```
 
-**3. Run the Web Server**
+**4. Run the Web Server**
 
 Use `uv run` to execute the `uvicorn` server.
 
@@ -98,13 +136,11 @@ The application will be available at `http://localhost:8000`.
 
 ## ⚙️ Configuration
 
-All configuration is handled via environment variables in the `.env` file.
-
-| Variable        | Required | Description                                                                                             |
-| --------------- | :------: | ------------------------------------------------------------------------------------------------------- |
-| `API_TOKEN`     |   Yes    | A secret token to protect access to the web UI. The server will not start without it.                     |
-| `OLLAMA_HOST`   |   Yes    | The full URL of your running Ollama instance (e.g., `http://localhost:11434`).                          |
-| `OLLAMA_MODEL`  |   Yes    | The name of the Ollama model to use for translations (e.g., `llama3`, `mistral`).                         |
+| Item              | Required | Description                                                                                             |
+| ----------------- | :------: | ------------------------------------------------------------------------------------------------------- |
+| `api_tokens.json` |   Yes    | A JSON file containing a list of user objects, each with a `name` and `token`. Manages access to the UI. |
+| `OLLAMA_HOST`     |   Yes    | The full URL of your running Ollama instance (e.g., `http://localhost:11434`). Set in `.env`.          |
+| `OLLAMA_MODEL`    |   Yes    | The name of the Ollama model to use for translations (e.g., `llama3`, `mistral`). Set in `.env`.      |
 
 ## 📁 Project Structure
 
@@ -112,6 +148,7 @@ All configuration is handled via environment variables in the `.env` file.
 /
 ├── .dockerignore
 ├── .gitignore
+├── api_tokens.json     # NEW: Manages user API tokens.
 ├── cli.py              # Standalone CLI for direct translation (bypasses queue).
 ├── Dockerfile          # Defines the Docker container for the application.
 ├── main.py             # FastAPI application entry point, handles startup/shutdown.
@@ -119,6 +156,7 @@ All configuration is handled via environment variables in the `.env` file.
 ├── pyproject.toml      # Project metadata and dependencies for `uv`.
 ├── README.md           # This file.
 ├── storage.py          # Handles reading/writing to the tasks.json file.
+├── token_manager.py    # NEW: Script to manage the api_tokens.json file.
 ├── translator.py       # Contains the core `translate_text` function that calls Ollama.
 ├── worker.py           # Background worker that picks up and runs tasks from the queue.
 ├── routers/            # FastAPI routers for different API endpoints (tasks, idml, etc.).

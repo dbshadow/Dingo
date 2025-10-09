@@ -1,10 +1,9 @@
 # routers/ws.py
 from typing import List, Tuple
-from fastapi import APIRouter, WebSocket, WebSocketDisconnect, HTTPException
-from starlette.status import HTTP_401_UNAUTHORIZED
+from fastapi import APIRouter, WebSocket, WebSocketDisconnect
 
 from storage import read_tasks
-from dependencies import VALID_TOKENS
+from token_manager import get_tokens
 
 class ConnectionManager:
     def __init__(self):
@@ -49,8 +48,9 @@ router = APIRouter()
 
 @router.websocket("/ws/{token}")
 async def websocket_endpoint(websocket: WebSocket, token: str):
-    # --- NEW: Authenticate WebSocket connection ---
-    if token not in VALID_TOKENS:
+    # --- Authenticate WebSocket connection using the token manager ---
+    valid_tokens = get_tokens()
+    if token not in valid_tokens:
         await websocket.close(code=1008) # Policy Violation
         return
 

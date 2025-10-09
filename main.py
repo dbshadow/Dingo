@@ -12,9 +12,7 @@ from fastapi.staticfiles import StaticFiles
 
 # --- Pre-flight checks and environment loading ---
 load_dotenv()
-if not os.getenv("API_TOKENS"):
-    print("FATAL: API_TOKENS not found in .env file. The application cannot start.")
-    exit(1)
+# The API token check is now handled by the token_manager
 if not os.getenv("OLLAMA_HOST") or not os.getenv("OLLAMA_MODEL"):
     print("FATAL: OLLAMA_HOST or OLLAMA_MODEL not found in .env file. The application cannot start.")
     exit(1)
@@ -24,6 +22,7 @@ if not os.getenv("OLLAMA_HOST") or not os.getenv("OLLAMA_MODEL"):
 from storage import initialize_tasks_file
 from worker import run_background_worker, get_running_tasks_dict
 from routers import tasks, idml, live, ws
+from token_manager import initialize_token_file
 
 # --- App Lifecycle (Lifespan) ---
 @asynccontextmanager
@@ -33,8 +32,8 @@ async def lifespan(app: FastAPI):
     """
     print("Application starting up...")
     Path("uploads").mkdir(exist_ok=True) # Ensure uploads directory exists
-    # Initialize the tasks.json file if it doesn't exist
     initialize_tasks_file()
+    initialize_token_file() # Ensure the token file exists
     
     # Start the background worker, passing it the WebSocket manager from the ws router
     worker_task = asyncio.create_task(run_background_worker(ws.manager))
