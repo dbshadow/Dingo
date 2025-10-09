@@ -9,12 +9,11 @@ from idml_processor import extract_idml_to_csv, rebuild_idml_from_csv
 router = APIRouter(
     prefix="/idml",
     tags=["IDML Tools"],
-    dependencies=[Depends(verify_api_token)]
 )
 
 UPLOAD_DIR = Path("uploads")
 
-@router.post("/extract")
+@router.post("/extract", dependencies=[Depends(verify_api_token)])
 async def handle_idml_extraction(idml_file: UploadFile = File(...)):
     # Use a more unique temporary filename to avoid potential collisions
     temp_idml_path = UPLOAD_DIR / f"temp_extract_{Path(idml_file.filename).name}"
@@ -37,7 +36,7 @@ async def handle_idml_extraction(idml_file: UploadFile = File(...)):
         if temp_idml_path.exists():
             temp_idml_path.unlink()
 
-@router.post("/rebuild")
+@router.post("/rebuild", dependencies=[Depends(verify_api_token)])
 async def handle_idml_rebuild(original_idml: UploadFile = File(...), translated_csv: UploadFile = File(...)):
     temp_idml_path = UPLOAD_DIR / f"temp_rebuild_{Path(original_idml.filename).name}"
     temp_csv_path = UPLOAD_DIR / f"temp_rebuild_{Path(translated_csv.filename).name}"

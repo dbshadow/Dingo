@@ -75,6 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (token) {
             localStorage.setItem('api_token', token);
             hideTokenModal();
+            // --- NEW: Reconnect WebSocket after getting token ---
+            initCsvTranslatorWebSocket();
         }
     });
 
@@ -98,6 +100,13 @@ document.addEventListener('DOMContentLoaded', () => {
             showTokenModal("Token is invalid or has expired. Please enter a new one.");
             throw new Error("Authentication failed.");
         }
+        
+        if (response.status === 403) {
+            const errorData = await response.json();
+            alert("Forbidden: " + (errorData.detail || "You do not have permission to perform this action."));
+            throw new Error("Forbidden.");
+        }
+
         return response;
     }
 
@@ -238,9 +247,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- WebSocket & CSV Task Rendering ---
+    let websocket = null; // Keep a reference to the current WebSocket
     function initCsvTranslatorWebSocket() {
         const taskListBody = document.getElementById('task-list-body');
         if (!taskListBody) return;
+
+        // --- Close existing connection if it exists ---
+        if (websocket) {
+            websocket.close();
+        }
 
         function renderTasks(tasks) {
             taskListBody.innerHTML = '';
@@ -255,6 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const isRunning = task.status === 'running';
                 const isError = task.status === 'error';
                 const hasNote = task.note && task.note.trim() !== '';
+                const isOwner = task.is_owner;
 
                 // Main task row
                 const row = document.createElement('tr');
@@ -274,10 +290,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </td>
                     <td>
-                        <button class="action-btn download-btn" data-task-id="${task.id}" title="Download">&#x21E9;</button>
+                        <button class="action-btn download-btn" data-task-id="${task.id}" title="Download" ${!isOwner ? 'disabled' : ''}>&#x21E9;</button>
                     </td>
                     <td>
-                        <button class="action-btn delete-btn" data-task-id="${task.id}" title="Delete">&#x1F5D1;</button>
+                        <button class="action-btn delete-btn" data-task-id="${task.id}" title="Delete" ${!isOwner ? 'disabled' : ''}>&#x1F5D1;</button>
                     </td>
                 `;
                 taskListBody.appendChild(row);
@@ -298,24 +314,23 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        async function fetchAndRenderTasks() {
-            try {
-                const response = await authenticatedFetch('/tasks/', { method: 'GET' });
-                if (!response.ok) throw new Error('Failed to fetch tasks');
-                const tasks = await response.json();
-                renderTasks(tasks);
-            } catch (error) {
-                console.error(error.message);
-            }
-        }
+        // This is now handled by the WebSocket itself on connection
+        // async function fetchAndRenderTasks() { ... }
 
         function connectWebSocket() {
+            const token = localStorage.getItem('api_token');
+            if (!token) {
+                console.log("No API token found, WebSocket connection aborted.");
+                return; // Don't try to connect without a token
+            }
+
             const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsUrl = `${wsProtocol}//${window.location.host}/ws`;
-            const websocket = new WebSocket(wsUrl);
+            const wsUrl = `${wsProtocol}//${window.location.host}/ws/${token}`;
+            websocket = new WebSocket(wsUrl);
+
             websocket.onopen = () => {
                 console.log('Task queue connection established.');
-                fetchAndRenderTasks();
+                // The server will send the initial task list upon connection.
             };
             websocket.onmessage = (event) => {
                 const data = JSON.parse(event.data);
@@ -323,7 +338,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     renderTasks(data.payload);
                 }
             };
-            websocket.onclose = () => { console.log('Task queue connection closed. Auto-reconnect in 5s.'); setTimeout(connectWebSocket, 5000); };
+            websocket.onclose = (event) => {
+                if (event.code === 1008) { // Policy Violation
+                    console.error('WebSocket connection closed: Invalid API Token.');
+                    localStorage.removeItem('api_token');
+                    showTokenModal("Your API Token is invalid. Please enter a valid one.");
+                } else {
+                    console.log('Task queue connection closed. Auto-reconnect in 5s.');
+                    setTimeout(connectWebSocket, 5000);
+                }
+            };
             websocket.onerror = () => console.error('WebSocket error.');
         }
 
@@ -460,3 +484,4 @@ function initializeLiveTranslator(authenticatedFetch) {
         }
     });
 }
+

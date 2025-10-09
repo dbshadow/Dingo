@@ -430,3 +430,10 @@ button:disabled {
     text-decoration: underline; /* Add underline on hover for feedback */
     color: #0056b3; /* A slightly darker blue for hover feedback */
 }
+
+.version {
+    font-size: 1rem; /* Smaller font */
+    color: #a0a0a0;   /* Lighter color */
+    margin-left: 12px;  /* Slightly less space */
+    font-weight: normal;
+}

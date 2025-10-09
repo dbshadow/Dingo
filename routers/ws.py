@@ -1,45 +1,66 @@
 # routers/ws.py
-from typing import List
-from fastapi import APIRouter, WebSocket, WebSocketDisconnect
+from typing import List, Tuple
+from fastapi import APIRouter, WebSocket, WebSocketDisconnect, HTTPException
+from starlette.status import HTTP_401_UNAUTHORIZED
 
 from storage import read_tasks
+from dependencies import VALID_TOKENS
 
 class ConnectionManager:
     def __init__(self):
-        self.active_connections: List[WebSocket] = []
+        # Store tuples of (websocket, api_token)
+        self.active_connections: List[Tuple[WebSocket, str]] = []
 
-    async def connect(self, websocket: WebSocket):
+    async def connect(self, websocket: WebSocket, token: str):
         await websocket.accept()
-        self.active_connections.append(websocket)
+        self.active_connections.append((websocket, token))
 
     def disconnect(self, websocket: WebSocket):
-        if websocket in self.active_connections:
-            self.active_connections.remove(websocket)
+        connection_to_remove = next((conn for conn in self.active_connections if conn[0] == websocket), None)
+        if connection_to_remove:
+            self.active_connections.remove(connection_to_remove)
+
+    async def send_tasks_to_connection(self, connection: Tuple[WebSocket, str]):
+        websocket, token = connection
+        all_tasks = read_tasks()
+        
+        # Create a personalized list of tasks with ownership info
+        tasks_with_ownership = []
+        for task in all_tasks:
+            task_copy = task.copy()
+            task_copy["is_owner"] = task_copy.get("api_token") == token
+            tasks_with_ownership.append(task_copy)
+
+        message = {"type": "tasks_update", "payload": tasks_with_ownership}
+        try:
+            await websocket.send_json(message)
+        except (WebSocketDisconnect, RuntimeError):
+            self.disconnect(websocket)
 
     async def broadcast_tasks(self):
         if not self.active_connections:
             return
-        tasks = read_tasks()
-        message = {"type": "tasks_update", "payload": tasks}
-        # Create a copy of the list for safe iteration
+        # Create a copy for safe iteration
         for connection in list(self.active_connections):
-            try:
-                await connection.send_json(message)
-            except (WebSocketDisconnect, RuntimeError):
-                # Handle cases where connection is closed but not yet removed
-                self.disconnect(connection)
+            await self.send_tasks_to_connection(connection)
 
 manager = ConnectionManager()
 router = APIRouter()
 
-@router.websocket("/ws")
-async def websocket_endpoint(websocket: WebSocket):
-    await manager.connect(websocket)
-    await manager.broadcast_tasks() # Send initial state
+@router.websocket("/ws/{token}")
+async def websocket_endpoint(websocket: WebSocket, token: str):
+    # --- NEW: Authenticate WebSocket connection ---
+    if token not in VALID_TOKENS:
+        await websocket.close(code=1008) # Policy Violation
+        return
+
+    await manager.connect(websocket, token)
+    # Send initial state to the newly connected client
+    await manager.send_tasks_to_connection((websocket, token))
     try:
         while True:
             # Keep connection alive. We are not expecting any client messages.
             await websocket.receive_text()
     except WebSocketDisconnect:
         manager.disconnect(websocket)
-        print("Client disconnected from WebSocket.")
+        print(f"Client disconnected from WebSocket.")

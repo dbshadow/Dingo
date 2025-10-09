@@ -10,7 +10,6 @@ from translator import translate_text
 # --- Router Setup ---
 router = APIRouter(
     tags=["Live Translation"],
-    dependencies=[Depends(verify_api_token)]
 )
 
 # --- Environment & Constants ---
@@ -24,7 +23,7 @@ class LiveTranslateRequest(BaseModel):
     target_lang: str
 
 # --- Endpoint ---
-@router.post("/live_translate")
+@router.post("/live_translate", dependencies=[Depends(verify_api_token)])
 async def live_translate(request: LiveTranslateRequest):
     if not OLLAMA_HOST or not OLLAMA_MODEL:
         raise HTTPException(

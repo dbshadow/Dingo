@@ -7,9 +7,9 @@ from fastapi import (
     APIRouter, Depends, HTTPException, UploadFile, File, Form
 )
 from fastapi.responses import FileResponse, JSONResponse
-from starlette.status import HTTP_404_NOT_FOUND
+from starlette.status import HTTP_403_FORBIDDEN, HTTP_404_NOT_FOUND
 
-from dependencies import verify_api_token
+from dependencies import get_current_api_token
 from storage import read_tasks, write_tasks
 from worker import get_running_tasks_dict
 # Import the WebSocket manager from the ws router to notify it of changes
@@ -19,7 +19,6 @@ from routers.ws import manager as ws_manager
 router = APIRouter(
     prefix="/tasks",
     tags=["Task Management"],
-    dependencies=[Depends(verify_api_token)]
 )
 
 # --- Constants ---
@@ -30,9 +29,12 @@ OLLAMA_MODEL = os.getenv("OLLAMA_MODEL")
 # --- Endpoints ---
 
 @router.get("/")
-async def get_tasks():
-    """Get the list of all tasks."""
-    return read_tasks()
+async def get_tasks(api_token: str = Depends(get_current_api_token)):
+    """Get the list of all tasks and indicate ownership."""
+    all_tasks = read_tasks()
+    for task in all_tasks:
+        task["is_owner"] = task.get("api_token") == api_token
+    return all_tasks
 
 @router.post("/upload")
 async def handle_upload(
@@ -41,7 +43,8 @@ async def handle_upload(
     target_lang: str = Form(...),
     overwrite: bool = Form(False),
     glossary_file: UploadFile | None = File(None),
-    note: str = Form("")
+    note: str = Form(""),
+    api_token: str = Depends(get_current_api_token)
 ):
     """Handles file upload and creates a new translation task."""
     original_filename = upload_file.filename
@@ -78,6 +81,7 @@ async def handle_upload(
         "ollama_host": OLLAMA_HOST,
         "model": OLLAMA_MODEL,
         "batch_size": 10,
+        "api_token": api_token  # Associate task with the user's token
     }
     tasks = read_tasks()
     tasks.append(new_task)
@@ -86,13 +90,17 @@ async def handle_upload(
     return JSONResponse({"message": "Task added to queue"})
 
 @router.delete("/{task_id}")
-async def delete_task(task_id: str):
+async def delete_task(task_id: str, api_token: str = Depends(get_current_api_token)):
     """Deletes a task and its associated files."""
     tasks = read_tasks()
     task_to_delete = next((t for t in tasks if t["id"] == task_id), None)
 
     if not task_to_delete:
         raise HTTPException(status_code=HTTP_404_NOT_FOUND, detail="Task not found")
+
+    # --- NEW: Ownership Verification ---
+    if task_to_delete.get("api_token") != api_token:
+        raise HTTPException(status_code=HTTP_403_FORBIDDEN, detail="You do not have permission to delete this task.")
 
     running_tasks = get_running_tasks_dict()
     if task_id in running_tasks:
@@ -146,11 +154,15 @@ async def delete_task(task_id: str):
     return JSONResponse(content={"message": f"Task {task_id} has been deleted."})
 
 @router.get("/download/{task_id}")
-async def download_file(task_id: str):
+async def download_file(task_id: str, api_token: str = Depends(get_current_api_token)):
     """Downloads the output file for a given task."""
     task = next((t for t in read_tasks() if t["id"] == task_id), None)
     if not task:
         raise HTTPException(status_code=HTTP_404_NOT_FOUND, detail="Task not found")
+
+    # --- NEW: Ownership Verification ---
+    if task.get("api_token") != api_token:
+        raise HTTPException(status_code=HTTP_403_FORBIDDEN, detail="You do not have permission to download this file.")
 
     original_filepath = Path(task["filepath"])
     original_stem = Path(task['filename']).stem

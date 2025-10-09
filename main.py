@@ -12,8 +12,8 @@ from fastapi.staticfiles import StaticFiles
 
 # --- Pre-flight checks and environment loading ---
 load_dotenv()
-if not os.getenv("API_TOKEN"):
-    print("FATAL: API_TOKEN not found in .env file. The application cannot start.")
+if not os.getenv("API_TOKENS"):
+    print("FATAL: API_TOKENS not found in .env file. The application cannot start.")
     exit(1)
 if not os.getenv("OLLAMA_HOST") or not os.getenv("OLLAMA_MODEL"):
     print("FATAL: OLLAMA_HOST or OLLAMA_MODEL not found in .env file. The application cannot start.")
