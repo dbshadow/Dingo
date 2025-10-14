@@ -437,3 +437,27 @@ button:disabled {
     margin-left: 12px;  /* Slightly less space */
     font-weight: normal;
 }
+
+.tool-note {
+    font-size: 0.9rem;
+    color: #6c757d; /* A muted, secondary text color */
+    background-color: #f8f9fa; /* A very light grey background */
+    border-left: 3px solid #6c757d;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.note-row > td {
+    padding: 15px;
+    background-color: #f8f9fa;
+}
+
+.note-content {
+    white-space: pre-wrap;
+}
+
+.error-content {
+    white-space: pre-wrap;
+    color: #c13515; /* A readable red color */
+    font-weight: bold;
+}

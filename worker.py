@@ -80,6 +80,7 @@ async def run_background_worker(manager):
                 except Exception as e:
                     print(f"Task {task_id} failed: {e}")
                     final_status = "error"
+                    error_msg = str(e)
                 finally:
                     # Clean up the task from the running list
                     if task_id in running_async_tasks:
@@ -87,11 +88,12 @@ async def run_background_worker(manager):
                     
                     # Update the final status in storage, but only if the task hasn't been deleted
                     current_tasks = read_tasks()
-                    task_exists = any(t['id'] == task_id for t in current_tasks)
-                    if task_exists:
-                        for task in current_tasks:
-                            if task['id'] == task_id:
-                                task["status"] = final_status
+                    task_to_update = next((t for t in current_tasks if t["id"] == task_id), None)
+
+                    if task_to_update:
+                        task_to_update["status"] = final_status
+                        if final_status == "error":
+                            task_to_update["error_message"] = error_msg
                         write_tasks(current_tasks)
                     
                     # Notify clients of the final status

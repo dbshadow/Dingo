@@ -23,7 +23,7 @@
             <a href="/"><img src="/static/logo.png" alt="D-Link Logo"></a>
         </div>
         <div class="title-container">
-            <h1>Translator&nbsp;<span class="version">v1.40</span></h1>
+            <h1>Translator&nbsp;<span class="version">v1.42</span></h1>
         </div>
         <div class="tabs">
             <button class="tab-link active" data-tab="csv-translator">CSV Translator</button>
@@ -78,6 +78,7 @@
             <div class="tool-section">
                 <h2>1. IDML to CSV Extractor</h2>
                 <p>This tool extracts text from an Adobe InDesign IDML file and converts it into a CSV file ready for translation.</p>
+                <p class="tool-note">Note: The extracted CSV file (with `source`/`target` columns) is not directly compatible with the 'CSV Translator' tab. You must manually change the headers to BCP-47 language codes (e.g., `en`, `de`, `zh-Hant`) to use it there.</p>
                 <form id="idml-extract-form">
                     <div class="form-group">
                         <label for="idml-file-extract">Upload IDML File</label>
@@ -90,6 +91,7 @@
             <div class="tool-section">
                 <h2>2. Rebuild IDML from CSV</h2>
                 <p>This tool merges a translated CSV file back into the original IDML file structure.</p>
+                <p class="tool-note">Note: The CSV file used for rebuilding *must* contain `source` and `target` columns. Files downloaded from the 'CSV Translator' tab need their headers modified before they can be used here.</p>
                 <form id="idml-rebuild-form">
                     <div class="form-group">
                         <label for="idml-file-rebuild">Upload Original IDML File</label>

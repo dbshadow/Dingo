@@ -57,6 +57,14 @@ async def process_csv(
     if len(df.columns) < 2:
         raise ValueError("CSV file must contain at least two columns: one for the source language and at least one for a target language.")
 
+    # --- NEW: Validate headers to prevent misuse of IDML-extracted CSVs ---
+    for header in df.columns:
+        if header.lower() in ['source', 'target']:
+            raise ValueError(
+                f"Header contains '{header}', which is not allowed. "
+                "This seems to be an IDML-extracted file. Please use BCP-47 language codes (e.g., 'en', 'de') as headers for the CSV Translator."
+            )
+
     source_lang = df.columns[0]
     target_langs = df.columns[1:]
     source_col_name = source_lang

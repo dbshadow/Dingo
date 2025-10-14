@@ -112,17 +112,22 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.tabs').addEventListener('click', (event) => {
         if (!event.target.matches('.tab-link')) return;
 
-        const tabId = event.target.dataset.tab;
+        // Deactivate all tabs and hide all content first
         document.querySelectorAll('.tab-link').forEach(link => link.classList.remove('active'));
-        event.target.classList.add('active');
+        document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
 
-        document.querySelectorAll('.tab-content').forEach(content => {
-            let displayStyle = 'none';
-            if (content.id === tabId) {
-                displayStyle = (content.id === 'csv-translator' || content.id === 'live-translator') ? 'flex' : 'block';
-            }
-            content.style.display = displayStyle;
-        });
+        // Activate the clicked tab
+        const clickedTab = event.target;
+        clickedTab.classList.add('active');
+
+        // Show the corresponding content
+        const tabId = clickedTab.dataset.tab;
+        const activeContent = document.getElementById(tabId);
+        if (activeContent) {
+            // Use 'flex' for specific tabs, 'block' for others as a default
+            const displayStyle = (tabId === 'csv-translator' || tabId === 'live-translator') ? 'flex' : 'block';
+            activeContent.style.display = displayStyle;
+        }
     });
 
     // --- Event Delegation for Forms & Actions ---
@@ -255,13 +260,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 const isRunning = task.status === 'running';
                 const isError = task.status === 'error';
                 const hasNote = task.note && task.note.trim() !== '';
+                const hasError = isError && task.error_message;
+                const hasDetails = hasNote || hasError;
                 const isOwner = task.is_owner;
 
                 // Main task row
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>
-                        ${hasNote 
+                        ${hasDetails 
                             ? `<a href="#" class="filename-toggle filename-link" data-task-id="${task.id}">${task.filename}</a>` 
                             : task.filename
                         }
@@ -283,18 +290,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
                 taskListBody.appendChild(row);
 
-                // Note row (if note exists)
-                if (hasNote) {
-                    const noteRow = document.createElement('tr');
-                    noteRow.className = 'note-row';
-                    noteRow.dataset.taskId = task.id;
-                    noteRow.style.display = 'none'; // Initially hidden
-                    noteRow.innerHTML = `
-                        <td colspan="4" class="note-content">
-                            ${task.note.replace(/\n/g, '<br>')}
+                // Detail row (for notes or errors)
+                if (hasDetails) {
+                    const detailRow = document.createElement('tr');
+                    detailRow.className = 'note-row';
+                    detailRow.dataset.taskId = task.id;
+                    detailRow.style.display = 'none'; // Initially hidden
+                    
+                    let detailContent = '';
+                    if (hasNote) {
+                        detailContent += `<div class="note-content">${task.note.replace(/\n/g, '<br>')}</div>`;
+                    }
+                    if (hasError) {
+                        detailContent += `<div class="error-content"><strong>Error:</strong> ${task.error_message}</div>`;
+                    }
+
+                    detailRow.innerHTML = `
+                        <td colspan="4">
+                            ${detailContent}
                         </td>
                     `;
-                    taskListBody.appendChild(noteRow);
+                    taskListBody.appendChild(detailRow);
                 }
             });
         }
