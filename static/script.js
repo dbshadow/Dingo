@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     function populateLanguageSelects() {
-        document.querySelectorAll('select[id*="lang"]').forEach(select => {
+        document.querySelectorAll('#live-source-lang, #live-target-lang').forEach(select => {
             languages.forEach(lang => {
                 const option = document.createElement('option');
                 option.value = lang.value;
@@ -54,8 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 select.appendChild(option);
             });
         });
-        document.getElementById('source-lang').value = 'en';
-        document.getElementById('target-lang').value = 'zh-Hant';
         document.getElementById('live-source-lang').value = 'en';
         document.getElementById('live-target-lang').value = 'zh-Hant';
     }
@@ -134,22 +132,12 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
             const form = event.target;
             const submitBtn = form.querySelector('button');
-            const sourceLangEl = document.getElementById('source-lang');
-            const targetLangEl = document.getElementById('target-lang');
-            const overwriteEl = document.getElementById('overwrite');
-
-            // Store current settings
-            const lastSettings = {
-                sourceLang: sourceLangEl.value,
-                targetLang: targetLangEl.value,
-                overwrite: overwriteEl.checked
-            };
-
+            
             submitBtn.disabled = true;
             submitBtn.textContent = 'Uploading...';
             const formData = new FormData(form);
             try {
-                                const response = await authenticatedFetch('/tasks/upload', { method: 'POST', body: formData });
+                const response = await authenticatedFetch('/tasks/upload', { method: 'POST', body: formData });
                 if (!response.ok) {
                     const errorData = await response.json();
                     throw new Error(errorData.detail || 'Upload failed');
@@ -158,9 +146,6 @@ document.addEventListener('DOMContentLoaded', () => {
             } catch (error) {
                 alert(`Upload failed: ${error.message}`);
             } finally {
-                sourceLangEl.value = lastSettings.sourceLang
-                targetLangEl.value = lastSettings.targetLang;
-                overwriteEl.checked = lastSettings.overwrite;
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Add to Queue';
             }

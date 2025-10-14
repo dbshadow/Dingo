@@ -1,15 +1,15 @@
-﻿source,target
-"Hello, world!","你好, 世世世界界界!"
-This is a test of the translation system.,這是翻譯系統的測試。
-The quick brown fox jumps over the lazy dog.,敏捷的棕色狐狸跳過懶惰的狗狗。
-Software development is a complex and rewarding field.,軟體開發是一個複雜且有回報的領域。
-"To be, or not to be, that is the question.",生存還是毀滅，這是個問題。
-The financial markets are experiencing significant volatility this week.,本週金融市場正經歷顯著波動。
-Please ensure all safety protocols are followed strictly.,請確保所有安全協議嚴格遵守。
-Artificial intelligence is transforming many industries.,人工智慧正在改變許多產業。
-What is the weather forecast for tomorrow?,明天的天氣預報是什麼？
-The new product launch has been a resounding success.,新產品發布取得了圓滿成功。
-Check out our website at https://www.example.com for more information.,請查看我們的網站 https://www.example.com 以獲取更多資訊。
+﻿en,zh-Hant,es
+"Hello, world!",
+This is a test of the translation system.,
+The quick brown fox jumps over the lazy dog.,
+Software development is a complex and rewarding field.,
+"To be, or not to be, that is the question.",
+The financial markets are experiencing significant volatility this week.,
+Please ensure all safety protocols are followed strictly.,
+Artificial intelligence is transforming many industries.,
+What is the weather forecast for tomorrow?,
+The new product launch has been a resounding success.,
+Check out our website at https://www.example.com for more information.,
 "My email is john.doe@email.com, feel free to contact me.",
 The command is `pip install requests`.,
 User-generated content (UGC) is key for our platform.,

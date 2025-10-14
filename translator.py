@@ -1,6 +1,7 @@
 import asyncio
 import ollama
 import re
+import pandas as pd
 from typing import Dict, Optional
 
 async def translate_text(
@@ -19,17 +20,18 @@ async def translate_text(
     prompt_instructions = []
     if glossary and text_to_translate:
         for term, translations in glossary.items():
-            if re.search(r'\b' + re.escape(term) + r'\b', text_to_translate, re.IGNORECASE):
+            #if re.search(r'\b' + re.escape(term) + r'\b', text_to_translate, re.IGNORECASE):
+            if re.search(r'\b' + re.escape(term) + r'\b', text_to_translate):
                 target_translation = translations.get(target_lang)
-                if target_translation:
+                if target_translation and not pd.isna(target_translation):
                     # 指定翻譯
                     prompt_instructions.append(
-                        f"- Always translate '{term}' as '{target_translation}'."
+                        f"- Always translate '{term}' (case-sensitive) as '{target_translation}'."
                     )
                 else:
                     # 保持原樣
                     prompt_instructions.append(
-                        f"- Do not translate '{term}'; keep it exactly as written."
+                        f"- Do not translate '{term}'; keep it exactly as written, including its original capitalization (case-sensitive)."
                     )
 
     general_rules = (
@@ -62,16 +64,18 @@ async def translate_text(
         f"The text to translate is: \"{text_to_translate}\""
     )
 
+    print(f"xxxxxxxxxxxxxx\n{prompt}\nxxxxxxxxxxxxxxx")
     try:
         response = await client.chat(
             model=model,
             messages=[{"role": "user", "content": prompt}],
-            options={"temperature": 0, "repeat_penalty": 1.1},
+            options={"temperature": 0.5, "top_p": 0.95},
         )
         translated_text = response["message"]["content"].strip()
         # 移除可能出現的引號
         if translated_text.startswith('"') and translated_text.endswith('"'):
             translated_text = translated_text[1:-1]
+        print(f"{translated_text}")
         return translated_text
     except Exception as e:
         print(f"An error occurred while translating '{text_to_translate}': {e}")

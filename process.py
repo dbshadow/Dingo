@@ -36,161 +36,83 @@ def load_glossary(glossary_path: Path) -> Dict[str, Dict[str, str]]:
 
 async def process_csv(
     csv_path: Path,
-    source_lang: str,
-    target_lang: str,
     ollama_host: str,
     model: str,
     batch_size: int,
-    overwrite: bool,
     progress_callback: ProgressCallback = None,
     glossary_path: Path | None = None
 ):
     """
-    Core logic for CSV translation. Progress is reported via a callback.
-    CancelledError will be propagated to the caller.
+    Core logic for CSV translation. Languages are determined by the CSV headers.
+    Progress is reported via a callback. CancelledError will be propagated to the caller.
     """
     glossary_dict = load_glossary(glossary_path)
 
     try:
-        df = pd.read_csv(csv_path)
+        df = pd.read_csv(csv_path, dtype=str).fillna('')
     except Exception as e:
         print(f"Error reading CSV {csv_path}: {e}")
         raise
 
-    if 'source' not in df.columns:
-        raise ValueError("CSV file must contain a 'source' column.")
+    if len(df.columns) < 2:
+        raise ValueError("CSV file must contain at least two columns: one for the source language and at least one for a target language.")
 
-    if 'target' not in df.columns:
-        df['target'] = ""
+    source_lang = df.columns[0]
+    target_langs = df.columns[1:]
+    source_col_name = source_lang
 
-    df['source'] = df['source'].fillna('').astype(str)
-    df['target'] = df['target'].fillna('').astype(str)
-
-    if not overwrite:
-        rows_to_process_mask = (df['target'] == '') | (df['target'].isna())
-        indices_to_update = df.index[rows_to_process_mask]
-        texts_to_translate = df.loc[indices_to_update, 'source'].tolist()
-    else:
-        indices_to_update = df.index
-        texts_to_translate = df["source"].tolist()
-
-    total_to_translate = len(texts_to_translate)
+    client = ollama.AsyncClient(host=ollama_host)
     
+    # Calculate total number of cells to translate for progress tracking
+    total_to_translate = 0
+    for target_lang in target_langs:
+        if target_lang not in df.columns:
+            df[target_lang] = ''
+        total_to_translate += int((df[target_lang] == '').sum())
+
     if progress_callback:
         await progress_callback(0, total_to_translate)
 
-    if total_to_translate == 0:
-        # Even if there's nothing to translate, we need to ensure the processed file exists for the download endpoint.
-        processed_filepath = csv_path.with_name(f"{csv_path.stem}_processed.csv")
-        if not processed_filepath.exists():
-            df.to_csv(processed_filepath, index=False, encoding='utf-8-sig')
-        return
-
-    client = ollama.AsyncClient(host=ollama_host)
     processed_count = 0
+    processed_filepath = csv_path.with_name(f"{csv_path.stem}_processed.csv")
 
-    for i in range(0, total_to_translate, batch_size):
-        batch_texts = texts_to_translate[i:i + batch_size]
-        batch_indices = indices_to_update[i:i + batch_size]
+    for target_lang in target_langs:
+        target_col_name = target_lang
         
-        tasks = [
-            translate_text(client, text, source_lang, target_lang, model, glossary=glossary_dict)
-            for text in batch_texts
-        ]
-        
-        batch_results = await asyncio.gather(*tasks)
-        
-        df.loc[batch_indices, 'target'] = batch_results
-        processed_count += len(batch_results)
+        # Ensure target column exists
+        if target_col_name not in df.columns:
+            df[target_col_name] = ''
 
-        try:
-            processed_filepath = csv_path.with_name(f"{csv_path.stem}_processed.csv")
-            df.to_csv(processed_filepath, index=False, encoding='utf-8-sig')
-            if progress_callback:
-                await progress_callback(processed_count, total_to_translate)
-        except Exception as e:
-            print(f"Error writing to CSV file {processed_filepath}: {e}")
-            raise
+        # Identify rows that need translation for the current target language
+        rows_to_process_mask = (df[target_col_name] == '') & (df[source_col_name] != '')
+        indices_to_update = df.index[rows_to_process_mask]
+        texts_to_translate = df.loc[indices_to_update, source_col_name].tolist()
 
-def _cleanup_temp_files(temp_csv_path: Path, translated_csv_path: Path):
-    """Safely remove temporary files."""
-    print("Cleaning up temporary files...")
-    try:
-        if temp_csv_path.exists():
-            temp_csv_path.unlink()
-        if translated_csv_path.exists():
-            translated_csv_path.unlink()
-    except OSError as e:
-        print(f"Error during cleanup: {e}")
+        if not texts_to_translate:
+            continue
 
+        for i in range(0, len(texts_to_translate), batch_size):
+            batch_texts = texts_to_translate[i:i + batch_size]
+            batch_indices = indices_to_update[i:i + batch_size]
+            
+            tasks = [
+                translate_text(client, text, source_lang, target_lang, model, glossary=glossary_dict)
+                for text in batch_texts
+            ]
+            
+            batch_results = await asyncio.gather(*tasks)
+            
+            df.loc[batch_indices, target_col_name] = batch_results
+            processed_count += len(batch_results)
 
-async def process_idml(
-    idml_path: Path,
-    source_lang: str,
-    target_lang: str,
-    ollama_host: str,
-    model: str,
-    batch_size: int,
-    overwrite: bool, # Overwrite is implicitly handled by the process
-    progress_callback: ProgressCallback = None,
-    glossary_path: Path | None = None
-):
-    """
-    Orchestrates the full IDML translation process.
-    Intermediate files are preserved on cancellation.
-    """
-    temp_csv_path = idml_path.with_name(f"{idml_path.stem}.csv")
-    translated_csv_path = temp_csv_path.with_name(f"{temp_csv_path.stem}_processed.csv")
-    final_idml_path = idml_path.with_name(f"{idml_path.stem}_processed.idml")
-
-    try:
-        # 1. Extract IDML to a temporary CSV file
-        print(f"Extracting IDML: {idml_path}")
-        csv_content = extract_idml_to_csv(idml_path)
-        with open(temp_csv_path, 'w', encoding='utf-8-sig') as f:
-            f.write(csv_content)
-        print(f"Temporary CSV created at: {temp_csv_path}")
-
-        # 2. Translate the temporary CSV using the existing process_csv function
-        print("Starting translation of extracted CSV...")
-        await process_csv(
-            csv_path=temp_csv_path,
-            source_lang=source_lang,
-            target_lang=target_lang,
-            ollama_host=ollama_host,
-            model=model,
-            batch_size=batch_size,
-            overwrite=True,  # Always overwrite for the IDML process
-            progress_callback=progress_callback,
-            glossary_path=glossary_path
-        )
-        print("CSV translation completed.")
-
-        # 3. Rebuild the IDML from the translated CSV
-        if not translated_csv_path.exists():
-            raise FileNotFoundError(f"Translated CSV file not found at {translated_csv_path}")
-        
-        print("Rebuilding IDML file...")
-        rebuilt_idml_content = rebuild_idml_from_csv(
-            original_idml_path=idml_path,
-            translated_csv_path=translated_csv_path
-        )
-        
-        # 4. Save the final IDML file
-        with open(final_idml_path, 'wb') as f:
-            f.write(rebuilt_idml_content)
-        print(f"Rebuilt IDML saved to: {final_idml_path}")
-
-        # 5. Clean up temporary files on success
-        _cleanup_temp_files(temp_csv_path, translated_csv_path)
-
-    except asyncio.CancelledError:
-        print("IDML processing was cancelled. Intermediate files will be preserved.")
-        # Re-raise the exception to be caught by the background worker
-        raise
-    except Exception as e:
-        print(f"An error occurred during IDML processing: {e}")
-        # Clean up on other errors
-        _cleanup_temp_files(temp_csv_path, translated_csv_path)
-        # Re-raise the exception to be caught by the background worker
-        raise
+            try:
+                df.to_csv(processed_filepath, index=False, encoding='utf-8-sig')
+                if progress_callback:
+                    await progress_callback(processed_count, total_to_translate)
+            except Exception as e:
+                print(f"Error writing to CSV file {processed_filepath}: {e}")
+                raise
+    
+    # Final save to ensure the file exists even if no translations were needed
+    if not processed_filepath.exists():
+        df.to_csv(processed_filepath, index=False, encoding='utf-8-sig')

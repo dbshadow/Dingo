@@ -3,7 +3,7 @@ import asyncio
 from pathlib import Path
 from typing import Dict, Any
 
-from process import process_csv, process_idml
+from process import process_csv
 from storage import read_tasks, write_tasks
 
 # This state is now local to the worker
@@ -56,22 +56,11 @@ async def run_background_worker(manager):
 
                 glossary_path_str = pending_task.get("glossary_path")
                 glossary_path = Path(glossary_path_str) if glossary_path_str else None
-                file_type = pending_task.get("file_type", "csv")
-
-                if file_type == 'idml':
-                    process_function = process_idml
-                    path_argument = {"idml_path": Path(pending_task["filepath"])}
-                else: # Default to csv
-                    process_function = process_csv
-                    path_argument = {"csv_path": Path(pending_task["filepath"])}
 
                 # Create and store the asyncio task
                 process_task = asyncio.create_task(
-                    process_function(
-                        **path_argument,
-                        source_lang=pending_task["source_lang"],
-                        target_lang=pending_task["target_lang"],
-                        overwrite=pending_task["overwrite"],
+                    process_csv(
+                        csv_path=Path(pending_task["filepath"]),
                         progress_callback=progress_callback,
                         ollama_host=pending_task.get("ollama_host"),
                         model=pending_task.get("model"),

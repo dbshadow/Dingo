@@ -39,9 +39,6 @@ async def get_tasks(api_token: str = Depends(get_current_api_token)):
 @router.post("/upload")
 async def handle_upload(
     upload_file: UploadFile = File(...),
-    source_lang: str = Form(...),
-    target_lang: str = Form(...),
-    overwrite: bool = Form(False),
     glossary_file: UploadFile | None = File(None),
     note: str = Form(""),
     api_token: str = Depends(get_current_api_token)
@@ -50,10 +47,9 @@ async def handle_upload(
     original_filename = upload_file.filename
     file_extension = Path(original_filename).suffix.lower()
 
-    if file_extension not in [".csv", ".idml"]:
-        raise HTTPException(status_code=400, detail="Invalid file type. Only .csv and .idml files are accepted.")
+    if file_extension not in [".csv"]:
+        raise HTTPException(status_code=400, detail="Invalid file type. Only .csv files are accepted.")
 
-    file_type = file_extension.strip('.')
     task_id = str(uuid.uuid4())
     filepath = UPLOAD_DIR / f"{task_id}_{original_filename}"
     with open(filepath, "wb") as buffer:
@@ -70,12 +66,9 @@ async def handle_upload(
         "id": task_id,
         "filename": original_filename,
         "filepath": str(filepath),
-        "file_type": file_type,
+        "file_type": "csv",
         "status": "pending",
         "progress": {"processed": 0, "total": 0},
-        "source_lang": source_lang,
-        "target_lang": target_lang,
-        "overwrite": overwrite,
         "glossary_path": glossary_filepath_str,
         "note": note,
         "ollama_host": OLLAMA_HOST,
@@ -166,16 +159,17 @@ async def download_file(task_id: str, api_token: str = Depends(get_current_api_t
 
     original_filepath = Path(task["filepath"])
     original_stem = Path(task['filename']).stem
-    target_lang = task.get("target_lang", "unknown")
     file_type = task.get("file_type", "csv")
 
     final_idml = original_filepath.with_name(f"{original_filepath.stem}_processed.idml")
     final_csv = original_filepath.with_name(f"{original_filepath.stem}_processed.csv")
+
+    # Handle CSV file download
     if file_type == 'csv' and final_csv.exists():
         if task["status"] == "completed":
-            filename = f"{original_stem}_translated_{target_lang}.csv"
+            filename = f"{original_stem}_translated.csv"
         else:
-            filename = f"{original_stem}_inprogress_{target_lang}.csv"
+            filename = f"{original_stem}_inprogress.csv"
         return FileResponse(
             final_csv,
             media_type="application/octet-stream",
@@ -184,8 +178,9 @@ async def download_file(task_id: str, api_token: str = Depends(get_current_api_t
             }
         )
 
+    # Handle IDML file download (for completed tasks)
     if task["status"] == "completed" and file_type == 'idml' and final_idml.exists():
-        filename = f"{original_stem}_translated_{target_lang}.idml"
+        filename = f"{original_stem}_translated.idml"
         return FileResponse(
             final_idml,
             media_type="application/octet-stream",
@@ -193,10 +188,10 @@ async def download_file(task_id: str, api_token: str = Depends(get_current_api_t
                 "Content-Disposition": f'attachment; filename="{filename}"'
             }
         )
-    print(f"{final_csv}")
+
+    # Handle in-progress IDML download (which serves the intermediate CSV)
     if task["status"] != "completed" and file_type == 'idml' and final_csv.exists():
-        filename = f"{original_stem}_inprogress_{target_lang}.csv"
-        print(f"{filename}")
+        filename = f"{original_stem}_inprogress.csv"
         return FileResponse(
             final_csv,
             media_type="application/octet-stream",
@@ -205,6 +200,7 @@ async def download_file(task_id: str, api_token: str = Depends(get_current_api_t
             }
         )
 
+    # Fallback to original file if no processed file is found
     if original_filepath.exists():
         return FileResponse(original_filepath, filename=task["filename"])
 

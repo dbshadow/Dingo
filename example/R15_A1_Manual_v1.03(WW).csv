@@ -1,0 +1,2087 @@
+﻿source,target
+R,R
+1,一
+5,五
+AX1500,AX1500
+SMART R,智慧R
+outer,外部
+Note:,備註：
+"To enjoy the benefits offered by Wi-Fi 6 and WPA3, please make sure that your operating system and wireless network adapter support Wi-Fi 6.",為了享受 Wi‑Fi 6 與 WPA3 所提供的好處，請確保您的作業系統和無線網路卡支援 Wi‑Fi 6。
+4,四
+3,三
+2,2
+http://xxxx.devicesetup.net/,http://xxxx.devicesetup.net/
+"To enjoy the benefits offered by Wi-Fi 6 and WPA3,  make sure that your version of Windows",要享受 Wi‑Fi 6 和 WPA3 所提供的好處，請確保您的 Windows 版本。
+®,®
+10 and wireless network adapter support Wi-Fi 6. Refer to the,10 和無線網路適配器支援 Wi‑Fi 6。參考
+from Microsoft,來自 Microsoft
+.,.
+"In order to better protect the router's configuration page, please enter a password. You will be prompted for this password every time you log in to the router’s web configuration utility. Password must be 8-15 characters and contains both numbers and letters.",為了更好地保護路由器的設定頁面，請輸入密碼。每次登錄路由器的網頁設定工具時，系統都會提示您輸入此密碼。密碼必須為8-15個字符，並且包含數字和字母。
+It is strongly recommended that you change the default device password for accessing the router's configuration page.,強烈建議您更改用於訪問路由器設定頁面的預設設備密碼。
+Click,點擊
+Next,下一步
+to continue.,繼續。
+Step 4,步驟4
+Say or Type in your command and provide the pin code when being asked.  Refer to,說或輸入你的指令，並在被要求時提供 PIN 代碼。參考
+Google Assistant Voice Commands,Google 助理語音指令
+on the next page,下一頁
+for tasks that you can ask your Google Assistant to perform.,對於可以請 Google Assistant 執行的任務。
+Step 1,步驟 1
+We will set up the pin code first for controls such as reboot and enable or disable guest Wi-Fi.,我們將首先設置 PIN 碼，以便控制重新啟動以及啟用或禁用客戶端 Wi‑Fi。
+Tap,點擊
+Voice Control,語音控制
+from the,從
+Home,首頁
+screen of the,螢幕的
+app.,應用程式
+Step 10,第10步
+Device is now successfully set up with the Google Home.,設備現在已成功設置為 Google Home。
+Step 8,第 8 步
+Choose a home.,選擇一個家。
+Step 7,步驟7
+Choose your device.,請選擇您的設備。
+Step 6,第六步
+"Link your registered account with Google. Depending on your system, note that if the account link page does not display, please tap ""+""  on the top left from the above step to add the device manually:",將已註冊的帳號與 Google 連結。根據您的系統，若帳號連結頁面未顯示，請在上述步驟的左上角點擊「+」以手動添加裝置：
++,+
+Set up device,設置裝置
+", choose",，選擇
+Works with Google,與 Google 兼容
+", and search for",，和搜尋
+. Then sign in using your registered D-Link account.,然後使用您已註冊的 D-Link 帳戶登錄。
+Link with the Google Assistant.,與 Google Assistant 連結
+Step 3,第3步
+Choose the cloud service (e.g. Google Assistant).,請選擇クラウド服務（例如 Google Assistant）。
+Google Home Setup,Google Home 設置
+Link D-Link Cloud Service to Other Services,將 D-Link クラウド 服務連結至其他服務
+R15 AX1500 Smart Router,R15 AX1500 智慧路由器
+"Power Adapter (12V, 1A)","電源轉接器 (12V, 1A)"
+"Ethernet Cable ( RJ45, 1m)",以太網線（RJ45，1米）
+Quick Installation Guide,快速安裝指南
+On the,在…上
+Add a VPN connection,新增虛擬私人網路連線
+"screen, do the following:",畫面，請執行以下操作：
+AI Parental Control:,人工智慧家長控制:
+"To enable this function, open the app. From the",要啟用此功能，請開啟該應用程式。從...
+"screen, tap",螢幕，點擊
+Parental Control,家長控制
+Then use the following procedure to add a new control profile:,然後使用以下程序添加新的控制配置文件：
+Start,開始
+Name this profile. Then tap,為此配置檔命名。然後點擊
+Select client devices to which the profile will be applied.,選擇將此配置檔套用到的客戶端裝置。
+Done,完成
+to proceed.,繼續
+The profile summary will be displayed. On this page you can tap,個人簡介摘要將顯示。在此頁面上，您可以點擊
+Pause,暫停
+to pause Internet immediately to the devices specified in the profile.,立即停止向配置文件中指定的設備提供網際網路。
+You can set schedules to restrict Internet access.,您可以設定時間表以限制上網存取。
+Use,使用
+Block Bedtime Internet Access,封鎖睡前上網
+to block Internet access during the specified days with time periods. Up to two schedules can be defined. Use,在指定日期的時間段內封鎖互聯網訪問。最多可定義兩個時間表。使用
+Allow Scheduled Internet Access,允許排程網路存取
+to allow Internet access only during the specified days and times. Users cannot access the Internet except during the hours that you specify. Note that bedtime restriction takes precedence over the allowed schedules here.,只允許在指定的日期和時間上網。用戶不能在指定時間之外上網。請注意，就寢時間限制優先於此處的允許時間表。
+AI Traffic Optimizer:,人工智慧交通優化器:
+"screen, tap the main router, scroll down the",螢幕，點擊主路由器，向下滾動
+Device Info,設備資訊
+screen to,螢幕至
+Settings,設定
+", and tap",，並點擊
+QoS,服務品質
+Then tap the slider for,然後點擊滑桿以
+AI Traffic Optimizer,人工智慧交通優化器
+"Before you start the AI Traffic Optimizer, run",在啟動人工智慧交通優化器之前，請執行
+Speed,速度
+Test,測試
+screen (go to,畫面（前往
+Home> Internet Speed,首頁> 網路速度
+) to set the download and upload speeds to assist the QoS engine in distributing the bandwidth to prioritized clients.,) 設定下載和上傳速度，以協助 QoS 引擎將頻寬分配給優先客戶端。
+"To prioritize clients, tap",優先處理客戶，點擊
+Client Priority,客戶優先級
+"screen. Tap a client device and assign a priority level with effective duration to this device. High priority devices running online games, video conferences, or other real-time programs will have the best access. The Red bar on the left indicates heavy users.",螢幕。點擊一個客戶端裝置，並為此裝置設定帶有生效期限的優先權等級。高優先權裝置運行線上遊戲、視訊會議或其他即時程式時，將獲得最佳存取權。左側的紅色條表示高負載使用者。
+Congratulations!,恭喜！
+EAGLE PRO AI,EAGLE PRO 人工智慧
+has been successfully linked as a skill for your Amazon device. Refer to,已成功將其作為您 Amazon 設備的技能進行連結。請參考
+Amazon Alexa Voice Commands,Amazon Alexa 語音指令
+for tasks that you can ask your Amazon Alexa to perform.,適用於您可要求 Amazon Alexa 執行的任務。
+Step 9,第 9 步
+Choose a location for your device.,請為您的裝置選擇位置。
+"Add device to your D-Link account. In this menu, you can sign up for a D-Link account using Facebook or Google account, Apple ID or an Email address. If you already have a D-Link account, you can tap the","將裝置新增至您的 D-Link 帳號。  
+在此選單中，您可以使用 Facebook 或 Google 帳號、Apple ID 或電子郵件地址註冊 D-Link 帳號。  
+如果您已經擁有 D-Link 帳號，您可以點擊該"
+Sign In,登入
+link at the bottom of the screen to be redirected to the login page.,畫面底部的連結會被重定向到登入頁面。
+"To disconnect, tap",要斷開，請點擊
+DISCONNECT,斷線
+"To connect, enter your",要連接，輸入您的
+Username,使用者名稱
+and,和
+"Password,",密碼
+then tap,然後點擊
+CONNECT,連接
+to create or,創建或
+VPN Settings,虛擬私人網路設定
+to edit a VPN connection profile,編輯虛擬私人網路連線設定檔
+IPv4 network addresses can have a prefix length between 1 and 32. IPv6 network addresses can have a prefix length between 1 and 128.,IPv4 網路位址的前綴長度可在 1 到 32 之間。IPv6 網路位址的前綴長度可在 1 到 128 之間。
+"Used to designate the subnet prefix of an address. Written as /nnn (up to 3 decimal digits, 0 <= nnn <= 128) suffix after the print form. An example is fe80::982:2a5c/10, where the first 10 bits comprise the subnet prefix.",用於指定地址的子網前綴。寫作 /nnn（最多三位十進位數字，0 ≤ nnn ≤ 128）作為印刷形式的後綴。 例如 fe80::982:2a5c/10，其中前 10 位組成子網前綴。
+"The text form of the IPv6 address is xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx, where each x is a hexadecimal digit, representing 4 bits. Leading zeros can be omitted",IPv6 位址的文字形式為 xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx，每個 x 為十六進位數字，代表 4 位元。前導零可以省略。
+"The text form of the IPv4 address is nnn.nnn.nnn.nnn, where 0<=nnn<=255, and each n is a decimal digit. Leading zeros can be omitted.",IPv4 位址的文字形式為 nnn.nnn.nnn.nnn，其中 0≤nnn≤255，且每個 n 為十進位數字。可省略前導零。
+AI Assistant:,人工智慧助手:
+AI Assistant,人工智慧助手
+"to display the weekly reports on bandwidth consumption with information about heavy users. Weekly reports also give information on the number of times the system performs traffic management automatically when congestion occurs and provides qualitative rating on your Wi-Fi environment. Furthermore, the",以顯示每週的帶寬消耗報告並提供關於重度使用者的資訊。每週報告還會說明系統在擁塞時自動執行流量管理的次數，並提供對您 Wi‑Fi 環境的定性評價。進一步說，
+Nighttime Internet Activity,夜間互聯網活動
+informs you about the overly active Internet access during nighttime.,通知您夜間網路使用過度頻繁的情況。
+This app enables you to proactively improve sleep quality by restricting Internet access  during nighttime. Tap,此應用程式可讓您通過在夜間限制網際網路訪問，主動改善睡眠品質。點按
+Health Mode,健康模式
+to set the bedtime during which Internet access will be blocked on,設定在此時段內封鎖網路存取的就寢時間
+all,所有
+devices within the network.,網路中的裝置.
+"The Bedtime scheduling also restricts local access by disabling Wi-Fi connectivity. However, remote management through the Internet is allowed.",睡眠排程也透過禁用 Wi‑Fi 連線來限制本地存取。然而，允許通過互聯網進行遠程管理。
+Other Features,其他功能
+Advanced Mode,進階模式
+The advanced mode provides links to the,進階模式提供鏈接到
+web configuration,網路設定
+interface,介面
+"of the device. Note that this feature is only available with local access (i.e. connected within the same Wi-Fi network). To access, go to",設備。請注意，該功能僅在本地存取時可用（即連接於同一個 Wi‑Fi 網路內）。要存取，請前往
+Home > Advanced Mode,首頁 > 高級模式
+Device Information and Settings,裝置資訊與設定
+From,從
+", tap the device",", 點擊裝置"
+(main router),(主路由器)
+"of the mesh network topology to view its information and settings: name, IP and MAC address, hardware and firmware version, time zone, and model number. You can also configure the Internet connection method and change the device password on this page. It also provides basic device maintenance functions: reboot, LED indicator on/off, firmware update, and device identification with flashing LED.",查看其資訊與設定：名稱、IP 與 MAC 位址、硬體與韌體版本、時區及型號。您亦可於此頁設定網際網路連線方式並更改裝置密碼。此頁亦提供基本裝置維護功能：重新開機、LED 指示燈開/關、韌體更新，以及藍色 LED 閃爍以識別裝置。
+Client Information and Statistics,客戶資訊與統計
+", tap the",", 點擊"
+device (Clients),設備（客戶端）
+"of the mesh network topology to view the clients currently online and blocked. Tap a device to obtain its information: name, IP and MAC address, and parental control profile. It also displays real-time traffic statistics as well as weekly traffic for the past days in a week for both download and upload data transmissions. The Priority function allows you to assign a High/Low priority for this device with effective duration: Always, 1 Day, 4 Hours, 2 Hours, or 1 Hour.",以網狀網路拓撲檢視目前線上與被封鎖的客戶端。點擊一台裝置可取得其資訊：名稱、IP 及 MAC 位址，以及家長控制設定檔。它還會顯示即時流量統計，以及過去一週內下載與上傳資料傳輸的每週流量。Priority 功能允許您為此裝置設定高/低優先權，並選擇有效期限：Always、1 Day、4 Hours、2 Hours 或 1 Hour。
+Extender Information,Extender 資訊
+device (Extenders),設備（擴充器）
+"of the mesh network topology to view the extenders currently connected with the following information: name, IP and MAC address, and hardware and firmware version. Tap",以查看目前已連線擴展器的網狀網路拓撲，並顯示以下資訊：名稱、IP 及 MAC 位址，以及硬體和韌體版本。點擊
+Clients,客戶
+to view its currently connected clients. You can also identify the device by flashing an LED indicator and restart the device on this screen.,查看其當前已連接的客戶端。您也可以通過閃爍 LED 指示燈來識別設備，並在此屏幕上重新啟動設備。
+"You can also block specific websites on this page to prevent the specified devices from accessing certain websites. To do this, tap",您也可以在此頁面上封鎖特定網站，以防止指定裝置存取某些網站。為此，請點擊
+Website Filter,網站篩選器
+", tap",", 點擊"
+Add Website,新增網站
+", then enter the website name and the domain keyword, for example, enter",", 然後輸入網站名稱和域名關鍵詞，例如輸入"
+violent.com,暴力.com
+to block all access to this site and,阻止對此網站的所有訪問並
+violent,暴力
+to block domain names that contain this keyword. Then tap,阻擋包含此關鍵字的網域名稱。然後點擊。
+Add,新增
+at the top right.,在右上角。
+AI Wi-Fi Optimizer:,人工智慧 Wi-Fi 優化器:
+Wi-Fi,無線網路
+and tap,並輕觸
+. Then tap the slider for,。 然後點擊滑桿以
+AI Wi-Fi Optimizer,人工智慧 Wi-Fi 優化器
+. Turn on Wi-Fi Optimizer to have your wireless connection adopting an interference-free channel automatically and receive weekly Wi-Fi environment report every Monday at 8 AM local time.,. 開啟 Wi‑Fi 優化器，讓您的無線連線自動採用無干擾頻道，並於本地時間每週一上午 8 時收到 Wi‑Fi 環境報告。
+"With the EAGLE PRO AI on your smart devices, you can get the R15 up and running quickly. Just plug in the router, open the app and build your home network by following the easy instructions on the screen. The new EAGLE PRO AI is especially designed to ease your management work with the following features:",有了 EAGLE PRO 人工智慧 在您的智慧裝置上，您可以快速啟動 R15。只需插上路由器，打開應用程式，並按螢幕上的簡易說明建立您的家庭網路。新的 EAGLE PRO 人工智慧 專為簡化您的管理工作而設計，並配備以下功能：
+Enable this feature to always connect to the cleanest Wi-Fi Channel using the breakthrough beamforming technology and receive information about automatic optimization for continuous improvement in the Wi-Fi environment.,啟用此功能，使用突破性的波束成形技術，始終連接至最乾淨的 Wi‑Fi 頻道，並接收有關自動優化的資訊，以持續改善 Wi‑Fi 環境。
+The QoS engine controls the traffic flow intelligently by automatically assigning heavy traffic with a low priority to improve the overall user experience. It also generates information about bandwidth usage of individual devices and aggregate utilization data.,QoS 引擎會透過自動將高流量指定為低優先級，智能地控制流量流向，以提升整體使用者體驗。它還會產生關於個別設備頻寬使用量及聚合利用率資料的資訊。
+"The message center reports Internet traffic volume and provides usage notifications when clients are transmitting a large amount of data or overly active at night in the weekly bandwidth report. It also enables you to prioritize connected devices to reduce traffic congestion along with the report. Moreover, every improvement made by the Wi-Fi Optimizer will also be recorded to inform administrators about conditions of the wireless environment.",訊息中心會報告互聯網流量量，並在每週頻寬報告中，當客戶端傳輸大量資料或夜間過度活躍時，提供使用通知。它還可以讓您對已連線的設備進行優先級設定，減輕報告中所示的流量擁堵。除此之外，Wi‑Fi 優化器所做的每一項改進都將被記錄，以便告知管理員無線環境的狀況。
+The Parental Control provides the highest flexibility of Internet accessibility control and website filtering. It allows administrators to control the availability of Internet access and speed on individual devices during the designated time periods.,家長控制提供最高的網路可存取控制與網站過濾彈性。它允許管理員在指定時間段內控制各個設備的網路存取可用性和速度。
+Check Speed,檢查速度
+to run a speed check to determine how to distribute Wi-Fi bandwidth to prioritized devices. The speed test helps the QoS engine to distribute Wi-Fi bandwidth to prioritized devices (configured in the device cards below).,執行速度測試，以確定如何將 Wi‑Fi 帶寬分配給優先設備。速度測試有助於 QoS 引擎將 Wi‑Fi 帶寬分配給優先設備（已在下方的設備卡中設定）。
+Upload Speed,上傳速度
+Download Speed,下載速度
+The intelligent QoS Engine lists devices consuming comparatively large resources and will intelligently adjust bandwidth to these devices by assigning a low priority. It will also allocate appropriate bandwidth to connected devices based on their priorities to maintain quality online experience.,智能 QoS 引擎會列出佔用較大資源的裝置，並透過將其設定為低優先權來智能調整其頻寬。它還會根據連接裝置的優先權分配適當的頻寬，以維持良好的線上體驗。
+"Once this is turned on, you will start receiving weekly reports on bandwidth usage through AI Assistant.",一旦開啟此功能，您將開始通過人工智慧助手接收有關頻寬使用的每週報告。
+The rate at which the content is being transferred to the Internet.,內容被傳輸到互聯網的速率。
+The rate at which the content is being transferred to the router.,內容傳輸到路由器的速率。
+Apply to QoS,套用於 QoS
+after the Speed Test to automatically fill in the above information.,完成速度測試後，自動填入上述資訊。
+Router,路由器
+You can view the,您可以查看
+Internet,互聯網
+",",","
+LAN,局域網
+Wi-Fi 2.4 GHz,Wi‑Fi 2.4 GHz
+", or",", 或"
+Wi-Fi 5 GHz,Wi‑Fi 5 GHz
+by clicking the respective tab at the top. The real-time graph of network traffic in,通過點擊頂部相應的標籤。網絡流量實時圖表在
+kilobyte per second,千字节每秒
+"will be shown. To clear the information on the graph, click",將顯示。要清除圖表上的資訊，請點擊
+Clear,清除
+The table below for each interface and radio frequency shows the total number of packets and data that are sent and received through the interface.,下表顯示了每個介面和無線電頻率所傳送及接收的總封包數與資料量。
+The traffic counter will reset if the device is rebooted.,如果設備重新啟動，流量計數器將被重置。
+Extender,擴展器
+Click the Extender tab to view the above information about the extender.,點擊 Extender 標籤以查看上述關於擴展器的資訊。
+At the bottom of the page are the IPv6 host settings.,頁面底部有 IPv6 主機設置。
+"If you wish to remove a record, click",如果您想刪除一條記錄，請點擊
+"in the Delete column. If you wish to edit a record, click",在刪除欄位中。如果您想編輯記錄，請點擊
+"in the Edit column. If you wish to create a new record, click the",在編輯欄位。若您想建立新紀錄，請點擊
+Add Record,新增記錄
+button.,按鈕.
+"If you wish to remove a rule, click",如果你想移除一條規則，請點擊
+"in the Delete column. If you wish to edit a rule, click",在 Delete 列中。 如果您想編輯規則，請點擊
+"in the Edit column. If you wish to create a new rule, click the",在「Edit」欄位中。如果您想建立新規則，請點擊此
+Add Rule,新增規則
+Rules can be configured for filtering the packets based on particular parameters like IP address or ports. and what type of traffic can be passed through the router.,規則可以根據特定參數（如 IP 位址或埠）進行設定，以過濾封包。還有什麼類型的流量可以通過路由器。
+to view the messages displayed to the device users whose Internet access has been restricted.,查看被限制網路存取的裝置使用者所顯示的訊息。
+Blocked Webpage Message,封鎖網頁訊息
+For these access controls:,針對這些存取控制：
+"Manual Pause Control, Website Filter, Custom Schedule,",手動暫停控制、網站過濾器、自訂排程，
+Bedtime Schedule,就寢時間表
+", you can view and customize the messages as well as the titles:",，您可以查看並自定義訊息以及標題：
+Title,標題
+Description,描述
+Reset this message,重置此訊息
+Preview this message,預覽此訊息
+Enter the title of the message in the text box.,請在文本框中輸入訊息標題。
+State the message to inform the user about the restricted access.,說明訊息以告知使用者存取受限。
+Click this button to reset the modified message to its factory default.,點擊此按鈕可將已修改的訊息重置為工廠預設值。
+Display the presentation of the message on a new webpage.,將訊息的呈現顯示在新網頁上。
+Device,裝置
+Add Device,新增裝置
+"to add devices to be in the defined profile. Select the devices from the list of connected devices to which the access policy should be applied, then click",將設備加入已定義的配置文件。從已連接設備列表中選擇應套用存取政策的設備，然後點擊。
+Apply,套用
+to close the screen. Click,關閉畫面。點擊
+Save,儲存
+to save your profile settings and the new profile will be added to the profile list.,保存您的配置設定，新的配置將被加入到配置列表中。
+You can also modify or delete an existing profile by clicking,您也可以點擊來修改或刪除現有的個人資料
+Edit,編輯
+or,或
+Delete,刪除
+respectively.,各自
+"On the Edit page for a selected profile, you can click",在所選個人檔案的編輯頁面上，您可以點擊
+to pause Internet access to specified devices of the profile immediately.,立即暫停設定檔中指定裝置的網際網路存取。
+to add a new website to be blocked:,新增要封鎖的新網站:
+Website Name,網站名稱
+URL Keyword,URL關鍵字
+"Enter the name for the website. This blocks access to websites based on a website's address. For example, enter ""ABC.com"" or ""www.ABC.com.""",請輸入網站名稱。此功能可根據網站地址阻止對網站的訪問。例如，輸入「ABC.com」或「www.ABC.com」。
+"This blocks access to websites based on the keywords with matching URLs. For example, use ""ABC"" to block ""www.ABC.com"" and ""xxx.ABC.com"" and other URLs containing ABC. Enter the same website name as the above in this field to block only the specific URL.",此功能根據關鍵字及相符的網址封鎖網站。例如，使用「ABC」封鎖「www.ABC.com」與「xxx.ABC.com」以及其他包含 ABC 的網址。在此欄位輸入與上述相同的網站名稱，即只封鎖特定網址。
+You can also modify or delete an existing rule by clicking,您也可以點擊以修改或刪除現有規則
+Schedule,時間表
+Profile Name,個人檔案名稱
+Enter a name for this profile.,請輸入此配置檔的名稱。
+Allow Internet Access Time,允許上網時間
+Enabled,已啟用
+and define the schedule to allow Internet access.,並定義允許網路存取的時間表。
+Select the time during which the Internet will be available.,請選擇網際網路可用的時間段。
+To add a schedule:,新增時間表：
+"Each box represents half an hour, with the clock time (0~23) at the top of each column. To add a time period to the schedule, simply click on the start time and drag to the end time. You can add multiple days and multiple periods per day to the schedule. If no time periods are selected, all devices in this profile will be denied Internet access.",每個方塊代表半小時，列頂部顯示時鐘時間（0~23）。要在時間表中加入一段時間，只需點擊開始時間並拖動至結束時間。您可以為時間表新增多個日期以及每天多段時間。若未選擇任何時間段，該設定檔中的所有裝置將被拒絕上網。
+Block Internet Access During Bedtime,在就寢時間阻止上網
+Allow Slow Internet Access,允許慢速網路存取
+and define the schedule to block Internet access  during bedtime.,並定義在睡覺時間阻止上網的排程。
+To add a bedtime schedule:,添加睡眠時間表：
+"Select the time during which bedtime schedule will be active. Select the days of the week, then select the pause time and the resume time for the period during which Internet access will be blocked. To specify different time periods for days of the week, click","選擇就寢時間表啟用的時間段。  
+選擇星期幾，然後選擇網路被封鎖期間的暫停時間與恢復時間。  
+若要為星期幾設定不同時間段，請點擊"
+Add another Bedtime schedule...,新增另一個就寢時間表...
+A maximum of 2  schedules can be defined.,最多可定義 2 個排程。
+Enable this option to allow slow Internet access with reduced speed during restricted hours set above.,啟用此選項以允許在上述限制時間段內以較低速度訪問網際網路。
+You can also modify an existing schedule by clicking,您也可以點擊來修改現有排程
+The name describes this profile.,名稱描述了此配置文件。
+Device Count,設備數量
+The number of devices that this policy will be applied to.,本政策將適用的裝置數量。
+State,州
+"Displays the current status of Internet accessibility, i.e. Normal, Schedule Paused, or Paused on Demand.",顯示目前的互聯網可訪問性狀態，例如正常、排程暫停或按需暫停。
+Edit this access profile.,編輯此存取設定檔
+Remove this access profile.,刪除此存取設定檔
+A maximum of 12 profiles can be defined.,最多可定義 12 個設定檔。
+"To add a profile, configure the following:",要新增配置文件，請配置以下內容：
+Go to,前往
+Features >,功能 >
+to configure parental control policies. You can configure schedules that set time limits for Internet access and prevent access to certain websites.,配置家長控制政策。您可以配置時間表，設定上網時間限制，並阻止訪問某些網站。
+at any time to save the changes you have made on this page.,您可以隨時保存您在此頁面上所做的更改。
+This page displays a list of profiles with the following information:,此頁面顯示包含以下資訊的個人資料列表：
+Features,功能
+Settings >,設定 >
+Operation Mode,操作模式
+"to select your operation mode. Depending on your network architecture, you can configure the router to function as one of the following types of network device: router, extender, or bridge.",選擇您的操作模式。根據您的網絡架構，您可以將路由器配置為以下類型的網絡設備之一：路由器、擴展器或橋接器。
+Router Mode:,路由器模式:
+"In this mode, the R15 directly connects to the Internet provided by your ISP (Internet Service Provider). All client devices from a network group are connected and managed under this router. This is the default mode.",在此模式下，R15 直接連接到您的 ISP（Internet Service Provider）提供的網際網路。所有來自網路組的客戶端設備都連接並在此路由器下進行管理。這是預設模式。
+Bridge Mode:,橋接模式:
+"In this Mode, the R15 extends your existing network and improves overall Wi-Fi coverage, meaning that you already have a router on the premises. Under this mode, the DHCP Server, Parental Control, QoS, and Firewall settings rely on the existing router.","在此模式下，R15 擴充您現有的網路並提升整體 Wi‑Fi 覆蓋範圍，意味著您已經在場所擁有路由器。  
+此模式下，DHCP 伺服器、家長控制、QoS 以及防火牆設定將依賴現有路由器。"
+Extender Mode:,擴展模式:
+"In this mode, this device acts as an extender to connect your wireless devices, expanding Wi-Fi coverage. It provides connectivity between various wireless devices. This can be useful if you already have an existing wireless router. You can then manage the extender through the main router under this mode.",在此模式下，該設備作為擴充器來連接您的無線設備，擴大 Wi‑Fi 覆蓋範圍。它提供各種無線設備之間的連接。若您已經擁有現有的無線路由器，這會很有用。您可以在此模式下通過主路由器管理擴充器。
+D-Link Cloud,D-Link クラウド
+"to see your D-Link Cloud Service details. This page lists whether you are registered with D-Link Cloud Service and email address associated with the account. It enables you to manage your device anytime, anywhere and check the status of your router. Use the EAGLE PRO AI to find out more about D-Link Cloud's features.",查看您的 D-Link クラウド 服務細節。此頁列出您是否已註冊 D-Link クラウド 服務以及與該帳戶相關聯的電子郵件地址。它允許您隨時隨地管理您的設備並檢查您的 路由器 狀態。使用 EAGLE PRO 人工智慧 了解更多關於 D-Link クラウド的功能。
+Advanced Settings,進階設定
+Security Mode,安全模式
+Choose,選擇
+"None, WPA/WPA2-Personal, WPA2-Personal, WPA2/WPA3-Personal,","無, WPA/WPA2-個人, WPA2-個人, WPA2/WPA3-個人,"
+WPA3-Personal.,WPA3-個人.
+WPA3 provides the highest level of encryption among these. Note that WPS will be disabled if WPA3 is used.,WPA3 在這些選項中提供最高級別的加密。請注意，使用 WPA3 時 WPS 將被禁用。
+Home Network Access,家庭網路存取
+Internet Access Only,僅限網際網路存取
+Enabling this option will confine connectivity to the Internet and prevent guests from accessing other local network devices.,啟用此選項將限制連接僅到互聯網，並防止訪客訪問其他本地網路設備。
+"AI-assisted Wi-Fi Optimizer intelligently assists in bandwidth optimization in your home or office network.  It automatically adopts the ""cleanest"" channel and utilizes beamforming technology to improve signal efficiency and reduce interference. It also provides push notifications about weekly network bandwidth utilization and network management advice on prioritizing clients to maintain the overall Internet quality. Refer to",人工智慧輔助的 Wi‑Fi 優化器會智能協助您在家庭或辦公網路中進行頻寬優化。它會自動採用「最乾淨」的頻道，並利用波束成形技術提升訊號效率，減少干擾。它還會推送每週網路頻寬使用率的通知，以及關於優先處理客戶端以維持整體網際網路品質的網路管理建議。參考
+on page,在頁面上
+for more information.,欲了解更多資訊。
+Choose Optimization Time,選擇優化時間
+Enable or disable AI Wi-Fi Optimizer functionality.,啟用或停用人工智慧 Wi‑Fi 優化器功能。
+Enable or disable scheduled optimization. Select the time at which the AI Wi-Fi Optimizer will start.,啟用或停用排程優化。選擇人工智慧 Wi‑Fi 優化器將啟動的時間。
+"Once this is turned on, you will start receiving weekly reports on  Wi-Fi conditions through AI Assistant.",一旦開啟此功能，您將開始透過人工智慧助手接收有關 Wi‑Fi 條件的每週報告。
+Wi-Fi Mesh,Wi‑Fi 網狀網路
+Status,狀態
+"Enable or disable Wi-Fi mesh if you plan to build a mesh network in your environment. The mesh network is able to find the shortest and fasted path to your gateway/router in a mesh network topology. Hence, it enhances efficiency and reliability.",如果您計劃在您的環境中構建網狀網絡，請啟用或禁用 Wi‑Fi 網狀網絡。網狀網絡能夠在網狀網絡拓撲中尋找到到您的閘道/路由器的最短、最快路徑。因此，它提升了效率和可靠性。
+For how long?,多久？
+The marking information is located at the bottom of the apparatus.,標示資訊位於裝置底部。
+Launch EAGLE PRO AI and go to the,啟動 EAGLE PRO 人工智慧並前往
+screen.,屏幕。
+Step 2,第二步
+"In order to use third-party apps to control and manage your device, you will first need to link your D-Link account with apps such as Google Assistant or Amazon Alexa.",為了使用第三方應用程式來控制和管理您的裝置，您首先需要將您的 D-Link 帳戶與 Google Assistant 或 Amazon Alexa 等應用程式進行連結。
+"If this is your first time installing the router, open your web browser and enter the default management address at",如果這是您第一次安裝路由器，打開您的網頁瀏覽器並在此輸入預設管理位址
+http://,http://
+XXXX,XXXX
+.devicesetup.net,.devicesetup.net
+/.,"/."""
+(where XXXX represents the last 4 digits of the MAC address).,(其中 XXXX 代表 MAC 位址的最後四位數)。
+"The Wi-Fi Name(SSID), Wi-Fi Password, and device password are printed on the Quick Installation Card and on the device label.",Wi‑Fi 名稱（SSID）、Wi‑Fi 密碼以及設備密碼已印在快速安裝卡和設備標籤上。
+Appendix H - Wall Mounting Information,附錄 H - 壁掛安裝資訊
+Wall Mounting,壁掛
+"To mount the unit directly onto a wall, use 2 screws (not included) with the dimensions shown below. Install the screws",將裝置直接安裝在牆上，請使用兩顆螺絲（不含），尺寸見下。安裝螺絲。
+85,85
+mm (3.35 in) apart and slide the mounting holes into the base of the router over them.,相距 mm（3.35 in），將安裝孔滑入路由器底部，覆蓋它們。
+The screw head should project out from the wall at 7 mm (0.28 in) as shown below.,螺絲頭應從牆面突出 7 毫米（0.28 英吋），如下所示。
+5GHz - Advanced Settings...,5GHz - 高級設定...
+802.11 Mode (5GHz),802.11 模式（5GHz）
+Select the desired wireless networking standards to use.,選擇所需使用的無線網絡標準。
+The available options for the 5 GHz wireless network are,5 GHz 無線網路的可用選項為
+"Mixed 802.11a/n/ac/ax, Mixed 802.11a/n/ac, Mixed 802.11a/n, 802.11ac only, 802.11a only,","混合 802.11a/n/ac/ax、混合 802.11a/n/ac、混合 802.11a/n、僅 802.11ac、僅 802.11a,"
+802.11n only,僅 802.11n
+Wi-Fi Channel,Wi‑Fi 頻道
+"Select the desired channel: 36, 40, 44, 48, 149, 153, 157, 161, or 165. The default is",選擇所需的頻道：36、40、44、48、149、153、157、161 或 165。預設為
+Auto,汽車
+(recommended).,(建議)
+Transmission Power,傳輸功率
+Select the desired wireless transmission power,選擇所需的無線傳輸功率
+:,:
+"High, Medium, or Low.",高、中或低。
+Channel Width (5GHz),頻道寬度（5GHz）
+Select,選擇
+Auto 20/40/80,自動 20/40/80
+MHz,兆赫
+"if you are using 802.11ax, 802.11ac, 802.11n, and 802.11a devices, select",如果您正在使用 802.11ax、802.11ac、802.11n 和 802.11a 設備，請選擇
+Auto 20/40,自動 20/40
+"if you are using 802.11n and 802.11a devices, or select",如果您正在使用 802.11n 和 802.11a 設備，或選擇
+20 MHz,20 MHz
+if you are using 802.11a devices.,如果你正在使用 802.11a 裝置。
+Visibility Status,可見性狀態
+The default setting is,預設設定為
+Visible,可見
+. Select,. 選擇
+Invisible,隱形
+if you do not want to broadcast the SSID of your wireless network.,如果您不想廣播您的無線網路的 SSID。
+Select the time during which the wireless network will be available. The schedule may be set to Always Enable or you can add your own schedule.,請選擇無線網路可用的時間。時間表可設為「始終啟用」，或您可以添加自己的時間表。
+"Each box represents half an hour, with the clock time (0~23) at the top of each column. To add a time period to the schedule, simply click on the start time and drag to the end time. You can add multiple days and multiple periods per day to the schedule.",每個方格代表半小時，每列上方顯示時鐘時間（0~23）。要在時間表中新增時間段，只需點擊起始時間並拖動至結束時間。您可以為時間表新增多個日期以及每天多個時間段。
+Wireless - Advanced Settings...,無線 - 高級設定...
+"Select the desired wireless transmission power: High, Medium, or Low.",選擇所需的無線傳輸功率：高、中或低。
+Modem,調製解調器
+"This device is an Energy Related Product (ErP) with High Network Availability (HiNA), and automatically switches to a power-saving Network Standby mode within 1 minute of no packets being transmitted.",這台設備是符合能源相關產品（ErP）的高網路可用性（HiNA）裝置，並且在連續 1 分鐘內沒有資料包被傳輸時，會自動切換到節能的網路待機模式。
+Network Standby: 3.89W,網路待機：3.89W
+ErP Power Usage,ErP 功耗
+SVENSKA	SE,瑞典語 SE
+"Den här symbolen på produkten eller förpackningen betyder att produkten enligt lokala lagar och föreskrifter inte skall kastas i hushållssoporna utan i stället återvinnas. Ta den vid slutet av dess livslängd till en av din lokala myndighet utsedd uppsamlingsplats, vissa accepterar produkter utan kostnad. Genom att på detta sätt återvinna produkten och förpackningen hjälper du till att bevara miljön och skydda människors hälsa.",此符號顯示於產品或包裝上，表示根據當地法律和規定，該產品不應丟入家庭垃圾，而應進行回收。使用完畢後，將其送至地方政府指定的收集站，有些站點免費接受回收。以此方式回收產品及其包裝，可協助保護環境並維護人類健康。
+D-Link och miljön,D-Link 與環境
+"På D-Link förstår vi och är fast beslutna att minska den påverkan våra verksamheter och produkter kan ha på miljön. För att minska denna påverkan utformar och bygger D-Link sina produkter för att de ska vara så miljövänliga som möjligt, genom att använda återvinningsbara material med låg gifthalt i både produkter och förpackningar.","在 D-Link，我們了解並決心減少我們的業務和產品可能對環境造成的影響。  
+為了減少這種影響，D-Link 設計並製造其產品，使其盡可能環保，採用可回收、低毒性材料製作產品與包裝。"
+D-Link rekommenderar att du alltid stänger av eller kopplar ur dina D-Link produkter när du inte använder dem. Genom att göra detta hjälper du till att spara energi och minska utsläpp av koldioxid.,D-Link 建議您在不使用時，始終關閉或斷開您的 D-Link 產品電源。透過這樣做，您將有助於節省能源並減少二氧化碳排放。
+För mer information om våra miljöansvariga produkter och förpackningar,欲了解更多關於我們環保產品與包裝的資訊
+www.dlinkgreen.com,www.dlinkgreen.com
+PORTUGUÊS	PT,葡萄牙語 PT
+"Este símbolo no produto ou embalagem significa que, de acordo com as leis e regulamentações locais, este produto não deverá ser eliminado juntamente com o lixo doméstico mas enviado para a reciclagem. Transporte-o para um ponto de recolha designado pelas suas autoridades locais quando este tiver atingido o fim da sua vida útil, alguns destes pontos aceitam produtos gratuitamente. Ao reciclar o produto e respectiva embalagem desta forma, ajuda a preservar o ambiente e protege a saúde humana.",此符號在產品或包裝上表示，根據當地法律和規章，該產品不應與家庭垃圾一起處理，而應送至回收處。當產品達到使用壽命終點時，請將其送至當地主管機關指定的回收點，有些點可免費接收。以這種方式回收產品及其包裝，有助於保護環境並維護人類健康。
+A D-Link e o ambiente,D-Link 與環境
+"Na D-Link compreendemos e comprometemo-nos com a redução do impacto que as nossas operações e produtos possam ter no ambiente. Para minimizar este impacto a D-Link concebe e constrói os seus produtos para que estes sejam o mais inofensivos para o ambiente possível, utilizando meteriais recicláveis e não tóxicos tanto nos produtos como nas embalagens.",在 D-Link，我們了解並致力於減少我們的營運和產品對環境可能產生的影響。為了減輕這種影響，D-Link 設計並製造產品，使其盡可能對環境無害，並在產品和包裝上使用可回收且無毒的材料。
+A D-Link recomenda que desligue os seus produtos D-Link quando estes não se encontrarem em utilização. Com esta acção ajudará a poupar energia e reduzir as emissões de CO2.,D-Link 建議您在不使用時關閉您的 D-Link 產品。這樣做可以節省能源並降低二氧化碳排放。
+Para saber mais sobre os nossos produtos e embalagens responsáveis a nível ambiental visite,欲了解更多關於我們環保產品與包裝，請訪問
+DANSK	DK,丹麥 DK
+"Dette symbol på produktet eller emballagen betyder, at dette produkt i henhold til lokale love og regler ikke må bortskaffes som husholdningsaffald, mens skal sendes til genbrug. Indlever produktet til et indsamlingssted som angivet af de lokale myndigheder, når det er nået til slutningen af dets levetid. I nogle tilfælde vil produktet blive modtaget gratis. Ved at indlevere produktet og dets emballage til genbrug på denne måde bidrager du til at beskytte miljøet og den menneskelige sundhed.",此符號在產品或包裝上表示，根據當地法律和規定，此產品不得作為家庭垃圾處理，而應送往回收。當產品達到使用壽命結束時，請將其交至當地機關指定的收集點。某些情況下，產品可免費收回。通過以此方式將產品及其包裝交回回收，您正在協助保護環境和人類健康。
+D-Link og miljøet,D-Link 和環境
+"Hos D-Link forstår vi og bestræber os på at reducere enhver indvirkning, som vores aktiviteter og produkter kan have på miljøet. For at minimere denne indvirkning designer og producerer D-Link sine produkter, så de er så miljøvenlige som muligt, ved at bruge genanvendelige materialer med lavt giftighedsniveau i både produkter og emballage.",在 D-Link，我們了解並努力減少我們的活動和產品可能對環境造成的任何影響。為了降低這種影響，D-Link 設計並生產其產品，使其盡可能環保，使用低毒性水平的可回收材料於產品與包裝中。
+"D-Link anbefaler, at du altid slukker eller frakobler dine D-Link-produkter, når de ikke er i brug. Ved at gøre det bidrager du til at spare energi og reducere CO2-udledningerne.",D-Link 建議您在不使用時始終關閉或斷開您的 D-Link 產品。透過這樣做，您有助於節能並減少二氧化碳排放。
+Du kan finde flere oplysninger om vores miljømæssigt ansvarlige produkter og emballage på,您可以在此處找到更多有關我們環保負責任產品及包裝的資訊。
+SUOMI	FI,芬蘭 FI
+"Tämä symboli tuotteen pakkauksessa tarkoittaa, että paikallisten lakien ja säännösten mukaisesti tätä tuotetta ei pidä hävittää yleisen kotitalousjätteen seassa vaan se tulee toimittaa kierrätettäväksi. Kun tuote on elinkaarensa päässä, toimita se lähimpään viranomaisten hyväksymään kierrätyspisteeseen. Kierrättämällä käytetyn tuotteen ja sen pakkauksen autat tukemaan sekä ympäristön että ihmisten terveyttä ja hyvinvointia.",此符號位於產品包裝上，表示根據當地法律和法規，該產品不應該丟棄於一般家庭垃圾中，而應送往回收處理。當產品使用壽命結束時，請將其送至當局批准的最近回收點。通過回收使用過的產品及其包裝，您將有助於同時支持環境與人們的健康與福祉。
+D-Link ja ympäristö,D-Link 與環境
+"D-Link ymmärtää ympäristönsuojelun tärkeyden ja on sitoutunut vähentämään tuotteistaan ja niiden valmistuksesta ympäristölle mahdollisesti aiheutuvia haittavaikutuksia. Nämä negatiiviset vaikutukset minimoidakseen D-Link suunnittelee ja valmistaa tuotteensa mahdollisimman ympäristöystävällisiksi käyttämällä kierrätettäviä, alhaisia pitoisuuksia haitallisia aineita sisältäviä materiaaleja sekä tuotteissaan että niiden pakkauksissa.",D-Link 理解環境保護的重要性，並致力於減少其產品及製造過程對環境可能造成的負面影響。為了最小化這些負面影響，D-Link 設計並製造盡可能環保的產品，使用可回收、低濃度有害物質的材料，無論是在產品本身還是包裝上。
+"Suosittelemme, että irrotat D-Link-tuotteesi virtalähteestä tai sammutat ne aina, kun ne eivät ole käytössä. Toimimalla näin autat säästämään energiaa ja vähentämään hiilidioksiidipäästöjä.",我們建議您在不使用時，將您的 D-Link 產品從電源插座拔掉或關閉。這樣做能幫助節省能源並減少二氧化碳排放。
+Lue lisää ympäristöystävällisistä D-Link-tuotteista ja pakkauksistamme osoitteesta,閱讀更多關於環保 D-Link 產品與我們的包裝，詳情請參閱以下地址。
+MAGYAR	HU,匈牙利 HU
+"Ez a szimbólum a terméken vagy a csomagoláson azt jelenti, hogy a helyi törvényeknek és szabályoknak megfelelően ez a termék nem semmisíthető meg a háztartási hulladékkal együtt, hanem újrahasznosításra kell küldeni. Kérjük, hogy a termék élettartamának elteltét követően vigye azt a helyi hatóság által kijelölt gyűjtőhelyre. A termékek egyes helyeken ingyen elhelyezhetők. A termék és a csomagolás újrahasznosításával segíti védeni a környezetet és az emberek egészségét.",此符號於產品或包裝上表示，根據當地法律和規定，該產品不能與家庭垃圾一起處理，而必須送至回收。請在產品使用壽命結束後，將其帶至地方當局指定的回收點。某些地點可免費放置此產品。通過回收產品及其包裝，有助於保護環境與人民健康。
+A D-Link és a környezet,D-Link 與環境
+"A D-Linknél megértjük és elkötelezettek vagyunk a műveleteink és termékeink környezetre gyakorolt hatásainak csökkentésére. Az ezen hatás csökkentése érdekében a D-Link a lehető leginkább környezetbarát termékeket tervez és gyárt azáltal, hogy újrahasznosítható, alacsony károsanyag-tartalmú termékeket gyárt és csomagolásokat alkalmaz.",在 D-Link，我們理解並致力於減少我們的運營和產品對環境的影響。為了減少這些影響，D-Link 盡可能設計並製造環保產品，透過生產可回收、低有害物質含量的產品並採用相應的包裝。
+"A D-Link azt javasolja, hogy mindig kapcsolja ki vagy húzza ki a D-Link termékeket a tápforrásból, ha nem használja azokat. Ezzel segít az energia megtakarításában és a széndioxid kibocsátásának csökkentésében.",D-Link 建議您在不使用時，始終關閉或拔掉 D-Link 產品的電源。這有助於節能並減少二氧化碳排放。
+Környezetbarát termékeinkről és csomagolásainkról további információkat a,更多有關我們環保產品及包裝的資訊請參見
+weboldalon tudhat meg.,您可以在網站上了解。
+NORSK	NO,挪威语 NO
+"Dette symbolet på produktet eller forpakningen betyr at dette produktet ifølge lokale lover og forskrifter ikke skal kastes sammen med husholdningsavfall, men leveres inn til gjenvinning. Vennligst ta det til et innsamlingssted anvist av lokale myndigheter når det er kommet til slutten av levetiden. Noen steder aksepteres produkter uten avgift. Ved på denne måten å gjenvinne produktet og forpakningen hjelper du å verne miljøet og beskytte folks helse.",此符號在產品或包裝上表示，根據當地法律法規，該產品不應與家庭垃圾一起丟棄，而應送至回收。請在產品使用壽命結束時，將其帶至當地政府指定的收集點。有些地區可免收費接受此類產品。以這種方式回收產品及其包裝，您將有助於保護環境並保障人們的健康。
+"Hos D-Link forstår vi oss på og er forpliktet til å minske innvirkningen som vår drift og våre produkter kan ha på miljøet. For å minimalisere denne innvirkningen designer og lager D-Link produkter som er så miljøvennlig som mulig, ved å bruke resirkulerbare, lav-toksiske materialer både i produktene og forpakningen.",在 D-Link，我們了解並致力於減少我們的營運和產品對環境的影響。為了減少這種影響，D-Link 設計並製造盡可能環保的產品，並在產品和包裝中使用可回收、低毒性材料。
+D-Link anbefaler at du alltid slår av eller frakobler D-Link-produkter når de ikke er i bruk. Ved å gjøre dette hjelper du å spare energi og å redusere CO2-utslipp.,D-Link 建議您在不使用時始終關閉或斷開 D-Link 產品。這樣做能幫助您節省能源並減少 CO2 排放。
+For mer informasjon angående våre miljøansvarlige produkter og forpakninger kan du gå til,要了解更多關於我們的環保產品與包裝資訊，您可以前往
+POLSKI	PL,波蘭 PL
+"Ten symbol umieszczony na produkcie lub opakowaniu oznacza, że zgodnie z miejscowym prawem i lokalnymi przepisami niniejszego produktu nie wolno wyrzucać jak odpady czy śmieci z gospodarstwa domowego, lecz należy go poddać procesowi recyklingu. Po zakończeniu użytkowania produktu, niektóre odpowiednie do tego celu podmioty przyjmą takie produkty nieodpłatnie, dlatego prosimy dostarczyć go do punktu zbiórki wskazanego przez lokalne władze. Poprzez proces recyklingu i dzięki takiemu postępowaniu z produktem oraz jego opakowaniem, pomogą Państwo chronić środowisko naturalne i dbać o ludzkie zdrowie.",此符號放置於產品或包裝上，表示根據本產品所在地的法律和當地規定，不能將其像家庭垃圾一樣丟棄，而應進行回收處理。產品使用完畢後，某些適合此目的的機構將免費收取此類產品，因此請將其送至當地政府指定的回收點。通過回收過程並以這種方式處理產品及其包裝，您將協助保護自然環境並關注人類健康。
+D-Link i środowisko,D-Link 和環境
+"D-Link podchodzimy w sposób świadomy do ochrony otoczenia oraz jesteśmy zaangażowani w zmniejszanie wpływu naszych działań i produktów na środowisko naturalne. W celu zminimalizowania takiego wpływu firma D-Link konstruuje i wytwarza swoje produkty w taki sposób, aby były one jak najbardziej przyjazne środowisku, stosując do tych celów materiały nadające się do powtórnego wykorzystania, charakteryzujące się małą toksycznością zarówno w przypadku samych produktów jak i opakowań.",D-Link 我們以有意識的方式處理環境保護，並致力於降低我們的行動和產品對自然環境的影響。為了最小化這種影響，D-Link 以使其產品盡可能環保的方式設計和製造，使用可重複利用的材料，這些材料在產品本身以及包裝方面都具有低毒性。
+"Firma D-Link zaleca, aby Państwo zawsze prawidłowo wyłączali z użytku swoje produkty D-Link, gdy nie są one wykorzystywane. Postępując w ten sposób pozwalają Państwo oszczędzać energię i zmniejszać emisje CO2.",D-Link 公司建議您在不使用產品時，始終正確關閉您的 D-Link 產品。這樣做可幫助您節能並降低 CO2 排放。
+Aby dowiedzieć się więcej na temat produktów i opakowań mających wpływ na środowisko prosimy zapoznać się ze stroną Internetową,欲了解更多關於對環境有影響的產品與包裝，請參閱網站。
+ČESKY	CZ,捷克語 CZ
+"Tento symbol na výrobku nebo jeho obalu znamená, že podle místně platných předpisů se výrobek nesmí vyhazovat do komunálního odpadu, ale odeslat k recyklaci. Až výrobek doslouží, odneste jej prosím na sběrné místo určené místními úřady k tomuto účelu. Některá sběrná místa přijímají výrobky zdarma. Recyklací výrobku i obalu pomáháte chránit životní prostředí i lidské zdraví.",此符號在產品或其包裝上表示，根據當地有效的法規，該產品不得丟入市政垃圾，而應送至回收。當產品用完時，請將其送至由當地政府指定的收集點。某些收集點會免費接收產品。通過回收產品和包裝，您有助於保護環境和人類健康。
+D-Link a životní prostředí,D-Link 與環境
+"Ve společnosti D-Link jsme si vědomi vlivu našich provozů a výrobků na životní prostředí a snažíme se o minimalizaci těchto vlivů. Proto své výrobky navrhujeme a vyrábíme tak, aby byly co nejekologičtější, a ve výrobcích i obalech používáme recyklovatelné a nízkotoxické materiály.",在 D-Link 公司，我們意識到我們的營運和產品對環境的影響，並致力於將這些影響最小化。因此，我們設計和製造產品時，力求使其盡可能環保，且在產品和包裝中使用可回收且低毒性材料。
+"Společnost D-Link doporučuje, abyste své výrobky značky D-Link vypnuli nebo vytáhli ze zásuvky vždy, když je nepoužíváte. Pomůžete tak šetřit energii a snížit emise CO2.",D-Link 公司建議您在不使用時，將 D-Link 產品關機或拔掉插頭。這樣可幫助節省能源並減少 CO₂ 排放。
+Více informací o našich ekologických výrobcích a obalech najdete na adrese,更多關於我們的環保產品與包裝資訊，請參考以下地址。
+ITALIANO	IT,義大利語 IT
+"La presenza di questo simbolo sul prodotto o sulla confezione del prodotto indica che, in conformità alle leggi e alle normative locali, questo prodotto non deve essere smaltito nei rifiuti domestici, ma avviato al riciclo. Una volta terminato il ciclo di vita utile, portare il prodotto presso un punto di raccolta indicato dalle autorità locali. Alcuni questi punti di raccolta accettano gratuitamente i prodotti da riciclare. Scegliendo di riciclare il prodotto e il relativo imballaggio, si contribuirà a preservare l'ambiente e a salvaguardare la salute umana.","該符號出現在產品或產品包裝上，表示根據當地法律和法規，該產品不得作為家庭垃圾處理，而應送至回收。  
+產品使用壽命結束後，請將其送至當地主管部門指定的收集點。  
+其中一些收集點會免費接受需回收的產品。  
+選擇回收產品及其相關包裝，可協助保護環境並維護人類健康。"
+D-Link e l'ambiente,D-Link 與環境
+"D-Link cerca da sempre di ridurre l'impatto ambientale dei propri stabilimenti e dei propri prodotti. Allo scopo di ridurre al minimo tale impatto, D-Link progetta e realizza i propri prodotti in modo che rispettino il più possibile l'ambiente, utilizzando materiali riciclabili a basso tasso di tossicità sia per i prodotti che per gli imballaggi.",D-Link 一直以來都致力於降低其工廠及產品對環境的影響。為了盡量減少這種影響，D-Link 以盡可能符合環保要求的方式設計並製造其產品，使用低毒性可回收材料，既適用於產品，也適用於包裝。
+D-Link raccomanda di spegnere sempre i prodotti D-Link o di scollegarne la spina quando non vengono utilizzati. In questo modo si contribuirà a risparmiare energia e a ridurre le emissioni di anidride carbonica.,D-Link 建議在不使用時，請始終關閉 D-Link 產品或拔掉插頭。這樣做將有助於節省能源並減少二氧化碳排放。
+"Per ulteriori informazioni sui prodotti e sugli imballaggi D-Link a ridotto impatto ambientale, visitate il sito all'indirizzo",欲了解更多關於 D-Link 產品及低環境影響包裝的資訊，請造訪網站
+NEDERLANDS	NL,荷蘭語 NL
+"Dit symbool op het product of de verpakking betekent dat dit product volgens de plaatselijke wetgeving niet mag worden weggegooid met het huishoudelijk afval, maar voor recyclage moeten worden ingeleverd. Zodra het product het einde van de levensduur heeft bereikt, dient u het naar een inzamelpunt te brengen dat hiertoe werd aangeduid door uw plaatselijke autoriteiten, sommige autoriteiten accepteren producten zonder dat u hiervoor dient te betalen. Door het product en de verpakking op deze manier te recyclen helpt u het milieu en de gezondheid van de mens te beschermen.",此符號出現在產品或包裝上，表示根據當地法律，該產品不得隨家庭垃圾一起處置，而必須交回以供回收。產品使用壽命結束後，您應將其帶至當地機構指定的收集點，一些機構允許免費接收此類產品。以此方式回收產品及包裝，可協助保護環境與人類健康。
+D-Link en het milieu,D-Link 及環境
+"Bij D-Link spannen we ons in om de impact van onze handelingen en producten op het milieu te beperken. Om deze impact te beperken, ontwerpt en bouwt D-Link zijn producten zo milieuvriendelijk mogelijk, door het gebruik van recycleerbare producten met lage toxiciteit in product en verpakking.",在 D-Link，我們致力於降低我們的行為和產品對環境的影響。為了限制這種影響，D-Link 以盡可能環保的方式設計和製造其產品，並在產品和包裝中使用低毒性的可回收材料。
+D-Link raadt aan om steeds uw D-Link producten uit te schakelen of uit de stekker te halen wanneer u ze niet gebruikt. Door dit te doen bespaart u energie en beperkt u de CO2-emissies.,D-Link 建議您在不使用時隨時關閉您的 D-Link 產品或將其拔掉。這樣做可以節省能源並減少 CO2 排放。
+Breng een bezoek aan,參觀
+voor meer informatie over onze milieuverantwoorde producten en verpakkingen.,欲了解更多有關我們環保產品與包裝的資訊，
+FRANÇAIS	FR,法語 FR
+"Ce symbole apposé sur le produit ou son emballage signifie que, conformément aux lois et règlementations locales, ce produit ne doit pas être éliminé avec les déchets domestiques mais recyclé. Veuillez le rapporter à un point de collecte prévu à cet effet par les autorités locales; certains accepteront vos produits gratuitement. En recyclant le produit et son emballage de cette manière, vous aidez à préserver l’environnement et à protéger la santé de l’homme.",此符號貼於產品或其包裝上，表示根據當地法律與規定，該產品不得與家庭垃圾一起處理，而應進行回收。請將其送至當地主管機關指定的收集點；部分機構將免費接受您的產品。以此方式回收產品及其包裝，您有助於保護環境並維護人類健康。
+D-Link et l’environnement,D-Link 及環境
+"Chez D-Link, nous sommes conscients de l'impact de nos opérations et produits sur l'environnement et nous engageons à le réduire. Pour limiter cet impact, D-Link conçoit et fabrique ses produits de manière aussi écologique que possible, en utilisant des matériaux recyclables et faiblement toxiques, tant dans ses produits que ses emballages.",在 D-Link，我們意識到我們的營運和產品對環境的影響，並承諾減少這種影響。為了限制這種影響，D-Link 以盡可能環保的方式設計和製造其產品，使用可回收且低毒性的材料，無論是在產品還是包裝中。
+D-Link recommande de toujours éteindre ou débrancher vos produits D-Link lorsque vous ne les utilisez pas. Vous réaliserez ainsi des économies d’énergie et réduirez vos émissions de CO2.,D-Link 建議您在不使用時，始終關閉或拔掉 D-Link 產品。這樣可節省能源並減少 CO2 排放。
+"Pour en savoir plus sur les produits et emballages respectueux de l’environnement, veuillez consulter le",欲了解更多有關環保產品與包裝的資訊，請參閱
+ESPAÑOL	ES,西班牙語 ES
+"Este símbolo en el producto o el embalaje significa que, de acuerdo con la legislación y la normativa local, este producto no se debe desechar en la basura doméstica sino que se debe reciclar. Llévelo a un punto de recogida designado por las autoridades locales una vez que ha llegado al fin de su vida útil; algunos de ellos aceptan recogerlos de forma gratuita. Al reciclar el producto y su embalaje de esta forma, contribuye a preservar el medio ambiente y a proteger la salud de los seres humanos.","這個符號在產品或包裝上表示，根據當地立法和規範，該產品不應丟棄於家庭垃圾，而應進行回收。  
+在產品使用壽命結束後，請將其帶到當地主管部門指定的回收點；其中一些回收點會免費收集。  
+以這種方式回收產品及其包裝，有助於保護環境並保障人類健康。"
+D-Link y el medio ambiente,D-Link 與環境
+"En D-Link, comprendemos y estamos comprometidos con la reducción del impacto que puedan tener nuestras actividades y nuestros productos en el medio ambiente. Para reducir este impacto, D-Link diseña y fabrica sus productos para que sean lo más ecológicos posible, utilizando materiales reciclables y de baja toxicidad tanto en los productos como en el embalaje.",在 D-Link，我們了解並致力於減少我們的活動和產品對環境的影響。為了減少這種影響，D-Link 設計並製造產品，使其盡可能環保，使用可回收且低毒性的材料，無論是在產品還是包裝上。
+"D-Link recomienda apagar o desenchufar los productos D-Link cuando no se estén utilizando. Al hacerlo, contribuirá a ahorrar energía y a reducir las emisiones de CO2.",D-Link 建議在不使用時關閉或拔掉 D-Link 產品。這樣做可以節省能源並減少 CO2 排放。
+"Para obtener más información acerca de nuestros productos y embalajes ecológicos, visite el sitio",欲了解更多關於我們的產品及環保包裝資訊，請訪問本網站。
+Disposing and Recycling Your Product,處理與回收您的產品
+ENGLISH	EN,英語 EN
+"This symbol on the product or packaging means that according to local laws and regulations this product should be not be disposed of in household waste but sent for recycling. Please take it to a collection point designated by your local authorities once it has reached the end of its life, some will accept products for free. By recycling the product and its packaging in this manner you help to conserve the environment and protect human health.",此符號在產品或包裝上表示，根據當地法律法規，該產品不應作為家庭垃圾處理，而應送往回收。請在產品使用壽命結束後，將其送至地方主管機關指定的收集點，一些地方可免費接受。以此方式回收產品及其包裝，有助於保護環境並維護人類健康。
+D-Link and the Environment,D-Link 與環境
+"At D-Link, we understand and are committed to reducing any impact our operations and products may have on the environment. To minimise this impact D-Link designs and builds its products to be as environmentally friendly as possible, by using recyclable, low toxic materials in both products and packaging.",在 D-Link，我們了解並致力於降低我們的營運和產品可能對環境造成的任何影響。為了最小化這種影響，D-Link 以盡可能環保的方式設計和製造產品，使用可回收、低毒材料於產品和包裝中。
+D-Link recommends that you always switch off or unplug your D-Link products when they are not in use. By doing so you will help to save energy and reduce CO2 emissions.,D-Link 建議您在不使用時始終關閉或拔掉 D-Link 產品電源。這樣做可以幫助節能並減少二氧化碳排放。
+To learn more about our environmentally responsible products and packaging please visit,欲了解更多關於我們環保產品與包裝，請訪問
+DEUTSCH	DE,德語 DE
+"Dieses Symbol auf dem Produkt oder der Verpackung weist darauf hin, dass dieses Produkt gemäß bestehender örtlicher Gesetze und Vorschriften nicht über den normalen Hausmüll entsorgt werden sollte, sondern einer Wiederverwertung zuzuführen ist. Bringen Sie es bitte zu einer von Ihrer Kommunalbehörde entsprechend amtlich ausgewiesenen Sammelstelle, sobald das Produkt das Ende seiner Nutzungsdauer erreicht hat. Für die Annahme solcher Produkte erheben einige dieser Stellen keine Gebühren. Durch ein auf diese Weise durchgeführtes Recycling des Produkts und seiner Verpackung helfen Sie, die Umwelt zu schonen und die menschliche Gesundheit zu schützen.",此符號位於產品或包裝上，表示此產品根據當地現行法律與法規，應以非普通生活垃圾方式處理，並應送往再利用。請在產品使用壽命結束時，將其送至您所在區公營機構正式指定的收集點。一些收集機構不收取此類產品的費用。透過以此方式回收產品及其包裝，您將有助於保護環境與人類健康。
+D-Link und die Umwelt,D-Link 與環境
+"D-Link ist sich den möglichen Auswirkungen seiner Geschäftstätigkeiten und seiner Produkte auf die Umwelt bewusst und fühlt sich verpflichtet, diese entsprechend zu mindern. Zu diesem Zweck entwickelt und stellt D-Link seine Produkte mit dem Ziel größtmöglicher Umweltfreundlichkeit her und verwendet wiederverwertbare, schadstoffarme Materialien bei Produktherstellung und Verpackung.",D-Link 意識到其業務活動和產品對環境可能造成的影響，並感到有責任相應地減輕這些影響。為此，D-Link 開發並製造其產品，旨在實現最大程度的環保，並在產品製造和包裝中使用可回收、低毒材料。
+"D-Link empfiehlt, Ihre Produkte von D-Link, wenn nicht in Gebrauch, immer auszuschalten oder vom Netz zu nehmen. Auf diese Weise helfen Sie, Energie zu sparen und CO2-Emissionen zu reduzieren.",D-Link 建議您在不使用 D-Link 產品時，始終關閉或拔掉電源。這樣，您就能節省能源並減少 CO₂ 排放。
+"Wenn Sie mehr über unsere umweltgerechten Produkte und Verpackungen wissen möchten, finden Sie entsprechende Informationen im Internet unter",如果您想了解更多关于我们环保产品和包装的信息，请在网上查阅以下网址。
+ISTRUZIONI PER LA SICUREZZA,安全說明
+"Le seguenti linee guida sulla sicurezza sono fornite per contribuire a garantire la sicurezza personale degli utenti e a proteggere il prodotto da potenziali danni. Per maggiori dettagli, consultare le istruzioni per l’utente del prodotto.",以下安全指南旨在協助確保使用者的人身安全並保護產品免受潛在損害。欲了解更多細節，請參閱產品使用說明書。
+L’elettricità statica può essere pericolosa per i componenti elettronici. Scaricare l’elettricità statica dal corpo (ad esempio toccando una parte metallica collegata a terra) prima di toccare il prodotto.,"靜電可能對電子元件構成危險。  
+在觸摸產品之前，先將身體的靜電放電（例如觸碰接地的金屬部件）。"
+"Non cercare di riparare il prodotto e non smontarlo mai. Per alcuni prodotti dotati di batteria sostituibile dall’utente, leggere e seguire le istruzioni riportate nel manuale dell’utente.",不要嘗試修理產品，也不要拆卸它。對於某些可由使用者更換電池的產品，請閱讀並遵循使用者手冊中的說明。
+Non versare cibi o liquidi sul prodotto e non spingere mai alcun oggetto nelle aperture del prodotto.,不要將食物或液體倒入產品中，亦切勿將任何物品推入產品的開口。
+"Non usare questo prodotto vicino all’acqua, in aree con elevato grado di umidità o soggette a condensa a meno che il prodotto non sia specificatamente approvato per uso in ambienti esterni.",請勿在靠近水源、濕度高或易產生凝結的區域使用本產品，除非該產品特別經批准可用於戶外環境。
+Tenere il prodotto lontano da caloriferi e altre fonti di calore.,請將產品遠離散熱器和其他熱源。
+Scollegare sempre il prodotto dalla presa elettrica prima di pulirlo e usare solo un panno asciutto che non lasci filacce.,在清潔產品前，請務必先將其從電源插座拔掉，並僅使用不留纖維的乾布。
+VEILIGHEIDSINFORMATIE,安全資訊
+De volgende algemene veiligheidsinformatie werd verstrekt om uw eigen persoonlijke veiligheid te waarborgen en uw product te beschermen tegen mogelijke schade. Denk eraan om de gebruikersinstructies van het product te raadplegen voor meer informatie.,以下一般安全資訊已提供，以確保您的個人安全並保護您的產品免於可能的損害。請記得參考產品使用說明以獲取更多資訊。
+Statische elektriciteit kan schadelijk zijn voor elektronische componenten. Ontlaad de statische elektriciteit van uw lichaam (d.w.z. het aanraken van geaard bloot metaal) voordat uhet product aanraakt.,靜電可能對電子元件造成危害。於接觸產品前，請先將身體靜電放電（即觸碰接地的裸露金屬）。
+"U mag nooit proberen het product te onderhouden en u mag het product nooit demonteren. Voor sommige producten met door de gebruiker te vervangen batterij, dient u de instructies in de gebruikershandleiding te lezen en te volgen.",您不得嘗試維護產品，也不得拆卸產品。對於某些需要用戶自行更換電池的產品，您應閱讀並遵循用戶手冊中的說明。
+Mors geen voedsel of vloeistof op uw product en u mag nooit voorwerpen in de openingen van uw product duwen.,請勿將食物或液體放在您的產品上，也不可將物品推入產品的開口。
+"Gebruik dit product niet in de buurt van water, gebieden met hoge vochtigheid of condensatie, tenzij het product specifiek geclassificeerd is voor gebruik buitenshuis.",請勿在靠近水源、高濕或凝結的區域使用此產品，除非該產品特別標定為可戶外使用。
+Houd het product uit de buurt van radiators en andere warmtebronnen.,請將產品遠離暖氣片和其他熱源。
+U dient het product steeds los te koppelen van de stroom voordat u het reinigt en gebruik uitsluitend een droge pluisvrije doek.,您在清潔產品前，必須先將其斷開電源，並僅使用乾燥、無絨毛的布。
+CONSIGNES DE SÉCURITÉ,安全指示
+Les consignes générales de sécurité ci-après sont fournies afin d’assurer votre sécurité personnelle et de protéger le produit d’éventuels dommages. Veuillez consulter les consignes d’utilisation du produit pour plus de détails.,以下的通用安全指引旨在確保您的個人安全並保護產品免受潛在損害。請查閱產品使用說明以獲取更多細節。
+L’électricité statique peut endommager les composants électroniques. Déchargez l’électricité statique de votre corps (en touchant un objet en métal relié à la terre par exemple) avant de toucher le produit.,靜電可能損壞電子元件。請在觸碰產品前，先透過觸摸一個接地的金屬物體等方式將身體的靜電放電。
+"N’essayez pas d’intervenir sur le produit et ne le démontez jamais. Pour certains produits contenant une batterie remplaçable par l’utilisateur, veuillez lire et suivre les consignes contenues dans le manuel d’utilisation.",請勿試圖干涉產品，也不要拆解它。對於某些可由使用者自行更換電池的產品，請閱讀並遵循使用說明書中的說明。
+Ne renversez pas d’aliments ou de liquide sur le produit et n’insérez jamais d’objets dans les orifices.,請勿將食物或液體倒入產品，也不要將物品插入孔洞。
+"N’utilisez pas ce produit à proximité d’un point d’eau, de zones très humides ou de condensation sauf si le produit a été spécifiquement conçu pour une application extérieure.",除非產品已專門設計為適用於戶外，否則請勿將本產品用於靠近水源、非常潮濕的區域或結露處。
+Éloignez le produit des radiateurs et autres sources de chaleur.,請將產品遠離暖氣機和其他熱源。
+Débranchez toujours le produit de l’alimentation avant de le nettoyer et utilisez uniquement un chiffon sec non pelucheux.,在清潔產品前，請始終將其斷開電源，並僅使用乾燥、無絨毛的布。
+INSTRUCCIONES DE SEGURIDAD,安全說明
+Las siguientes directrices de seguridad general se facilitan para ayudarle a garantizar su propia seguridad personal y para proteger el producto frente a posibles daños. No olvide consultar las instrucciones del usuario del producto para obtener más información.,以下一般安全指引供您參考，以協助確保個人安全並保護產品免受可能的損害。請勿忘記查閱產品使用說明書以了解更多資訊。
+"La electricidad estática puede resultar nociva para los componentes electrónicos. Descargue la electricidad estática de su cuerpo (p. ej., tocando algún metal sin revestimiento conectado a tierra) antes de tocar el producto.",静電可能對電子元件有害。在觸摸產品之前，請先將身體的靜電放電（例如，觸摸未塗層且接地的金屬）。
+"No intente realizar el mantenimiento del producto ni lo desmonte nunca. Para algunos productos con batería reemplazable por el usuario, lea y siga las instrucciones del manual de usuario.",不要嘗試對產品進行維護，也不要拆卸它。對於某些可由使用者更換的電池產品，請閱讀並遵循使用手冊中的說明。
+No derrame comida o líquidos sobre el producto y nunca deje que caigan objetos en las aberturas del mismo.,不要將食物或液體倒在產品上，也不要讓物品掉進產品的開口中。
+"No utilice este producto cerca del agua, en zonas con humedad o condensación elevadas a menos que el producto esté clasificado específicamente para aplicación en exteriores.",請勿在靠近水源、濕度高或凝結的區域使用此產品，除非該產品已明確標示適用於戶外使用。
+Mantenga el producto alejado de los radiadores y de otras fuentes de calor.,請將產品遠離暖氣片及其他熱源。
+Desenchufe siempre el producto de la alimentación de red antes de limpiarlo y utilice solo un paño seco sin pelusa.,在清潔前請務必將產品從網路電源拔掉，並僅使用無絨毛的乾布。
+SAFETY INSTRUCTIONS,安全說明
+The following general safety guidelines are provided to help ensure your own personal safety and protect your product from potential damage. Remember to consult the product user instructions for more details.,以下一般安全指引旨在協助您確保個人安全並保護產品免受潛在損害。請查閱產品使用說明以獲取更多細節。
+Static electricity can be harmful to electronic components. Discharge static electricity from your body (i.e. touching grounded bare metal) before touching the product.,靜電可能對電子元件造成危害。在觸摸產品前，請先將靜電放電（即觸摸接地的裸金屬）。
+"Do not attempt to service the product and never disassemble the product. For some products with a user replaceable battery, please read and follow the instructions in the user manual.",請勿嘗試維修本產品，也不要拆解本產品。對於部分可自行更換電池的產品，請閱讀並遵循使用手冊中的說明。
+Do not spill food or liquid on your product and never push any objects into the openings of your product.,請勿將食物或液體灑在您的產品上，亦切勿將任何物品推入產品的開口。
+"Do not use this product near water, areas with high humidity, or condensation unless the product is specifically rated for outdoor application.",請勿將此產品置於水邊、潮濕環境或凝結處使用，除非產品已專門標示適用於戶外。
+Keep the product away from radiators and other heat sources.,請將產品遠離散熱器和其他熱源。
+Always unplug the product from mains power before cleaning and use a dry lint free cloth only.,清潔前請務必將產品從主電源拔下，僅使用乾燥且無絨毛的抹布。
+SICHERHEITSVORSCHRIFTEN,安全規定
+Die folgenden allgemeinen Sicherheitsvorschriften dienen als Hilfe zur Gewährleistung Ihrer eigenen Sicherheit und zum Schutz Ihres Produkts. Weitere Details finden Sie in den Benutzeranleitungen zum Produkt.,以下通用安全規定旨在協助確保您的安全並保護您的產品。更多詳細資訊請參閱產品使用說明書。
+"Statische Elektrizität kann elektronischen Komponenten schaden. Um Schäden durch statische Aufladung zu vermeiden, leiten Sie elektrostatische Ladungen von Ihrem Körper ab, (z. B. durch Berühren eines geerdeten blanken Metallteils), bevor Sie das Produkt berühren.",靜電可能對電子元件造成損害。為了避免因靜電充電而導致損壞，請將身體上的靜電荷放電（例如通過觸摸接地的裸金屬部件），再觸摸產品。
+"Unterlassen Sie jeden Versuch, das Produkt zu warten, und versuchen Sie nicht, es in seine Bestandteile zu zerlegen. Für einige Produkte mit austauschbaren Akkus lesen Sie bitte das Benutzerhandbuch und befolgen Sie die dort beschriebenen Anleitungen.",請勿嘗試維修產品，也不要將其拆解為部件。對於某些配備可更換電池的產品，請閱讀使用手冊並遵循其中說明的指示。
+"Vermeiden Sie, dass Speisen oder Flüssigkeiten auf Ihr Produkt gelangen, und stecken Sie keine Gegenstände in die Gehäuseschlitze oder -öffnungen Ihres Produkts.",請避免食物或液體接觸您的產品，並勿將任何物品塞入產品的機身槽或開口。
+"Verwenden Sie dieses Produkt nicht in unmittelbarer Nähe von Wasser und nicht in Bereichen mit hoher Luftfeuchtigkeit oder Kondensation, es sei denn, es ist speziell zur Nutzung in Außenbereichen vorgesehen und eingestuft.",除非專門設計為戶外使用並已分類，否則請勿在靠近水源或高濕度或結露區域使用本產品。
+"Halten Sie das Produkt von Heizkörpern und anderen Quellen fern, die Wärme erzeugen.",請遠離暖氣片和其他產熱源。
+"Trennen Sie das Produkt immer von der Stromzufuhr, bevor Sie es reinigen und verwenden Sie dazu ausschließlich ein trockenes fusselfreies Tuch.",請在清潔產品前，始終將其從電源上斷開，並且僅使用乾燥且無絨毛的布來清潔。
+AVVISO PER L’USO DI LAN RADIO WIRELESS NELLA COMUNITÀ EUROPEA (SOLO PER PRODOTTI WIRELESS),關於在歐洲共同體使用無線電 LAN 的通知（僅限無線產品）
+"Nella Comunità europea, l’uso di questo dispositivo è limitato esclusivamente agli ambienti interni sui canali compresi nella banda da 5,15 a 5,35 GHz al fine di ridurre potenziali interferenze. Questo dispositivo è un sistema di trasmissione a banda larga a 2,4 GHz (ricetrasmittente), destinato all’uso in tutti gli stati membri dell’Unione europea e nei paesi EFTA.",在歐洲共同體內，該裝置的使用僅限於 5.15 至 5.35 GHz 頻段內的室內環境，以減少潛在干擾。此裝置是一種 2.4 GHz 寬頻傳輸系統（回傳發射器），旨在於歐盟所有成員國及歐洲自由貿易聯盟（EFTA）國家使用。
+"Questo dispositivo può essere utilizzato in AL, AD, BE, BG, DK, DE, FI, FR, GR, GW, IS, IT, HR, LI, LU, MT, MK, MD, MC, NL, NO, AT, PL, PT, RO, SM, SE, RS, SK, ES, CI, HU, CY",此設備可於 AL、AD、BE、BG、DK、DE、FI、FR、GR、GW、IS、IT、HR、LI、LU、MT、MK、MD、MC、NL、NO、AT、PL、PT、RO、SM、SE、RS、SK、ES、CI、HU、CY 使用。
+Note per l’uso,使用說明
+"Al fine di mantenere la conformità alle normative nazionali europee per l’uso dello spettro di frequenze, saranno applicate limitazioni sulle frequenze e sui canali per il prodotto in conformità alle normative del paese in cui il dispositivo viene utilizzato.",為了維持符合歐盟國家關於頻譜使用的規範，將根據裝置使用所在國家的法規，對產品的頻率與頻道施加限制。
+Questo dispositivo non può essere attivato in modalità Ad-hoc durante il funzionamento a 5 Ghz. La modalità Ad-hoc è una comunicazione diretta peer-to-peer fra due dispositivi client senza un punto di accesso.,此設備無法在 5 GHz 工作時以 Ad-hoc 模式啟用。Ad-hoc 模式是兩個客戶端設備之間直接的點對點通信，沒有接入點。
+I punti di accesso supportano le funzionalità DFS (Dynamic Frequency Selection) e TPC (Transmit Power Control) richieste per operare a 5 Ghz nell’Unione europea.,無線接入點支援DFS（Dynamic Frequency Selection）和TPC（Transmit Power Control）功能，以符合在歐盟使用5 GHz頻段的要求。
+"Ti invitiamo a fare riferimento al manuale del prodotto o alla scheda tecnica per verificare se il tuo prodotto utilizza le frequenze 2,4 GHz e/o 5 GHz.",我們邀請您參考產品手冊或技術規格，確認您的產品是否使用 2.4 GHz 和/或 5 GHz 頻段。
+KENNISGEVING VAN DRAADLOOS RADIO LAN-GEBRUIK IN DE EUROPESE GEMEENSCHAP (ALLEEN VOOR DRAADLOOS PRODUCT),有關無線電台局域網使用於歐洲社群的通知（僅限無線產品）
+Dit toestel is beperkt tot gebruik binnenshuis wanneer het wordt gebruikt in de Europese Gemeenschap gebruik makend van kanalen in de 5.15-5.35 GHz band om de kans op interferentie te beperken.,本裝置僅限於在歐洲共同體使用時於室內使用，並使用 5.15-5.35 GHz 頻段的頻道，以降低干擾的機率。
+"Dit toestel is een 2.4 GHz breedband transmissiesysteem (transceiver) dat bedoeld is voor gebruik in alle EU lidstaten en EFTA landen. Deze uitrusting mag gebruikt worden in AL, AD, BE, BG, DK, DE, FI, FR, GR, GW, IS, IT, HR, LI, LU, MT, MK, MD, MC, NL, NO, AT, PL, PT, RO, SM, SE, RS, SK, ES, CI, HU, CY",此裝置是一個 2.4 GHz 廣帶傳輸系統（收發器），設計用於在所有歐盟成員國及歐洲自由貿易聯盟（EFTA）國家使用。此設備可於 AL、AD、BE、BG、DK、DE、FI、FR、GR、GW、IS、IT、HR、LI、LU、MT、MK、MD、MC、NL、NO、AT、PL、PT、RO、SM、SE、RS、SK、ES、CI、HU、CY 使用。
+Gebruiksaanwijzingen:,使用說明：
+"Om de gebruiksvoorschriften van het Europese Nationale spectrum na te leven, zullen frequentie- en kanaalbeperkingen worden toegepast op de producten volgens het land waar de uitrusting gebruikt zal worden.",為遵守歐洲國家頻譜的使用規定，將根據設備使用所在國對產品施加頻率和頻道限制。
+Dit toestel kan niet functioneren in Ad-hoc mode wanneer het gebruikt wordt in 5 GHz. Ad-hoc mode is directe peer-to-peer communicatie tussen twee klantenapparaten zonder een toegangspunt.,"此設備在使用 5 GHz 時無法在 Ad-hoc 模式下運作。  
+Ad-hoc 模式是兩台客戶端設備之間直接的點對點通信，無需使用接入點。"
+Toegangspunten ondersteunen DFS (Dynamic Frequency Selection) en TPC (Transmit Power Control) functionaliteit zoals vereist bij gebruik in 5 GHz binnen de EU.,接入點支持 DFS（動態頻率選擇）和 TPC（發射功率控制）功能，符合在歐盟使用 5 GHz 時的要求。
+Raadpleeg de handleiding of de datasheet om te controleren of uw product gebruik maakt van 2.4 GHz en/of 5 GHz.,請參閱說明書或資料表以確認您的產品是否使用 2.4 GHz 和/或 5 GHz。
+AVIS CONCERNANT L'UTILISATION DE LA RADIO SANS FIL LAN DANS LA COMMUNAUTÉ EUROPÉENNE (UNIQUEMENT POUR LES PRODUITS SANS FIL),關於在歐洲共同體使用無線網路電波的通知（僅適用於無線產品）
+"Cet appareil est limité à un usage intérieur lorsqu'il est utilisé dans la Communauté européenne sur les canaux de la bande de 5,15 à 5,35 GHz afin de réduire les risques d'interférences.",本設備在歐盟使用時，限於室內使用，並且僅限於 5.15 至 5.35 GHz 頻段的頻道，以減少干擾風險。
+"Cet appareil est un système de transmission à large bande (émetteur-récepteur) de 2,4 GHz, destiné à être utilisé dans tous les États-membres de l'UE et les pays de l'AELE. Cet équipement peut être utilisé dans les pays suivants : AL, AD, BE , BG, DK, DE, FI, FR, GR, GW, IS, IT, HR, LI, LU, MT , MK, MD, MC, NL, NO, AT, PL, PT, RO, SM, SE, RS, SK, ES, CI, HU, CY",本裝置是一個 2.4 GHz 寬頻傳輸系統（發射機‑接收機），旨在於所有歐盟成員國及歐洲經濟聯盟國家使用。本設備可於以下國家使用：AL、AD、BE、BG、DK、DE、FI、FR、GR、GW、IS、IT、HR、LI、LU、MT、MK、MD、MC、NL、NO、AT、PL、PT、RO、SM、SE、RS、SK、ES、CI、HU、CY
+Notes d'utilisation:,使用說明:
+"Pour rester en conformité avec la réglementation nationale européenne en matière d'utilisation du spectre, des limites de fréquence et de canal seront appliquées aux produits selon le pays où l'équipement sera déployé.",為了保持符合歐洲國家在頻譜使用方面的法規，將根據裝置部署所在國家對產品施加頻率和頻道限制。
+Cet appareil ne peut pas utiliser le mode Ad-hoc lorsqu'il fonctionne dans la bande de 5 GHz. Le mode Adhoc fournit une communication directe pair à pair entre deux périphériques clients sans point d'accès.,此裝置在 5 GHz 頻段工作時無法使用 Ad-hoc 模式。Adhoc 模式提供兩個客戶端裝置之間直接的點對點通信，無需接入點。
+Les points d'accès prendront en charge les fonctionnalités DFS (Dynamic Frequency Selection) et TPC (Transmit Power Control) au besoin lors du fonctionnement dans la bande de 5 GHz au sein de l'UE.,接入點將在歐盟範圍內的5 GHz頻段運行時，如有需要支持DFS（Dynamic Frequency Selection，動態頻率選擇）和TPC（Transmit Power Control，傳輸功率控制）功能。
+Merci de vous référer au guide d'utilisation ou de la fiche technique afin de vérifier si votre produit utilise 2.4 GHz et/ou 5 GHz sans fil.,請參閱使用手冊或技術規格表，以確認您的產品是否使用 2.4 GHz 和/或 5 GHz 無線。
+AVISO DE USO DE LA LAN DE RADIO INALÁMBRICA EN LA COMUNIDAD EUROPEA (SOLO PARA EL PRODUCTO INALÁMBRICO),歐盟無線局域網無線電使用通知（僅限無線產品）
+"El uso de este dispositivo está restringido a interiores cuando funciona en la Comunidad Europea utilizando canales en la banda de 5,15-5,35 GHz, para reducir la posibilidad de interferencias.",此裝置的使用僅限於室內，當其在歐洲共同體內使用 5.15-5.35 GHz 頻段的頻道時，以降低干擾的可能性。
+"Este dispositivo es un sistema de transmisión (transceptor) de banda ancha de 2,4 GHz, pensado para su uso en todos los estados miembros de la UE y en los países de la AELC. Este equipo se puede utilizar en AL, AD, BE, BG, DK, DE, FI, FR, GR, GW, IS, IT, HR, LI, LU, MT, MK, MD, MC, NL, NO, AT, PL, PT, RO, SM, SE, RS, SK, ES, CI, HU, CY","此設備是一種 2.4 GHz 寬帶傳輸（收發器）系統，設計用於歐盟所有成員國以及 AELC 國家。此裝置可於以下國家使用：AL, AD, BE, BG, DK, DE, FI, FR, GR, GW, IS, IT, HR, LI, LU, MT, MK, MD, MC, NL, NO, AT, PL, PT, RO, SM, SE, RS, SK, ES, CI, HU, CY"
+Notas de uso:,使用說明:
+"Para seguir cumpliendo las normas europeas de uso del espectro nacional, se aplicarán limitaciones de frecuencia y canal en los productos en función del país en el que se pondrá en funcionamiento el equipo.",為了繼續遵守歐洲國家頻譜使用規範，將根據設備將要運行的國家對產品實施頻率和頻道限制。
+Este dispositivo tiene restringido el funcionamiento en modo Ad-hoc mientras funcione a 5 Ghz. El modo Ad-hoc es la comunicación directa de igual a igual entre dos dispositivos cliente sin un punto de acceso.,"當此設備以5 GHz運行時，其 Ad‑hoc 模式功能受到限制。  
+Ad‑hoc 模式是兩台客戶端設備之間直接對等通信，無需接入點。"
+Los puntos de acceso admitirán la funcionalidad DFS (Selección de frecuencia dinámica) y TPC (Control de la potencia de transmisión) si es necesario cuando funcionan a 5 Ghz dentro de la UE.,接入點將在需要時在歐盟內以 5 GHz 工作時支援 DFS（動態頻率選擇）和 TPC（傳輸功率控制）功能。
+Por favor compruebe el manual o la ficha de producto para comprobar si el producto utiliza las bandas inalámbricas de 2.4 GHz y/o la de 5 GHz.,請檢查說明書或產品資料表，以確認產品是否使用 2.4 GHz 和/或 5 GHz 無線頻段。
+Notice of Wireless Radio LAN Usage in The European Community (For Wireless Product Only):,歐洲共同體無線電台 LAN 使用通知（僅限無線產品）：
+This device is restricted to indoor use when operated in the European Community using channels in the 5.15-5.35 GHz band to reduce the potential for interference.,此裝置在歐洲共同體使用 5.15-5.35 GHz 頻段的頻道時，僅限室內使用，以降低干擾的可能性。
+"This device is a 2.4 GHz wideband transmission system (transceiver), intended for use in all EU member states and EFTA countries. This equipment may be operated in AL, AD, BE, BG, DK, DE, FI, FR, GR, GW, IS, IT, HR, LI, LU, MT, MK, MD, MC, NL, NO, AT, PL, PT, RO, SM, SE, RS, SK, ES, CI, HU, and CY.",本裝置為 2.4 GHz 廣帶傳輸系統（收發器），旨在於所有歐盟成員國及歐洲自由貿易聯盟國家使用。本設備可在 AL、AD、BE、BG、DK、DE、FI、FR、GR、GW、IS、IT、HR、LI、LU、MT、MK、MD、MC、NL、NO、AT、PL、PT、RO、SM、SE、RS、SK、ES、CI、HU 與 CY 運行。
+Usage Notes:,使用說明:
+"To remain in conformance with European National spectrum usage regulations, frequency and channel limitations will be applied on the products according to the country where the equipment will be deployed.",為了保持符合歐洲國家頻譜使用規定，將根據設備部署所在的國家對產品施加頻率與頻道限制。
+This device is restricted from functioning in Ad-hoc mode while operating in 5 GHz. Ad-hoc mode is direct peer-to-peer communication between two client devices without an Access Point.,此裝置在使用 5 GHz 時被限制不能以 Ad‑hoc 模式運作。Ad‑hoc 模式是兩台客戶端裝置之間不經由存取點的直接點對點通信。
+Access points will support DFS (Dynamic Frequency Selection) and TPC (Transmit Power Control) functionality as required when operating in 5 GHz band within the EU.,接入點在歐盟內的 5 GHz 頻段運行時，將按需支持 DFS（動態頻率選擇）和 TPC（傳輸功率控制）功能。
+Please refer to the product manual or datasheet to check whether your product uses 2.4 GHz and/or 5 GHz wireless.,請參閱產品手冊或資料表，以確認您的產品是否使用 2.4 GHz 和/或 5 GHz 無線頻段。
+HINWEIS ZUR VERWENDUNG VON DRAHTLOS-NETZWERK (WLAN) IN DER EUROPÄISCHEN GEMEINSCHAFT ( NUR FÜR EIN DRAHTLOSES PRODUKT ),關於在歐洲共同體使用無線網絡（WLAN）的注意事項（僅適用於無線產品）
+"Der Betrieb dieses Geräts in der Europäischen Gemeinschaft bei Nutzung von Kanälen im 5,15-5,35 GHz Frequenzband ist ausschließlich auf Innenräume beschränkt, um das Interferenzpotential zu reduzieren.",在歐洲共同體使用 5.15-5.35 GHz 頻段的通道時，該設備的運作僅限於室內，以降低干擾潛在風險。
+"Bei diesem Gerät handelt es sich um ein zum Einsatz in allen EU-Mitgliedsstaaten und in EFTA-Ländern - ausgenommen Frankreich. Der Betrieb dieses Geräts ist in den folgenden Ländern erlaubt: AL, AD, BE, BG, DK, DE, FI, FR, GR, GW, IS, IT, HR, LI, LU, MT, MK, MD, MC, NL, NO, AT, PL, PT, RO, SM, SE, RS, SK, ES, CI, HU, CY",此設備為可在所有歐盟成員國以及歐洲自由貿易聯盟（EFTA）國家使用的裝置，僅不包括法國。該設備的使用在以下國家是允許的：AL、AD、BE、BG、DK、DE、FI、FR、GR、GW、IS、IT、HR、LI、LU、MT、MK、MD、MC、NL、NO、AT、PL、PT、RO、SM、SE、RS、SK、ES、CI、HU、CY
+Gebrauchshinweise:,使用說明:
+"Um den in Europa geltenden nationalen Vorschriften zum Nutzen des Funkspektrums weiterhin zu entsprechen, werden Frequenz und Kanalbeschränkungen, dem jeweiligen Land, in dem das Gerät zum Einsatz kommt, entsprechend, auf die Produkte angewandt.",為了繼續符合歐洲各國對無線頻譜使用的國家規定，將根據裝置使用所在各國相應的頻率與頻道限制，應用於產品上。
+Die Funktionalität im Ad-hoc-Modus bei Betrieb auf 5 GHz ist für dieses Gerät eingeschränkt. Bei dem Ad-hoc-Modus handelt es sich um eine Peer-to-Peer-Kommunikation zwischen zwei Client-Geräten ohneeinen Access Point.,在 5 GHz 頻段下以 Ad‑hoc 模式運作時，該設備的功能受限。Ad‑hoc 模式是兩台客戶端設備之間的點對點通信，無需接入點。
+Access Points unterstützen die Funktionen DFS (Dynamic Frequency Selection) und TPC (Transmit Power Control) wie erforderlich bei Betrieb auf 5 GHz innerhalb der EU.,Access Points 支援 DFS（Dynamic Frequency Selection）和 TPC（Transmit Power Control）功能，必要時在歐盟境內以 5 GHz 進行作業。
+"Bitte schlagen Sie im Handbuch oder Datenblatt nach nach, ob Ihr Gerät eine 2,4 GHz und / oder 5 GHz Verbindung nutzt.",请在手册或数据表中查阅，您的设备是否使用 2.4 GHz 和/或 5 GHz 连接。
+Íslenska [Icelandic],冰島語 [冰岛语]
+"Hér með lýsir D-Link Corporation því yfir að þessi vara, fylgihlutir og hugbúnaður eru í samræmi við tilskipun 2014/53/EB. Sækja má ESB-samræmisyfirlýsinguna í heild sinni og fastbúnað vörunnar af vefsíðu vörunnar á www.dlink.com.",本公司 D-Link Corporation 在此聲明，該產品、附件與軟體符合指令 2014/53/EB。可於 www.dlink.com 下載該產品的完整 ESB 合規聲明與固件。
+Norsk [Norwegian],挪威語 [挪威語]
+"Herved erklærer D-Link Corporation at dette produktet, tilbehøret og programvaren er i samsvar med direktivet 2014/53/EU. Den fullstendige teksten i EU-erklæring om samsvar og produktets fastvare er tilgjengelig for nedlasting fra produktsiden på www.dlink.com.",本函宣示 D-Link Corporation 本產品、附件與軟體符合 2014/53/EU 指令。完整的歐盟合規聲明文本及本產品韌體可從 www.dlink.com 之產品頁下載。
+Warning Statement:,警告聲明:
+The equipment supplied by an approved external power adapter which is considered to be Pluggable Equipment Type A. The socket outlets shall be installed near the equipment and be easily accessible.,由經核准的外部電源適配器供電的設備被視為可插拔設備類型 A。插座應安裝在設備附近，並易於接觸。
+Latviski [Latvian],拉脫維亞語 [Latvian]
+"Ar šo uzņēmums D-Link Corporation apliecina, ka šis produkts, piederumi un programmatūra atbilst direktīvai 2014/53/ES. ES atbilstības deklarācijas pilno tekstu un produkta aparātprogrammatūru var lejupielādēt attiecīgā produkta lapā vietnē www.dlink.com.",本公司 D-Link Corporation 證明此產品、附件與軟體符合指令 2014/53/ES。完整的歐盟合規聲明文本與產品固件可於該產品頁面 www.dlink.com 下載。
+Lietuvių [Lithuanian],Lietuvių（立陶宛語）
+"Šiuo dokumentu „D-Link Corporation“ pareiškia, kad šis gaminys, priedai ir programinė įranga atitinka direktyvą 2014/53/ES. Visą ES atitikties deklaracijos tekstą ir gaminio programinę aparatinę įrangą galima atsisiųsti iš gaminio puslapio adresu www.dlink.com.",本文件由「D-Link Corporation」聲明，此產品、附件和軟件符合指令 2014/53/ES。完整的歐盟合規聲明文本及產品軟硬體可從產品網站 www.dlink.com 下載。
+Nederlands [Dutch],荷蘭語 [荷蘭語]
+"Hierbij verklaart D-Link Corporation dat dit product, accessoires en software voldoen aan de richtlijnen 2014/53/EU. De volledige tekst van de EU conformiteitsverklaring en productfirmware is beschikbaar voor download van de productpagina op www.dlink.com.",此處，D-Link Corporation 宣告此產品、配件及軟體符合 2014/53/EU 指引。完整的 EU 符合性聲明及產品韌體文本可於 www.dlink.com 的產品頁面下載。
+Malti [Maltese],馬爾他語 [馬爾他語]
+"Bil-preżenti, D-Link Corporation tiddikjara li dan il-prodott, l-aċċessorji, u s-software huma konformi mad-Direttiva 2014/53/UE. Tista’ tniżżel it-test sħiħ tad-dikjarazzjoni ta’ konformità tal-UE u l-firmware tal-prodott mill-paġna tal-prodott fuq www.dlink.com.",本函，D-Link Corporation 宣佈本產品、配件及軟體符合 2014/53/UE 指令。您可以從 www.dlink.com 上的產品頁面下載完整的歐盟合規聲明文本和本產品的韌體。
+Magyar [Hungarian],馬加爾 [匈牙利]
+"Ezennel a D-Link Corporation kijelenti, hogy a jelen termék, annak tartozékai és szoftvere megfelelnek a 2014/53/EU sz. rendeletek rendelkezéseinek. Az EU Megfelelőségi nyilatkozat teljes szövege és a termék firmware a termék oldaláról tölthető le a www.dlink.com címen.",兹此，D-Link Corporation声明，本产品及其附件和软件符合2014/53/EU条例的规定。完整的欧盟合规声明文本和产品韧体可在产品页面下载，网址为 www.dlink.com。
+Polski [Polish],波蘭語 [Polish]
+"D-Link Corporation niniejszym oświadcza, że ten produkt, akcesoria oraz oprogramowanie są zgodne z dyrektywami 2014/53/EU. Pełen tekst deklaracji zgodności UE oraz oprogramowanie sprzętowe do produktu można pobrać na stronie produktu w witrynie www.dlink.com.",D-Link Corporation 本公司特此聲明，該產品、配件及軟體均符合 2014/53/EU 指令。完整的 EU 符合性聲明文本及產品硬體軟體可於 www.dlink.com 的產品頁面下載。
+Português [Portuguese],葡萄牙語 [葡萄牙語]
+"Desta forma, a D-Link Corporation declara que este produto, os acessórios e o software estão em conformidade com a diretiva 2014/53/UE. O texto completo da declaração de conformidade da UE e do firmware",因此，D-Link Corporation 宣稱此產品、配件和軟體符合 2014/53/UE 指令。完整的歐盟合規聲明及韌體文本
+Slovensko[Slovenian],斯洛伐克[斯洛文尼亞語]
+"Podjetje D-Link Corporation s tem izjavlja, da so ta izdelek, dodatna oprema in programnska oprema skladni z direktivami 2014/53/EU. Celotno besedilo izjave o skladnosti EU in vdelana programska oprema sta na voljo za prenos na strani izdelka na www.dlink.com.",D-Link Corporation 公司在此聲明，該產品、額外設備與軟體皆符合 2014/53/EU 指令。完整的 EU 合規聲明與嵌入式軟體內容可於產品頁面 www.dlink.com 下載。
+Slovensky [Slovak],斯洛伐克語 [斯洛伐克]
+"Spoločnosť D-Link týmto vyhlasuje, že tento produkt, príslušenstvo a softvér sú v súlade so smernicou 214/53/EÚ. Úplné znenie vyhlásenia EÚ o zhode a firmvéri produktu sú k dispozícii na prevzatie zo stránky produktu www.dlink.com.",D-Link公司在此聲明，本產品、配件和軟體符合歐盟指令214/53/EU。完整的歐盟合規聲明及產品韌體全文可於產品網頁 www.dlink.com 下載。
+Suomi [Finnish],Suomi [芬蘭語]
+"D-Link Corporation täten vakuuttaa, että tämä tuote, lisävarusteet ja ohjelmisto ovat direktiivin 2014/53/EU vaatimusten mukaisia. Täydellinen EU-vaatimustenmukaisuusvakuutus samoin kuin tuotteen laiteohjelmisto ovat ladattavissa osoitteesta www.dlink.com.",D-Link Corporation 本公司特此保證，該產品、附件及軟體符合 2014/53/EU 指令之要求。完整的歐盟合規保證及產品的裝置軟體可於 www.dlink.com 下載。
+Svenska[Swedish],瑞典語[瑞典語]
+"D-Link Corporation försäkrar härmed att denna produkt, tillbehör och programvara överensstämmer med direktiv 2014/53/EU. Hela texten med EU-försäkran om överensstämmelse och produkt-firmware kan hämtas från produktsidan på www.dlink.com.",D-Link Corporation 兹保证本产品、附件及软件符合指令 2014/53/EU。完整的 EU 合规声明及产品韌體可从 www.dlink.com 的产品页面获取。
+European Community Declaration of Conformity:,歐洲共同體符合性聲明：
+Česky [Czech],捷克語 [Czech]
+"Tímto D-Link Corporation prohlašuje, že tento produkt, jeho příslušenství a software jsou v souladu se směrnicí 2014/53/EU. Celý text ES prohlášení o shodě vydaného EU a o firmwaru produktu lze stáhnout na stránkách k produktu www.dlink.com.",本公司 D-Link Corporation 宣稱此產品、其附件及軟體均符合 2014/53/EU 指令。完整的 ES 合規聲明及產品韌體文本可於產品網頁 www.dlink.com 下載。
+Dansk [Danish],丹麥語 [Danish]
+"D-Link Corporation erklærer herved, at dette produkt, tilbehør og software er i overensstemmelse med direktiv 2014/53/EU. Den fulde tekst i EU-overensstemmelseserklæringen og produktfirmware kan wnloades fra produktsiden hos www.dlink.com.","D-Link Corporation 在此聲明，本產品、附件與軟體符合指令 2014/53/EU 的規定。  
+完整的 EU 合規聲明全文與產品韌體可從 www.dlink.com 的產品頁下載。"
+Deutsch [German],德語（German）
+"Hiermit erklärt die D-Link Corporation, dass dieses Produkt, das Zubehör und die Software der Richtlinie 2014/53/EU entsprechen. Der vollständige Text der Konformitätserklärung der Europäischen Gemeinschaft sowie die Firmware zum Produkt stehen Ihnen zum Herunterladen von der Produktseite im Internet auf www.dlink.com zur Verfügung.",此函宣布 D-Link Corporation 本產品、配件與軟體符合 2014/53/EU 指令。歐洲共同體的完整合格聲明文本以及該產品的韌體可在 www.dlink.com 的產品頁面下載。
+Eesti [Estonian],愛沙尼亞 [愛沙尼亞語]
+"Käesolevaga kinnitab D-Link Corporation, et see toode, tarvikud ja tarkvara on kooskõlas direktiiviga 2014/53/EL. Euroopa Liidu vastavusdeklaratsiooni täistekst ja toote püsivara on allalaadimiseks saadaval tootelehel www.dlink.com.",本函由 D-Link Corporation 確認，該產品、配件和軟件符合指令 2014/53/EL。歐洲聯盟合規聲明的完整文本以及產品固件可在產品頁面 www.dlink.com 下載。
+English,英語
+"Hereby, D-Link Corporation, declares that this product, accessories, and software are in compliance with directive 2014/53/EU. The full text of the EU Declaration of Conformity and product firmware are available for download from the product page at www.dlink.com",特此聲明，D-Link Corporation 本產品、附件和軟體符合指令 2014/53/EU 的規定。歐盟符合性聲明全文以及產品韌體可從產品頁面 www.dlink.com 下載。
+Español [Spanish],西班牙語 [西班牙語]
+"Por la presente, D-Link Corporation declara que este producto, accesorios y software cumplen con las directivas 2014/53/UE. El texto completo de la declaración de conformidad de la UE y el firmware del producto están disponibles y se pueden descargar desde la página del producto en www.dlink.com.",本公司 D-Link Corporation 宣稱此產品、附件及軟體符合 2014/53/UE 指令。完整的歐盟合規聲明及產品韌體可從 www.dlink.com 上的產品頁面下載。
+Ελληνική [Greek],希臘語 [希臘]
+"Με την παρούσα, η D-Link Corporation δηλώνει ότι αυτό το προϊόν, τα αξεσουάρ και το λογισμικό συμμορφώνονται με την Οδηγία 2014/53/ΕΕ. Το πλήρες κείμενο της δήλωσης συμμόρφωσης της ΕΕ και το υλικολογισμικό του προϊόντος είναι διαθέσιμα για λήψη από τη σελίδα του προϊόντος στην τοποθεσία www.dlink.com.",本函，D-Link Corporation 宣稱本產品、附件及軟體符合歐盟指令 2014/53/EU。歐盟合規聲明全文以及本產品的硬體軟體可於產品頁面 www.dlink.com 下載。
+Français [French],法語 [法語]
+"Par les présentes, D-Link Corporation déclare que ce produit, ces accessoires et ce logiciel sont conformes aux directives 2014/53/UE.Le texte complet de la déclaration de conformité de l'UE et le icroprogramme du produit sont disponibles au téléchargement sur la page des produits à www.dlink.com.",根據本聲明，D-Link Corporation 宣稱此產品、這些配件和此軟件符合 2014/53/UE 指令。完整的 EU 合規聲明文本和產品微程式可在 www.dlink.com 的產品頁面下載。
+Italiano [Italian],Italiano [義大利語]
+"Con la presente, D-Link Corporation dichiara che questo prodotto, i relativi accessori e il software sono conformi alla direttiva 2014/53/UE. Il testo completo della dichiarazione di conformità UE e il firmware del prodotto sono disponibili per il download dalla pagina del prodotto su www.dlink.com.",本公司 D-Link Corporation 在此聲明，該產品、相關配件和軟體符合 2014/53/UE 指令。完整的歐盟符合性聲明文本以及產品韌體可於 www.dlink.com 上的產品頁面下載。
+Frequency Band(s),頻帶
+Frequenzband,頻段
+Fréquence bande(s),頻率帶
+Bandas de Frecuencia,頻段
+Frequenza/e,頻率
+Frequentie(s),頻率(s)
+Max. Output Power (EIRP),最大輸出功率 (EIRP)
+Max. Output Power,最大輸出功率
+Consommation d’énergie max.,最大能源消耗
+Potencia máxima de Salida,最大輸出功率
+Potenza max. Output,最大功率輸出
+5 G,5G
+5.15 – 5.25 GHz,5.15–5.25 GHz
+200 mW,200 毫瓦
+5.25 – 5.35 GHz,5.25–5.35 GHz
+5.47 – 5.725 GHz,5.47–5.725 GHz
+1 W,1 瓦
+2.4 G,2.4 G
+2.4 – 2.4835 GHz,2.4–2.4835 GHz
+100 mW,100 毫瓦
+Radiation Exposure Statement,輻射曝露說明
+This equipment complies with ISED radiation exposure limits set forth for an uncontrolled environment. This equipment should be installed and operated with minimum distance 20 cm between the radiator and your body.,此設備符合 ISED 所設定的無控制環境下的輻射暴露限值。應安裝及操作時，發熱器與使用者之間保持最小 20 公分距離。
+Déclaration d'exposition aux radiations,輻射曝露聲明
+Cet équipement est conforme aux limites d'exposition aux rayonnements ISED établies pour un environnement non contrôlé. Cet équipement doit être installé et utilisé avec un minimum de 20 cm de distance entre la source de rayonnement et votre corps.,此設備符合ISED為非受控環境所確定的輻射暴露限值。此設備必須安裝並使用時，射線源與您身體之間至少保持20厘米的距離。
+"Innovation, Science and Economic Development Canada (ISED) Statement:",加拿大創新、科學與經濟發展部（ISED）聲明：
+This device complies with ISED licence-exempt RSS standard(s). Operation is subject to the following two conditions:,此裝置符合 ISED 免許證免除 RSS 標準。運作受以下兩項條件限制：
+"(1) this device may not cause interference, and",(1) 本裝置不得造成干擾，且
+"(2) this device must accept any interference, including interference that may cause undesired operation of the device.",(2) 本裝置必須容忍任何干擾，包括可能導致裝置不當運作的干擾。
+Le présent appareil est conforme aux CNR d'ISED applicables aux appareils radio exempts de licence. L'exploitation est autorisée aux deux conditions suivantes :,本裝置符合 ISED 對免許可無線電裝置所適用的 CNR 標準。使用僅在以下兩項條件下獲得授權：
+"(1) l'appareil ne doit pas produire de brouillage, et",(1) 裝置不得產生干擾，且
+"(2) l'utilisateur de l'appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d'en compromettre le fonctionnement.",(2) 設備使用者必須接受任何遭受的電磁干擾，即使該干擾可能會破壞其功能。
+Caution :,注意:
+(i) the device for operation in the band 5150-5250 MHz is only for indoor use to reduce the potential for harmful interference to co-channel mobile satellite systems;,(i) 該設備僅供在 5150-5250 MHz 頻段內使用，以降低對同頻道移動衛星系統的有害干擾可能性；
+(ii) the maximum antenna gain permitted for devices in the band 5725-5850 MHz shall be such that the equipment still complies with the e.i.r.p. limits specified for point-to-point and non-point-to-point operation as appropriate; and,(ii) 設備於 5725-5850 MHz 頻段允許的最大天線增益，必須使設備仍符合適用於點對點與非點對點操作的 e.i.r.p. 限制；且
+(iii) Users should also be advised that high-power radars are allocated as primary users (i.e. priority users) of the bands 5650-5850 MHz and that these radars could cause interference and/or damage to LE-LAN devices.,(iii) 用戶亦應被告知，高功率雷達已被分配為 5650-5850 MHz 波段的主要使用者（即優先使用者），且這些雷達可能對 LE‑LAN 設備造成干擾和/或損害。
+Avertissement:,警告:
+(i) les dispositifs fonctionnant dans la bande 5150-5250 MHz sont réservés uniquement pour une utilisation à l’intérieur afin de réduire les risques de brouillage préjudiciable aux systèmes de satellites mobiles utilisant les mêmes canaux;,(i) 在 5150-5250 MHz 頻段內運作的裝置僅限於室內使用，以減少對使用相同頻道的移動衛星系統造成有害干擾的風險；
+"(ii) le gain maximal d'antenne permis (pour les dispositifs utilisant la bande de 5725 à 5 850 MHz) doit être conforme à la limite de la p.i.r.e. spécifiée pour l'exploitation point à point et l’exploitation non point à point, selon le cas;",(ii) 允許的最大天線增益（對於使用 5725 至 5 850 MHz 頻段的裝置）必須符合針對點對點與非點對點作業所指定的 p.i.r.e. 限制，視情況而定；
+"(iii) De plus, les utilisateurs devraient aussi être avisés que les utilisateurs de radars de haute puissance sont désignés utilisateurs principaux (c.-à-d., qu’ils ont la priorité) pour les bandes 5650-5850 MHz et que ces radars pourraient causer du brouillage et/ou des dommages aux dispositifs LAN-EL.",(iii) 此外，使用者也應該被告知高功率雷達使用者被指定為主要使用者（即他們具有優先權）針對 5650-5850 MHz 頻段，且這些雷達可能對 LAN-EL 設備造成干擾和/或損壞。
+This Class B digital apparatus complies with Canadian ICES-003.,此 B 級數位裝置符合加拿大 ICES‑003 標準。
+Cet appareil numérique de la classe B est conforme à la norme NMB-003 du Canada.,此B級數位裝置符合加拿大NMB-003標準。
+IMPORTANT NOTICE:,重要通知：
+FCC Radiation Exposure Statement,FCC輻射暴露聲明
+This equipment complies with FCC radiation exposure limits set forth for an uncontrolled environment. This equipment should be installed and operated with minimum distance 20 cm between the radiator and your body.,本設備符合美國聯邦通信委員會（FCC）針對無控環境所規定的輻射暴露限制。使用本設備時，散熱器與使用者之間的最小距離應保持至少20公分。
+Appendix G - Regulatory Information,附錄 G - 監管資訊
+"This device and its antenna(s) must not be co-located or operating in conjunction with any other antenna or transmitter except in accordance with FCC multi-transmitter product procedures. For product available in the USA/Canada market, only channel 1~11 can be operated. Selection of other channels is not possible.",本裝置及其天線不得與任何其他天線或發射器同址或同時運作，除非符合 FCC 多發射器產品程序。對於面向美國／加拿大市場的產品，僅允許使用頻道 1~11；無法選擇其他頻道。
+Note,備註
+"The country code selection is for non-USA models only and is not available to all USA models. Per FCC regulations, all WiFi product marketed in the USA must be fixed to USA operational channels only.",國家代碼選擇僅適用於非美國型號，並非所有美國型號都可用。根據 FCC 規定，所有在美國市場銷售的 WiFi 產品必須固定使用美國運營頻道。
+Federal Communication Commission Interference Statement,聯邦通信委員會干擾聲明
+"This equipment has been tested and found to comply with the limits for a Class B digital device, pursuant to Part 15 of the FCC Rules. These limits are designed to provide reasonable protection against harmful interference in a residential installation. This equipment generates, uses and can radiate radio frequency energy and, if not installed and used in accordance with the instructions, may cause harmful interference to radio communications. However, there is no guarantee that interference will not occur in a particular installation. If this equipment does cause harmful interference to radio or television reception, which can be determined by turning the equipment off and on, the user is encouraged to try to correct the interference by one of the following measures:",本裝置已經經測試並確認符合《美國聯邦通信委員會（FCC）規則》第15部分關於B類數位設備的限制。這些限制旨在於住宅安裝中提供合理的防護，避免有害干擾。本裝置會產生、使用並可輻射射頻能量，若未按說明書安裝和使用，可能會對無線通訊造成有害干擾。然而，並不保證任何特定安裝環境中不會發生干擾。若本裝置確實對無線或電視接收造成有害干擾（可透過關機再開機來判斷），鼓勵使用者嘗試以下措施之一來修正干擾：
+Reorient or relocate the receiving antenna.,重新定位或重新安置接收天線。
+Increase the separation between the equipment and receiver.,增大設備與接收器之間的距離。
+Connect the equipment into an outlet on a circuit different from that to which the receiver is connected.,將設備插入與接收器所連接的電路不同的插座。
+Consult the dealer or an experienced radio/TV technician for help.,請諮詢經銷商或經驗豐富的收音機/電視技術人員以獲得協助。
+Non-modifications Statement:,非修改声明：
+Any changes or modifications not expressly approved by the party responsible for compliance could void the user’s authority to operate this equipment.,任何未經負責合規方明確批准的更改或修改，可能會使使用者的操作此設備之授權失效。
+This transmitter must not be co-located or operating in conjunction with any other antenna or transmitter.,本發射機不得與任何其他天線或發射機共址或同時運行。
+Caution:,注意:
+This device complies with Part 15 of the FCC Rules. Operation is subject to the following two conditions:,本裝置符合美國聯邦通信委員會（FCC）第15部規定。操作受以下兩項條件限制：
+"(1) This device may not cause harmful interference, and (2) this device must accept any interference received, including interference that may cause undesired operation.",(1) 本裝置不得造成有害干擾；(2) 本裝置必須接受任何收到的干擾，包括可能導致不期望運作的干擾。
+Regulatory Statements,監管聲明
+Admin Password,管理員密碼
+Password,密碼
+Enter a new password for the administrator account. You will need to enter this password whenever you configure the router using a web browser or add the router to EAGLE PRO AI. It is recommended that you change the default device password printed on the device label on the bottom of the device.,輸入新的密碼給管理員帳戶。每次使用網頁瀏覽器設定路由器或將路由器加入 EAGLE PRO 人工智慧時，都需要輸入此密碼。建議您更改印在裝置底部裝置標籤上的預設裝置密碼。
+Advanced Settings... - Administration,進階設定… - 行政管理
+Enable HTTPS Management,啟用 HTTPS 管理
+Enable HTTPS Remote Management,啟用 HTTPS 遠端管理
+Enable router management using an encrypted HTTP connection.,使用加密的 HTTP 連線啟用路由器管理。
+Enable remote management over the Internet using an encrypted HTTP connection.,使用加密的 HTTP 連線，啟用網際網路遠端管理。
+Remote Admin Port,遠端管理埠
+Specify the port number for accessing the web configuration interface. The default is 8081.,請指定用於存取網頁設定介面的埠號。預設為 8081。
+LED Control,LED 控制
+Status LED,狀態 LED
+Turn the LED status lights on or off.,開啟或關閉 LED 狀態燈。
+Edit Rule,編輯規則
+Name,名稱
+Enter a custom name for this client.,請輸入此客戶的自訂名稱。
+Vendor,供應商
+Displays the vendor of the client.,顯示客戶的供應商
+MAC Address,MAC 地址
+Displays the MAC address of the client.,顯示客戶端的 MAC 位址。
+IP Address,IP 位址
+Displays the current IP address of the client.,顯示客戶端的當前 IP 位址。
+Reserve IP,保留 IP
+Enable,啟用
+to reserve an IP address for the client.,為客戶預留一個 IP 位址。
+IP Address (Reserved),IP 地址（保留）
+Specify an IP address for the router's DHCP server to assign.,為路由器的 DHCP 伺服器指定要分配的 IP 位址。
+Enable Parental Control and select a profile to control the client's Internet access. Make sure that this device is also on the device list of the selected profile.,啟用家長控制並選擇一個設定檔，以控制客戶端的網際網路存取。確保此裝置也在所選設定檔的裝置清單中。
+Profile,個人檔案
+Use the drop-down menu to select a profile to be used for Parental Control. The profile can be set to,使用下拉式選單選擇要用於家長控制的個人資料。該個人資料可以設定為
+Always Block,始終區塊
+"to have this client blocked from accessing the Internet, or you can create your own profiles to specify the times that the client can access the network. You can also block access to unwanted websites. Refer to",將此客戶端阻止訪問互聯網，或您可以創建自己的配置文件，以指定客戶端可訪問網絡的時間。您還可以阻止訪問不需要的網站。參見
+when you are done.,當你完成時。
+Power,力量
+Solid White,純白
+The device is on and the system is healthy.,設備已開啟，系統正常。
+Solid Orange,純橙色
+The device is booting up or performing the factory reset process.,裝置正在啟動或進行恢復出廠設定程序。
+Blinking Orange,閃爍的橘色
+The device is under recovery mode.,設備正處於恢復模式。
+The Internet connection is established.,網路連線已建立。
+The device cannot connect to the Internet.,此裝置無法連接到互聯網。
+Blinking Orange & White Alternately,橙白交替閃爍
+The device is undergoing the firmware upgrade process.,該裝置正在進行韌體升級過程。
+Internet access has been paused.,已暫停網路存取
+Wireless (2.4 GHz),無線（2.4 GHz）
+The 2.4 GHz wireless band is enabled.,2.4 GHz 無線頻段已啟用。
+Blinking White,閃爍的白色
+The device is transmitting data. It is processing WPS if the below 5 GHz LED is blinking at the same time.,設備正在傳輸數據。若下面的 5 GHz LED 同時閃爍，即表示正在處理 WPS。
+Wireless (5 GHz),無線（5 GHz）
+The 5 GHz wireless band is enabled.,已啟用5 GHz無線頻段。
+The device is transmitting data. It is processing WPS if the above 2.4 GHz LED is blinking at the same time.,設備正在傳輸數據。若上述 2.4 GHz LED 同時閃爍，則正在處理 WPS。
+Device Interfaces,設備介面
+Wireless Interface (2.4 GHz): IEEE 802.11n/g/b,無線介面 (2.4 GHz): IEEE 802.11n/g/b
+Wireless Interface (5 GHz): IEEE 802.11ax/ac/n/a,無線介面（5 GHz）：IEEE 802.11ax/ac/n/a
+One 10/100/1000 Mbps WAN port,一個 10/100/1000 Mbps 的 WAN 端口
+Three 10/100/1000 Mbps LAN port,三個10/100/1000 Mbps LAN埠
+Standards,標準
+IEEE 802.11ax,IEEE 802.11ax
+"1,2,3","1,2,3"
+IEEE 802.11ac,IEEE 802.11ac
+IEEE 802.3u,IEEE 802.3u
+IEEE 802.3ab,IEEE 802.3ab
+IEEE 802.1p/q (WAN),IEEE 802.1p/q（廣域網）
+IEEE802.3x,IEEE802.3x
+IEEE 802.11h,IEEE 802.11h
+IEEE 802.11k/v,IEEE 802.11k/v
+IEEE 802.11n/g/b/a,IEEE 802.11n/g/b/a
+Antenna Types,天線類型
+Four external antennas,四根外部天線
+Security,安全
+WPA3/WPA2/WPA-Personal,WPA3/WPA2/WPA-個人
+Wi-Fi Protected Setup (WPS),Wi‑Fi 保護設定 (WPS)
+WAN Connection Type,WAN 連接類型
+Static IP,靜態 IP
+Dynamic IP,動態IP
+PPPoE,PPPoE
+PPTP,點對點隧道協定
+L2TP,L2TP
+DS-Lite,DS-Lite
+"Input: 100 to 240 V AC, 50 / 60 Hz",輸入：100 至 240 V 交流，50/60 Hz
+"Output: 12 V, 1 A",輸出：12 V，1 A
+Temperature,溫度
+Operating: 0 to 40 °C (32 to 104 °F),運行：0 至 40 °C（32 至 104 °F）
+Storage: -20 to 65 °C (-4 to 149 °F),儲存：-20 至 65 °C（-4 至 149 °F）
+Humidity,濕度
+"Operating: 10% to 90% maximum, non-condensing",運行：10% 至 90%（最高），非冷凝式
+"Storage: 5% to 95% maximum, non-condensing",存储：5%–95% 最大值，非冷凝
+Certifications,認證
+IC,IC
+FCC,聯邦通信委員會
+CE,CE
+RCM,RCM
+VCCI,VCCI
+KCC,KCC
+Anatel,巴西國家電信管理局
+BSMI,標準檢驗檢測局
+Dimensions,尺寸
+L x W x H: 195 x 139 x 55 mm (7.68 x 5.47 x 2.17 in),長 x 寬 x 高：195 x 139 x 55 毫米（7.68 x 5.47 x 2.17 英吋）
+Weight,重量
+300 g,300 克
+Technical Specifications,技術規格
+"Maximum wireless signal rate derived from IEEE Standard 802.11a, 802.11g, 802.11n, 802.11ac and 802.11ax specifications. Actual data throughput will vary. Network conditions and environmental factors - including volume of network traffic, building materials and construction, and network overhead - lower actual data throughput rate. Environmental factors will adversely affect wireless signal range.",最大無線訊號速率取自 IEEE 標準 802.11a、802.11g、802.11n、802.11ac 與 802.11ax 規範。實際資料吞吐速率會有所差異。網路狀況與環境因素—包括網路流量量、建築材料與結構，以及網路開銷—會降低實際資料吞吐速率。環境因素將對無線訊號覆蓋範圍產生不利影響。
+Frequency Range varies depending on country’s regulation.,頻率範圍因各國規定而異。
+The router does not include 5.25-5.35 GHz & 5.47-5.725 GHz in some regions.,該路由器在某些地區不包含 5.25-5.35 GHz 與 5.47-5.725 GHz 頻段。
+Gigabit LAN Ports,十億位元局域網埠
+(1- 3),(1-3)
+"Connect Ethernet devices such as computers, switches, storage (NAS) devices, and game consoles.",連接以太網設備，例如電腦、交換機、存儲（NAS）設備和遊戲主機。
+Gigabit WAN Port,十億位元 WAN埠
+Use an Ethernet cable to connect your broadband modem to this port.,使用以太網線將您的寬頻調製解調器連接到此端口。
+Reset Button,重置按鈕
+"Insert a paperclip in the hole, wait for",把回形針插進洞裡，等待
+the power LED turns orange (all other LEDs should be off),電源 LED 變成橙色（其他所有 LED 應該熄滅）
+", then release to reset the router to default settings.",", 然後鬆開以將路由器恢復至預設設定。"
+WPS Button,WPS 按鈕
+Press to start the WPS process and automatically create an encrypted connection to a WPS client.,按下以啟動 WPS 流程並自動建立加密連線至 WPS 客戶端。
+Power Connector,電源連接器
+Connector for the supplied power adapter.,供應電源適配器的連接器。
+Back Panel,背面板
+Hardware Overview,硬體概覽
+LED Indicators,LED 指示燈
+Section 5 - Wi-Fi Mesh Setup,第5節 - Wi‑Fi Mesh 設置
+Step 5,第5步
+The Google Home app will be launched.,Google Home 應用程式將推出。
+With the,與
+", you can command your router’s functionality with your voice through Amazon Alexa and the Google Assistant, enabling you to control your network with voice commands. Features include enabling and disabling your Wi-Fi guest zone without logging in to the web interface, rebooting the router, and checking your router for firmware upgrades. In order to use third-party services to control and manage your device, please register your device with D-Link Cloud Service first.",", 你可以通過 Amazon Alexa 和 Google Assistant 用語音指揮你的路由器功能，讓你用語音指令來控制網路。功能包括在不登入網頁介面的情況下啟用和停用 Wi‑Fi 來賓區域、重新啟動路由器，以及檢查路由器韌體升級。若要使用第三方服務來控制與管理你的裝置，請先在 D-Link クラウド 服務中註冊你的裝置。"
+dlink,迪連
+"When you have established a successful connection with a wireless network, the word",當您已成功連接到無線網路時，單字
+Connected,已連線
+will appear next to the name of the network to which you are connected.,將顯示在您所連接的網路名稱旁邊。
+You will then be prompted to enter the network security key (Wi-Fi password) for the wireless network. Enter the password into the box and click,随后将提示您输入无线网络的网络安全密钥（Wi‑Fi 密码）。在框中输入密码，然后单击
+"If you wish to use Wi-Fi Protected Setup (WPS) to connect to the router, you can also press the WPS button on your router at this point to enable the WPS function.",如果您想使用 Wi‑Fi Protected Setup (WPS) 連接到路由器，您也可以在此時按下路由器上的 WPS 按鈕以啟用 WPS 功能。
+Wireless Icon,無線圖標
+"To join an existing network, locate the wireless network icon in the taskbar, next to the time display.",要加入現有網路，請在工具列中找到無線網路圖示，位於時鐘顯示附近。
+Clicking on this icon will display a list of wireless networks which are within connecting proximity of your computer. Select the extender’s network by clicking on the network name.,點擊此圖示將顯示一個無線網路列表，這些網路距離您的電腦在可連接距離內。通過點擊網路名稱選擇擴充器的網路。
+Windows® 8,Windows® 8
+WPA/WPA2,WPA/WPA2
+You will then be prompted to enter the Wi-Fi password (network security key) for the wireless network. Enter the password into the box and click,此時，系統會提示您輸入無線網路的 Wi‑Fi 密碼（網路安全金鑰）。在欄位中輸入密碼，然後點擊
+to connect to the network. Your computer will now automatically connect to this wireless network when it is detected.,連接到網路。您的電腦現在會在偵測到此無線網路時自動連接。
+"To connect to the SSID, click",要連接到 SSID，請點擊
+Connect.,連接
+"To automatically connect with the router when your device next detects the SSID, check the",要在您的設備下次偵測到 SSID 時自動連接到路由器，請檢查
+Connect Automatically,自動連接
+check box,核取方塊
+Windows® 10,Windows® 10
+WPA/WPA2/WPA3,WPA/WPA2/WPA3
+Clicking on this icon will display a list of wireless networks which are within range of your computer. Select the desired network by clicking on the SSID.,點擊此圖示會顯示您電腦範圍內的無線網路列表。點擊 SSID 選擇您想要的網路。
+"To join an existing network, locate the wireless network icon in the taskbar, next to the time display and click on it.",要加入現有網路，請在工作列中尋找無線網路圖示，位於時間顯示旁，點擊它。
+Internal use only,僅供內部使用
+Firmware Information,韌體資訊
+Current Firmware Version,目前韌體版本
+Displays the current firmware version for both the main router as well as the extenders.,顯示主路由器以及擴展器的當前韌體版本。
+Check for New Firmware,檢查是否有新韌體
+"Click this button to prompt the router to automatically check for a new firmware version. If a newer version is found, it will prompt you to install it.",點擊此按鈕，讓路由器自動檢查是否有新的韌體版本。若發現較新版本，系統將提示您安裝。
+Advanced Settings...Upgrade Manually,進階設定...手動升級
+Device Name,裝置名稱
+Select the device in the mesh network for manual update.,請在網狀網路中選擇要手動更新的裝置。
+Select File,選擇檔案
+"If you wish to upgrade manually, first download the firmware file. Then, click the",如果您想手動升級，請先下載韌體檔案。接著，點擊該
+button and locate the file to install the new firmware.,按下按鈕並定位檔案以安裝新韌體。
+Automatic Firmware Upgrade,自動韌體升級
+Automatic Upgrade,自動升級
+"If enabled, the router will automatically upgrade to the newest firmware. The system will automatically upgrade to the latest firmware every day at 3:30-4:00 AM.",如果啟用，路由器將自動升級至最新韌體。系統將於每天上午3:30-4:00自動升級至最新韌體。
+Choose Upgrade Time,選擇升級時間
+Enable this function to set the router to automatically upgrade its firmware at a set time every day.,啟用此功能，設定路由器每天在指定時間自動升級其韌體。
+Upgrade Time,升級時間
+Configurable if,可配置（如果）
+is enabled. Set the hour and minute to automatically upgrade the router.,已啟用。設定小時和分鐘，以自動升級路由器。
+"To create a user, click",要建立使用者，請點擊
+Create User,創建使用者
+and configure the following:,並配置以下:
+User Name,使用者名稱
+Enter a username for the new user account.,輸入新使用者帳戶的使用者名稱。
+Maximum length: 20 characters.,最大長度：20 個字符
+Enter a password for the new user account.,為新使用者帳號輸入密碼。
+Maximum length: 32 characters.,最大長度：32個字元。
+VPN,虛擬私人網路
+Enable or disable Virtual Private Network (VPN) functionality for this user.,為此使用者啟用或停用虛擬私人網路功能。
+A maximum of 9 users (not including the Admin) can be created. Click,最多可以建立 9 位使用者（不包含管理員）。點擊
+OK,好的
+to close the screen.,關閉螢幕
+Auto Reboot Configuration,自動重啟設定
+Reboot the Device,重新啟動設備
+Click this button to reboot the router immediately.,點擊此按鈕以立即重新啟動路由器。
+Auto Reboot,自動重啟
+You may set the router to automatically reboot at a set time. The options are,您可以將路由器設定為在固定時間自動重新啟動。選項如下：
+"Never, Daily,",永不，每日
+Weekly,每週
+". You may set the day, and hour and minute of the day for automatic reboot.",. 您可以設定自動重新啟動的日期、時間與分鐘。
+System,系統
+Save Settings to Local Hard Drive,將設定儲存到本機硬碟
+This option will save the current router configuration settings to a file (bin type) on your computer.,此選項將把當前路由器的配置設置保存為一個 (bin 類型) 檔案到您的電腦。
+Load Settings from Local Hard Drive,從本地硬碟載入設定
+This option will load a previously saved router configuration file. This will overwrite the router’s current configuration.,此選項將載入先前已儲存的路由器設定檔。此將覆寫路由器目前的設定。
+Restore to Factory Default Settings,恢復出廠預設設定
+"This option will restore the router back to the default configurations stored in the firmware. Any settings that have not been saved will be lost, including any rules that you have created. If you want to back up the current router configuration settings before restoring to factory defaults, use the",此選項將把路由器恢復至韌體中儲存的預設設定。未儲存的任何設定將會遺失，包括您已建立的任何規則。若您想在恢復至出廠預設前備份目前路由器設定，請使用
+function above.,上方函式
+Email Settings,電子郵件設置
+Enable E-mail Notification,啟用電子郵件通知
+Enable this option if you want the logs to be automatically sent to an email address.,如果您想將日誌自動發送到電子郵件地址，請啟用此選項。
+If you enable,如果您啟用
+", configure the following:",，配置以下：
+From E-mail Address,寄件人電子郵件地址
+Enter the sender's email address of the SysLog messages.,輸入 SysLog 訊息的寄件人電子郵件地址。
+To E-mail Address,收件人電子郵件地址
+Enter the recipient's email address.,輸入收件人的電子郵件地址。
+SMTP Server Address,SMTP 伺服器位址
+Enter the SMTP server address.,輸入 SMTP 伺服器地址。
+SMTP Server Port,SMTP 伺服器埠
+Enter the SMTP server port. The default is 25.,請輸入 SMTP 伺服器埠號。預設為 25。
+Enable Authentication,啟用身份驗證
+Enable this if your SMTP server requires authentication.,若您的 SMTP 伺服器需要驗證，請啟用此功能。
+Account Name,帳戶名稱
+Enter your SMTP account name.,請輸入您的 SMTP 帳戶名稱。
+Enter your SMTP account's password.,輸入您的 SMTP 帳戶密碼。
+E-mail Log When Full or On Schedule,當日誌滿或按計劃時發送電子郵件
+Send When Log Full,日誌滿時發送
+"If enabled, this option will set the router to send the log when the log buffer is full. The email account for sending logs is configured in the above section.",啟用此選項時，將設置路由器在日誌緩衝區滿時發送日誌。發送日誌的電子郵件帳戶已在上方段落中配置。
+Send on Schedule,按排程發送
+"If enabled, this option will set the router to send the log according to a set schedule periodically, so the administrator is always up to date on the operation of the router. The email account for sending logs is configured in the above section.",如果啟用，該選項將使路由器根據預定時間表定期發送日誌，從而使管理員始終了解路由器的運作情況。發送日誌的電子郵件帳戶已在上述部分配置。
+"If you enable Send On Schedule, use the drop-down menu to select a schedule to apply. The schedule may be set to Always Enable, or you can create your own schedules in the Schedules section. Refer to",如果您啟用「排程發送」，請使用下拉選單選擇要套用的排程。排程可以設定為「始終啟用」，或您可以在「排程」區段建立自己的排程。參考
+Time & Schedule - Schedule,時間與排程 - 排程
+SysLog Settings,SysLog 設定
+Enable Logging to Syslog Server,啟用 Syslog 伺服器記錄
+Check this box to send the router logs to a SysLog Server.,勾選此方塊將路由器日誌發送至 SysLog 伺服器。
+SysLog Server IP Address,SysLog 伺服器 IP 位址
+"is enabled. Enter the IP address of the Syslog server. If the Syslog server is connected to the router, select it from the drop-down menu to automatically populate the field.",已啟用。輸入 Syslog 伺服器的 IP 位址。若 Syslog 伺服器已連接到路由器，請從下拉式選單中選擇它，以自動填充該欄位。
+Log Settings,日誌設定
+System Log,系統日誌
+Click the,點擊這個
+Check System Log,查看系統日誌
+button to download a text file containing the system log. You can view the log entries by opening with any text editing applications such as WordPad on Windows.,下載系統日誌文本文件的按鈕。您可以使用任何文字編輯應用程式（例如 Windows 上的 WordPad）打開，以查看日誌條目。
+Automatic Time Configuration,自動時間設定
+NTP Server,NTP 伺服器
+Select from the drop-down menu to use one of the following servers to synchronize the time and date for your router:,請從下拉式選單中選擇以下伺服器之一，以同步您路由器的時間和日期：
+D-Link NTP Server or Google NTP Server.,D-Link NTP 伺服器或 Google NTP 伺服器。
+Choose Manual to set the NTP server's IP address or server name.,選擇手動以設定 NTP 伺服器的 IP 位址或伺服器名稱。
+Time Configuration,時間設定
+Time Zone,時區
+Select your time zone from the drop-down menu.,請從下拉式選單中選擇您的時區。
+Time,時間
+Displays the current date and time of the router.,顯示路由器的當前日期和時間。
+L2TP over IPSec,L2TP 透過 IPSec
+Enable or disable the Quick VPN server. Quick VPN uses L2TP protocol.,啟用或停用 Quick 虛擬私人網路伺服器。Quick 虛擬私人網路使用 L2TP 協定。
+Enter a username.,輸入使用者名稱。
+Enter a password containing both numbers and letters with  8 to 64 characters in length.,輸入一個同時包含數字和字母、長度為 8 到 64 個字符的密碼。
+PSK,預共享金鑰
+Enter a Pre-shared Key between 6 and 64 characters.,請輸入 6 至 64 個字符的預共享金鑰。
+VPN Profile for iOS Device and MAC OS X,虛擬私人網路配置檔案，適用於 iOS 設備和 Mac OS X
+Export,匯出
+to save the VPN profile settings file for iOS devices and Mac OS X.,以保存 iOS 設備和 Mac OS X 的虛擬私人網路設定檔
+Advanced Settings...,進階設定...
+Authentication Protocol,身份驗證協定
+Choose the authentication protocol type:,選擇身份驗證協定類型:
+"MSCHAPv2, PAP,",MSCHAPv2、PAP
+CHAP,CHAP
+MSCHAPv2,MSCHAPv2
+is the default.,是預設值。
+MPPE,Microsoft 點對點加密
+Select the encryption cipher strength for Microsoft Point-to-Point (MPPE) Encryption:,選擇 Microsoft 點對點（MPPE）加密的加密密碼強度：
+"None, RC4-40,",無，RC4-40，
+RC4-128,RC4-128
+,
+Host Name,主機名稱
+Enter the host name that you registered with your dynamic DNS service provider.,輸入您已向動態 DNS 服務提供商註冊的主機名稱。
+IPv6 Address,IPv6 位址
+"Enter the IPv6 address of your host or server for DDNS configuration. Alternatively, select the network interface for DDNS configuration.",輸入您的主機或伺服器的 IPv6 位址以進行 DDNS 配置。或者，選擇網路介面進行 DDNS 配置。
+A maximum of 10 records can be defined.,最多可定義 10 條記錄。
+Enable Dynamic DNS,啟用動態 DNS
+Enable or disable dynamic DNS. Enable this feature to display more configuration options.,啟用或停用動態 DNS。啟用此功能以顯示更多設定選項。
+Displays the current dynamic DNS connection status.,顯示目前的動態 DNS 連線狀態。
+Server Address,伺服器地址
+Select the DDNS service provider from the drop-down menu.,請從下拉式選單中選擇 DDNS 服務供應商。
+Enter your dynamic DNS account name.,請輸入您的動態 DNS 帳號名稱。
+Enter your dynamic DNS account password.,請輸入您的動態 DNS 帳戶密碼。
+Time Out,暫停
+Enter a time-out value (in hours) to indicate how often the router should update its Dynamic DNS settings.,輸入一個逾時值（以小時為單位），以指示路由器應該多久更新其動態 DNS 設定。
+If you click on,如果您點擊
+Add Route,新增路線
+", the following options will appear:",，以下選項將顯示:
+Enter a name for the route.,請輸入路線名稱。
+DestNetwork,目標網路
+"Enter the destination IPv6 address of the subnetwork or the prefix, for example, 2010:db9:abcd:1234::",請輸入子網路的目的 IPv6 位址或前綴，例如 2010:db9:abcd:1234::
+PrefixLen,前綴長度
+"Enter the prefix length, which is the number of prefix bits of the IPv6 address. Enter a value between 64 and 128.",輸入前綴長度，即 IPv6 位址前綴位元的數量。請輸入 64 到 128 之間的數值。
+Gateway,閘道
+"Enter the IP address of the next hop, which is the gateway to the remote network.",輸入下一跳的 IP 地址，該地址是遠端網路的網關。
+Metric,公制
+Enter a route metric value between 1 between 128. This value indicates the cost of using this route.,請輸入 1 到 128 之間的路由度量值。此值表示使用此路由的成本。
+Interface,介面
+Select the interface that the IP packet will use to transit out of the router when this route is used.,選擇在此路由使用時，IP 封包將使用以離開路由器的介面。
+Destination Network,目的地網路
+Enter the destination IP address of the subnetwork.,輸入子網路的目標 IP 位址。
+Mask,口罩
+Enter the subnet mask of the destination address.,輸入目標地址的子網遮罩。
+Enter a route metric value between 1,請輸入介於 1 之間的路由度量值
+and 16. This value indicates the cost of using this route.,以及 16。此值表示使用此路徑的成本。
+"Enter a name for the rule. Alternatively, select the protocol/Application Name from the drop-down menu. Depending on the requested service, the router redirects the external service request to the appropriate internal host.",請為規則輸入名稱。或者，從下拉選單中選擇協議/應用程式名稱。根據所請求的服務，路由器將外部服務請求重定向到相應的內部主機。
+Local IP,本地IP
+"Enter the IP address of the computer on your local network that you want to direct the incoming service to. Alternatively, select the device from the drop-down menu.",輸入您想將進來服務指向的本地網路中電腦的 IP 地址。或者，從下拉選單中選擇該裝置。
+Protocol,協議
+Select the protocol of the traffic to allow or deny (,選擇要允許或拒絕的流量協定 (
+"TCP, UDP, Both,","TCP、UDP、兩者,"
+Other,其他
+).,).
+Protocol Number,協議編號
+If you entered,如果您輸入了
+"above, enter the protocol number. Refer to https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml for Assigned Internet Protocol Numbers.",在上方輸入協定編號。參考 https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml 以取得已分配的網際協定號碼。
+External Port,外部埠
+Enter the public port you want to open.,請輸入您想要開啟的公開端口。
+Internal Port,內部埠
+Enter the private port you want to open.,輸入您想要開啟的私有埠號。
+Use the drop-down menu to select the time schedule for the rule. The schedule may be set to,使用下拉式選單選擇規則的時間表。時間表可以設為
+Always Enable,始終啟用
+", or you can create your own schedules in the",", 或者您可以在這裡自行建立自己的時間表"
+Schedules,時間表
+section. Refer to,節。參見
+If you click,如果你點擊
+Enter a name for the rule.,請輸入規則名稱。
+"Enter the IP address of the computer on your local network to which you want to direct the incoming service. Alternatively, select the device from the drop-down menu.",輸入您想將傳入服務定向至本地網路中電腦的 IP 位址。或者，從下拉式選單中選擇該裝置。
+TCP Port,TCP埠
+"Enter the TCP ports that you want to open. You can enter a single port or a range of ports. Separate ports with a comma (for example: 24,1009,3000-4000).","輸入您想打開的 TCP 端口。您可以輸入單個端口或端口範圍。用逗號分隔端口（例如：24,1009,3000-4000）。"
+UDP Port,UDP 端口
+"Enter the UDP ports that you want to open. You can enter a single port or a range of ports. Separate ports with a comma (for example: 24,1009,3000-4000).","輸入您想要開啟的 UDP 端口。您可以輸入單一端口或端口範圍。使用逗號分隔端口（例如：24,1009,3000-4000）。"
+Management  >,管理 >
+Source IP Address Range,來源 IP 位址範圍
+"Enter the source IP address range (e.g. 1.1.1.1-1.1.1.2 for IPv4 or 2001::1-2001::2 for IPv6) that the rule will apply to. Using the drop-down menu, specify whether it is a",輸入規則適用的來源 IP 位址範圍（例如 IPv4 為 1.1.1.1-1.1.1.2，IPv6 為 2001::1-2001::2）。使用下拉式選單，指定它是什麼
+WAN,廣域網路
+IP address. Both a single IP address and a range of IP addresses can be entered.,IP 位址。您可以輸入單一 IP 位址或 IP 位址範圍。
+Destination IP Address Range,目標 IP 位址範圍
+"Enter the destination IP address range (e.g. 1.1.1.1-1.1.1.2 for IPv4 or 2001::1-2001::2 for IPv6) that the rule will apply to. Using the drop-down menu, specify whether it is a",輸入該規則將適用的目標 IP 位址範圍（例如 IPv4 的 1.1.1.1-1.1.1.2 或 IPv6 的 2001::1-2001::2）。使用下拉式選單，指定它是…
+Protocol & Port Range,協定與埠範圍
+"Any, TCP, or UDP",任意、TCP 或 UDP
+) and then enter the range of ports (e.g. 21-23) that the rule will apply to.,) 並輸入規則將套用的埠範圍（例如 21-23）。
+Any,任何
+to allow/deny all types of traffic regardless of the port number.,允許/拒絕所有類型的流量，無論埠號為何。
+Management >,管理 >
+A maximum of 24 rules can be defined.,最多可以定義 24 條規則。
+Advanced Settings... - Application Level Gateway (ALG) Configuration,進階設定… - 應用層閘道（ALG）設定
+Different ALGs provide special handling for specific protocols or applications. A number of ALGs for common applications are enabled by default as stated below.,不同的 ALG 為特定協議或應用程式提供特殊處理。以下列出的常見應用程式 ALG 已預設啟用。
+Allows multiple machines on the LAN to connect to their corporate network using the PPTP protocol.,允許局域網上的多台機器使用 PPTP 協議連接到他們的企業網絡。
+IPSec (VPN),IPSec (虛擬私人網路)
+"Allows multiple VPN clients to connect to their corporate network using IPSec. Some VPN clients support traversal of IPSec through NAT. This Application Level Gateway (ALG) may interfere with the operation of such VPN clients. If you are having trouble connecting with your corporate network, try turning this ALG off. Please check with the system administrator of your corporate network whether your VPN client supports NAT traversal.",允許多個虛擬私人網路客戶端使用 IPSec 連接到其企業網路。某些虛擬私人網路客戶端支援 NAT 穿透的 IPSec。此應用層閘道（ALG）可能會干擾此類虛擬私人網路客戶端的運作。若您在連接企業網路時遇到問題，請嘗試關閉此 ALG。請向您企業網路的系統管理員確認您的虛擬私人網路客戶端是否支援 NAT 穿透。
+RTSP,實時流傳輸協議
+Allows applications that uses Real Time Streaming Protocol (RTSP) to receive streaming media from the Internet.,允許使用實時流媒體協定（RTSP）的應用程式從網際網路接收串流媒體。
+SIP,會話啟動協議
+"Allows devices and applications using VoIP (Voice over IP) to communicate across NAT. Some VoIP applications and devices have the ability to discover NAT devices and work around them. This ALG may interfere with the operation of such devices. If you are having trouble making VoIP calls, try turning this ALG off.",允許使用 VoIP（語音 over IP）的裝置和應用程式跨越 NAT 進行通訊。某些 VoIP 應用程式和裝置具有發現 NAT 裝置並繞過它們的功能。此 ALG 可能會干擾這些裝置的操作。如果您在進行 VoIP 呼叫時遇到困難，請嘗試關閉此 ALG。
+Enable DMZ,啟用 DMZ
+Enable or disable Demilitarized Zone (DMZ). Devices in this zone are completely exposed to threats over the Internet. This is not recommended unless they are servers that must be exposed to the WAN.,啟用或停用非軍事區（DMZ）。此區域的設備完全暴露於網際網路上的威脅。除非它們是必須對 WAN 暴露的伺服器，否則不建議這樣做。
+DMZ IP Address,DMZ IP 地址
+"If you enable DMZ, enter the IP address of the client to be placed in this zone, or use the drop-down menu to quickly select one of the clients.",如果您啟用 DMZ，請輸入要放置於此區域的客戶端 IP 位址，或使用下拉式選單快速選擇其中一個客戶端。
+Enable SPI IPv4,啟用 SPI IPv4
+Enabling Stateful Packet Inspection (SPI) or dynamic packet filtering helps prevent cyber attacks by tracking more states per session to validate that the traffic passing through the session conforms to the protocol.,啟用有狀態封包檢查（SPI）或動態封包過濾，可通過追蹤每個會話中的更多狀態來驗證通過該會話的流量是否符合協定，從而幫助防止網路攻擊。
+Enable Anti-spoof Checking,啟用反偽造檢查
+Enable this feature to help protect your network from certain kinds of “spoofing” attacks.,啟用此功能以協助保護您的網路免受某些類型的「偽裝」攻擊。
+IPv6 Simple Security,IPv6 簡易安全
+Enable or disable IPv6 simple security. A simple firewall configuration that denies access directly to computers behind the router.,啟用或禁用 IPv6 簡易安全。簡易防火牆配置，直接拒絕對路由器後面電腦的存取。
+IPv6 Ingress Filtering,IPv6 入站過濾
+Enable or disable IPv6 ingress filtering for incoming packets to prevent suspicious senders.,啟用或停用 IPv6 入口過濾，以阻止可疑發送者。
+WAN Port Speed,WAN 端口速度
+You may set the link speed of the Internet port to,您可以將互聯網埠的連接速度設置為
+"10 Mbps, 100 Mbps, 1000 Mbps",10 Mbps、100 Mbps、1000 Mbps
+UPnP,通用即插即用
+"Enable or disable Universal Plug and Play (UPnP). UPnP provides compatibility with networking equipment, software, and peripherals. This is enabled by default.","啟用或停用通用 Plug and Play (UPnP)。  
+UPnP 可提供與網路設備、軟體和外設的相容性。  
+這個功能預設已啟用。"
+IPv4 Multicast Streams,IPv4 多播流
+Allow or disallow IPv4 multicast traffic to pass through the router from the Internet. This is enabled by default.,允許或禁止 IPv4 多播流量從互聯網通過路由器。此功能預設為啟用。
+IPv6 Multicast Streams,IPv6 多播流
+Allow or disallow IPv6 multicast traffic to pass through the router from the Internet. This is enabled by default.,允許或禁止 IPv6 多播流量從互聯網傳送通過路由器。此功能預設已啟用。
+DHCP Server,DHCP 伺服器
+Enable or disable the DHCP server.,啟用或停用 DHCP 伺服器。
+DHCP IP Address Range,DHCP IP 位址範圍
+Enter the start and end IP addresses for the DHCP server's IP assignment.,請輸入 DHCP 伺服器 IP 分配的起始和結束 IP 位址。
+"If you statically assign IP addresses to your computers or devices, make sure the IP addresses are outside of this range or you may have an IP conflict.",若您為電腦或設備靜態分配 IP 位址，請確保該 IP 位址位於此範圍之外，否則可能發生 IP 衝突。
+DHCP Lease Time,DHCP租期
+Enter the length of time for the IP address lease in minutes. The default is 10080 minutes.,輸入IP位址租約的時間長度（以分鐘為單位）。預設值為10080分鐘。
+Always Broadcast,永遠廣播
+Enable this feature to broadcast your network's DHCP server to LAN/WLAN clients.,啟用此功能，將您的網路 DHCP 伺服器廣播至 LAN/WLAN 客戶端。
+Network Settings,網路設定
+LAN IP Address,LAN IP 位址
+Enter the IP address of the router. The default IP address is,輸入路由器的 IP 地址。默認 IP 地址為
+192.168.0.1,192.168.0.1
+". If you change the IP address, you will need to enter the new IP address in your browser to log in to the web configuration.",. 如果您更改 IP 位址，您需要在瀏覽器中輸入新的 IP 位址以登入網頁設定。
+Subnet Mask,子網路遮罩
+Enter the subnet mask of the router. The default subnet mask is,請輸入路由器的子網路遮罩。預設的子網路遮罩是
+255.255.255.0.,255.255.255.0.
+Management Link,管理連結
+The default address to access the router’s configuration is,訪問路由器配置的預設地址是
+http://R15-,http://R15-
+.local./,.local./
+(where XXXX represents the last 4 digits of your router's MAC address). You can replace,(其中 XXXX 代表您路由器的 MAC 地址的最後四位數字)。您可以替換
+R15-XXXX,R15-XXXX
+with a name of your choice.,以您選擇的名字
+Local Domain Name,本地域名
+Enter the domain name (optional).,輸入域名（可選）
+Enable DNS Relay,啟用 DNS 轉發
+"Disable this option to transfer the DNS server information from your ISP to network clients for setting DNS server. If enabled, network clients will instead set the router's IP address as the DNS server.",禁用此選項可將您的 ISP 的 DNS 伺服器資訊傳送給網路客戶端，用於設定 DNS 伺服器。若啟用，網路客戶端將改為以路由器的 IP 位址作為 DNS 伺服器。
+If Smart Connect is,如果 Smart Connect 是
+"in the previous Wireless settings, configure the following for both radio frequencies. If it is",在前面的無線設定中，為兩個無線頻段配置以下項目。若它是
+Disabled,禁用
+", configure the following for 2.4GHz and 5GHz individually.",", 為 2.4GHz 與 5GHz 各自設定以下內容。"
+Wireless,無線
+Enable or disable the Guest Zone feature. The status is disabled by default.,啟用或停用 Guest Zone 功能。該狀態預設為停用。
+Wireless Name (SSID),無線名稱（SSID）
+Create a name for your wireless network using up to 32 characters.,請為您的無線網路創建名稱，長度不超過 32 個字元。
+Create a Wi-Fi password. Your password must be between 8-63 characters in length.,建立 Wi‑Fi 密碼。密碼長度須在 8 至 63 個字元之間。
+Wi-Fi Protected Setup,Wi‑Fi 受保護設置
+The easiest way to connect your wireless devices to the router is with Wi-Fi Protected Setup (WPS).,將無線設備連接到路由器的最簡單方式是使用 Wi‑Fi Protected Setup (WPS)。
+WPS-PBC Status,WPS-PBC 狀態
+Enable or disable WPS-PBC (Push Button Configuration) functionality. Press to establish a connection with another WPS compatible device.,啟用或停用 WPS-PBC（Push Button Configuration）功能。按下以與另一台符合 WPS 的設備建立連線。
+2.4GHz - Advanced Settings...,2.4GHz - 高級設定...
+802.11 Mode (2.4GHz),802.11 模式（2.4GHz）
+Select the desired wireless networking standards to use in your environment.,選擇您環境中所需的無線網路標準。
+The available options for the 2.4 GHz wireless network are,可用的 2.4 GHz 無線網路選項為
+"Mixed 802.11b/g/n, Mixed 802.11b/g, Mixed 802.11g/n","混合 802.11b/g/n, 混合 802.11b/g, 混合 802.11g/n"
+"802.11b only, 802.11g only,","僅 802.11b、僅 802.11g,"
+Select the desired channel:1-11. The default is,請選擇所需頻道：1-11。預設為
+"Select the desired wireless transmission power: High, Medium",請選擇所需的無線傳輸功率：高、中
+or Low.,或低。
+Channel Width (2.4GHz),頻道寬度（2.4GHz）
+Auto 20/40 MHz,自動 20/40 MHz
+"if you are using both 802.11n and non-802.11n (802.11b/g) devices, or select",如果您同時使用 802.11n 與非 802.11n（802.11b/g）裝置，或選擇
+if you are using a mix of 802.11b/g devices.,如果您正在使用混合的 802.11b/g 設備。
+HT20/40 Coexistence (2.4GHz),HT20/40 共存（2.4GHz）
+"Enable or disable the existence of both 20 MHz and 40 MHz channel width. Keep it enabled to achieve the maximum operability of wireless products using different standards in your environment. However, it might prevent your 802.11n devices from reaching the maximum performance.",啟用或禁用同時存在 20 MHz 與 40 MHz 頻道寬度。保持啟用可實現您環境中使用不同標準的無線產品的最大可操作性。然而，這可能會阻止您的 802.11n 設備達到最高性能。
+Smart Connect,智能連接
+"Enable or disable the Smart Connect Feature. When disabled, 2.4GHz and 5GHz configuration options become available.",啟用或停用 Smart Connect 功能。當停用時，2.4GHz 和 5GHz 配置選項將可用。
+2.4GHz / 5GHz,2.4GHz / 5GHz
+Enable or disable the 2.4GHz / 5GHz wireless network.,啟用或停用 2.4GHz / 5GHz 無線網路。
+Wi-Fi Name (SSID),Wi‑Fi 名稱（SSID）
+Create a name for your wireless network. Up to 32 characters are allowed.,為您的無線網路創建一個名稱。允許最多32個字符。
+Create a Wi-Fi password. Wireless clients will need to enter this password to connect to the network.,建立一個 Wi‑Fi 密碼。無線客戶端將需要輸入此密碼以連接到網絡。
+"Enable or disable the Smart Connect Feature. The Smart Connect feature presents a single wireless network. When connecting clients to the extended network, the clients will be automatically added to the best band, either 2.4 GHz or 5 GHz.",啟用或停用 Smart Connect 功能。Smart Connect 功能呈現單一無線網路。將客戶端連接到擴展網路時，客戶端將自動加入最佳頻段，無論是 2.4 GHz 或 5 GHz。
+Create a Wi-Fi password. Wireless clients will need to enter this password to successfully connect to the network.,建立一個 Wi‑Fi 密碼。無線客戶端需要輸入此密碼才能成功連接到網路。
+Interface Traffic Type Setting,介面流量類型設定
+LAN Port 1-3,LAN埠 1-3
+"Select the type of connection (Internet, IPTV, or Voice over IP) coming from the WAN connection to each interface on the router.",選擇從 WAN 連線到每個路由器介面的連線類型（Internet、IPTV 或 Voice over IP）。
+If Triple-Play is,如果 Triple-Play 是
+VLAN TAG,VLAN 標籤
+"Enable VLAN TAG to enter VLAN ID, as provided by your ISP",啟用 VLAN TAG，並輸入您的 ISP 所提供的 VLAN ID。
+Internet VLAN ID,互聯網 VLAN ID
+"Enter the VLAN ID for your Internet connection, as provided by your ISP.",請輸入您的網際網路連線所使用的 VLAN ID，這些資訊由您的 ISP 提供。
+IPTV VLAN ID,IPTV 虛擬區域網路識別碼
+"Enter the VLAN ID for your IPTV service, as provided by your ISP.",輸入您的 IPTV 服務的 VLAN ID，該 ID 由您的 ISP 提供。
+VOIP VLAN ID,語音 VLAN ID
+"Enter the VLAN ID for your VoIP network, as provided by your ISP.",請輸入您 VoIP 網路的 VLAN ID，根據您的 ISP 所提供的值。
+Priority ID,優先級 ID
+"Enable or disable traffic priority ID for the Internet, IPTV, and VoIP VLANs. Select a priority ID from the drop-down menus to assign to the corresponding VLAN (0-7). Higher priority ID traffic takes precedence over traffic with a low priority ID tag.","啟用或停用互聯網、IPTV 與 VoIP VLAN 的流量優先級 ID。  
+從下拉式選單中選擇優先級 ID，將其指派給相應的 VLAN（0-7）。  
+高優先級 ID 的流量將優先於低優先級 ID 標籤的流量。"
+Click to enable or disable the Triple-Play VLAN feature. More configuration options will be available if the Status is enabled.,點擊以啟用或停用 Triple-Play VLAN 功能。若已啟用，將提供更多設定選項。
+Advanced Settings... - Current IPv6 ULA Settings,進階設定... - 當前 IPv6 ULA 設定
+Current ULA Prefix,目前 ULA 前綴
+Displays the current ULA prefix.,顯示當前 ULA 前綴。
+LAN IPv6 ULA,局域網 IPv6 ULA
+Displays the LAN's IPv6 ULA.,顯示局域網的 IPv6 ULA。
+Advanced Settings... - IPv6 ULA Settings,進階設定... - IPv6 ULA 設定
+Enable ULA,啟用 ULA
+Click here to enable Unique Local IPv6 Unicast Addresses settings.,點擊此處啟用唯一本地 IPv6 單播地址設定。
+Use Default ULA Prefix,使用預設 ULA 前綴
+Enable this option to use the default ULA prefix.,啟用此選項以使用預設的 ULA 前綴。
+ULA Prefix,ULA 前綴
+"If you disable Use Default ULA Prefix, enter your own ULA prefix.",若您停用「使用預設 ULA 前綴」，請輸入您自己的 ULA 前綴。
+If you select,如果你選擇
+Stateful DHCPv6,有狀態 DHCPv6
+as the Autoconfiguration Type:,作為自動配置類型：
+Range (Start),範圍（起始）
+Enter the start IPv6 address for the DHCP server’s IPv6 assignment.,輸入 DHCP 伺服器 IPv6 指派的起始 IPv6 位址。
+Range (End),範圍（結束）
+Enter the end IPv6 address for the DHCP server’s IPv6 assignment.,輸入 DHCP 伺服器 IPv6 指派的結束 IPv6 位址。
+IPv6 Address Lifetime,IPv6 地址壽命
+Enter the IPv6 address lifetime (in minutes). The default is 10080 minutes.,輸入 IPv6 位址的存活時間（以分鐘計）。預設為 10080 分鐘。
+SLAAC+RDNSS,無狀態地址自動配置 + 遞歸 DNS 服務器
+SLAAC+Stateless DHCP,SLAAC+無狀態 DHCP
+Advertisement,廣告
+Lifetime,壽命
+Enter the router advertisement lifetime (in minutes). The default is 30 minutes.,輸入路由器廣告生存時間（以分鐘為單位）。預設值為 30 分鐘。
+Advanced Settings... - Address Autoconfiguration Settings,進階設定... - 地址自動配置設定
+Enable Automatic,啟用自動
+Assignment,任務
+Enable or disable the Automatic IPv6 Address Assignment feature.,啟用或停用自動 IPv6 地址分配功能。
+Autoconfiguration,自動配置
+Type,類型
+LAN IPv6 Address Settings,局域網 IPv6 位址設定
+LAN IPv6 Address,局域網 IPv6 位址
+Displays the router’s LAN IPv6 address.,顯示路由器的 LAN IPv6 地址。
+LAN IPv6 Link-Local Address,局域網 IPv6 本地鏈路地址
+Displays the router’s LAN link-local address.,顯示路由器的 LAN 本地鏈路位址。
+6rd Manual Configuration,6rd 手動配置
+Enable Hub and Spoke Mode,啟用樞紐與分支模式
+Enable this option if you want to minimize the number of routes to the destination by using a hub and spoke method of networking.,若您想透過使用樞紐‑輻射網路方式來最小化前往目的地的路由數量，請啟用此選項。
+6rd Configuration,6rd 配置
+Choose the,選擇
+6rd DHCPv4 Option,6rd DHCPv4 選項
+"to automatically discover and populate the data values, or",自動發現並填充資料值，或
+Manual Configuration,手動配置
+to enter the settings yourself.,自行進入設定
+as the 6rd Configuration:,作為 6rd 配置：
+6rd IPv6 Prefix,6rd IPv6 前綴
+Enter the 6rd IPv6 network address and prefix length (1~128) supplied by your ISP.,輸入您的 ISP 所提供的 6rd IPv6 網路地址及前綴長度（1~128）
+WAN IPv4 Address,WAN IPv4 位址
+Enter the IPv4 network prefix.,輸入 IPv4 網路前綴。
+6rd Border Relay IPv4 Address,6rd 邊界中繼 IPv4 位址
+Enter the 6rd border relay IPv4 address settings supplied by your ISP.,輸入您的 ISP 提供的 6rd 邊界中繼 IPv4 位址設定。
+Assign IPv6 Prefix,分配 IPv6 前綴
+Currently unsupported.,目前不支援.
+Primary DNS Server,主要 DNS 伺服器
+Enter the primary DNS server address.,輸入主 DNS 伺服器地址。
+Secondary DNS Server,次級 DNS 伺服器
+Enter the secondary DNS server address as a backup.,將次級 DNS 伺服器地址輸入作為備用。
+If,如果
+Enable DHCP-PD,啟用 DHCP-PD
+is disabled in the previous LAN IPv6 Address Settings:,已在前一個 LAN IPv6 地址設定中停用：
+Enter the router advertisement lifetime (in minutes).,輸入路由器廣告存活時間（以分鐘為單位）。
+Enable or disable the Automatic IPv6 Address Assignment.,啟用或停用自動 IPv6 位址指派
+is enabled in the previous LAN IPv6 Address Settings:,已在先前的 LAN IPv6 位址設定中啟用：
+DHCP-PD in LAN,LAN中的 DHCP-PD
+Enable or disable DHCP-PD for other IPv6 routers connected to the LAN interface.,啟用或停用 DHCP-PD，以供連接到 LAN 介面的其他 IPv6 路由器使用。
+Enable or disable prefix delegation.,啟用或停用前綴委派。
+Configurable if the above DHCP-PD is disabled.,若上述 DHCP-PD 已停用，可配置。
+Enter the IP address provided by your ISP.,輸入您的 ISP 所提供的 IP 位址。
+Displays the router’s LAN link-local address for the local network only.,顯示路由器的 LAN 本地鏈接地址，只顯示本地網路。
+IPv6 DNS Settings,IPv6 DNS 設定
+DNS Type,DNS 類型
+Select either,選擇其中一個
+Obtain DNS server address automatically,自動取得 DNS 伺服器地址
+Use the following DNS address,請使用以下 DNS 地址
+", enter the primary DNS server address.",，輸入主要 DNS 伺服器位址。
+", enter the secondary DNS server address as a backup.",，將次級 DNS 伺服器地址輸入為備用。
+PPPoE Session,PPPoE 會話
+Create a new PPPoE session.,建立新的 PPPoE 連線。
+Enter the username provided by your ISP.,輸入您的 ISP 所提供的使用者名稱。
+Enter the password provided by your ISP,請輸入您的 ISP 提供的密碼
+Address Mode,地址模式
+Configurable if Static IP is chosen.,若選擇靜態 IP，則可配置。
+Service Name,服務名稱
+Enter the ISP service name (optional).,輸入 ISP 服務名稱（可選）。
+Reconnect Mode,重新連接模式
+Always On,永遠開啟
+Manual,手冊
+MTU,最大傳輸單位
+Maximum Transmission Unit - you may need to change the MTU for optimal performance with your ISP.  The default is 1492  bytes.,最大傳輸單位 - 您可能需要調整 MTU 以在您的 ISP 上獲得最佳效能。預設值為 1492 字節。
+Enter the IP address retention period in minutes. The default is 10080 minutes.,請輸入 IP 地址保留期間（以分鐘為單位）。預設值為 10080 分鐘。
+"is disabled, configure the following:",已停用，請配置以下：
+Enter a valid LAN IPv6 address.,請輸入有效的 LAN IPv6 位址。
+", enter the secondary DNS server address.",", 輸入備用 DNS 伺服器位址。"
+Enter the dynamic IP's retention time. The default is 10080 minutes.,輸入動態 IP 的保留時間。預設為 10080 分鐘。
+Enter the LAN (local) IPv6 address for the router.,輸入路由器的 LAN（本地）IPv6 位址。
+Use Link-Local Address,使用鏈路本地地址
+Enable or disable link-local address.,啟用或停用鏈路本地地址。
+Configurable when,可設定時
+is disabled. Enter the address supplied by your ISP.,已停用。請輸入 ISP 提供的地址。
+Subnet Prefix Length,子網路前綴長度
+is disabled. Enter the subnet prefix length (1~128) supplied by your ISP.,已停用。請輸入您的 ISP 所提供的子網前綴長度（1~128）。
+Default Gateway,預設網關
+Enter the default gateway for your IPv6 connection.,請輸入您的 IPv6 連線的預設閘道。
+Enter the secondary DNS server address.,輸入備用 DNS 伺服器位址。
+Advanced Settings... - Manual Configuration Option,進階設定... - 手動配置選項
+AFTR IPv6 Address,AFTR IPv6 位址
+Enter the,輸入
+Address Family Transition Router (,地址族轉移路由器 (
+AFTR) IPv6 address. This is where an IPv6 packet will be decapsulated.,AFTR) IPv6 位址。這裡將進行 IPv6 封包的解封裝。
+B4 IPv4 Address,B4 IPv4 地址
+Enter the B4 IPv4 address.,請輸入 B4 IPv4 位址。
+WAN IPv6 Address,WAN IPv6 地址
+"Once connected, the WAN IPv6 address will be displayed here.",連線成功後，WAN IPv6 位址將顯示在此。
+IPv6 WAN Default Gateway,IPv6 WAN 預設閘道
+"Once connected, the IPv6 WAN default gateway address will be displayed here.",一旦連接，IPv6 WAN 的預設閘道地址將在此顯示。
+Secure DNS,安全 DNS
+DNS over HTTP Provider,DNS over HTTP 供應商
+Allow Fall-back,允許回退
+Enable this option to use public DNS with encryption via DNS-over-HTTPS (DoH).,啟用此選項以使用帶有加密的公共 DNS，透過 DNS‑over‑HTTPS (DoH)。
+Select the DNS-over-HTTPS (DoH) service provider: Google or Cloudflare.,選擇 DNS-over-HTTPS（DoH）服務提供商：Google 或 Cloudflare。
+Use your primary or secondary DNS server as an alternative if the configured provider is not working.,如果已配置的 DNS 供應商無法運作，請使用您的主或備用 DNS 伺服器作為備選方案。
+Enable or disable DHCP prefix delegation.,啟用或停用 DHCP 前綴委派。
+"Displays the router’s LAN link-local address, which is used only within the local network.",顯示路由器的 LAN 本地鏈路地址，僅在本地網路內使用。
+"is disabled, enter the following:",已停用，請輸入以下：
+My Internet Connection is,我的網路連線是
+Choose your Internet connection type from the drop-down menu. You will be presented with the appropriate options for your connection type.,請從下拉選單中選擇您的網路連接類型。您將看到符合您連接類型的選項。
+Advanced Settings... - DS-Lite DHCPv6 Option,進階設定... - DS-Lite DHCPv6 選項
+Enter the B4 (Basic Bridging Broadband) IPv4 address that will be encapsulated into IPv6 packets to transmit over an IPv6 network.,輸入將被封裝為 IPv6 封包以在 IPv6 網絡上傳輸的 B4（Basic Bridging Broadband）IPv4 地址。
+IPv6 WAN Default  Gateway,IPv6 WAN 預設閘道
+DS-Lite Configuration,DS-Lite 配置
+DS-Lite DHCPv6,DS-Lite DHCPv6
+Option,選項
+to let the router allocate the AFTR IPv6 (Address Family Transition Router) address automatically. Select,讓路由器自動分配 AFTR IPv6（地址族轉換路由器）地址。選擇
+to enter the AFTR IPv6 address manually.,手動輸入 AFTR IPv6 地址。
+Advanced Settings... - Static IP,進階設定... - 靜態IP
+Shows your chosen address mode.,顯示您所選的地址模式
+L2TP IP Address,L2TP IP 位址
+L2TP Subnet Mask,L2TP 子網遮罩
+Enter the subnet mask provided by your ISP.,輸入您 ISP 所提供的子網遮罩。
+L2TP Gateway IP Address,L2TP 閘道 IP 地址
+Enter the gateway IP address provided by your ISP.,輸入您的 ISP 所提供的閘道 IP 位址。
+Enter the primary DNS server IP address assigned by your ISP.,輸入由您的 ISP 分配的主要 DNS 伺服器 IP 位址。
+Enter the secondary DNS server IP address assigned by your ISP.,輸入您 ISP 所指定的次級 DNS 伺服器 IP 位址。
+Maximum Transmission Unit (1280~1460) - you may need to change the MTU for optimal performance with your ISP. The default is 1400.,最大傳輸單位（1280~1460）- 您可能需要調整 MTU 以獲得與 ISP 的最佳性能。默認值為 1400。
+Advanced Settings... - Dynamic IP,進階設定... - 動態 IP
+Maximum Transmission Unit (1280~1460) - you may need to change the MTU for optimal performance with your ISP. The default is 1400,最大傳輸單元 (1280~1460) - 您可能需要為了最佳效能與您的 ISP 調整 MTU。預設值為 1400
+"if the following information is given by your ISP: IP address, subnet mask, gateway, and DNS server addresses. In most cases, select",如果您的 ISP 提供了以下資訊：IP 地址、子網掩碼、閘道和 DNS 伺服器地址。在大多數情況下，請選擇。
+L2TP Server,L2TP 伺服器
+Enter the L2TP server IP address provided by your ISP.,輸入您的 ISP 所提供的 L2TP 伺服器 IP 位址。
+Enter the password provided by your ISP.,請輸入您 ISP 所提供的密碼。
+Always on,隨時開啟
+On Demand,按需
+Maximum Idle Time,最大空閒時間
+"is selected. Enter a maximum idle time during which the Internet connection is maintained during inactivity. To disable this feature, select",已選取。請輸入在空閒期間保持互聯網連接的最大閒置時間。若要停用此功能，請選擇
+as the reconnect mode. The default is 5 minutes.,作為重新連接模式。默認為 5 分鐘。
+Displays your chosen address mode.,顯示您選擇的地址模式。
+PPTP IP Address,PPTP IP 地址
+PPTP Subnet Mask,PPTP 子網遮罩
+PPTP Gateway IP Address,PPTP 網關 IP 位址
+PPTP Server,PPTP 伺服器
+Enter the PPTP server's IP address or name provided by your ISP.,請輸入您的 ISP 所提供的 PPTP 伺服器 IP 位址或名稱。
+as the reconnect mode.,作為重新連接模式。
+Enter the ISP service name (optional),輸入 ISP 服務名稱（可選）
+Maximum Transmission Unit (1280~1492)- you may need to change the MTU for optimal performance with your ISP. The default is 1492.,最大傳輸單位（1280~1492）- 您可能需要更改 MTU 以獲得最佳 ISP 效能。預設值為 1492。
+MAC Address Clone,MAC 地址克隆
+The default MAC address is set to the Internet port’s physical interface MAC address on the router. You can replace the Internet port’s MAC address with the MAC address of a connected client.,默認的 MAC 地址設置為路由器上互聯網埠的物理介面 MAC 地址。您可以將互聯網埠的 MAC 地址替換為已連接客戶端的 MAC 地址。
+Maximum Transmission Unit (1280~1500)- you may need to change the MTU for optimal performance with your ISP. The default is 1500.,最大傳輸單位（1280~1500）– 你可能需要調整 MTU 以獲得最佳的 ISP 性能。預設值為 1500。
+"if the following information has been provided by your ISP: IP address, MTU, and DNS server addresses. In most cases, select",如果以下信息已由您的 ISP 提供：IP 地址、MTU 和 DNS 伺服器位址。在大多數情況下，選擇。
+Maximum Transmission Unit - you may need to change the MTU for optimal performance with your ISP.,最大傳輸單元 - 你可能需要調整 MTU 以獲得最佳與 ISP 的性能。
+Enter the default gateway address provided by your ISP.,輸入您的 ISP 提供的預設閘道地址。
+Enter the primary DNS server IP address provided by your ISP.,請輸入您網際網路服務提供商（ISP）提供的主要 DNS 伺服器 IP 位址。
+The host name is optional but may be required by some ISPs. Leave it blank if you are not sure.,主機名稱是可選的，但某些 ISP 可能會要求。若不確定，請留空。
+Enter the primary DNS server IP address assigned by your ISP. This address is usually filled in automatically.,輸入由您的 ISP 分配的主 DNS 伺服器 IP 位址。此位址通常會自動填寫。
+Enter the secondary DNS server IP address assigned by your ISP. This address is usually filled in automatically.,請輸入由您的 ISP 分配的次級 DNS 伺服器 IP 位址。此位址通常會自動填入。
+Maximum Transmission Unit - you may need to change the MTU for optimal performance with your ISP. The default is 1500.,最大傳輸單位 - 為了與您的 ISP 取得最佳性能，您可能需要調整 MTU。默認值為 1500。
+Select the public DNS service provider: Google or Cloudflare.,選擇公共 DNS 服務提供商：Google 或 Cloudflare.
+Choose your Internet connection type from the drop-down menu. You will be presented with more options for your connection type.,請從下拉式選單中選擇您的網路連線類型。您將會看到更多關於此連線類型的選項。
+This section provides Quick VPN setup instructions for Windows 10. Refer to,本節提供 Windows 10 快速 VPN 設定說明。請參閱
+Quick VPN,快速 VPN
+for your router setup instructions.,為您的路由器設定說明。
+This section provides Quick VPN setup instructions for Windows 8.1/8. Refer to,本節提供 Windows 8.1/8 的快速 VPN 設定說明。請參閱
+This section provides Quick VPN setup instructions for Windows 7. Refer to,本節提供 Windows 7 快速 VPN 設置說明。參考
+to customize the pin code or use the randomly generated number.,自訂 PIN 代碼或使用隨機產生的數字。
+With,與
+"linked with the Google Assistant, you can ask your Google Assistant to do any of these tasks:",連結到 Google Assistant 後，您可以請您的 Google Assistant 執行以下任何任務：
+Task,任務
+Command,命令
+Check guest Wi-Fi status,檢查客人 Wi‑Fi 狀態
+"""Is my guest Wi-Fi enabled?""",我的客人 Wi‑Fi 是否已啟用？
+Check Wi-Fi status,檢查 Wi‑Fi 狀態
+"""Is my Wi-Fi enabled?""",我的 Wi‑Fi 是否已啟用？
+Check guest Wi-Fi SSID,檢查客人 Wi‑Fi SSID
+"""What is my guest Wi-Fi SSID?""",我的客用Wi‑Fi SSID 是什麼？
+Check Wi-Fi SSID,檢查 Wi‑Fi SSID
+"""What is my Wi-Fi SSID?""",我的 Wi‑Fi SSID 是什麼？
+Enable the guest Wi-Fi,啟用客人 Wi‑Fi
+“Enable my guest Wi-Fi.”,“啟用我的客人 Wi‑Fi。”
+Disable the guest Wi-Fi,停用訪客 Wi‑Fi
+“Disable my guest Wi-Fi.”,“停用我的客人 Wi‑Fi。”
+Find out the guest Wi-Fi password,查詢客人 Wi‑Fi 密碼
+"""What is my guest Wi-Fi password?”",我的客人 Wi‑Fi 密碼是什麼？
+Reboot the router,重新啟動路由器
+"""Reboot my router.""",重啟我的路由器。
+Update the router,更新路由器
+"""Software update my router.”",更新我的路由器軟體。
+Notes:,備註：
+Only supported on Nest Hub with screen display.,僅支援裝有螢幕的 Nest Hub。
+Network can be substituted for Wi-Fi.,網路可以替代 Wi‑Fi。
+"If using a Google Home speaker, start your command by saying ""Hey Google.”",如果使用 Google Home 喇叭，請先說「Hey Google」開始您的指令。
+"enabled as a skill for Alexa, you can ask Alexa to do any of the following tasks. Before commanding Alexa, say ""Open EAGLE PRO AI"" and respond to Alexa's offering by saying ""Help.""",已將此技能啟用於 Alexa，您可以請 Alexa 執行以下任務。 在下達指令前，請說「Open EAGLE PRO AI」並在 Alexa 提供選項時回覆「Help」。
+Find out your Wi-Fi SSID,找出您的 Wi‑Fi SSID
+"""What is my Wi-Fi SSID?",我的 Wi‑Fi SSID 是什麼？
+Find out the guest Wi-Fi name and password,查詢客人 Wi‑Fi 名稱和密碼
+"""What are my guest Wi-Fi credentials?""",我的客人 Wi‑Fi 資訊是什麼？
+Upgrade the router,升級路由器
+"""Upgrade my router.”",升級我的路由器。
+Obtain weekly report messages,取得每週報告訊息
+"""Read messages",閱讀訊息
+".""",.
+"If using an Alexa speaker, start your command with one of the following:",若使用 Alexa 喇叭，請以以下任一項開始您的指令：
+"""Alex, ask EAGLE PRO AI to."" For example, command Alexa by saying, "" Alexa, ask EAGLE PRO AI to enable my guest Wi-Fi.""",Alex，請讓 EAGLE PRO AI 去做。 例如，對 Alexa 說：“Alexa，請讓 EAGLE PRO AI 啟用我的客人 Wi‑Fi。”
+"""Alex, talk to EAGLE PRO AI"" and wait for Alexa to respond. Then say your command.",Alex，跟 EAGLE PRO AI 對話，然後等待 Alexa 回覆。再說出你的指令。
+"You will need the Google Assistant app, a Google account, and a D-Link Cloud Service account to use this feature.",您需要 Google Assistant 應用程式、Google 帳戶以及 D-Link Cloud Service 帳戶才能使用此功能。
+"You will need the Amazon Alexa app, an Amazon account, and a D-Link account to use this feature.",您需要 Amazon Alexa 應用程式、Amazon 帳戶以及 D-Link 帳戶才能使用此功能。
+Assistant,助手
+Launch the,啟動
+Google Assistant,谷歌助手
+"The screenshots may be different depending on your mobile device’s OS version. However,  the process is the same.",截圖可能因您的行動裝置作業系統版本而異。然而，流程相同。
+The Google Assistant Setup,Google 助理設定
+LAUNCH,啟動
+to link the skill.,連結技能
+The EAGLE PRO AI page.,EAGLE PRO AI 頁面
+Search EAGLE PRO AI for,搜尋 EAGLE PRO AI
+Skills & Games,技能與遊戲
+Browse Skills,瀏覽技能
+Amazon Alexa,亞馬遜 Alexa
+Amazon Alexa Setup,Amazon Alexa 設定
+Section 4 - Third Party Services,第4節 - 第三方服務
+Appendix D - Wireless Security,附錄 D - 無線安全
+Appendix B - Wireless Modes,附錄 B - 無線模式
+"With a powerful network processor, the",憑藉強大的網路處理器，該
+"packs in strong processing power to help you manage your home or office network. It’s a powerful, intelligent home router with AI-assisted traffic control, Wi-Fi utilization and mesh optimization, and parental controls. It also has integrated voice assistant compatibility for Amazon Alexa and Google Assistant so you can control your network with voice commands.","擁有強大的處理能力，協助您管理家庭或辦公室網路。  
+它是一款強大且智能的家庭路由器，具備 AI 輔助的流量控制、Wi‑Fi 使用率提升與網狀優化，以及家長控制功能。  
+它還整合了 Amazon Alexa 與 Google Assistant 的語音助手兼容功能，讓您能透過語音指令控制網路。"
+Smooth Wireless Connectivity with Maximized Bandwidth,順暢無線連線，最大化帶寬
+The innovative AI Traffic Optimizer provides weekly usage report to inform administrators about the consumption of network bandwidth along with heavy users. It also rates the overall condition of the wireless network and states the number of times the engine has optimized the network  automatically based on the network conditions and usage data.,創新的 AI 流量優化器每週提供使用報告，讓管理員了解網路頻寬的消耗以及重度使用者。它還評估無線網路的整體狀況，並顯示引擎根據網路條件和使用資料自動優化網路的次數。
+Handle More with a High-Power Processor,使用高功率處理器，處理更多
+", you’re not only enjoying buffer-free gaming and lightning-fast surfing, but also features such as optimized QoS, controlled Internet access with website filtering, and compatibility with voice assistants. All this is possible with the router’s 1.4 GHz dual-core high-power processor, 128 MB of flash memory and 256 MB of RAM.",", 你不僅能夠享受無緩衝的遊戲體驗和閃電般快速的瀏覽，還有優化的 QoS、帶有網站過濾的受控網路存取，以及與語音助理相容。所有這些都得益於路由器的 1.4 GHz 雙核高效能處理器、128 MB 快閃記憶體和 256 MB 隨機存取記憶體。"
+Intelligent Quality of Service Features,智能服務質量功能
+"The Quality of Service (QoS) allows you to prioritize important traffic to ensure that real-time applications are receiving optimal bandwidth. Moreover, the inbuilt AI",服務品質（QoS）允許您優先處理重要流量，以確保實時應用程式獲得最佳帶寬。此外，內建的 AI
+engine collects and analyzes traffic data and notifies administrators of clients that consume high bandwidth so that they can take prompt action.,引擎收集並分析流量資料，並通知佔用高頻寬的客戶端管理員，以便他們能及時採取行動。
+Always Up-to-Date with the Latest Features,始終保持最新功能
+The,那
+"will automatically check daily for updates to make sure that the device always has the latest security upgrades and new features, which will install silently in the background. For extra peace of mind, in the event of failure during the firmware update, the router will store a backup system image in the memory before proceeding with the update.",將每天自動檢查更新，以確保設備始終擁有最新的安全升級和新功能，這些更新將在背景中靜默安裝。為了額外的安心，在固件更新失敗時，路由器將在繼續更新之前將備份系統映像存儲於記憶體中。
+Easy Setup and Flexible Management,簡易設置與靈活管理
+Managing your Internet utilization has never been easier; just download the free EAGLE PRO AI for your mobile device and follow the on-screen step-by-step instructions to add your device. You also have the option to use a web browser to access the setup wizard for basic configuration and advanced features. Support for industry-standard Wi-Fi Protected Setup (WPS) lets you create encrypted connections to new devices by pressing a button.,管理您的網際網路使用量從未如此簡單；只需下載免費的 EAGLE PRO AI 版至您的手機，並按螢幕上的逐步指示新增您的裝置。您亦可選擇使用網頁瀏覽器進入設定精靈，完成基本設定與進階功能。支援行業標準的 Wi‑Fi Protected Setup（WPS）功能，您只需按一下按鈕，即可為新裝置建立加密連線。
+Introduction,引言
+Home Uses/Benefits,家居用途／好處
+• Gives everyone at home broadband access,• 為家庭中的每個人提供寬頻接入
+"• Surf the web, check email, instant message, etc.",• 上網、查收電子郵件、即時通訊等。
+• Gets rid of the cables around the house,• 消除房子周圍的電纜
+• Simple and easy to use,• 簡單易用
+Small Office and Home Office Uses/Benefits,小型辦公室與家庭辦公室的用途／好處
+• Stay on top of everything at home as you would at office,• 在家也像在辦公室一樣，保持對一切事務的掌控
+• Remotely access your office network from home,• 從家中遠程存取您的辦公網絡
+• Share Internet connection and printer with multiple computers,• 與多台電腦共用網路連線與列印機
+• No need to dedicate office space,• 無需專用辦公空間
+Where is wireless used?,無線在哪裡使用？
+"Wireless technology is expanding everywhere, not just at home or office. People like the freedom of mobility and it’s becoming so popular that more and more public facilities now provide wireless access to attract people. The wireless connection in public places is usually called “hotspots”.",無線技術正在各處擴張，不僅限於家庭或辦公室。人們喜歡移動的自由，這已變得如此受歡迎，以至於越來越多的公共設施現在提供無線接入以吸引人們。公共場所的無線連接通常被稱為「熱點」。
+"Using a D-Link USB adapter with your laptop, you can access the hotspot to connect to the Internet from remote locations like: airports, hotels, coffee shops, libraries, restaurants, and convention centers.",使用 D-Link USB 轉接器與筆記本電腦，您可透過熱點連線至網際網路，甚至能在遙遠地點（如機場、酒店、咖啡店、圖書館、餐廳與會議中心）使用。
+"Wireless network is easy to setup, but if you’re installing it for the first time it could be quite a task not knowing where to start. That’s why we’ve put together a few setup steps and tips to help you through the process of setting up a wireless network.",無線網路很容易設置，但如果你是第一次安裝，可能不知道從何開始，這會是一件相當困難的事。正因如此，我們整理了一些設置步驟和提示，幫助你完成無線網路的設定流程。
+Enter the same security key or passphrase (Wi-Fi password) that is on your router and click,請輸入與您路由器上相同的安全金鑰或通行碼（Wi‑Fi 密碼），然後點擊
+. You can also connect by pushing the WPS button on the router.,. 您也可以按下路由器上的WPS按鈕來連接。
+"It may take 20-30 seconds to connect to the wireless network. If the connection fails, please verify that the security settings are correct. The key or passphrase must be exactly the same as the one on the wireless router.",連接無線網路可能需要 20-30 秒。如果連線失敗，請確認安全設定是否正確。密鑰或通訊密碼必須與無線路由器上設定的完全相同。
+The following window appears while your computer tries to connect to the router.,當您的電腦嘗試連接路由器時，會顯示以下視窗。
+The utility will display any available wireless networks in your area.,該工具將顯示您所在區域內可用的無線網絡。
+Highlight the wireless connection with Wi-Fi name (SSID) you would like to connect to and click the,將您想要連接的無線連接（Wi‑Fi 名稱（SSID））高亮顯示，並點擊
+Connect,連接
+"If you get a good signal but cannot access the Internet, check your TCP/IP settings for your wireless adapter. Refer to",如果您有良好的訊號但無法連接到網路，請檢查您的無線網路卡的 TCP/IP 設定。參見
+Networking Basics,網路基礎
+,
+>,>
+System Preferences,系統偏好設定
+... >,... >
+Network,網路
+and select the Quick VPN connection and click,並選擇 Quick VPN 連線並點擊
+Authentication Settings,身份驗證設置
+You should see a pop-up window asking you to fill out the details of your VPN connection.,您應該會看到一個彈出窗口，要求您填寫 VPN 連接的詳細資訊。
+Type:,類型：
+IPSec,IPSec
+. Tap,. 點擊
+Back,返回
+to return to the Add Configuration page.,返回至新增設定頁面。
+Description:,說明：
+"For reference purposes only, used to differentiate between multiple VPN connections.",僅供參考，僅用於區分多個 VPN 連線。
+Server:,伺服器:
+Enter the IP/DDNS address of your Quick VPN server.,請輸入您的 Quick VPN 伺服器的 IP/DDNS 位址。
+Account:,帳號：
+Enter the Username used to authenticate login to VPN server,輸入用於驗證登錄VPN伺服器的使用者名稱
+Password:,密碼:
+Enter Password used to authenticate login to VPN server,輸入用於驗證登入 VPN 伺服器的密碼
+Secret:,祕密:
+Enter your Pre-Shared Key (PSK).,輸入您的預共享密鑰 (PSK).
+to close the configuration window.,關閉設定視窗
+Your iOS device is now configured to connect to your Quick VPN server.,您的 iOS 裝置現在已設定為連接至您的 Quick VPN 伺服器。
+"Quick VPN only provides an added layer of security against specific types of snooping attacks and does not guarantee complete data integrity or protection. Only traffic in the tunnel between your router and device will be encrypted, WAN traffic will leave your D-Link Quick VPN enabled router unencrypted.",Quick VPN 只提供針對特定窺探攻擊的額外安全層，並不保證完整的資料完整性或保護。只有路由器與裝置之間隧道內的流量會被加密，WAN 流量則會從啟用 D-Link Quick VPN 的路由器離開時保持未加密。
+"Keep your Quick VPN Username, Password, and Passkey safe. Keep your Quick VPN Username, Password, and Passkey safe. It is recommended that you change these credentials periodically.",請妥善保管您的 Quick VPN 帳號、密碼與通行碼。請妥善保管您的 Quick VPN 帳號、密碼與通行碼。建議您定期更換這些憑證。
+"A device connected via Quick VPN tunnel may experience lower data throughput and higher latency due to a number of factors including: Internet conditions, local and remote network Wi-Fi and WAN bandwidth limitations, and increased latency. This may negatively impact real time voice and video communication.",透過 Quick VPN 隧道連接的裝置可能因多種因素導致資料吞吐量降低、延遲升高，包括：網際網路條件、本地與遠端網路 Wi‑Fi 與 WAN 帶寬限制，以及延遲增加。這可能對即時語音與視頻通訊產生負面影響。
+"Quick VPN supports up to five concurrent VPN client sessions using the same login and password are supported. Quick VPN uses L2TP/IPsec with MSCHAPv2, PAP, or CHAP authentication.",Quick VPN 支持最多使用相同登錄名和密碼的五個並發 VPN 客戶端會話。Quick VPN 使用 L2TP/IPsec 與 MSCHAPv2、PAP 或 CHAP 認證。
+"You device may warn you that your information may be intercepted, since you control the Quick VPN server, you may ignore this.",您的裝置可能會警告您，您的資訊可能會被攔截；由於您控制 Quick VPN 伺服器，您可以忽略這個警告。
+"UDP Ports 500, 4500, 1701 and IP Port 50 must be open in order for Quick VPN to work.",UDP埠 500、4500、1701 以及 IP 埠 50 必須開啟，才能讓 Quick VPN 正常運作。
+"L2TP/IPsec VPN usage may be restricted in some countries and on some networks. If you have trouble using Quick VPN on some networks, but not others and are not violating network access rules, try contacting your ISP or network administrator.",在某些國家和某些網路上，L2TP/IPsec VPN 的使用可能受到限制。如果您在某些網路上使用 Quick VPN 時遇到問題，但在其他網路上卻沒有，且未違反網路訪問規則，請嘗試聯繫您的網際網路服務供應商或網路管理員。
+Devices connected via Quick VPN are assigned addresses on a separate subnet (ex. 192.168.1.x). Some network resources may be unavailable when connecting via Quick VPN.,使用 Quick VPN 連線的裝置會被分配到獨立子網路的位址（例如 192.168.1.x）。透過 Quick VPN 連線時，部分網路資源可能無法使用。
+"If your Internet connection uses DHCP, it is strongly recommended that you first set up Dynamic DNS (DDNS), such as D-Link DDNS, to eliminate the need to reconfigure client devices in the event your ISP assigns you a new WAN IP address.",如果您的網路連線使用 DHCP，建議您先設定動態 DNS（DDNS），例如 D-Link DDNS，以消除 ISP 指派您新 WAN IP 位址時需要重新設定客戶端裝置的需求。
+"by clicking on the respective tabs at the top. The graph of network traffic in KB/s will update in real time. To clear the information on the graph, click",點擊頂部的相應選項卡。以 KB/s 為單位的網路流量圖表將實時更新。若要清除圖表上的資訊，請點擊
+near the top of the page.,靠近頁面頂部。
+The table below for each interface and radio frequency shows the total number of packts that are sent and received through the interface.,下表列出了每個接口和無線頻率，顯示通過該接口發送和接收的總數據包數。
+Statistics,統計
+On the Statistics page you can view the amount of traffic that passes through the router,在統計頁面，您可以查看通過路由器的流量數量。
+on the Internet and LAN interfaces as well as  the traffic from Wi-Fi 2.4 GHz and Wi-Fi 5GHz networks.,在互聯網和 LAN 接口，以及來自 2.4 GHz 和 5 GHz Wi‑Fi 網路的流量。
+Upgrade,升級
+". This page allows you to upgrade the router’s firmware, either automatically or manually. To manually upgrade the firmware, you must first download the firmware file from",. 本頁允許您自動或手動升級路由器韌體。若要手動升級韌體，您必須先從下載韌體檔案
+http://support.dlink.com,http://support.dlink.com
+"If you wish to remove a user, click",如果您想刪除使用者，請點擊
+"in the Delete column. If you wish to edit a user, click",在刪除列中。如果您想編輯用戶，請點擊
+"in the Edit column. If you wish to create a new user, click the",在編輯欄位中。如欲新增使用者，請點擊
+User,使用者
+". The User page is used to create, manage, and delete user accounts with VPN connection permission.",. 使用者頁面用於創建、管理以及刪除具備 VPN 連線權限的使用者帳戶。
+System Admin,系統管理員
+", then click",", 然後點擊"
+". This page allows you to save the router’s current configuration, load a previously saved configuration, reset the router to its factory default settings, or reboot the router.",此頁面允許您保存路由器的當前設定，載入先前已保存的設定，將路由器重設為出廠預設設定，或重新啟動路由器。
+"To configure the Admin settings, click the",要設定管理員設定，請點擊
+Admin,管理員
+tab. Refer to,表格。參見
+System Admin - Admin,系統管理員 - 管理員
+. The Admin page will allow you to change the administrator (Admin) password.,. 管理員頁面將允許您更改管理員（Admin）密碼。
+"To configure the System settings, click the",要配置系統設定，請點擊
+System Admin - System,系統管理員 - 系統
+. The router keeps a running log of events. This log can be sent to a Syslog server or to your email address.,. 這台路由器會持續記錄事件日誌。此日誌可傳送至 Syslog 伺服器或您的電子郵件地址。
+"If you wish to remove a schedule, click",如果您想要移除日程，請點擊
+"in the Delete column. If you wish to edit a schedule, click",在刪除欄位中。如果您想編輯排程，請點擊
+"in the Edit column. If you wish to create a new schedule, click the",在「編輯」欄位中。如果您想建立新的排程，請點擊
+Add a Schedule,新增排程
+Time & Schedule,時間與安排
+", then click the",", 然後點擊那個"
+tab. The,選項卡。該
+"page allows you to control some of the functions based on a pre-configured schedule, for example, Port Forwarding in",此頁面允許您根據預先設定的排程控制某些功能，例如埠轉發。
+Features > Port Forwarding,功能 > 端口轉發
+and Firewall Settings in,以及防火牆設定在
+Features > Firewall,功能 > 防火牆
+as well as sending Syslog via email in,以及通過電子郵件發送 Syslog 在
+Management > System Log,管理 > 系統日誌
+"To configure the Time settings, click the",要設定時間設定，請點擊
+Time & Schedule - Time,時間與日程 - 時間
+. The,. 這個
+"page allows you to configure, update, and maintain the correct time on the internal system clock. From here you can set the time zone and the Network Time Protocol (NTP) server.",此頁面允許您配置、更新並維護內部系統時鐘的正確時間。從這裡，您可以設置時區和網路時間協定（NTP）伺服器。
+"To configure the Schedule settings, click the",要配置排程設定，請點擊
+". This page will help you configure the Quick VPN feature of your router. For more information, refer to",. 本頁將協助您設定路由器的 Quick VPN 功能。欲了解更多資訊，請參閱
+". Before proceeding, ensure that your Internet connection is working properly. We recommend configuring Dynamic DNS before proceeding with Quick VPN setup. If your router is assigned an IP address from your ISP using DHCP, it may frequently change, requiring connection parameters to be set accordingly and a DDNS address can avoid this hassle.",在繼續之前，請確保您的網路連線正常。建議在進行 Quick VPN 設定之前先設定動態 DNS。若您的路由器使用 DHCP 從 ISP 分配 IP 位址，該位址可能會經常變動，必須相應設定連線參數，而使用 DDNS 位址則可以避免此煩惱。
+"To configure the User settings and grant users with VPN permission, go to",要設定使用者設定並授予使用者 VPN 權限，請前往
+Management > User,管理 > 用戶
+. Refer to,. 請參考
+Dynamic DNS,動態 DNS
+. This page allows your router to associate an easy-to-remember domain name such as [YourDomainName].com with a regularly changing IP address assigned by your Internet Service provider. This feature is helpful when running a virtual server.,本頁面允許您的路由器將易於記憶的域名（例如 [YourDomainName].com）與由您的網路服務供應商分配的經常變動的 IP 位址關聯。此功能在執行虛擬伺服器時很有幫助。
+Features > Static Routes,功能 > 靜態路由
+IPv6,IPv6
+to configure the IPv6 Static Routes.,配置 IPv6 靜態路由。
+"To configure the Static Route IPv4 settings, click the",要配置靜態路由 IPv4 設定，請點擊
+IPv4,IPv4
+Static Routes - IPv4,靜態路由 - IPv4
+Static Routes - IPv6,靜態路由 - IPv6
+Static Routes,靜態路由
+to define custom routes to control how traffic moves around your network.,定義自訂路由以控制流量如何在您的網路中移動。
+"To configure the Static Route IPv6 settings, click the",要設定靜態路由 IPv6 設定，請點擊
+then click the,然後點擊這個
+Virtual Server,虛擬伺服器
+tab to configure its settings and specify a public port on your router for redirection to an internal LAN IP with the mapped port. This might be necessary if you are hosting services behind the router.,在設定頁籤中配置其選項，並在路由器上指定一個公共埠，以將該埠轉發到內部 LAN IP（並映射相應埠）。若您在路由器後方托管服務，這可能是必要的。
+"To configure the Port Forwarding settings, click the",要配置端口轉發設定，請點擊
+Port Forwarding,端口轉發
+link. Refer to,連結。參考
+"to specify a port or range of ports to open for specific devices on the network. This might be necessary for certain applications to connect through the router. For example, access from the Internet can be redirected to a DMZ host using Port Forwarding.",指定要為網路上特定設備開啟的端口或端口範圍。這對某些應用程式透過路由器連線可能是必要的。例如，從互聯網進來的存取可以透過「轉發端口」（Port Forwarding）重新導向到 DMZ 主機。
+"To configure the Virtual Server settings, click the",要設定虛擬伺服器設定，請點擊
+Port Forwarding - Virtual Server,埠轉發 - 虛擬伺服器
+Firewall,防火牆
+IPv4 Rules,IPv4 規則
+tab or the,Tab 或 the
+IPv6 Rules,IPv6 規則
+tab to configure rules for traffic filtering.,切換到分頁以配置流量過濾規則。
+"To configure the Firewall Advanced settings, click the",要配置防火牆進階設定，請點擊
+Advanced,先進
+to configure the router’s firewall settings. The firewall feature helps protect your network from malicious attacks over the Internet.,配置路由器的防火牆設置。防火牆功能可幫助保護您的網絡免受互聯網上的惡意攻擊。
+"To configure the IPv4 firewall rules, click the",要設定 IPv4 防火牆規則，請點擊
+Firewall Settings - IPv4/IPv6 Rules,防火牆設置 - IPv4/IPv6 規則
+"To configure the IPv6 firewall rules, click the",要設定 IPv6 防火牆規則，請點擊
+QoS Engine,QoS 引擎
+to configure clients' Internet access priorities. It aims to optimize Internet traffic to enhance the overall user experience.,設定客戶的網際網路存取優先權。其目的是優化網際網路流量，以提升整體使用者體驗。
+Settings > Network,設定 > 網路
+to change the local network settings of the router and configure the DHCP settings.,更改路由器的本地網路設定並配置 DHCP 設定。
+Settings > Wireless,設定 > 無線
+Guest Zone,來賓區
+tab to configure your guest Wi-Fi.,點選此分頁以配置您的客人 Wi‑Fi。
+feature will allow you to create temporary zones that can be used by guests to access the Internet. These zones will be separate from your main wireless network. You may configure different zones for the 2.4 GHz and 5 GHz wireless bands.,此功能允許您創建臨時區域，供客人連接網際網路。這些區域將與您的主無線網路分開。您可以為 2.4 GHz 與 5 GHz 無線頻段設定不同的區域。
+to see your wireless network settings for your router.,查看您路由器的無線網路設置。
+VLAN,虛擬區域網路
+link to access the configuration options for the VLAN.,連結以存取 VLAN 的設定選項。
+VLAN allows Triple-Play services to be differentiated by dividing a network into segments and allowing access to these services by devices only in the assigned segment.,VLAN 允許將網路劃分為多個段，並僅允許屬於指定段的裝置存取這些服務，從而區分 Triple‑Play 服務。
+"To configure the IPv4 Internet and network connection details, click the",要設定 IPv4 Internet 與網路連線詳細資訊，請點擊
+Internet - IPv4,互聯網 - IPv4
+"To configure the IPv6 Internet and network connection details, click the",要設定 IPv6 網際網路和網路連線的詳細資訊，請點選
+Internet - IPv6,網際網路 - IPv6
+Local Connectivity Only,僅本地連線
+allows you to set up an IPv6 connection that will not connect to the Internet.,允許您設置一個不會連接到互聯網的 IPv6 連接。
+6rd,6rd
+(rapid deployment) allows IPv6 packets to be transmitted over an IPv4 network.,(快速部署) 允許 IPv6 封包通過 IPv4 網路傳輸。
+Agree to the,同意
+Terms of Use and Privacy Policy,使用條款與隱私政策
+before proceeding.,在繼續之前。
+if your ISP requires you to enter a PPPoE username and password to connect to the Internet.,如果您的網路服務供應商要求您輸入 PPPoE 使用者名稱和密碼以連線至網際網路。
+Auto Configuration,自動配置
+if your ISP assigns an IPv6 address when your router requests one from the ISP’s server. Some ISPs require you to configure relevant settings in advance before your router can connect to the IPv6 Internet.,如果您的 ISP 在您的路由器向 ISP 的伺服器請求 IPv6 位址時分配了 IPv6 位址。有些 ISP 需要您在路由器能連接到 IPv6 網際網路之前，提前配置相關設定。
+Additional previously to Enable Automatic DHCP-PD in LAN see DIR-882 page 39,欲了解先前在 LAN 啟用自動 DHCP-PD 的相關資訊，請參閱 DIR‑882 第 39 頁。
+Enable or disable DHCP-PD for other IPv6 routers connected to the,為連接至此的其他 IPv6 路由器啟用或禁用 DHCP‑PD
+LAN interface.,局域網介面
+"This feature requires a smaller subnet prefix than /64 (i.e. allowing for a larger address allocation), such as /63. Contact your ISP for more information.",此功能需要比 /64 更小的子網前綴（即允許更大的地址分配），例如 /63。請聯繫您的 ISP 以了解更多資訊。
+if your IPv6 information is provided by your Internet Service Provider (ISP).,如果您的 IPv6 資訊由您的 ISP 提供。
+Auto Detection,自動偵測
+"to automatically detect the IPv6 connection method used by your Internet Service Provider (ISP). If Auto Detection fails, you can manually select another IPv6 connection type.",自動偵測您的網路服務供應商（ISP）所使用的 IPv6 連接方式。如果自動偵測失敗，您可以手動選擇其他 IPv6 連接方式。
+For,為
+IPv6 - Auto Detection,IPv6 - 自動偵測
+refer to page,參照頁面
+IPv6 - Static IPv6,IPv6 - 靜態 IPv6
+IPv6 - Auto Configuration (SLAAC/DHCPv6),IPv6 - 自動配置 (SLAAC/DHCPv6)
+IPv6 - PPPoE,IPv6 - PPPoE
+IPv6 - 6rd,IPv6 - 6rd
+IPv6 - Local Connectivity Only,IPv6 - 僅本地連線
+"to see the Internet configuration options for IPv4 , then click the",要查看 IPv4 的網際網路設定選項，然後點擊
+tab to access the configuration options for IPv6.,按 Tab 鍵可進入 IPv6 的設定選項。
+"To configure the VLAN connection details, click the",若要設定 VLAN 連線詳細資訊，請點擊
+Internet - VLAN,網際網路 - VLAN
+"allows local IPv4 packets to travel through an IPv6 network. After selecting DS-Lite, the following parameters will be available for configuration.",允許本地 IPv4 封包透過 IPv6 網路傳輸。選擇 DS‑Lite 後，以下參數將可進行配置。
+(Layer 2 Tunneling Protocol) if your Internet Service Provider (ISP) uses an L2TP connection. Your ISP will provide you with a username and password.,(Layer 2 Tunneling Protocol) 如果您的網際網路服務供應商 (ISP) 使用 L2TP 連線。您的 ISP 將為您提供使用者名稱和密碼。
+(Point-to-Point-Tunneling Protocol) if your Internet Service Provider (ISP) uses a PPTP connection. Your ISP will provide you with a username and password.,(點對點隧道協定) 如果您的網路服務供應商 (ISP) 使用 PPTP 連線，您的 ISP 將為您提供使用者名稱和密碼。
+(Point-to-Point Protocol over Ethernet) if your ISP requires you to enter a PPPoE username and password in order to connect to the Internet.,(點對點協議 over Ethernet) 若您的 ISP 要求您輸入 PPPoE 使用者名稱與密碼才能連線至網際網路。
+if your IP information is provided by your Internet Service Provider (ISP).,如果您的IP資訊由您的網際網路服務供應商（ISP）提供。
+to see details of the IPv4 connection and IPv6 connection respectively.,分別查看 IPv4 連線和 IPv6 連線的詳細資訊。
+Release IP Address,釋放 IP 位址
+"to disconnect from the Internet. To reconnect, click",斷開 Internet 連線。要重新連線，請點擊。
+Renew IP Address,重新取得 IP 位址
+"To reconfigure the Internet settings, refer to",若要重新設定網際網路設定，請參考
+"If it is disconnected, click",如果斷開，請點擊
+Click to repair,點擊修復
+"to bring up the setup wizard, refer to the",啟動設定嚮導，請參考
+Setup Wizard,安裝嚮導
+The Home page displays whether the router is currently connected to the Internet.,首頁顯示路由器目前是否已連接至網際網路。
+Please wait while the device settings are saved.,請稍等，設備設定正在儲存中。
+Do not turn off or unplug your router during this time.,請勿在此期間關閉或拔掉您的路由器。
+Connect the router and the modem with an Ethernet cable.,請使用乙太網線將路由器與調製解調器連接。
+The setup wizard is designed to guide you through a step-by-step process of configuring your new,設定嚮導旨在引導您完成一步一步的流程，配置您的新
+for Internet connection.,用於網際網路連線
+Wireless Installation Considerations,無線安裝考量
+Product Overview,產品概覽
+Package Contents,包裝內容
+Your new settings have been saved and your router is now configured.,您的新設定已保存，您的路由器現在已完成配置。
+to close the Setup Wizard.,關閉安裝嚮導。
+"Congratulations, your device has been successfully configured!",恭喜，您的設備已成功配置！
+You can log in to the web configuration interface with the Admin Password.,您可以使用管理員密碼登入 Web 配置界面。
+Keeping your router's firmware up-to-date provides you with the latest security upgrades and new features over the air. Choose whether to keep your device up-to-date automatically or to manage the device updates by yourself.,保持路由器韌體更新能讓您透過無線獲取最新的安全升級和新功能。您可以選擇自動保持設備更新，或自行管理設備更新。
+Add VPN Configuration...,新增 VPN 設定...
+Go into,進入
+on your compatible iOS device.,在您的相容 iOS 裝置上。
+Scroll down and tap,向下滾動並點擊
+General,一般
+This section provides Quick VPN setup instructions for iOS devices. Refer to,本節提供了 iOS 裝置的快速 VPN 設置說明。請參閱
+iOS Devices,iOS 設備
+VPN Setup Instructions,VPN 設置說明
+Install New Device,安裝新裝置
+Scan the setup code on the device label on the bottom of the router. Follow the on-screen instructions to complete the setup.,掃描路由器底部設備標籤上的設置代碼。依照螢幕上的說明完成設置。
+Launch the EAGLE PRO AI from the home screen of your device.,從您的裝置主畫面啟動 EAGLE PRO AI。
+Search and install the free,搜尋並安裝免費
+available on the App Store or on Google Play.,可在 App Store 或 Google Play 上下載。
+The EAGLE PRO AI allows you to install and configure your,EAGLE PRO AI 允許您安裝並配置您的。
+from your compatible Android or iOS device.,從您相容的 Android 或 iOS 設備。
+"The screenshots may be different depending on your mobile device’s OS version. However, the process is the same.",截圖可能因手機作業系統版本不同而有所差異。不過，整個流程是一樣的。
+EAGLE PRO AI Setup,EAGLE PRO AI 設定
+Tap the,輕觸
+connection you created.,您創建的連線。
+Connect or Disconnect,連接或斷開
+Enter a name for your VPN connection.,輸入您的 VPN 連線名稱。
+L2TP/IPSec,L2TP/IPSec
+PSK for,PSK 用於
+Type.,類型
+IP/DDNS address,IP/DDNS 地址
+of your Quick VPN server.,您的 Quick VPN 伺服器.
+Enter your,輸入您的
+Passkey,通行鑰匙
+in,在
+IPSec pre-shared key,IPSec 預共享密鑰
+field.,田。
+Your Android device is now configured to connect to your Quick VPN server.,您的 Android 設備現在已設定為連接到您的 Quick VPN 伺服器。
+Android,安卓
+This section provides Quick VPN setup instructions for Android devices. Your device's screens may vary. Refer to,本節提供 Android 設備的快速 VPN 設定說明。您的設備畫面可能會有所不同。請參考
+Network & Internet,網路與互聯網
+"To connect to or disconnect from your Quick VPN server, click on the",要連接或斷開您的 Quick VPN 伺服器，請點擊
+icon (either,圖示（任一
+) in the notification area of the Windows taskbar and click on your Quick VPN connection.,）在 Windows 任務欄的通知區域中，點擊您的 Quick VPN 連線。
+The section of VPN in,VPN 部分在
+Network & Internet Settings,網路與網際網路設定
+"page will open, select your Quick VPN, then select",頁面將打開，選擇您的 Quick VPN，然後選擇
+". Or if the Connect button shows under the VPN connection, select",. 或者如果連接按鈕顯示在 VPN 連線下，請選擇
+"If connected, the VPN connection name will display",若已連線，VPN 連線名稱將顯示
+underneath it. You can click,在其下方。你可以點擊
+Disconnect,斷開
+to stop the connection.,停止連線。
+Windows (built-in),Windows（內建）
+VPN Provider,VPN 供應商
+menu.,菜單
+Create a name for your VPN connection.,為您的 VPN 連線建立名稱。
+with pre-shared key,使用預共享密鑰
+for,為
+VPN type,VPN類型
+Passkey.,通行碼。
+User name and password,使用者名稱與密碼
+from,從
+Type of sign-in info,登入資訊類型
+"If you would like windows to remember your sign-in information, enter your",如果您想讓 Windows 記住您的登錄資訊，請輸入您的
+"User name, Password,",使用者名稱，密碼，
+and select,並選擇
+Remember my sign-in info,記住我的登入資訊
+Your Windows 10 system is now configured to connect to your Quick VPN server.,您的 Windows 10 系統現在已配置為連接您的 Quick VPN 伺服器。
+This section provides Quick VPN setup instructions for Windows 10.,本節提供 Windows 10 快速 VPN 設置說明。
+Start > Settings,開始 > 設定
+VPN > Add a VPN Connection,VPN > 新增 VPN 連線
+Windows 10,Windows 10
+icon in the notification area of the Windows taskbar.,Windows 任務列通知區域中的圖示
+Click on your Quick VPN connection and click on the,點擊您的 Quick VPN 連線，然後點擊那個。
+Your Windows 8.1/8 system is now configured to connect to your Quick VPN server.,您的 Windows 8.1/8 系統現在已設定為連接到您的 Quick VPN 伺服器。
+Advanced settings.,進階設定。
+in the,在…裡
+Key,鑰匙
+text box under,文字框在下方
+Use preshared key for authentication,使用預共享金鑰進行身份驗證
+to close,關閉
+Advanced Properties,進階屬性
+and click,並點擊
+Quick VPN Properties.,快速 VPN 屬性
+Right-click your,右鍵單擊您的
+Quick VPN Connection,快速 VPN 連線
+and left-click,並左鍵單擊
+Properties,屬性
+Select the,選擇
+tab.,標籤。
+For the,為了
+Type of VPN,VPN類型
+", select",，選擇
+Layer 2 Tunneling with IPsec (L2TP/IPSec).,使用IPsec的二層隧道（L2TP/IPSec）
+button and type,按鈕和類型
+view network connections,查看網路連線
+View network connections.,查看網路連線。
+Right-click on the Quick VPN Connection you just created,右鍵點擊您剛剛創建的 Quick VPN 連接
+and left-click on,並左鍵點擊
+tab. For the,標籤。為了
+Layer 2 Tunneling with IPsec (L2TP/IPSec).,使用 IPsec 的第二層隧道（L2TP/IPSec）
+Microsoft,微軟
+"From the Network Settings page, click",在網路設定頁面，點擊
+Add a VPN Connection,新增 VPN 連線
+This section provides Quick VPN setup instructions for Windows 8.1/8.,本節為 Windows 8.1/8 提供快速 VPN 設定說明。
+vpn,虛擬私人網路
+Manage virtual private networks.,管理虛擬私人網路
+Windows 8.1/8,Windows 8.1/8
+icon in the notification area of the Windows taskbar and from the,Windows 任務列的通知區域中的圖示，並從
+Dial Up and VPN,拨号上网和 VPN
+section click on your Quick VPN connection and click on the,章節：點擊您的 Quick VPN 連線，並點擊那個
+. Click,. 點擊
+Quick VPN Connection Properties.,快速 VPN 連線屬性
+Your Windows 7 system is now configured to connect to your Quick VPN server.,您的 Windows 7 系統現在已配置為連接到您的 Quick VPN 伺服器。
+Do not click,請勿點擊
+Connect Now,立即連線
+Close,關閉
+. Click the,. 點擊
+into the,進入
+Search programs and files,搜尋程式和檔案
+text box. Select,文本框。選擇
+". If you would like windows to save your password, enter your",. 如果您想讓 Windows 儲存您的密碼，請輸入您的
+and check,並檢查
+Remember this password,請記住這個密碼
+Create,創建
+Windows 7,Windows 7
+of your Quick VPN server in the,您的 Quick VPN 服务器在
+Internet address,網路地址
+"box, create a name for your connection in the",盒子，為您的連接創建一個名稱在
+Destination Name,目的地名稱
+", check",，檢查
+Don't Connect now; just set it up so I can connect later,現在不要連接；只要先設置好，等我之後再連接
+", and click",，並點擊
+box.,盒子。
+Set up a virtual private network (VPN) connection.,建立虛擬私人網路（VPN）連線。
+"To connect to or disconnect from your Quick VPN server, go to",要連線或斷開您的 Quick VPN 伺服器，請前往
+Select the Quick VPN connection and click on the,選擇 Quick VPN 連線，並點擊
+Your Mac is now configured to connect to your Quick VPN server.,您的 Mac 現已設定為連線到 Quick VPN 伺服器。
+Shared Secret,共享密鑰
+text box and click,文本框並點擊
+"OK, Apply,",好的，套用
+then,那麼
+This section provides Quick VPN setup instructions for OS X using the,本節提供使用 OS X 的快速 VPN 設置說明。
+Profile function. Refer to,設定檔功能。參考
+Mac OS X,Mac OS X
+Open the exported profile. The Install Profile dialogue will appear; click,開啟匯出的設定檔。將顯示安裝設定檔對話方塊；點擊
+Continue,繼續
+Install,安裝
+Enter your user account password when prompted. Close the,提示時輸入您的使用者帳戶密碼。關閉該
+Profiles,個人資料
+dialogue.,對話。
+The VPN icon will appear in the notification area at the top of your screen indicating that your device is currently connected to the Quick VPN server.,VPN 圖示會顯示在螢幕頂部的通知區域，表示您的裝置目前已連線到 Quick VPN 伺服器。
+"To connect or disconnect from to your Quick VPN server, go to",要連線或斷線至您的 Quick VPN 伺服器，請前往
+and tap the button next to,並點擊旁邊的按鈕
+VPN Status,VPN 狀態
+The following instructions explain and help you to configure your D-Link Quick VPN enabled router and devices to create a Virtual Private Network (VPN). This feature is provided for advanced users who wish to connect remotely and use their router's Internet connection to add a layer of security while using untrusted networks. Configure the Quick VPN Server on your router first and then set up client devices to connect through your router's WAN connection.,以下說明將協助您設定支援 D-Link Quick VPN 的路由器與裝置，以建立虛擬私人網路（VPN）。此功能面向進階使用者，讓他們遠端連線並利用路由器的網際網路連接，在使用不可信任網路時加入安全層。請先於路由器上設定 Quick VPN 伺服器，再將客戶端裝置設定為透過路由器的 WAN 連接進行連線。
+Important Information,重要信息
+Without Quick VPN,無 Quick VPN
+Potential Hacker Stealing Data,潛在駭客盜取資料
+Your Laptop,你的筆記本電腦
+Public Unsecured Wi-Fi Hotspot,公共不安全 Wi‑Fi 熱點
+"This router is equipped with D-Link's Quick VPN technology. Virtual Private Networking (VPN) creates a connection between devices across the Internet. Using Quick VPN allows you to connect your computer or mobile device to places with free, untrusted Wi-Fi hotspots in places like coffee shops and hotels by encrypting and relaying it through your home Internet connection. This extra 'hop' reduces the chances of hackers stealing your information, such as logins, passwords, and credit card numbers. When traveling, Quick VPN lets you watch sports and use video streaming services without experiencing blackouts or filtering. You can surf the whole Internet just as you would at home.",此路由器配備了 D-Link 的 Quick VPN 技術。虛擬私人網路（VPN）在互聯網上創建設備之間的連接。使用 Quick VPN 可讓您通過加密並將流量轉發到您的家庭網絡，將電腦或行動裝置連接到咖啡店、酒店等場所的免費且不可信的 Wi‑Fi 熱點。這額外的“跳躍”降低了駭客竊取您資訊（例如登入資訊、密碼和信用卡號碼）的風險。旅行時，Quick VPN 讓您觀看體育節目並使用視頻串流服務，而不會遇到停播或過濾。您可以像在家一樣瀏覽整個互聯網。
+Your Network with Quick VPN Server,您的網路與 Quick VPN Server
+Encrypted Data,加密資料
+Unencrypted Data,未加密資料
+With Quick VPN,使用 Quick VPN
+"If any of the above items are missing or damaged, please contact your local reseller.",如果上述任何項目遺失或損壞，請聯繫您當地的經銷商。
+Using a power supply with a different voltage rating than the one included with the router will cause damage and void the warranty for this product.,使用與路由器隨附的不同電壓等級的電源將導致損壞並使此產品的保修失效。
+Appendix F - Regulatory Statements,附錄 F - 法規聲明
+There are several ways you can configure your router to connect to the Internet,有幾種方法可以配置您的路由器以連接到網際網路
+- Use your compatible iOS or Android device to install and configure your router. Refer to,- 使用兼容的 iOS 或 Android 裝置安裝並設定您的路由器。參考
+Hardware Setup,硬體設置
+- This section explains how to set up your,- 本章說明如何設置您的
+D-Link Setup Wizard,D-Link 設定嚮導
+- This wizard will ﻿launch when you log in to the router using your browser for the first time. Refer to,- 這個嚮導將在您首次使用瀏覽器登入路由器時啟動。請參考
+Manual Setup,手動設置
+- Log in to the router to manually configure your router. Refer to,- 登入路由器以手動配置您的路由器。參考
+Configuration,配置
+"If you are connecting to a broadband service that uses a dynamic connection (not PPPoE), you may be online already. Try opening a web browser and connecting to a website. If the website does not load, proceed to",如果您正在連接使用動態連接（非 PPPoE）的寬頻服務，您可能已經在線。嘗試打開網頁瀏覽器並連接到網站。如果網站無法加載，請繼續到
+You will be presented with a summary of your settings.,您將看到您的設置摘要。
+to apply the settings or,套用設定或
+to make changes.,做出變更
+Type in a,輸入 a
+Wi-Fi Network Name,Wi‑Fi 網路名稱
+Wi-Fi Password,Wi‑Fi 密碼
+to set up your Wi-Fi network. Your wireless clients will need this network password to be able to connect to your wireless network.,設置您的 Wi‑Fi 網路。您的無線客戶端將需要此網路密碼才能連接到您的無線網路。
+"The router's Smart Connect feature presents a single wireless network. When connecting clients to an extended network, they will be automatically added to the best band, either 2.4 GHz or 5 GHz. To disable the Smart Connect feature and individually configure 2.4 GHz and 5 GHz networks, refer to",路由器的 Smart Connect 功能呈現單一無線網路。當將客戶端連接至延伸網路時，它們將自動加入最佳頻段，無論是 2.4 GHz 還是 5 GHz。若要停用 Smart Connect 功能並單獨設定 2.4 GHz 與 5 GHz 網路，請參閱
+Installation,安裝
+"The D-Link wireless router lets you access your network using a wireless connection from virtually anywhere within the operating range of your wireless network. Keep in mind that the number, thickness and location of walls, ceilings, or other objects that the wireless signals must pass through may limit the range. Typical ranges vary depending on the types of materials and background RF (radio frequency) noise in your home or business. The key to maximizing wireless range is to follow these basic guidelines:",D-Link 無線路由器允許您在無線網路作業範圍內，幾乎隨時隨地使用無線連線來存取您的網路。請注意，無線訊號必須穿過的牆壁、天花板或其他物件的數量、厚度與位置，可能會限制其覆蓋範圍。實際覆蓋距離會因您家中或辦公場所的材料種類與背景射頻（RF）雜訊而有所不同。最大化無線覆蓋範圍的關鍵在於遵循以下基本指引：
+Keep the number of walls and ceilings between the D-Link router and other network devices to a minimum - each wall or ceiling can reduce your adapter’s range from 3-90 feet (1-30 meters.) Position your devices so that the number of walls or ceilings is minimized.,將 D-Link 路由器與其他網路裝置之間的牆壁與天花板數量保持在最低——每一道牆壁或天花板都可能將您的適配器範圍縮短 3-90 英尺（1-30 公尺）。請將裝置擺放位置盡量減少牆壁與天花板的數量。
+"Be aware of the direct line between network devices. A wall that is 1.5 feet thick (0.5 meters), at a 45-degree angle appears to be almost 3 feet (1 meter) thick. At a 2-degree angle it looks over 42 feet (14 meters) thick. Position devices so that the signal will travel straight through a wall or ceiling (instead of at an angle) for better reception.",注意網路設備之間的直線路徑。厚度為 1.5 英尺（0.5 公尺）的牆壁，在 45 度角時看起來幾乎有 3 英尺（1 公尺）厚。在 2 度角時，看起來超過 42 英尺（14 公尺）厚。將設備安放位置，使信號能直線穿過牆壁或天花板（而非斜向）以獲得更佳接收效果。
+"Building materials make a difference. A solid metal door or aluminum studs may have a negative effect on range. Try to position access points, wireless routers, and computers so that the signal passes through drywall or open doorways. Materials and objects such as glass, steel, metal, walls with insulation, water (fish tanks), mirrors, file cabinets, brick, and concrete will degrade your wireless signal.",建築材料會產生影響。堅固的金屬門或鋁質立柱可能會降低訊號範圍。請嘗試將接入點、無線路由器和電腦放置於訊號經過石膏板或開放門道的位置。玻璃、鋼鐵、金屬、隔熱牆、含水物品（如魚缸）、鏡子、櫃子、磚石和混凝土等材料和物體會降低你的無線訊號。
+Keep your product away (at least 3-6 feet or 1-2 meters) from electrical devices or appliances that generate RF noise.,請將產品遠離（至少3-6英尺或1-2米）產生射頻噪音的電氣設備或電器。
+"If you are using 2.4 GHz cordless phones or X-10 (wireless products such as ceiling fans, lights, and home security systems), your wireless connection may degrade dramatically or drop completely. Make sure your 2.4 GHz phone base is as far away from your wireless devices as possible. The base transmits a signal even if the phone is not in use.",如果您使用的是 2.4 GHz 無線電話或 X-10（例如吊扇、燈具和家庭安全系統等無線產品），您的無線連線可能會大幅下降或完全斷開。請確保 2.4 GHz 電話基座與您的無線裝置之間距離盡可能遠。即使手機未在使用，基座仍會傳輸訊號。
+This section will walk you through the installation of your,本節將帶您完成您的安裝。
+"Placement of the router is very important. Do not place the router in an enclosed area such as a closet, cabinet, attic, or garage.",路由器的位置非常重要。請勿將路由器放置於密閉空間，例如壁櫥、櫃子、閣樓或車庫。
+Configure the router with the computer that was last connected directly to your Internet connection. Verify that it is connected to the Internet before connecting additional devices.,使用最後一次直接連接到您的網際網路的電腦來設定路由器。確認路由器已連上網際網路後，再接入其他裝置。
+"If your ISP provides you with a modem/router combo, you will need to set it to bridge or router mode depending on your usage requirements. Please contact your ISP or refer to the user manual for your modem/router device.",如果您的 ISP 為您提供了調製解調器/路由器組合設備，您需要根據使用需求將其設置為橋接模式或路由器模式。請聯繫您的 ISP 或參閱調製解調器/路由器設備的使用手冊。
+"You can only use the Ethernet port on your modem. If you were using the USB connection before using the router, then you must turn off your modem, disconnect the USB cable and connect an Ethernet cable to the Internet port on the router, then turn the modem back on. In some cases, you may need to call your Internet Service Provider (ISP) to change connection types (USB to Ethernet).",您只能使用調製解調器上的乙太網埠。如果您在使用路由器之前使用的是 USB 連接，則必須關閉調製解調器，斷開 USB 線纜，並將乙太網線纜連接到路由器的網際網路埠，然後重新打開調製解調器。在某些情況下，您可能需要致電您的網際網路服務供應商（ISP）以更改連接類型（USB 到乙太網）。
+"If connecting to a DSL modem, make sure to have your DSL service information provided by your Internet Service Provider handy. This information is likely to include your DSL account's username and password. Your ISP may also supply you with additional WAN configuration settings which might be necessary to establish a connection.",如果連接到 DSL 調制解調器，請確保已備妥您的 ISP（網際網路服務供應商）提供的 DSL 服務資訊。這些資訊很可能包含您的 DSL 帳戶的使用者名稱和密碼。您的 ISP 還可能提供額外的 WAN 配置設定，這些設定可能是建立連線所必需的。
+"If you are connecting a considerable amount of networking equipment, it may be a good idea to take the time to label each cable or take a picture of your existing setup before making any changes.",如果您要接入大量網路設備，建議您在進行任何變更前，花點時間為每條線纜打上標籤或拍照記錄現有設置。
+"If you have DSL and are connecting via PPPoE, make sure you disable or uninstall any PPPoE software such as WinPoET, BroadJump, or EnterNet 300 from your computer or you will not be able to connect to the Internet.",如果您使用 DSL 並通過 PPPoE 連接，請確保從您的電腦中禁用或卸載任何 PPPoE 軟體，例如 WinPoET、BroadJump 或 EnterNet 300，否則您將無法連接到網際網路。
+Before you Begin,開始前
+Use the Ethernet cable to connect your modem to the port labelled,請使用以太網線將您的調製解調器連接到標記為
+INTERNET,互聯網
+on the router.,在路由器上。
+"If you are configuring the router wirelessly from a PC, connect to the Wi-Fi network name printed on the label attached to the bottom of your router.",如果您正在使用 PC 無線方式配置路由器，請連接到印在路由器底部貼紙上的 Wi‑Fi 網路名稱。
+"The Wi-Fi name (SSID), Wi-Fi password, and device password are printed on the device label on the bottom of the device.",Wi‑Fi 名稱（SSID）、Wi‑Fi 密碼以及裝置密碼印在裝置底部的標籤上。
+"Turn off and unplug the power to your cable or DSL broadband modem. This is required. In some cases, you may need to turn it off for up to five minutes.",關閉並拔掉您有線或 DSL 寬頻調製解調器的電源。這是必要的。在某些情況下，您可能需要關閉它長達五分鐘。
+Position your,定位您的
+near your Internet-connected modem. Place it in an open area for better wireless coverage.,靠近您的連接到互聯網的調製解調器。將其放在開闊區域以獲得更好的無線覆蓋。
+Click on the wireless icon in your system tray (lower-right corner).,點擊系統托盤中的無線圖標（右下角）。
+"It is recommended that you enable wireless encryption (WPA/WPA2) on your wireless router or access point before configuring your wireless adapter. If you are joining an existing network, you will need to know the security key or passphrase (Wi-Fi password) being used.",建議您在設定無線網卡之前，先在無線路由器或接入點啟用無線加密（WPA/WPA2）。若您要加入現有網路，則需要知道所使用的安全金鑰或密語（Wi‑Fi 密碼）。
+Windows® 7,Windows® 7
+"If you are configuring the router from a PC with a wired Ethernet connection, plug one end of an Ethernet cable into the port labelled 1 on the back of the router, and the other end into the Ethernet port on your computer.",若您使用有線以太網路連接的 PC 來設定路由器，請將以太網線的一端插入路由器背面標有 1 號的埠，另一端插入您的電腦的以太網埠。
+"Connect the supplied power adapter to the router and a power outlet, and wait approximately one minute until the LED indicator on the front of the device changes from orange to solid white.",將隨附的電源適配器連接至路由器與電源插座，並等待約一分鐘，直到設備前方的 LED 指示燈由橙色變為純白色。
+Plug in the power and turn your modem back on and wait approximately one minute before proceeding with the procedure.,插入電源，重新開啟您的調製解調器，並在繼續執行程序前等待約一分鐘。
+Section 3 - Configuration,第3節 - 配置
+"On the Schedule creation page, enter the name of your schedule in the",在排程建立頁面，輸入您的排程名稱於
+"To remove a time period from the schedule, click on the cross icon.",若要從排程中移除一段時間，請點擊交叉圖示。
+to save and close the page. Then click,儲存並關閉頁面。然後點擊
+when you are done creating schedules.,當您完成建立排程時。
+"If you want to remove a rule, click",如果您想刪除規則，請點擊
+"in the Delete column. If you want to edit a rule, click",在刪除欄中。如果您想編輯規則，請點擊
+"in the Edit column. If you want to create a new rule, click the",在編輯欄位中。如果您想建立新規則，請點擊
+"To begin, use the drop-down menu to select whether it is an",首先，使用下拉式選單選擇它是
+ALLOW,允許
+DENY,拒絕
+rule. You can also choose to turn filtering,規則。您也可以選擇關閉過濾
+OFF,關
+This,這
+Quality of Service (QoS) Engine,服務質量（QoS）引擎
+"allows you to prioritize particular clients over others, so that these clients receive higher bandwidth. For example, if one client is streaming a movie and another is downloading a bulk of files, you might want to assign the former device a higher priority than the latter so that the movie streaming is not disrupted.",允許您將特定客戶端優先於其他客戶端，以便這些客戶端獲得更高的頻寬。例如，如果一個客戶端正在串流影片，而另一個客戶端正在下載大量文件，您可能希望為前者設置比後者更高的優先權，這樣就不會打斷影片串流。
+Under,在下面
+Connected Clients,已連線的客戶端
+", you will see device cards representing each connected client. Click",", 你將看到每個已連接客戶端的設備卡片。點擊"
+All,全部
+to see all connected devices and,查看所有已連接的裝置並
+Heavy Consumer,重度消費者
+to see clients that are particularly active on the Internet.,查看在互聯網上特別活躍的客戶。
+"To assign a priority level to a device, enable",要為裝置分配優先級，請啟用
+first.,第一。
+Then click the client to open its information page. It shows the following information:,然後點擊客戶端以開啟其資訊頁面。它顯示以下資訊：
+Device Name:,裝置名稱：
+The name that describes the client device,描述客戶端裝置的名稱
+MAC Address:,MAC 地址:
+The MAC address of the client device,客戶端設備的 MAC 位址
+IPv4/IP v6 Address:,IPv4/IP v6 位址：
+The IP address in IPv4 and IPv6 addressing mechanism of the client device.,客戶端設備在 IPv4 與 IPv6 地址機制中的 IP 位址。
+Priority:,優先級:
+Select the priority for the client device with the following categories:,請為客戶端裝置選擇優先級，以下為分類：
+Normal,正常
+;,;
+High:,高:
+", for",", 為"
+1 Day,1 天
+4 Hours,4 小時
+2 Hours,2 小時
+", or for",", 或為"
+1 Hour,1小時
+Low: Always Enable,低：永遠啟用
+Traffic Statistics,交通統計
+"It shows traffic statistics for these activities: TCP flow, UDP flow, and Download and Upload speeds in megabit per second.",它顯示這些活動的流量統計：TCP 流量、UDP 流量，以及下載與上傳速度（以兆比特每秒為單位）。
+Real-Time & Weekly Traffic,即時與每週交通
+Two graphs: Real-time Traffic represents real-time data speeds in megabyte per second or kilobyte per second. Weekly Traffic represents daily download and upload data volume for the past week in kilobyte or megabyte.,兩張圖表：實時流量表示以兆位元組每秒或千位元組每秒為單位的實時數據速度。每週流量表示過去一週每日下載與上傳的數據量，以千位元組或兆位元組為單位。
+"If no devices are explicitly assigned a priority, they will all be treated with equal priority.",若沒有明確為任何設備分配優先權，則所有設備將被視為具有相同優先權。
+Dynamic IP (DHCP),動態 IP（DHCP）
+to obtain IP address information automatically from your Internet Service Provider (ISP). Select this option if your ISP does not specify an IP address to use.,從您的網際網路服務供應商（ISP）自動取得 IP 位址資訊。若您的 ISP 未指定使用的 IP 位址，請選擇此選項。
+Section 6 - Connect a Wireless Client to your Router,第6節：將無線客戶端連接到您的路由器
+IPv4 - DS-Lite,IPv4 - DS-Lite
+If the router detects or you select,如果路由器檢測到或您選擇
+Static,靜態
+", enter the IP and DNS settings supplied by your ISP. If you do not have this information, please contact your ISP.",請輸入您網路供應商提供的IP和DNS設定。如您沒有此資訊，請聯繫您的網路供應商。
+"If the router does not detect a valid Internet connection, a list of connection types will be displayed.",如果路由器未偵測到有效的網際網路連線，將顯示一份連線類型清單。
+Select your Internet connection type (this information can be obtained from your Internet Service Provider).,請選擇您的網路連線類型（此資訊可從您的網路服務供應商處取得）。
+System Requirements,系統需求
+Network Requirements,網路需求
+"• An Ethernet-based cable, DSL or fiber modem",• 以乙太網為基礎的電纜、DSL 或光纖調製解調器
+• IEEE 802.11ax/ac/n/g/b/a wireless clients,• IEEE 802.11ax/ac/n/g/b/a 無線客戶端
+• 10/100/1000 Ethernet,• 10/100/1000 以太網
+Web-based,基於網路
+Configuration Utility Requirements,配置工具需求
+Computer with the following:,電腦具有以下功能：
+"• Windows®, Macintosh, or Linux-based operating system",• Windows®、Macintosh 或 Linux 為基礎的作業系統
+• An installed Ethernet adapter,• 已安裝的以太網路介面卡
+Browser Requirements:,瀏覽器需求：
+• Internet Explorer 11 or later,• Internet Explorer 11 或更高版本
+• Firefox 28 or later,• Firefox 28 或更高版本
+• Safari 6 or later,• Safari 6 或更高版本
+• Chrome 28 or later,• Chrome 28 或更高版本
+EAGLE PRO AI  APP,EAGLE PRO AI 應用程式
+Requirements,要求
+• iOS,• iOS
+or Android,或 Android
+™,™
+device (Please refer to the description of the app’s page to check whether your device is compatible.),設備（請參閱應用程式頁面的說明，以確認您的設備是否相容。）
+Time & Schedule -,時間與日程 -
+Management,管理
+IPv4 - PPPoE,IPv4 - PPPoE
+IPv4 - L2TP,IPv4 - L2TP
+IPv4 - PPTP,IPv4 - PPTP
+IPv4 - Static IP,IPv4 - 靜態 IP
+IPv4 - Dynamic IP (DHCP),IPv4 - 動態 IP（DHCP）
+to see the Internet configuration options for IPv4 connection.,查看 IPv4 連線的網際網路設定選項。
+"To configure IPv6 Internet and network connection details, click the",要設定 IPv6 網際網路及網路連線細節，請點擊
+"To configure VLAN connection details, click the",要配置 VLAN 連線詳細資料，請點擊
+Settings > Wizard,設定 > 嚮導
+to open the setup wizard. This is the same wizard that appears when you start the router for the first time. Refer to,打開設定精靈。這是首次啟動路由器時出現的相同精靈。參考
+for details.,詳情
+"When the Wizard is opened, the router will disconnect from the Internet.",當向導被打開時，路由器將斷開與互聯網的連接。
+Wizard,巫師
+On this page you can see all the clients currently connected to the router along with their IP addresses and device manufacturers.,在此頁面上，您可以查看目前已連接到路由器的所有客戶端，以及它們的 IP 地址和設備製造商。
+"To view more information about a client or edit a client’s settings such as IP reservation and parental control, click",要查看客戶端的更多資訊或編輯客戶端設定（例如 IP 保留和家長控制），請點擊
+on the client you want to edit.,在你想要編輯的客戶端
+Click on the,點擊此
+icon to obtain information about the connected clients of the router.,圖示可取得路由器已連接客戶端的資訊
+"Here you can see the router’s current Wi-Fi network name and password, as well as the router's MAC address, IPv4 address, and IPv6 address.",這裡您可以查看路由器目前的 Wi‑Fi 網路名稱和密碼，以及路由器的 MAC 位址、IPv4 位址和 IPv6 位址。
+"To reconfigure network settings, either click",要重新配置網路設定，請點擊
+Go to settings,前往設定
+"at the bottom of the page, or click",在頁面底部，或點擊
+(in the left pane). Refer to,(在左側窗格)。參考
+"To reconfigure wireless settings, either click",要重新配置無線設定，請點擊
+", on the lower right, or click",，在右下角，或點擊
+> Wireless,> 無線
+menu (in the left pane). Refer to,左側窗格中的菜單。參考
+icon to view details about the router and its wireless settings.,查看路由器及其無線設定詳細資訊的圖示
+"To bring up more details about your Internet connection, click on the",若要顯示您網際網路連線的更多細節，請點擊
+icon.,圖標.
+", enter your PPPoE username and password. If you do not have this information, please contact your ISP.",",輸入您的 PPPoE 使用者名稱與密碼。如您沒有此資訊，請聯絡您的 ISP。"
+Be sure to remove all other existing PPPoE software from your computer. The software is no longer needed and will not work through a router.,請確保從電腦中移除所有其他現有的 PPPoE 軟體。這些軟體不再需要，且無法通過路由器運作。
+What is WPA?,WPA 是什麼？
+"WPA (Wi-Fi Protected Access), is a Wi-Fi standard that was designed to improve the security features of WEP (Wired Equivalent Privacy).",WPA（Wi‑Fi Protected Access）是一種 Wi‑Fi 標準，旨在提升 WEP（Wired Equivalent Privacy）的安全功能。
+The 2 major improvements over WEP:,相較於 WEP 的兩大改進:
+"Improved data encryption through the Temporal Key Integrity Protocol (TKIP). TKIP scrambles the keys using a hashing algorithm and by adding an integrity-checking feature, ensures that the keys haven’t been tampered with. WPA2 is based on 802.11i and uses Advanced Encryption Standard (AES) instead of TKIP.",透過時間金鑰完整性協定（Temporal Key Integrity Protocol，簡稱 TKIP）改善資料加密。TKIP 使用雜湊演算法混淆金鑰，並加入完整性檢查功能，確保金鑰未被竄改。WPA2 基於 802.11i，採用先進加密標準（AES）取代 TKIP。
+"User authentication, which is generally missing in WEP, through the extensible authentication protocol (EAP). WEP regulates access to a wireless network based on a computer’s hardware-specific MAC address, which is relatively simple to be sniffed out and stolen. EAP is built on a more secure public-key encryption system to ensure that only authorized network users can access the network.",用戶身份驗證，通常在 WEP 中缺失，透過可擴充身份驗證協定（EAP）。WEP 以電腦的硬體專屬 MAC 地址來限制對無線網路的存取，這種方式相對容易被嗅探與竊取。EAP 建立在更安全的公鑰加密系統上，以確保只有授權的網路使用者能存取網路。
+"WPA-PSK/WPA2-PSK/WPA3-SAE uses a passphrase or key to authenticate your wireless connection. The key is an alpha-numeric password between 8 and 63 characters long. The password can include symbols (!?*&_) and spaces. This key must be the exact same key entered on your wireless router or access point. Further, The Simultaneous Authentication of Equals (SAE) of WPA3 enhances the protection against dictionary attacks.",WPA‑PSK / WPA2‑PSK / WPA3‑SAE 使用密碼短語或金鑰來驗證您的無線連線。金鑰是一個長度介於 8 至 63 個字符之間的英數混合密碼。密碼可包含符號（!？*&_）及空格。此金鑰必須與您在無線路由器或接入點上輸入的金鑰完全相同。此外，WPA3 的同時等價認證（SAE）提升了對字典攻擊的保護。
+WPA/WPA2 incorporates user authentication through the Extensible Authentication Protocol (EAP). EAP is built on a more secure public key encryption system to ensure that only authorized network users can access the network.,"WPA/WPA2 透過可擴充身份驗證協定（Extensible Authentication Protocol, EAP）實現使用者身份驗證。EAP 建構於更安全的公鑰加密系統之上，以確保僅授權的網路使用者能夠存取網路。"
+WPA3 has the strongest encryption among these with the increased cryptographic capability and the requirements of the Protected Management Frames (PMFs) to help prevent snooping attacks.,WPA3 在這些中擁有最強的加密功能，具備增強的加密能力以及受保護管理幀（PMF）的要求，從而協助防止窺探攻擊。
+This section will show you the different levels of encryption you can use to protect your data from intruders. The router offers the following types of security protocols:,本節將向您展示可用於保護資料免受入侵者侵害的不同加密級別。路由器提供以下類型的安全協議：
+• WPA3 (Wi-Fi Protected Access 3)			• WPA2 (Wi-Fi Protected Access 2),"• WPA3 (Wi‑Fi保護存取 3)            
+• WPA2 (Wi‑Fi保護存取 2)"
+• WPA2-PSK (Pre-Shared Key)				• WPA (Wi-Fi Protected Access),• WPA2-PSK (預共享密鑰) • WPA (Wi‑Fi 保護存取)
+• WPA-PSK (Pre-Shared Key),• WPA-PSK（預共享密鑰）
+Wireless Security,無線安全
+Statically Assign an IP address,靜態分配 IP 地址
+1.,1.
+"If you are not using a DHCP capable gateway/router, or you need to assign a static IP address, please follow the steps below:",如果您不使用支援 DHCP 的閘道器/路由器，或需要設定靜態 IP 位址，請按以下步驟進行：
+Start> Settings  > Network & Internet.,開始> 設定  > 網路與網際網路.
+Windows® 7 /8,Windows® 7 /8
+Start > Control Panel > Network and Internet > Network and Sharing Center,開始 > 控制面板 > 網路與網際網路 > 網路與共用中心
+Windows® XP,Windows® XP
+Start > Control Panel > Network Connections,開始 > 控制面板 > 網路連線
+2.,2.
+Wi-Fi > Manage known networks,Wi‑Fi > 管理已知網路
+". For Windows 7/8/XP, click",. 在 Windows 7/8/XP 上，點擊
+Change adapter settings.,變更網路介面設定。
+"Choose the network you want to modify, right-click on it, then select",選擇您想要修改的網路，右鍵單擊它，然後選擇
+Properties.,屬性
+3. Under,3. 在下方
+IP assignment,IP分配
+". For Windows 7/8/XP, select",。對於 Windows 7/8/XP，請選擇
+Internet Protocol Version 4 (TCP/IPv4) Properties,網際協定版本4（TCP/IPv4）屬性
+Internet Protocol Version 6 Properties (TCP/IPv6),網際協議第 6 版屬性（TCP/IPv6）
+. Then select,. 然後選擇
+Use the Following IP Address,請使用以下 IP 地址
+4. Under,4. 在
+Edit IP settings,編輯 IP 設定
+". If IPv4 is selected, type the IP address settings in",如果選擇IPv4，請在此輸入IP地址設定。
+"IP address, Subnet prefix length","IP 地址, 子網前綴長度"
+"(subnet mask), and",（子網遮罩），和
+"fields. If IPv6 is selected, type the IP address settings in",欄位。如果選擇 IPv6，請在此輸入 IP 位址設定。
+"IP address, Subnet prefix length,",IP 位址，子網前綴長度，
+fields.,欄位
+Example: Enter x.x.x.x for IPv4 addressing scheme (where x is between 0 and 255),範例：輸入 x.x.x.x 以符合 IPv4 位址格式（其中 x 的範圍是 0 至 255）
+and xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx for IPv6 addressing scheme (where x is a hexadecimal digit).,以及 xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx 作為 IPv6 地址方案（其中 x 是十六進制數字）
+Set Preferred DNS the same as the LAN IP address of your router.,將首選 DNS 設為與您的路由器 LAN IP 地址相同。
+The Alternate DNS is only optional or you may enter a DNS server from your ISP.,替代 DNS 只是一個選項，您也可以輸入 ISP 的 DNS 伺服器。
+"5. When you’re done, click",5. 當你完成後，點擊
+Check your IP address,檢查你的 IP 地址
+"After you install your new D-Link adapter, by default, the TCP/IP settings should be set to obtain an IP address from a DHCP server (i.e. wireless router) automatically. To verify your IP address, please follow the steps below.",安裝完您的新 D-Link 適配器後，系統預設會將 TCP/IP 設定設定為自動從 DHCP 伺服器（即無線路由器）取得 IP 位址。若要確認您的 IP 位址，請按以下步驟操作。
+Click on,點擊
+and type,並輸入
+cmd,命令提示符
+Search,搜尋
+"At the prompt, type",在提示符下輸入
+ipconfig,ipconfig
+and press,並按
+Enter,進入
+"This will display the IP address, subnet mask, and the default gateway of your adapter.",此將顯示您網路介面的 IP 位址、子網路遮罩以及預設閘道。
+"If the IP address is 0.0.0.0 or empty, check your adapter installation, security settings, and the settings on your router. Some firewall software programs may block a DHCP request on newly installed adapters.",如果 IP 位址為 0.0.0.0 或空白，請檢查您的網卡安裝、保安設定，以及路由器上的設定。有些防火牆軟體可能會阻擋新安裝網卡的 DHCP 請求。
+Tips,提示
+"Here are a few things to keep in mind, when you install a wireless network.",在安裝無線網路時，請注意以下幾點。
+Centralize your router or access point,集中化您的路由器或接入點
+"Make sure you place the router/access point in a centralized location within your network for the best performance. Try to place the router/access point as high as possible in the room, so the signal gets dispersed throughout your home. If you have a two-story home, you may need a repeater or an extender to boost the signal to extend the range.",請確保將路由器/接入點放置在網路內部的中心位置，以獲得最佳效能。盡量將路由器/接入點放在房間內盡可能高的地方，這樣訊號才能在整個住宅中散布。若您有兩層樓的住宅，可能需要重複器或延伸器來提升訊號，以擴大覆蓋範圍。
+Extend and Strengthen Your Wireless Network with Wi-Fi Mesh,使用 Wi‑Fi Mesh 擴展並強化您的無線網路
+D-Link’s Wi-Fi Mesh is a scalable solution that allows you to easily increase the coverage and eliminate weak spots of your wireless AX network. Setup is effortless; configuration of multiple routers and extenders can be done in minutes as settings can be passed on to other devices once the first is configured. And routing is more efficient and reliable since mesh network intelligently finds the shortest path and reroutes data traffic through working mesh points in the event of link or device failures.,D-Link 的 Wi‑Fi Mesh 是一個可擴展的解決方案，能讓您輕鬆擴大覆蓋範圍並消除無線 AX 網路的死角。設置簡便；多台路由器與擴展器的設定可在數分鐘內完成，因為一旦第一台設備設定完成，其設定便可傳遞給其他設備。路由更高效、更可靠，因為 Mesh 網路會智能地尋找最短路徑，並在連線或設備失效時透過正常的 Mesh 節點重新路由資料流量。
+Eliminate Interference,消除干擾
+"Place home appliances such as cordless telephones, microwaves, and televisions as far away as possible from the router/access point. This would significantly reduce any interference that the appliances might cause since they operate on same frequency.",將無線電話、微波爐和電視等家用電器盡可能遠離路由器／接入點，這樣可以顯著降低它們可能產生的干擾，因為它們使用相同的頻率。
+Wireless Encryption,無線加密
+Don’t let your next-door neighbors or intruders connect to your wireless network. Encrypt your wireless network with the latest,不要讓鄰居或闖入者連接到你的無線網路。使用最新的加密技術加密你的無線網路。
+WPA3 security protocol.,WPA3 安全協定
+Refer to the product manual for detail information on how to set it up.,請參閱產品手冊，了解如何設置的詳細資訊。
+How does wireless work?,無線是如何工作的？
+"Wireless works similarly to how cordless phones work, through radio signals that transmit data from one point A to point B. But wireless technology has restrictions as to how you can access the network. You must be within the wireless network range area to be able to connect your computer. There are two different types of wireless networks: Wireless Local Area Network (WLAN), and Wireless Personal Area Network (WPAN).",無線與無線電話的運作方式相似，透過無線電波傳送資料，將資料從 A 點傳送至 B 點。但無線技術在存取網路方面有一定限制。您必須處於無線網路覆蓋範圍內，才能連接電腦。無線網路主要有兩種類型：無線區域網路（WLAN）和無線個人區域網路（WPAN）。
+Wireless Local Area Network (WLAN),無線區域網路 (WLAN)
+"In a wireless local area network, a device called an Access Point (AP) connects computers to the network. The access point has a small antenna attached to it, which allows it to transmit data back and forth over radio signals. With an indoor access point the signal can travel up to 300 feet. With an outdoor access point the signal can reach out up to 30 miles to serve places like manufacturing plants, industrial locations, university and high school campuses, airports, golf courses, and many other outdoor venues.",在無線區域網路中，一個稱為接入點（Access Point，AP）的裝置將電腦連接到網路。接入點附有一個小天線，允許它透過無線電波來回傳輸資料。室內接入點的訊號可傳輸約 300 英尺；室外接入點的訊號可達 30 英里，足以服務製造廠、工業區、校園（大學與高中）、機場、高爾夫球場以及許多其他戶外場所。
+Wireless Personal Area Network (WPAN),無線個人區域網路 (WPAN)
+"Bluetooth is the industry standard wireless technology used for WPAN. Bluetooth devices in WPAN operate in a range up to 30 feet away. Compared to WLAN the speed and wireless operation range are both less than WLAN, but in return it doesn’t use nearly as much power. This makes it ideal for personal devices, such as mobile phones, PDAs, headphones, laptops, speakers, and other devices that operate on batteries.","藍牙是用於 WPAN 的行業標準無線技術。  
+WPAN 中的藍牙設備距離可達 30 英尺（約 9 公尺）。  
+與 WLAN 相比，藍牙的速度和無線工作距離都較低，但相對地，它耗電量也大幅降低。  
+這使得藍牙成為個人裝置（如手機、掌上型電腦、耳機、筆記型電腦、喇叭以及其他使用電池供電的裝置）的理想選擇。"
+Who uses wireless?,誰使用無線？
+"Wireless technology has become so popular in recent years that almost everyone is using it, whether it’s for home, office, business, D-Link has a wireless solution for it.",近年來，無線技術已變得極為普及，幾乎每個人都在使用它，無論是家庭、辦公室還是商業用途，D-Link 都提供相應的無線解決方案。
+Wireless Basics,無線基礎
+"D-Link wireless products are based on industry standards to provide easy-to-use and compatible high-speed wireless connectivity within your home, business, or public access wireless networks. Strictly adhering to the IEEE standard, the D-Link wireless family of products allows you to access the data you want, when, and where you want it. You will be able to enjoy the freedom that wireless networking delivers.",D-Link 無線產品基於行業標準，為您在家中、商業或公共無線網絡中提供易於使用且相容的高速無線連接。嚴格遵循 IEEE 標準，D-Link 無線產品系列讓您能在您想要的時間、地點，存取您所需的資料。您將能夠享受無線網絡帶來的自由。
+"A wireless local area network (WLAN) is a cellular computer network that transmits and receives data with radio signals instead of wires. Wireless LANs are used increasingly in both home and office environments, and public areas such as airports, coffee shops and universities. Innovative ways to utilize WLAN technology are helping people work and communicate more efficiently. Increased mobility and the absence of cabling and other fixed infrastructure have proven to be beneficial for many users.",無線區域網路（WLAN）是一種透過無線電波傳輸與接收資料的電腦網路，取代了有線傳輸。無線區域網路在家庭、辦公環境以及機場、咖啡館、大學等公共場所的使用日益增多。創新的 WLAN 技術運用方式正協助人們更有效地工作與溝通。移動性提升及不需要電纜和其他固定基礎設施的特性，已被證明對許多使用者帶來益處。
+Wireless users can use the same applications they use on a wired network. Wireless adapter cards used on laptop and desktop systems support the same protocols as Ethernet adapter cards.,無線使用者可以使用與有線網路相同的應用程式。筆記型電腦和桌上電腦上使用的無線網路卡支援與以太網卡相同的協定。
+"Under many circumstances, it may be desirable for mobile network devices to link to a conventional Ethernet LAN in order to use servers, printers or an Internet connection supplied through the wired LAN. A wireless router is a device used to provide this link.",在許多情況下，移動網路裝置連接傳統以太網局域網會比較理想，以便使用由有線局域網提供的伺服器、印表機或網際網路連線。無線路由器是用來提供此連結的裝置。
+What is Wireless?,什麼是無線？
+Wireless or Wi-Fi technology is another way of connecting your computer to the network without using wires. Wi-Fi uses radio frequency to connect wirelessly so you have the freedom to connect computers anywhere in your home or office network.,無線或 Wi‑Fi 技術是另一種不使用電纜即可將電腦連接到網路的方式。Wi‑Fi 使用射頻無線連接，讓您能自由在家中或辦公室網路中任何位置連接電腦。
+•	Access the,• 進入
+. Open your web browser and enter the IP address of your D-Link router in the address bar. This should open the login page for your,. 打開你的網頁瀏覽器，在地址欄輸入你的 D-Link 路由器的 IP 位址。這應該會打開你的登入頁面。
+"•	If you still cannot access the configuration, unplug the power to the router for 10 seconds and plug back in. Wait about 30 seconds and try accessing the configuration. If you have multiple computers, try connecting using a different computer.",• 如果仍無法存取設定，請先斷開路由器電源 10 秒鐘，然後重新接通。等候大約 30 秒後再次嘗試存取設定。若您有多台電腦，請嘗試使用不同的電腦連線。
+2. What can I do if I forgot my password?,2. 如果我忘記了密碼，我能做什麼？
+"If you forgot your password, you must reset your router. This process will change all your settings back to the factory defaults.",如果您忘記了密碼，您必須重置路由器。此過程將把所有設置恢復到出廠預設值。
+"To reset the router, locate the reset button (hole) on the rear panel of the unit. With the router powered on, use a paperclip to hold the recessed button down until the power LED turns orange. Release the button and the router will go through its reboot process. Wait about 30 seconds to access the router. The address of the",要重置路由器，請在機器後方面板上找到重置按鈕（孔）。在路由器通電時，使用回形針按住凹陷的按鈕，直到電源 LED 轉為橙色。釋放按鈕後，路由器將進行重啟過程。等待約 30 秒即可進入路由器。地址為
+is printed on the device label on the bottom of the device. You may also enter the default IP address:,印在設備底部的設備標籤上。您也可以輸入預設 IP 地址：
+". When logging in, enter the default device password printed on the device label too.",. 登錄時，也請輸入印在設備標籤上的預設設備密碼。
+1. Why can’t I access the web-based configuration utility?,1. 為什麼我無法訪問基於網頁的配置工具？
+When entering the IP address of the D-Link router (,當輸入 D-Link 路由器的 IP 位址時（
+"for example), you are not connecting to a website, nor do you have to be connected to the Internet. The device has the utility built-in to a ROM chip in the device itself. Your computer must be on the same IP subnet to connect to the web-based utility.",例如)，你不需要連接到網站，也不必連接到互聯網。該設備將此工具內建於設備本身的 ROM 晶片中。你的電腦必須與同一個 IP 子網路，才能連接到網頁版工具。
+•	Make sure you have an updated Java-enabled web browser. We recommend the following:,• 確保您使用的是已更新的支持 Java 的網頁瀏覽器。我們建議以下選項：
+- Microsoft Internet Explorer® 11 or higher,- Microsoft Internet Explorer® 11 以上
+- Mozilla Firefox 28 or higher,- Mozilla Firefox 28 或更高
+- Google™ Chrome 28 or higher,- Google™ Chrome 28 或更高版本
+- Apple,- 蘋果
+Safari,Safari
+6 or higher,6 或以上
+"•	Verify physical connectivity by checking for solid link lights on the device. If you do not get a solid link light, try using a different cable, or connect to a different port on the device if possible. If the computer is turned off, the link light may not be on.",• 確認實體連接，檢查設備上是否有持續閃爍的連線燈。若沒有持續閃爍的連線燈，請嘗試使用另一條線纜，或在可能的情況下連接到設備的其他埠位。若電腦處於關機狀態，連線燈可能不會亮起。
+"•	Disable any Internet security software running on the computer. Software firewalls such as ZoneAlarm, BlackICE, Sygate and Norton Personal Firewall may block access to the configuration pages. Check the help files included with your firewall software for more information on disabling or configuring it.",• 禁用在電腦上運行的任何網際網路安全軟體。像 ZoneAlarm、BlackICE、Sygate 和 Norton Personal Firewall 這類軟體防火牆可能會阻止存取設定頁面。請參閱隨防火牆軟體附帶的說明文件，以取得更多關於禁用或設定的資訊。
+This chapter provides solutions to problems that can occur during the installation and operation of the router. Read the following descriptions if you are having problems.,本章提供在路由器安裝和操作過程中可能出現問題的解決方案。如遇問題，請閱讀以下說明。
+Troubleshooting,疑難排解
+- Press the WPS button on the router for about 1 second. The wireless LEDs will start to blink.,- 按下路由器上的 WPS 按鈕約 1 秒。無線 LED 將開始閃爍。
+"The easiest way to connect your wireless devices to the router is with WPS (Wi-Fi Protected Setup). Most wireless devices such as wireless adapters, media players, Blu-ray DVD players, wireless printers and cameras will have a WPS button (or a software utility with WPS) that you can press to connect to the router. Please refer to your user manual for the wireless device you want to connect to make sure you understand how to enable WPS. Once you know, follow the steps below:",將無線設備連接到路由器最簡單的方法是使用 WPS（Wi‑Fi Protected Setup）。大多數無線設備，例如無線適配器、媒體播放器、藍光/DVD 播放器、無線印表機與相機，都會有 WPS 按鈕（或具備 WPS 功能的軟體工具），你可以按下該按鈕來連接路由器。請參閱你想連接的無線設備使用手冊，確保了解如何啟用 WPS。了解後，請依下列步驟操作：
+"-	Within 2 minutes, press the WPS button on your wireless device (or launch the software utility and start the WPS process).",- 在 2 分鐘內，按下無線裝置上的 WPS 按鈕（或啟動軟體工具並開始 WPS 流程）。
+"-	Allow up to 1 minute for your connection to be configured. Once the LEDs stop blinking, you will be connected using WPA2 encryption.",- 允許最多 1 分鐘完成連線設定。當 LED 停止閃爍後，您將使用 WPA2 加密連線。
+Connect a Wireless Client to your Router,將無線客戶端連接到您的路由器
+The Home page displays the status of the router in the form of an interactive diagram. You can click each icon to display information about the components of the network at the bottom of the screen. The left pane allows you to quickly navigate to other pages.,首頁以互動式圖表的形式顯示路由器的狀態。您可以點擊每個圖標，在畫面底部顯示網路組件的資訊。左側窗格允許您快速導航至其他頁面。
+The router’s home page will open displaying its current connection status.,路由器的主頁將打開，並顯示其當前的連接狀態。
+The left pane has quick access to,左側窗格可快速存取
+"Features,","功能,"
+functions. You can access,功能。您可以访问
+(an AI-assisted message center for reports on Wi-Fi conditions and bandwidth utilization at the top right). Note that you need to turn on AI-assisted functions to receive messages.,(AI輔助訊息中心，用於報告 Wi‑Fi 狀況與頻寬使用，位於右上角)。請注意，您需要開啟 AI 輔助功能才能接收訊息。
+The system will automatically log out after a period (180 seconds) of inactivity.,系統將在 180 秒無活動後自動登出。
+"If you cannot remember your password for login, use a paperclip to press the recessed",如果你無法記住登入密碼，請用回形針按下凹陷處。
+Reset,重置
+button on the back of the device to restore the router to its default settings.,裝置背面的按鈕可將路由器恢復為預設設定。
+"If this is your first time installing the router, open your web browser and enter",如果這是您第一次安裝路由器，請打開您的網頁瀏覽器並輸入
+.devicesetup.net/,.devicesetup.net/
+into the browser (XXXX represents the last 4 digits of the MAC address). Enter the,輸入瀏覽器 (XXXX 代表 MAC 位址的最後四位)。輸入以下
+Log In,登入
+to start the configuration process. The web address and device password are printed on,以開始設定流程。網頁位址與裝置密碼列印在
+the device label on the bottom of the device,設備底部的設備標籤
+Follow the on-screen instructions to configure your new D-Link router and connect to the Internet.,請依照畫面上的說明設定您的新 D-Link 路由器，並連接到網際網路。
+Setup,設定
+Table of Contents,目錄
+Preface,序言
+D-Link reserves the right to revise this publication and to make changes in the content hereof without obligation to notify any person or organization of such revisions or changes.,D-Link 保留修改本出版物的權利，並可對其內容進行更改，而無需通知任何人或組織此類修訂或更改。
+Manual Revisions,手動修訂
+Hardware,硬件
+Revision,修訂
+Date,日期
+A1,A1
+v1.02,v1.02
+2021/10/20,2021/10/20
+Wording changes,措辭變更
+v1.03,v1.03
+"New cover, removal of Parental Control notice",新封面，移除家長控制通知
+Trademarks,商標
+D-Link and the D-Link logo are trademarks or registered trademarks of D-Link Corporation or its subsidiaries in the United States or other countries. All other company or product names mentioned herein are trademarks or registered trademarks of their respective companies.,D-Link 及 D-Link 標誌為 D-Link Corporation 或其子公司在美國或其他國家的商標或註冊商標。本文件中提及的所有其他公司或產品名稱亦為其各自公司的商標或註冊商標。
+"Apple®, Apple logo®, Safari®, iPhone®, and Macintosh® are trademarks of Apple Inc., registered in the U.S. and other countries. App Store","Apple®, Apple logo®, Safari®, iPhone® 和 Macintosh® 是 Apple Inc. 的註冊商標，已在美國及其他國家註冊。App Store"
+SM,社交媒體
+is a service mark of Apple Inc.,是 Apple Inc. 的服務商標。
+"Chrome™ browser, Google Play™ and Android™ are trademarks of Google Inc.",Chrome™ 瀏覽器、Google Play™ 及 Android™ 是 Google Inc. 的商標。
+"Internet Explorer®, Windows® and the Windows logo are trademarks of the Microsoft group of companies.",Internet Explorer®、Windows® 與 Windows 標誌為 Microsoft 集團公司的商標。
+"Copyright © 2021 by D-Link Corporation, Inc.","© 2021 D-Link Corporation, Inc. 版權所有"
+"All rights reserved. This publication may not be reproduced, in whole or in part, without prior expressed written permission from D-Link Corporation, Inc.","保留所有權利。 本出版物不得未經 D-Link Corporation, Inc. 事先明示書面許可，全部或部分複製。"
+Appendix E - Technical Specifications,附錄 E - 技術規格
+Appendix C - Networking Basics,附錄 C - 網路基礎
+Appendix A - Wireless Basics,附錄 A - 無線基礎
+Section 7 - Troubleshooting,第7節 - 故障排除
+Section 5 - Quick VPN,第5節 - 快速 VPN
+Section 2 - Installation,第 2 節 - 安裝
+Section 1 - Product Overview,第一節 - 產品概覽
+D-Link,D-Link
+User Manual,使用者手冊
+6,六
+7,七

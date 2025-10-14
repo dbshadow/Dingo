@@ -23,7 +23,7 @@
             <a href="/"><img src="/static/logo.png" alt="D-Link Logo"></a>
         </div>
         <div class="title-container">
-            <h1>Translator&nbsp;<span class="version">v1.30</span></h1>
+            <h1>Translator&nbsp;<span class="version">v1.40</span></h1>
         </div>
         <div class="tabs">
             <button class="tab-link active" data-tab="csv-translator">CSV Translator</button>
@@ -38,29 +38,15 @@
             <h2>Add New Translation Task</h2>
             <form id="upload-form">
                 <div class="form-group">
-                    <label for="upload-file">1. Upload File (.csv or .idml)</label>
-                    <input type="file" id="upload-file" name="upload_file" accept=".csv,.idml" required>
+                    <label for="upload-file">1. Upload File (.csv)</label>
+                    <input type="file" id="upload-file" name="upload_file" accept=".csv" required>
                 </div>
                 <div class="form-group">
-                    <label for="source-lang">2. Source Language</label>
-                    <select id="source-lang" name="source_lang" required>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="target-lang">3. Target Language</label>
-                    <select id="target-lang" name="target_lang" required>
-                    </select>
-                </div>
-                <div class="form-group-checkbox">
-                    <input type="checkbox" id="overwrite" name="overwrite">
-                    <label for="overwrite">Overwrite existing translations</label>
-                </div>
-                <div class="form-group">
-                    <label for="glossary-file">4. Upload Glossary (Optional)</label>
+                    <label for="glossary-file">2. Upload Glossary (Optional)</label>
                     <input type="file" id="glossary-file" name="glossary_file" accept=".csv">
                 </div>
                 <div class="form-group">
-                    <label for="note">5. Note (Optional)</label>
+                    <label for="note">3. Note (Optional)</label>
                     <textarea id="note" name="note" rows="2" placeholder="e.g., Project name, your name, department..."></textarea>
                 </div>
                 <button type="submit">Add to Queue</button>
