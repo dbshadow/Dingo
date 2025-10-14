@@ -64,7 +64,6 @@ async def translate_text(
         f"The text to translate is: \"{text_to_translate}\""
     )
 
-    print(f"xxxxxxxxxxxxxx\n{prompt}\nxxxxxxxxxxxxxxx")
     try:
         response = await client.chat(
             model=model,
