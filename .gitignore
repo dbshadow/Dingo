@@ -1,5 +1,6 @@
 # Environment variables
 .env
+*:Zone.Identifier
 
 # Python virtual environment
 .venv/
