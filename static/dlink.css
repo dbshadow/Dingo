@@ -16,7 +16,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center; /* 確保所有內容在水平方向上置中 */
-    padding: 20px;
+    padding: 10px 20px; /* 上下10px, 左右20px */
     background-color: var(--header-bg-color);
     color: var(--text-color);
 }
@@ -32,9 +32,9 @@ header {
     filter: invert(100%); /* 將 logo 顏色改為白色（適用於黑色 logo） */
 }
 
-.title-container {
-    flex: 1;
-    text-align: center; /* 使標題置中 */
+.title-container img{
+    height: 80px; /* 限制高度來避免撐開 header */
+    width: auto; /* 寬度自動調整以維持比例 */
     margin: 0 auto; /* 確保標題容器在中間 */
 }
 

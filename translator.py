@@ -74,7 +74,6 @@ async def translate_text(
         # 移除可能出現的引號
         if translated_text.startswith('"') and translated_text.endswith('"'):
             translated_text = translated_text[1:-1]
-        print(f"{translated_text}")
         return translated_text
     except Exception as e:
         print(f"An error occurred while translating '{text_to_translate}': {e}")

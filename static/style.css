@@ -269,8 +269,9 @@ button:disabled {
 /* Tab Styles */
 .tabs {
     position: absolute;
-    top: 10px; /* Adjust position */
+    top: 50%;
     right: 20px;
+    transform: translateY(-50%);
     display: grid;
     grid-template-columns: 1fr 1fr; /* 2x2 grid */
     gap: 5px;
@@ -285,7 +286,7 @@ button:disabled {
     cursor: pointer;
     padding: 8px 10px; /* Smaller padding */
     transition: 0.3s;
-    font-size: 0.9rem; /* Smaller font */
+    font-size: 1.0rem; /* Smaller font */
     border-radius: 5px;
     text-align: center;
 }
