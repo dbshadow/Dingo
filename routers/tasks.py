@@ -2,6 +2,7 @@
 import uuid
 import os
 from pathlib import Path
+from urllib.parse import quote
 
 from fastapi import (
     APIRouter, Depends, HTTPException, UploadFile, File, Form
@@ -164,44 +165,34 @@ async def download_file(task_id: str, api_token: str = Depends(get_current_api_t
     final_idml = original_filepath.with_name(f"{original_filepath.stem}_processed.idml")
     final_csv = original_filepath.with_name(f"{original_filepath.stem}_processed.csv")
 
+    def create_file_response(path, filename):
+        ascii_filename = Path(filename).stem.encode('ascii', 'ignore').decode('ascii') + Path(filename).suffix
+        utf8_filename = quote(filename)
+        headers = {
+            "Content-Disposition": f"attachment; filename=\"{ascii_filename}\"; filename*=UTF-8''{utf8_filename}"
+        }
+        return FileResponse(path, media_type="application/octet-stream", headers=headers)
+
     # Handle CSV file download
     if file_type == 'csv' and final_csv.exists():
         if task["status"] == "completed":
             filename = f"{original_stem}_translated.csv"
         else:
             filename = f"{original_stem}_inprogress.csv"
-        return FileResponse(
-            final_csv,
-            media_type="application/octet-stream",
-            headers={
-                "Content-Disposition": f'attachment; filename="{filename}"'
-            }
-        )
+        return create_file_response(final_csv, filename)
 
     # Handle IDML file download (for completed tasks)
     if task["status"] == "completed" and file_type == 'idml' and final_idml.exists():
         filename = f"{original_stem}_translated.idml"
-        return FileResponse(
-            final_idml,
-            media_type="application/octet-stream",
-            headers={
-                "Content-Disposition": f'attachment; filename="{filename}"'
-            }
-        )
+        return create_file_response(final_idml, filename)
 
     # Handle in-progress IDML download (which serves the intermediate CSV)
     if task["status"] != "completed" and file_type == 'idml' and final_csv.exists():
         filename = f"{original_stem}_inprogress.csv"
-        return FileResponse(
-            final_csv,
-            media_type="application/octet-stream",
-            headers={
-                "Content-Disposition": f'attachment; filename="{filename}"'
-            }
-        )
+        return create_file_response(final_csv, filename)
 
     # Fallback to original file if no processed file is found
     if original_filepath.exists():
-        return FileResponse(original_filepath, filename=task["filename"])
+        return create_file_response(original_filepath, task["filename"])
 
     raise HTTPException(status_code=HTTP_404_NOT_FOUND, detail="No downloadable file found for this task.")
