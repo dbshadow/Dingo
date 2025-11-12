@@ -28,8 +28,8 @@ def extract_idml_to_csv(idml_file_path: Path) -> str:
                     # IDML text is within <Content> tags inside <CharacterStyleRange>
                     for content_tag in root.findall(".//CharacterStyleRange/Content"):
                         if content_tag.text:
-                            # Append the text content, stripping leading/trailing whitespace
-                            stories_content.append(content_tag.text.strip())
+                            # Append the text content, preserving whitespace
+                            stories_content.append(content_tag.text)
     except zipfile.BadZipFile:
         raise ValueError("Invalid IDML file: Not a valid zip archive.")
     except ET.ParseError:
@@ -89,7 +89,7 @@ def rebuild_idml_from_csv(original_idml_path: Path, translated_csv_path: Path) -
                 root = tree.getroot()
 
                 for content_tag in root.findall(".//CharacterStyleRange/Content"):
-                    original_text = content_tag.text.strip() if content_tag.text else ""
+                    original_text = content_tag.text if content_tag.text else ""
                     if original_text in translation_map:
                         translated_text = translation_map[original_text]
                         # CRITICAL: Only replace if the translation is a non-empty string
