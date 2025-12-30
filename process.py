@@ -20,7 +20,7 @@ def load_glossary(glossary_path: Path) -> Dict[str, Dict[str, str]]:
     if not glossary_path or not glossary_path.exists():
         return None
     try:
-        glossary_df = pd.read_csv(glossary_path)
+        glossary_df = pd.read_csv(glossary_path, encoding='utf-8-sig')
         glossary_df = glossary_df.where(pd.notna(glossary_df), None)
         
         english_col = glossary_df.columns[0]
@@ -49,7 +49,7 @@ async def process_csv(
     glossary_dict = load_glossary(glossary_path)
 
     try:
-        df = pd.read_csv(csv_path, dtype=str).fillna('')
+        df = pd.read_csv(csv_path, dtype=str, encoding='utf-8-sig').fillna('')
     except Exception as e:
         print(f"Error reading CSV {csv_path}: {e}")
         raise

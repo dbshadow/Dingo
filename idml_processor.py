@@ -62,7 +62,7 @@ def rebuild_idml_from_csv(original_idml_path: Path, translated_csv_path: Path) -
     """
     # 1. Read translated CSV into a lookup dictionary
     try:
-        df = pd.read_csv(translated_csv_path)
+        df = pd.read_csv(translated_csv_path, encoding='utf-8-sig')
         # Ensure columns exist and handle potential NaN values
         if 'source' not in df.columns or 'target' not in df.columns:
             raise ValueError("CSV must contain 'source' and 'target' columns.")
