@@ -1,4 +1,4 @@
-# D-Link Translator
+# Dingo
 
 A web-based tool for translating CSV and IDML files using a local Ollama-powered Large Language Model, featuring a real-time task queue and a suite of IDML processing tools.
 
@@ -109,7 +109,7 @@ You can add more users by running the command again with a different name. You c
 **3. Build the Docker Image**
 
 ```bash
-docker build -t dlink-translator .
+docker build -t dingo .
 ```
 
 **4. Run the Docker Container**
@@ -122,7 +122,7 @@ docker run -d -p 8000:8000 \
   -v ./uploads:/app/uploads \
   -v ./tasks.json:/app/tasks.json \
   -v ./api_tokens.json:/app/api_tokens.json \
-  --rm --name dlink-translator-app dlink-translator
+  --rm --name dingo-app dingo
 ```
 
 - `-d`: Run in detached mode (in the background).

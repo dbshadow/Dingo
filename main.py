@@ -59,7 +59,7 @@ async def lifespan(app: FastAPI):
 
 # --- FastAPI App Initialization ---
 app = FastAPI(
-    title="Dlink Translator",
+    title="Dingo",
     description="A tool to translate CSV and IDML files using local LLMs.",
     version="1.0.0",
     lifespan=lifespan

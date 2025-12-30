@@ -1,7 +1,7 @@
 [project]
-name = "dlinktranslator"
+name = "dingo"
 version = "0.1.0"
-description = "Add your description here"
+description = "A web-based tool for translating CSV and IDML files using a local Ollama-powered Large Language Model, featuring a real-time task queue and a suite of IDML processing tools."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [

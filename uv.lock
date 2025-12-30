@@ -62,7 +62,7 @@ wheels = [
 ]
 
 [[package]]
-name = "dlinktranslator"
+name = "dingo"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
